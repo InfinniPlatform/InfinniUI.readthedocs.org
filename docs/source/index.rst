@@ -8,3 +8,4 @@ Welcome to InfinniUI documentation!
    :numbered:
 
    00-getting-started/index.rst
+   01-architecture/index.rst
