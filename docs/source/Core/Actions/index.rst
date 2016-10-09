@@ -33,8 +33,3 @@ Actions
      - Отправляет http запрос
    * - `RouteToAction <RouteToAction/>`__
      - Переходит по заданному маршруту
-
-.. toctree::
-
-   AcceptAction/index.rst
-   AddAction/index.rst

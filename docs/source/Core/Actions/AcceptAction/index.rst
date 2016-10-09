@@ -48,7 +48,3 @@ See Also
 --------
 
 -  `CancelAction <../CancelAction/>`__
-
-.. toctree::
-
-   AcceptAction.metadata.rst
