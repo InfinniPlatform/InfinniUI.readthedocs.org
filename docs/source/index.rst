@@ -9,3 +9,4 @@ Welcome to InfinniUI documentation!
 
    00-getting-started/index.rst
    01-architecture/index.rst
+   API/index.rst
