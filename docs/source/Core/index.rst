@@ -6,7 +6,6 @@ Core
 .. toctree::
 
 	Actions/index.rst
-	Architecture/index.rst
 	Builders/index.rst
 	Collection/index.rst
 	Context/index.rst

@@ -34,3 +34,7 @@ Actions
    * - `RouteToAction <RouteToAction/>`__
      - Переходит по заданному маршруту
 
+.. toctree::
+
+   AcceptAction/index.rst
+   AddAction/index.rst
