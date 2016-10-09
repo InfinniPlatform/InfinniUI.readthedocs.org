@@ -45,3 +45,9 @@ ghtIt | именем      |
 em/>` |             |
 __    |             |
 +-------+-------------+
+
+
+.. toctree::
+
+   MenuBar.highlightItem.rst
+   MenuBar.metadata.rst

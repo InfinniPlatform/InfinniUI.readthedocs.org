@@ -38,3 +38,12 @@ Methods
 `setParentSelector <TreeView.setParentSelector/>`__\ \|Устанавливает
 `функцию <../../Core/Script/>`__ выборки из элемента коллекции
 идентификатора родителя.
+
+
+.. toctree::
+
+   TreeView.getKeySelector.rst
+   TreeView.getParentSelector.rst
+   TreeView.metadata.rst
+   TreeView.setKeySelector.rst
+   TreeView.setParentSelector.rst

@@ -28,3 +28,8 @@ Parameters
      - `элемент <../../Core/Elements/Element>`__
      - Родительский `элемент <../../Core/Elements/Element/>`__.
 
+
+
+.. toctree::
+
+   ToolBar.metadata.rst

@@ -145,3 +145,18 @@ ubleC | клик по     |
 lick/ | элементам   |
 >`__  | DataGrid.   |
 +-------+-------------+
+
+
+.. toctree::
+
+   DataGridColumn/index.rst
+   DataGrid.getCheckAll.rst
+   DataGrid.getCheckAllVisible.rst
+   DataGrid.getColumns.rst
+   DataGrid.getShowSelectors.rst
+   DataGrid.metadata.rst
+   DataGrid.onCheckAllChanged.rst
+   DataGrid.onRowClick.rst
+   DataGrid.onRowDoubleClick.rst
+   DataGrid.setCheckAllVisible.rst
+   DataGrid.setShowSelectors.rst

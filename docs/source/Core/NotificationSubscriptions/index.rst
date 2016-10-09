@@ -45,3 +45,14 @@ Methods
    * - `on <NotificationSubscriptions.on.html>`__
      - Выполняет подписку на события signalR
 
+
+
+.. toctree::
+
+   NotificationSubscriptions.isDisconnected.rst
+   NotificationSubscriptions.on.rst
+   NotificationSubscriptions.reconnection.rst
+   NotificationSubscriptions.startConnection.rst
+   NotificationSubscriptions.stopConnection.rst
+   NotificationSubscriptions.subscribe.rst
+   NotificationSubscriptions.unsubscribe.rst

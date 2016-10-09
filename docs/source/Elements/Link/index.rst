@@ -46,3 +46,12 @@ Methods
    * - `setTarget <Link.setTarget.html>`__
      - Устанавливает режим загрузки документа.
 
+
+
+.. toctree::
+
+   Link.getHref.rst
+   Link.getTarget.rst
+   Link.metadata.rst
+   Link.setHref.rst
+   Link.setTarget.rst

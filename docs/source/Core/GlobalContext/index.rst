@@ -47,3 +47,8 @@ Methods
    * - `executeAction <GlobalContext.executeAction.html>`__
      - Запускает выполнение указанного `действия <../Actions/>`__.
 
+
+
+.. toctree::
+
+   GlobalContext.executeAction.rst

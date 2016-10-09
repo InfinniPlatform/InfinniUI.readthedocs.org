@@ -32,3 +32,14 @@ Properties
    * - `controls <ViewContext.controls.html>`__
      - Возвращает ассоциативный список `визуальных элементов представления <../Elements/Element/>`__
 
+
+
+.. toctree::
+
+   ViewContext.controls.rst
+   ViewContext.dataSources.rst
+   ViewContext.global.rst
+   ViewContext.messageBus.rst
+   ViewContext.parameters.rst
+   ViewContext.scripts.rst
+   ViewContext.view.rst

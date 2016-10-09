@@ -18,3 +18,12 @@ See also
 -  `DateTimeFormat <DateTimeFormat/>`__
 -  `NumberFormat <NumberFormat/>`__
 -  `ObjectFormat <ObjectFormat/>`__
+
+
+.. toctree::
+
+   BaseFormat/index.rst
+   BooleanFormat/index.rst
+   DateTimeFormat/index.rst
+   NumberFormat/index.rst
+   ObjectFormat/index.rst

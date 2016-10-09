@@ -67,3 +67,9 @@ yourProject/styles/bootstrap-variables.less (если вы делаете сво
 конкретному элементу метаданные Style, это значение появится у элемента
 в качестве дополнительного класса, на который можно будет назначить
 необходимый css-стиль (или несколько стилей).
+
+
+.. toctree::
+
+   ColorStyle/index.rst
+   TextStyle/index.rst

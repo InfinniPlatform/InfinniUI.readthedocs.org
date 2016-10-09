@@ -63,3 +63,12 @@ Methods
    * - `unsubscribeByType <MessageBus.unsubscribeByType.html>`__
      - Отписывается на сообщения заданного типа.
 
+
+
+.. toctree::
+
+   InfinniUIMessages.rst
+   MessageBus.getView.rst
+   MessageBus.send.rst
+   MessageBus.subscribe.rst
+   MessageBus.unsubscribeByType.rst

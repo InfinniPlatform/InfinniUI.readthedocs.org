@@ -26,3 +26,11 @@ DataSources
    для произвольных http-сервисов данных.
 -  `DocumentDataSource <DocumentDataSource/>`__ - источник данных
    представления для документов InfinniPlatform.
+
+
+.. toctree::
+
+   BaseDataSource/index.rst
+   DocumentDataSource/index.rst
+   ObjectDataSource/index.rst
+   RestDataSource/index.rst

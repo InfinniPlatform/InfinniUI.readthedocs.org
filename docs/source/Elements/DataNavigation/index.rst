@@ -60,3 +60,21 @@ Events
 события <../../Core/Script/>`__ о том, что размер страницы изменился.
 `onPageNumberChanged <DataNavigation.onPageNumberChanged>`__|`Обработчик
 события <../../Core/Script/>`__ о том, что номер страницы изменился.
+
+
+.. toctree::
+
+   DataNavigation.getAvailablePageSizes.rst
+   DataNavigation.getDataSource.rst
+   DataNavigation.getIsDataReady.rst
+   DataNavigation.getPageCount.rst
+   DataNavigation.getPageNumber.rst
+   DataNavigation.getPageSize.rst
+   DataNavigation.metadata.rst
+   DataNavigation.onPageNumberChanged.rst
+   DataNavigation.onPageSizeChanged.rst
+   DataNavigation.setDataSource.rst
+   DataNavigation.setIsDataReady.rst
+   DataNavigation.setPageCount.rst
+   DataNavigation.setPageNumber.rst
+   DataNavigation.setPageSize.rst

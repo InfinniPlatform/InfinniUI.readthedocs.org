@@ -29,3 +29,13 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+
+   DataProvider.createIdFilter.rst
+   DataProvider.createItem.rst
+   DataProvider.createLocalItem.rst
+   DataProvider.deleteItem.rst
+   DataProvider.getItems.rst
+   DataProvider.saveItem.rst

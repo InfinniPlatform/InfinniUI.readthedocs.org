@@ -68,3 +68,18 @@ Events
    * - `onValueChanged <EditorBase.onValueChanged.html>`__
      - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что значение было изменено.
 
+
+
+.. toctree::
+
+   EditorBase.getErrorText.rst
+   EditorBase.getHintText.rst
+   EditorBase.getValue.rst
+   EditorBase.getWarningText.rst
+   EditorBase.metadata.rst
+   EditorBase.onValueChanged.rst
+   EditorBase.onValueChanging.rst
+   EditorBase.setErrorText.rst
+   EditorBase.setHintText.rst
+   EditorBase.setValue.rst
+   EditorBase.setWarningText.rst

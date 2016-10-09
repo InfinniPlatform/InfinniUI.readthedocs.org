@@ -34,3 +34,8 @@ Parameters
      - ``common``
      - Режим отображения
 
+
+
+.. toctree::
+
+   PopupButton.metadata.rst

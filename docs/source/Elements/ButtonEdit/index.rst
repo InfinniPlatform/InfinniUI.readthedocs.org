@@ -64,3 +64,15 @@ Name                                            | Description                   
 +=================================================+===============================================================================+
 `onButtonClick <ButtonEdit.onButtonClick.html>`__   | Устанавливает `обработчик события <../../Core/Script/>`__ нажатия на кнопку   |
 +-------------------------------------------------+-------------------------------------------------------------------------------+
+
+
+.. toctree::
+
+   ButtonEdit.getIcon.rst
+   ButtonEdit.getReadOnly.rst
+   ButtonEdit.getShowClear.rst
+   ButtonEdit.metadata.rst
+   ButtonEdit.onButtonClick.rst
+   ButtonEdit.setIcon.rst
+   ButtonEdit.setReadOnly.rst
+   ButtonEdit.setShowClear.rst

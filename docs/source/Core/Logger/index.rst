@@ -57,3 +57,15 @@ Methods
    * - `trace <Logger.trace.html>`__
      - Регистрирует сообщение трассировки.
 
+
+
+.. toctree::
+
+   Logger.debug.rst
+   Logger.error.rst
+   Logger.getLevel.rst
+   Logger.info.rst
+   Logger.setLevel.rst
+   Logger.trace.rst
+   Logger.warn.rst
+   LogLevel.rst

@@ -47,3 +47,12 @@ Methods
    * - `setAcceptTypes <ImageBox.setAcceptTypes.html>`__
      - Устанавливает список допустимых форматов данных.
 
+
+
+.. toctree::
+
+   ImageBox.getAcceptTypes.rst
+   ImageBox.getMaxSize.rst
+   ImageBox.metadata.rst
+   ImageBox.setAcceptTypes.rst
+   ImageBox.setMaxSize.rst

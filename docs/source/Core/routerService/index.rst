@@ -37,3 +37,9 @@ Methods
    * - `startRouter() <RouterService.startRouter.html>`__
      - Запускает роутинг
 
+
+
+.. toctree::
+
+   RouterService.getLinkByName.rst
+   RouterService.startRouter.rst

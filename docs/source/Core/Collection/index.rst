@@ -120,3 +120,52 @@ Events
 изменения.\| \|\ `onChange <Collection.onChange/>`__\ \|Устанавливает
 `обработчик события <../Script/>`__ о том, что произошли какие-то
 изменения.\|
+
+
+.. toctree::
+
+   Collection.add.rst
+   Collection.addAll.rst
+   Collection.clear.rst
+   Collection.clone.rst
+   Collection.comparator.rst
+   Collection.contains.rst
+   Collection.every.rst
+   Collection.filter.rst
+   Collection.find.rst
+   Collection.findIndex.rst
+   Collection.forEach.rst
+   Collection.getById.rst
+   Collection.getByIndex.rst
+   Collection.getProperty.rst
+   Collection.idProperty.rst
+   Collection.indexOf.rst
+   Collection.insert.rst
+   Collection.insertAll.rst
+   Collection.lastIndexOf.rst
+   Collection.length.rst
+   Collection.move.rst
+   Collection.onAdd.rst
+   Collection.onChange.rst
+   Collection.onMove.rst
+   Collection.onRemove.rst
+   Collection.onReplace.rst
+   Collection.onReset.rst
+   Collection.pop.rst
+   Collection.push.rst
+   Collection.remove.rst
+   Collection.removeAll.rst
+   Collection.removeAt.rst
+   Collection.removeById.rst
+   Collection.removeEvery.rst
+   Collection.removeRange.rst
+   Collection.replace.rst
+   Collection.reset.rst
+   Collection.set.rst
+   Collection.setProperty.rst
+   Collection.size.rst
+   Collection.some.rst
+   Collection.sort.rst
+   Collection.take.rst
+   Collection.toArray.rst
+   Comparator.rst

@@ -54,3 +54,16 @@ Methods
    * - `setStartValue <NumericBox.setStartValue.html>`__
      - Устанавливает начальное значение по умолчанию.
 
+
+
+.. toctree::
+
+   NumericBox.getIncrement.rst
+   NumericBox.getMaxValue.rst
+   NumericBox.getMinValue.rst
+   NumericBox.getStartValue.rst
+   NumericBox.metadata.rst
+   NumericBox.setIncrement.rst
+   NumericBox.setMaxValue.rst
+   NumericBox.setMinValue.rst
+   NumericBox.setStartValue.rst

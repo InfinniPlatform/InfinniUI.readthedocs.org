@@ -46,3 +46,12 @@ Methods
    * - `setLineCount <TextBox.setLineCount.html>`__
      - Устанавливает максимально видимое количество строк.
 
+
+
+.. toctree::
+
+   TextBox.getLineCount.rst
+   TextBox.getMultiline.rst
+   TextBox.metadata.rst
+   TextBox.setLineCount.rst
+   TextBox.setMultiline.rst

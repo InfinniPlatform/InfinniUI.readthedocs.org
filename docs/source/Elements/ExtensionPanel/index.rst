@@ -132,3 +132,13 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+
+   ExtensionPanel.getParameters.rst
+   ExtensionPanel.metadata.rst
+   ExtensionPanel.setBuilder.rst
+   ExtensionPanel.setContext.rst
+   ExtensionPanel.setExtensionName.rst
+   ExtensionPanel.setParameters.rst

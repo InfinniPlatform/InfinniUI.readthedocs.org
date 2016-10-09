@@ -35,3 +35,10 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+
+   ViewPanel.getLayout.rst
+   ViewPanel.metadata.rst
+   ViewPanel.setLayout.rst

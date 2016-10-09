@@ -55,3 +55,22 @@ Events
    * - `onSignOut <Session.onSignOut.html>`__
      - Устанавливает обработчик события выхода пользователя из системы.
 
+
+
+.. toctree::
+
+   Session.addClaim.rst
+   Session.changeActiveRole.rst
+   Session.changePassword.rst
+   Session.changeProfile.rst
+   Session.getCurrentUser.rst
+   Session.getLinkExternalLoginForm.rst
+   Session.getSessionData.rst
+   Session.getSignInExternalForm.rst
+   Session.onActiveRoleChanged.rst
+   Session.onSignInInternal.rst
+   Session.onSignOut.rst
+   Session.setSessionData.rst
+   Session.signInInternal.rst
+   Session.signOut.rst
+   Session.unlinkExternalLogin.rst

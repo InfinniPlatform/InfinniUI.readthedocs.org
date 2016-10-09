@@ -35,3 +35,8 @@ Events
 ------
 
 Нет.
+
+
+.. toctree::
+
+   Frame.metadata.rst

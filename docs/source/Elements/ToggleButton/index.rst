@@ -39,3 +39,12 @@ Name                                        | Description                       
 +---------------------------------------------+-------------------------------------------------+
 `setTextOff <ToggleButton.setTextOff.html>`__   | Устанавливает текст на выключенное состояние.   |
 +---------------------------------------------+-------------------------------------------------+
+
+
+.. toctree::
+
+   ToggleButton.getTextOff.rst
+   ToggleButton.getTextOn.rst
+   ToggleButton.metadata.rst
+   ToggleButton.setTextOff.rst
+   ToggleButton.setTextOn.rst
