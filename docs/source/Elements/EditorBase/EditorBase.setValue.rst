@@ -6,16 +6,16 @@ EditorBase.setValue
 Description
 -----------
 
-Метод `setValue() <../EditorBase.setValue.html>`__ позволяет изменить
+Метод `setValue() <EditorBase.setValue.html>`__ позволяет изменить
 значение редактора. Если значение переданного параметра отличается от
 текущего значения редактора, происходит генерация события
-`onValueChanging <../EditorBase.onValueChanging.html>`__. Если нет ни одного
+`onValueChanging <EditorBase.onValueChanging.html>`__. Если нет ни одного
 обработчика, подписанного на событие
-`onValueChanging <../EditorBase.onValueChanging.html>`__, либо если все
+`onValueChanging <EditorBase.onValueChanging.html>`__, либо если все
 обработчики этого события вернули значение, отличное от ``false``,
 значение редактора меняется на новое. Факт изменения значения редактора
 приводит к возникновению события
-`onValueChanged <../EditorBase.onValueChanged.html>`__.
+`onValueChanged <EditorBase.onValueChanged.html>`__.
 
 Syntax
 ------
@@ -51,6 +51,6 @@ Examples
 See Also
 --------
 
--  `getValue() <../EditorBase.getValue.html>`__
--  `onValueChanging <../EditorBase.onValueChanging.html>`__
--  `onValueChanged <../EditorBase.onValueChanged.html>`__
+-  `getValue() <EditorBase.getValue.html>`__
+-  `onValueChanging <EditorBase.onValueChanging.html>`__
+-  `onValueChanged <EditorBase.onValueChanged.html>`__

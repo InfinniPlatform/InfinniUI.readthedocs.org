@@ -51,4 +51,4 @@ Members
 See Also
 --------
 
--  `Logger <../>`__
+-  `Logger <./>`__

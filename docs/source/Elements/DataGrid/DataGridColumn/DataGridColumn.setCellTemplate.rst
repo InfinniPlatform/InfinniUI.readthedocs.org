@@ -1,7 +1,7 @@
 DataGridColumn.setCellTemplate
 ==============================
 
-Устанавливает `функцию <../../../../Core/Script/>`__ шаблонизации ячейки
+Устанавливает `функцию <../../../Core/Script/>`__ шаблонизации ячейки
 дочернего элемента DataGrid.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../../../Core/Script/>`__
-     - Функция шаблонизации ячейки дочернего элемента DataGrid. В параметре ``args`` передается информация, необходимая для формирования `визуального элемента <../../../../Core/Elements/Element/>`__, который будет отображен в качестве элемента DataGrid. Результатом работы функции должен быть `визуальный элемент <../../../../Core/Elements/Element/>`__
+     - `Script <../../../Core/Script/>`__
+     - Функция шаблонизации ячейки дочернего элемента DataGrid. В параметре ``args`` передается информация, необходимая для формирования `визуального элемента <../../../Core/Elements/Element/>`__, который будет отображен в качестве элемента DataGrid. Результатом работы функции должен быть `визуальный элемент <../../../Core/Elements/Element/>`__
 
 
 Returns
@@ -44,4 +44,4 @@ Examples
 See Also
 --------
 
--  `getCellTemplate() <../DataGridColumn.getCellTemplate.html>`__
+-  `getCellTemplate() <DataGridColumn.getCellTemplate.html>`__

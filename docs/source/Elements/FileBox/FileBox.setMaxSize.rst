@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getMaxSize <../FileBox.getMaxSize.html>`__
+-  `getMaxSize <FileBox.getMaxSize.html>`__

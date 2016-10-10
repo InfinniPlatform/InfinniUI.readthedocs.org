@@ -3,7 +3,7 @@ ComboBox.getShowClear
 
 Возвращает значение, которое определяет наличие кнопки, очищающей
 выбранное значение. По умолчанию кнопка отображается. Чтобы убрать её,
-воспользуйтесь методом `setShowClear() <../ComboBox.setShowClear.html>`__.
+воспользуйтесь методом `setShowClear() <ComboBox.setShowClear.html>`__.
 
 Syntax
 ------
@@ -33,4 +33,4 @@ Examples
 See Also
 --------
 
--  `setShowClear() <../ComboBox.setShowClear.html>`__
+-  `setShowClear() <ComboBox.setShowClear.html>`__

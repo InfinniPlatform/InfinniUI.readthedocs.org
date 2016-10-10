@@ -7,11 +7,11 @@ Description
 -----------
 
 Если в источнике данных `разрешено обновление списка
-элементов <../../BaseDataSource/BaseDataSource.resumeUpdate.html>`__ и он
-уже `обновлялся <../../BaseDataSource/BaseDataSource.updateItems.html>`__,
+элементов <../BaseDataSource/BaseDataSource.resumeUpdate.html>`__ и он
+уже `обновлялся <../BaseDataSource/BaseDataSource.updateItems.html>`__,
 изменение фильтра приводит к автоматическому `обновлению списка
 элементов источника
-данных <../../BaseDataSource/BaseDataSource.updateItems.html>`__.
+данных <../BaseDataSource/BaseDataSource.updateItems.html>`__.
 
 Syntax
 ------
@@ -35,9 +35,9 @@ Parameters
 
 
 1 `Шаблонизируемая
-величина <../../RestDataSource/#parameters-templating>`__. Для
+величина <../RestDataSource/#parameters-templating>`__. Для
 определения параметров используйте метод
-`setFilterParams() <../DocumentDataSource.setFilterParams.html>`__.
+`setFilterParams() <DocumentDataSource.setFilterParams.html>`__.
 
 Returns
 ~~~~~~~
@@ -190,10 +190,10 @@ Examples
 See Also
 --------
 
--  `setFilterParams() <../DocumentDataSource.setFilterParams.html>`__
--  `getFilterParams() <../DocumentDataSource.getFilterParams.html>`__
--  `getFilter() <../DocumentDataSource.getFilter.html>`__
--  `setIdFilter() <../DocumentDataSource.setIdFilter.html>`__
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
--  `suspendUpdate() <../../BaseDataSource/BaseDataSource.suspendUpdate.html>`__
--  `resumeUpdate() <../../BaseDataSource/BaseDataSource.resumeUpdate.html>`__
+-  `setFilterParams() <DocumentDataSource.setFilterParams.html>`__
+-  `getFilterParams() <DocumentDataSource.getFilterParams.html>`__
+-  `getFilter() <DocumentDataSource.getFilter.html>`__
+-  `setIdFilter() <DocumentDataSource.setIdFilter.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `suspendUpdate() <../BaseDataSource/BaseDataSource.suspendUpdate.html>`__
+-  `resumeUpdate() <../BaseDataSource/BaseDataSource.resumeUpdate.html>`__

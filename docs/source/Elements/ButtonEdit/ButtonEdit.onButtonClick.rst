@@ -1,7 +1,7 @@
 ButtonEdit.onButtonClick
 ========================
 
-Устанавливает `обработчик события <../../../Core/Script/>`__ нажатия на
+Устанавливает `обработчик события <../../Core/Script/>`__ нажатия на
 кнопку.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - Обработчик события нажатия на кнопку
 
 

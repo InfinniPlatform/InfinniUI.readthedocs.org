@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setIncrement() <../NumericBox.setIncrement.html>`__
+-  `setIncrement() <NumericBox.setIncrement.html>`__

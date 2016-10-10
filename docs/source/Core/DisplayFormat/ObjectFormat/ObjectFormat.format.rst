@@ -8,15 +8,15 @@ Description
 представления заданного объекта.
 
 Путь к свойству объекта записывается в формате, который описан в разделе
-`DotNotation <../../DotNotation/>`__.
+`DotNotation <../DotNotation/>`__.
 
 Строка форматирования для даты и времени записываться в формате, который
 описан в разделе
-`dateTimeFormatFormatting <../../../Culture/Culture.dateTimeFormatting.html>`__.
+`dateTimeFormatFormatting <../../Culture/Culture.dateTimeFormatting.html>`__.
 
 Строка форматирования для числовых значений записываться в формате,
 который описан в разделе
-`NumberFormat.format <../../NumberFormat.format.html>`__.
+`NumberFormat.format <../NumberFormat.format.html>`__.
 
 Ниже приведены правила построения строки форматирования в форме
 `Бэкуса-Наура <http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form>`__.

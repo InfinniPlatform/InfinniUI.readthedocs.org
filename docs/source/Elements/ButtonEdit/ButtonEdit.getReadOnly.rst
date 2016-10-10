@@ -5,7 +5,7 @@ ButtonEdit.getReadOnly
   текстового поля.
 По умолчанию редактирование запрещено.
 Чтобы разрешить редактирование, воспользуйтесь методом
-  `setReadOnly() <../ButtonEdit.setReadOnly.html>`__.
+  `setReadOnly() <ButtonEdit.setReadOnly.html>`__.
 
 Syntax
 ------
@@ -35,4 +35,4 @@ Examples
 See Also
 --------
 
--  `setReadOnly() <../ButtonEdit.setReadOnly.html>`__
+-  `setReadOnly() <ButtonEdit.setReadOnly.html>`__

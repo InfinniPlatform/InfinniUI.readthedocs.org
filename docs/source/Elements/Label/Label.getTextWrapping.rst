@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setTextWrapping() <../Label.setTextWrapping.html>`__
+-  `setTextWrapping() <Label.setTextWrapping.html>`__

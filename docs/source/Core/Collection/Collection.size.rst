@@ -28,4 +28,4 @@ Examples
 See Also
 --------
 
--  `length <../Collection.length.html>`__
+-  `length <Collection.length.html>`__

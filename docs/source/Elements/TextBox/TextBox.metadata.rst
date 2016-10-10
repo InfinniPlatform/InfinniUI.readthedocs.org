@@ -1,7 +1,7 @@
 TextBox.metadata
 ================
 
-Метаданные типа `TextBox <../>`__.
+Метаданные типа `TextBox <./>`__.
 
 Properties
 ----------

@@ -1,7 +1,7 @@
 FileBox.metadata
 ================
 
-Метаданные типа `FileBox <../>`__.
+Метаданные типа `FileBox <./>`__.
 
 Properties
 ----------

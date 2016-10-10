@@ -34,4 +34,4 @@ Examples
 See Also
 --------
 
--  `getMaxValue() <../NumericBox.getMaxValue.html>`__
+-  `getMaxValue() <NumericBox.getMaxValue.html>`__

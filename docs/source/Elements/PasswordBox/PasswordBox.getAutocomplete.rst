@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setAutocomplete() <../PasswordBox.setAutocomplete.html>`__
+-  `setAutocomplete() <PasswordBox.setAutocomplete.html>`__

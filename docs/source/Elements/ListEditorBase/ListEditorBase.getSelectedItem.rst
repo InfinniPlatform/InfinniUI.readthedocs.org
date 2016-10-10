@@ -21,4 +21,4 @@ Examples
 See Also
 --------
 
--  `setSelectedItem() <../ListEditorBase.setSelectedItem.html>`__
+-  `setSelectedItem() <ListEditorBase.setSelectedItem.html>`__

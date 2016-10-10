@@ -51,4 +51,4 @@ Examples
 See Also
 --------
 
--  `getTarget() <../Link.getTarget.html>`__
+-  `getTarget() <Link.getTarget.html>`__

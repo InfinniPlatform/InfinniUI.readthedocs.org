@@ -38,4 +38,4 @@ Examples
 See Also
 --------
 
--  `setDeletingUrlParams <../RestDataSource.setDeletingUrlParams.html>`__
+-  `setDeletingUrlParams <RestDataSource.setDeletingUrlParams.html>`__

@@ -54,5 +54,5 @@ Examples
 See Also
 --------
 
--  `every() <../Collection.every.html>`__
--  `some() <../Collection.some.html>`__
+-  `every() <Collection.every.html>`__
+-  `some() <Collection.some.html>`__

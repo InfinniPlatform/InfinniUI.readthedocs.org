@@ -2,7 +2,7 @@ Logger.setLevel
 ===============
 
 Возвращает минимальный `уровень регистрируемых
-сообщений <../LogLevel/>`__.
+сообщений <LogLevel/>`__.
 
 Syntax
 ------
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``value``
-     - `LogLevel <../LogLevel/>`__
-     - Устанавливает `уровень регистрируемых сообщений <../LogLevel/>`__.
+     - `LogLevel <LogLevel/>`__
+     - Устанавливает `уровень регистрируемых сообщений <LogLevel/>`__.
 
 
 Examples
@@ -40,5 +40,5 @@ Examples
 See Also
 --------
 
--  `getLevel() <../Logger.getLevel.html>`__
--  `LogLevel <../LogLevel/>`__
+-  `getLevel() <Logger.getLevel.html>`__
+-  `LogLevel <LogLevel/>`__

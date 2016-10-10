@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - value
-     - ``String``/`Element <../>`__
+     - ``String``/`Element <./>`__
      - Текст или визуальный элемент, появляющийся при наведении на элемент
 
 
@@ -41,4 +41,4 @@ Examples
 See Also
 --------
 
--  `getToolTip() <../Element.getToolTip.html>`__
+-  `getToolTip() <Element.getToolTip.html>`__

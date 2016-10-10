@@ -1,8 +1,8 @@
 View.getDataSources()
 =====================
 
-Возвращает `коллекцию <../../../Collection/>`__ `источников данных
-представления <../../../DataSources/BaseDataSource/>`__.
+Возвращает `коллекцию <../../Collection/>`__ `источников данных
+представления <../../DataSources/BaseDataSource/>`__.
 
 Syntax
 ------
@@ -19,8 +19,8 @@ Parameters
 Returns
 ~~~~~~~
 
-`Коллекция <../../../Collection/>`__ `источников данных
-представления <../../../DataSources/BaseDataSource/>`__.
+`Коллекция <../../Collection/>`__ `источников данных
+представления <../../DataSources/BaseDataSource/>`__.
 
 Examples
 --------
@@ -38,5 +38,5 @@ Examples
 See Also
 --------
 
--  `Collection <../../../Collection/>`__
--  `BaseDataSource <../../../DataSources/BaseDataSource/>`__
+-  `Collection <../../Collection/>`__
+-  `BaseDataSource <../../DataSources/BaseDataSource/>`__

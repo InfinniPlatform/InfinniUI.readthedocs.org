@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getIsHeaderTemplateEmpty() <../DataGridColumn.getIsHeaderTemplateEmpty.html>`__
+-  `getIsHeaderTemplateEmpty() <DataGridColumn.getIsHeaderTemplateEmpty.html>`__

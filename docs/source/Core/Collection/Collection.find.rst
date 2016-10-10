@@ -48,8 +48,8 @@ Examples
 See Also
 --------
 
--  `getById() <../Collection.getById.html>`__
--  `getByIndex() <../Collection.getByIndex.html>`__
--  `indexOf() <../Collection.indexOf.html>`__
--  `lastIndexOf() <../Collection.lastIndexOf.html>`__
--  `findIndex() <../Collection.findIndex.html>`__
+-  `getById() <Collection.getById.html>`__
+-  `getByIndex() <Collection.getByIndex.html>`__
+-  `indexOf() <Collection.indexOf.html>`__
+-  `lastIndexOf() <Collection.lastIndexOf.html>`__
+-  `findIndex() <Collection.findIndex.html>`__

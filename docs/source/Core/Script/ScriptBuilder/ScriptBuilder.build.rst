@@ -13,7 +13,7 @@ Parameters
      - Type
      - Description
    * - context
-     - `Context <../../../Context/>`__
+     - `Context <../../Context/>`__
      -  Контекст представление, в котором будет находится скрипт 
    * - args
      -  ``Object`` 
@@ -22,6 +22,6 @@ Parameters
      -  ``Object`` 
      -  Метаданные скрипта 
    * - args.parent
-     -  `Element <../...html>`__ 
+     -  `Element <...html>`__ 
      -  Родительский элемент 
 

@@ -42,4 +42,4 @@ Examples
 See Also
 --------
 
--  `getParameters <../ExtensionPanel.getParameters.html>`__
+-  `getParameters <ExtensionPanel.getParameters.html>`__

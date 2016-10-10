@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что Action был выполнен
 
 

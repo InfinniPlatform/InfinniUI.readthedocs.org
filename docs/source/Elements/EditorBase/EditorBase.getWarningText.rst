@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setWarningText() <../EditorBase.setWarningText.html>`__
+-  `setWarningText() <EditorBase.setWarningText.html>`__

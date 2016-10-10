@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getPageNumber() <../DataNavigation.getPageNumber.html>`__
+-  `getPageNumber() <DataNavigation.getPageNumber.html>`__

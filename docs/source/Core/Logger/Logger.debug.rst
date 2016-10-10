@@ -36,8 +36,8 @@ Examples
 See Also
 --------
 
--  `info() <../Logger.info.html>`__
--  `warn() <../Logger.warn.html>`__
--  `error() <../Logger.error.html>`__
--  `trace() <../Logger.trace.html>`__
--  `LogLevel <../LogLevel/>`__
+-  `info() <Logger.info.html>`__
+-  `warn() <Logger.warn.html>`__
+-  `error() <Logger.error.html>`__
+-  `trace() <Logger.trace.html>`__
+-  `LogLevel <LogLevel/>`__

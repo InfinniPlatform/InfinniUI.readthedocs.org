@@ -30,6 +30,6 @@ Examples
 See Also
 --------
 
--  `setMultiLine <../TextBox.setMultiline.html>`__
--  `setLineCount <../TextBox.setLineCount.html>`__
--  `getLineCount <../TextBox.getLineCount.html>`__
+-  `setMultiLine <TextBox.setMultiline.html>`__
+-  `setLineCount <TextBox.setLineCount.html>`__
+-  `getLineCount <TextBox.getLineCount.html>`__

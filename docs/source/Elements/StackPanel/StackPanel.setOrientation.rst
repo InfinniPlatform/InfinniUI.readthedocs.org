@@ -2,7 +2,7 @@ StackPanel.setOrientation()
 ===========================
 
 Устанавливает `ориентацию стека
-элементов <../StackPanelOrientation/>`__.
+элементов <StackPanelOrientation/>`__.
 
 Syntax
 ------
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `StackPanelOrientation <../StackPanelOrientation/>`__
+     - `StackPanelOrientation <StackPanelOrientation/>`__
      - Ориентация стека элементов
 
 
@@ -40,5 +40,5 @@ Examples
 See Also
 --------
 
--  `getOrientation() <../StackPanel.getOrientation.html>`__
--  `StackPanelOrientation <../StackPanelOrientation/>`__
+-  `getOrientation() <StackPanel.getOrientation.html>`__
+-  `StackPanelOrientation <StackPanelOrientation/>`__

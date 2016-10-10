@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getTextOn <../ToggleButton.getTextOn.html>`__
+-  `getTextOn <ToggleButton.getTextOn.html>`__

@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `startRouter() <../RouterService.startRouter/>`__
+-  `startRouter() <RouterService.startRouter/>`__

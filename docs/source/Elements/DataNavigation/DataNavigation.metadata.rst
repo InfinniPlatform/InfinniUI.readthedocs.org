@@ -1,7 +1,7 @@
 DataNavigation.metadata
 =======================
 
-Метаданные типа `DataNavigation <../>`__.
+Метаданные типа `DataNavigation <./>`__.
 
 Properties
 ----------

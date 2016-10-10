@@ -19,7 +19,7 @@ Returns
 ~~~~~~~
 
 Источник данных привязки, установленный вызовом метода
-`bindSource() <../DataBinding.bindSource.html>`__.
+`bindSource() <DataBinding.bindSource.html>`__.
 
 Examples
 --------
@@ -32,5 +32,5 @@ Examples
 See Also
 --------
 
--  `bindSource() <../DataBinding.bindSource.html>`__
--  `getSourceProperty() <../DataBinding.getSourceProperty.html>`__
+-  `bindSource() <DataBinding.bindSource.html>`__
+-  `getSourceProperty() <DataBinding.getSourceProperty.html>`__

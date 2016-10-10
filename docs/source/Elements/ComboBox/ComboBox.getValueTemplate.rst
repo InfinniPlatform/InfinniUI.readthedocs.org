@@ -1,7 +1,7 @@
 ComboBox.getValueTemplate
 =========================
 
-Возвращает `функцию <../../../Core/Script/>`__ шаблонизации выбранного
+Возвращает `функцию <../../Core/Script/>`__ шаблонизации выбранного
 значения.
 
 Description
@@ -10,9 +10,9 @@ Description
 Зачастую значения перед отображением необходимо преобразовывать.
 Чтобы изменить формат отображения значений ComboBox воспользуйтесь
   методом
-  `setItemTemplate <../../../Core/Elements/Container/Container.setItemTemplate.html>`__.
+  `setItemTemplate <../../Core/Elements/Container/Container.setItemTemplate.html>`__.
 Для изменения формата отображения выбранного значения используйте
-  метод `setValueTemplate <../ComboBox.setValueTemplate.html>`__.
+  метод `setValueTemplate <ComboBox.setValueTemplate.html>`__.
 
 Syntax
 ------
@@ -29,7 +29,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Core/Script/>`__ шаблонизации выбранного значения.
+`Функция <../../Core/Script/>`__ шаблонизации выбранного значения.
 
 Examples
 --------
@@ -41,5 +41,5 @@ Examples
 See Also
 --------
 
--  `setValueTemplate <../ComboBox.setValueTemplate.html>`__
--  `setItemTemplate <../../../Core/Elements/Container/Container.setItemTemplate.html>`__
+-  `setValueTemplate <ComboBox.setValueTemplate.html>`__
+-  `setItemTemplate <../../Core/Elements/Container/Container.setItemTemplate.html>`__

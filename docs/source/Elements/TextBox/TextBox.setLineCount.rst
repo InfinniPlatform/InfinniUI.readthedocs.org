@@ -41,6 +41,6 @@ Examples
 See Also
 --------
 
--  `getLineCount <../TextBox.getLineCount.html>`__
--  `getMultiLine <../TextBox.getMultiLine.html>`__
--  `setMultiLine <../TextBox.setMultiLine.html>`__
+-  `getLineCount <TextBox.getLineCount.html>`__
+-  `getMultiLine <TextBox.getMultiLine.html>`__
+-  `setMultiLine <TextBox.setMultiLine.html>`__

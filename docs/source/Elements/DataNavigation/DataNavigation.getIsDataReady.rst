@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setIsDataReady() <../DataNavigation.setIsDataReady.html>`__
+-  `setIsDataReady() <DataNavigation.setIsDataReady.html>`__

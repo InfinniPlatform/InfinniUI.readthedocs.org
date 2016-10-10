@@ -1,8 +1,8 @@
 DataGrid.getColumns
 ===================
 
-Возвращает `коллекцию <../../../Core/Collection/>`__
-`колонок <../DataGridColumn/>`__ таблицы.
+Возвращает `коллекцию <../../Core/Collection/>`__
+`колонок <DataGridColumn/>`__ таблицы.
 
 Syntax
 ------
@@ -19,8 +19,8 @@ Parameters
 Returns
 ~~~~~~~
 
-`Коллекция <../../../Core/Collection/>`__
-`колонок <../DataGridColumn/>`__.
+`Коллекция <../../Core/Collection/>`__
+`колонок <DataGridColumn/>`__.
 
 Examples
 --------
@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `DataGridColumn <../DataGridColumn/>`__
+-  `DataGridColumn <DataGridColumn/>`__

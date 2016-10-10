@@ -1,7 +1,7 @@
 NumericBox.metadata
 ===================
 
-Метаданные типа `NumericBox <../>`__.
+Метаданные типа `NumericBox <./>`__.
 
 Properties
 ----------

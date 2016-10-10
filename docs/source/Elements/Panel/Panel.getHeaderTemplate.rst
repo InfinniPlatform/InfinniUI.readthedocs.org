@@ -1,7 +1,7 @@
 Panel.getHeaderTemplate()
 =========================
 
-Возвращает `функцию <../../../Core/Script/>`__ шаблонизации заголовка
+Возвращает `функцию <../../Core/Script/>`__ шаблонизации заголовка
 панели.
 
 Syntax
@@ -19,12 +19,12 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Core/Script/>`__ шаблонизации заголовка панели. В
+`Функция <../../Core/Script/>`__ шаблонизации заголовка панели. В
 параметре ``args`` передается информация, необходимая для формирования
-`визуального элемента <../../../Core/Elements/Element/>`__, который
+`визуального элемента <../../Core/Elements/Element/>`__, который
 будет отображен в качестве заголовка панели. Свойство ``args.value``
 содержит данные заголовка. Результатом работы функции должен быть
-`визуальный элемент <../../../Core/Elements/Element/>`__.
+`визуальный элемент <../../Core/Elements/Element/>`__.
 
 Examples
 --------
@@ -36,6 +36,6 @@ Examples
 See Also
 --------
 
--  `setHeaderTemplate() <../Panel.setHeaderTemplate.html>`__
--  `getHeader() <../Panel.getHeader.html>`__
--  `setHeader() <../Panel.setHeader.html>`__
+-  `setHeaderTemplate() <Panel.setHeaderTemplate.html>`__
+-  `getHeader() <Panel.getHeader.html>`__
+-  `setHeader() <Panel.setHeader.html>`__

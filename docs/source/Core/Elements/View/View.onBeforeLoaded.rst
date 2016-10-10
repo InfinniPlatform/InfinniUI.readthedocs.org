@@ -1,9 +1,9 @@
 View.onBeforeLoaded
 ===================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 представление представление было загружено. Данный обработчик сработает
-до `onLoaded <../../Element/Element.onLoaded.html>`__.
+до `onLoaded <../Element/Element.onLoaded.html>`__.
 
 Syntax
 ------
@@ -22,7 +22,7 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что представление было загружено
 
 
@@ -42,4 +42,4 @@ Examples
 See Also
 --------
 
--  `onLoaded <../../Element/Element.onLoaded.html>`__
+-  `onLoaded <../Element/Element.onLoaded.html>`__

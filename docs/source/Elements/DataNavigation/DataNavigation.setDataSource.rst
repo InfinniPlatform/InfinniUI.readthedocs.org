@@ -2,7 +2,7 @@ DataNavigation.setDataSource
 ============================
 
 Устанавливает `источник
-данных <../../../Core/DataSources/BaseDataSource/>`__.
+данных <../../Core/DataSources/BaseDataSource/>`__.
 
 Syntax
 ------
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - ``value``
-     - `BaseDataSource <../../../Core/DataSources/BaseDataSource/>`__
+     - `BaseDataSource <../../Core/DataSources/BaseDataSource/>`__
      - Устанавливает источник данных.
 
 
@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getDataSource() <../DataNavigation.getDataSource.html>`__
+-  `getDataSource() <DataNavigation.getDataSource.html>`__

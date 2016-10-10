@@ -6,11 +6,11 @@ Collection.insertAll
 Description
 -----------
 
-Метод `insertAll() <../Collection.insertAll.html>`__ добавляет указанные
+Метод `insertAll() <Collection.insertAll.html>`__ добавляет указанные
 элементы, начиная с заданной позиции. Успешное выполнение данного метода
-приводит к возникновению события `onAdd <../Collection.onAdd.html>`__.
+приводит к возникновению события `onAdd <Collection.onAdd.html>`__.
 Вместе с этим событием также генерируется событие
-`onChange <../Collection.onChange.html>`__, которое информирует о наличии
+`onChange <Collection.onChange.html>`__, которое информирует о наличии
 любых изменений. Аргументы обеих событий в данном случае будут
 идентичны.
 
@@ -55,9 +55,9 @@ Examples
 See Also
 --------
 
--  `push() <../Collection.push.html>`__
--  `add() <../Collection.add.html>`__
--  `addAll() <../Collection.addAll.html>`__
--  `insert() <../Collection.insert.html>`__
--  `onAdd <../Collection.onAdd.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `push() <Collection.push.html>`__
+-  `add() <Collection.add.html>`__
+-  `addAll() <Collection.addAll.html>`__
+-  `insert() <Collection.insert.html>`__
+-  `onAdd <Collection.onAdd.html>`__
+-  `onChange <Collection.onChange.html>`__

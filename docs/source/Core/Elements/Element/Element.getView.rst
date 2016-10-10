@@ -1,7 +1,7 @@
 Element.getView()
 =================
 
-Возвращает родительское `представление <../../View/>`__ элемента.
+Возвращает родительское `представление <../View/>`__ элемента.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-Родительское `представление <../../View/>`__ элемента.
+Родительское `представление <../View/>`__ элемента.
 
 Examples
 --------
@@ -30,6 +30,6 @@ Examples
 See Also
 --------
 
--  `getParent() <../Element.getParent.html>`__
--  `setParent() <../Element.setParent.html>`__
--  `View <../../View/>`__
+-  `getParent() <Element.getParent.html>`__
+-  `setParent() <Element.setParent.html>`__
+-  `View <../View/>`__

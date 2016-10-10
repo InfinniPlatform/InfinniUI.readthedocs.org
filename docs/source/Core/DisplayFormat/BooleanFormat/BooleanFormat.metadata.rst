@@ -1,7 +1,7 @@
 BooleanFormat.metadata
 ======================
 
-Метаданные типа `BooleanFormat <../>`__.
+Метаданные типа `BooleanFormat <./>`__.
 
 Properties
 ----------

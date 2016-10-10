@@ -38,4 +38,4 @@ Examples
 See Also
 --------
 
--  `setAutocomplete() <../ComboBox.setAutocomplete.html>`__
+-  `setAutocomplete() <ComboBox.setAutocomplete.html>`__

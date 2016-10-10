@@ -1,7 +1,7 @@
 ListEditorBase.metadata
 =======================
 
-Метаданные типа `ListEditorBase <../>`__.
+Метаданные типа `ListEditorBase <./>`__.
 
 Properties
 ----------
@@ -18,7 +18,7 @@ Properties
      - false
      - Разрешен ли выбор нескольких элементов коллекции
    * - ValueSelector
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Функция выборки из элемента коллекции значения для выбора
    * - ValueProperty
@@ -26,11 +26,11 @@ Properties
      - –
      - Свойство элемента коллекции со значением для выбора
    * - DisabledItemCondition
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Функция, определяющая запрет на выбор элемента
    * - OnSelectedItemChanged
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события о том, что элемент был выделен
 

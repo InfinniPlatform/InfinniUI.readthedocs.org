@@ -1,7 +1,7 @@
 Button.setContentTemplate
 =========================
 
-Устанавливает `функцию <../../../Core/Script/>`__ шаблонизации
+Устанавливает `функцию <../../Core/Script/>`__ шаблонизации
 содержимого кнопки.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../Script/>`__
+     - `Script <../Script/>`__
      - Функция шаблонизации содержимого кнопки
 
 
@@ -49,4 +49,4 @@ Examples
 See Also
 --------
 
--  `getContentTemplate <../Button.getContentTemplate.html>`__
+-  `getContentTemplate <Button.getContentTemplate.html>`__

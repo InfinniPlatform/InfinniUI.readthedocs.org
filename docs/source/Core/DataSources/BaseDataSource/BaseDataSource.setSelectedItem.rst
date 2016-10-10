@@ -13,7 +13,7 @@ Description
 элементе, благодаря чему имеется возможность определять элемент данных,
 с которым работает пользователь. Изменение выделенного элемента приводит
 к возникновению события
-`onSelectedItemChanged <../BaseDataSource.onSelectedItemChanged.html>`__.
+`onSelectedItemChanged <BaseDataSource.onSelectedItemChanged.html>`__.
 
 Syntax
 ------
@@ -33,9 +33,9 @@ Parameters
    * - item\*
      - Элемент источника данных
    * - success
-     - `Обработчик события <../../../Script.html>`__ о том, что выделенный элемент изменился. Параметр args данного обработчика содержит поле source, в котором хранится ссылка на `источник данных <...html>`__ 
+     - `Обработчик события <../../Script.html>`__ о том, что выделенный элемент изменился. Параметр args данного обработчика содержит поле source, в котором хранится ссылка на `источник данных <...html>`__ 
    * - error
-     - `Обработчик события <../../../Script/>`__ о том, что при изменении выделенного элемента произошла ошибка. Параметр args данного обработчика содержит поле error, хранящее сообщение об ошибке
+     - `Обработчик события <../../Script/>`__ о том, что при изменении выделенного элемента произошла ошибка. Параметр args данного обработчика содержит поле error, хранящее сообщение об ошибке
 
 
 \* Обязательный аргумент.
@@ -56,5 +56,5 @@ Examples
 See Also
 --------
 
--  `getSelectedItem() <../BaseDataSource.getSelectedItem.html>`__
--  `onSelectedItemChanged <../BaseDataSource.onSelectedItemChanged.html>`__
+-  `getSelectedItem() <BaseDataSource.getSelectedItem.html>`__
+-  `onSelectedItemChanged <BaseDataSource.onSelectedItemChanged.html>`__

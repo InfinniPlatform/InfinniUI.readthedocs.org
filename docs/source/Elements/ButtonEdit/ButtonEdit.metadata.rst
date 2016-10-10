@@ -1,7 +1,7 @@
 ButtonEdit.metadata
 ===================
 
-Метаданные типа `ButtonEdit <../>`__.
+Метаданные типа `ButtonEdit <./>`__.
 
 Properties
 ----------
@@ -26,11 +26,11 @@ Properties
      - true
      - Значение, определяющее наличие кнопки, очищающей указанное значение
    * - OnButtonClick
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события нажатия на кнопку
    * - Action
-     - `ActionMetadata <../../../Core/Actions/>`__
+     - `ActionMetadata <../../Core/Actions/>`__
      - –
      - Основное действие кнопки
 

@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `setProperty <../BaseAction.setProperty.html>`__
+-  `setProperty <BaseAction.setProperty.html>`__

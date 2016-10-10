@@ -25,4 +25,4 @@ Returns
 See Also
 --------
 
--  `setFocusOnControl() <../View.setFocusOnControl.html>`__
+-  `setFocusOnControl() <View.setFocusOnControl.html>`__

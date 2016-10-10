@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setColumnSpan() <../Cell.setColumnSpan.html>`__
+-  `setColumnSpan() <Cell.setColumnSpan.html>`__

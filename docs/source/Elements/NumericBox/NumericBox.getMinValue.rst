@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setMinValue() <../NumericBox.setMinValue.html>`__
+-  `setMinValue() <NumericBox.setMinValue.html>`__

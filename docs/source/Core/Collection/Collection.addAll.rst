@@ -6,11 +6,11 @@ Collection.addAll
 Description
 -----------
 
-Метод `addAll() <../Collection.addAll.html>`__ добавляет указанные элементы
+Метод `addAll() <Collection.addAll.html>`__ добавляет указанные элементы
 в конец коллекции. Успешное выполнение данного метода приводит к
-возникновению события `onAdd <../Collection.onAdd.html>`__. Вместе с этим
+возникновению события `onAdd <Collection.onAdd.html>`__. Вместе с этим
 событием также генерируется событие
-`onChange <../Collection.onChange.html>`__, которое информирует о наличии
+`onChange <Collection.onChange.html>`__, которое информирует о наличии
 любых изменений. Аргументы обеих событий в данном случае будут
 идентичны.
 
@@ -52,9 +52,9 @@ Examples
 See Also
 --------
 
--  `push() <../Collection.push.html>`__
--  `add() <../Collection.add.html>`__
--  `insert() <../Collection.insert.html>`__
--  `insertAll() <../Collection.insertAll.html>`__
--  `onAdd <../Collection.onAdd.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `push() <Collection.push.html>`__
+-  `add() <Collection.add.html>`__
+-  `insert() <Collection.insert.html>`__
+-  `insertAll() <Collection.insertAll.html>`__
+-  `onAdd <Collection.onAdd.html>`__
+-  `onChange <Collection.onChange.html>`__

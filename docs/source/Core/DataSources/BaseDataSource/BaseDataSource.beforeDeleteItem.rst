@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `deleteItem() <../BaseDataSource.deleteItem.html>`__
+-  `deleteItem() <BaseDataSource.deleteItem.html>`__

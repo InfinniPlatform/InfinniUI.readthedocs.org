@@ -1,7 +1,7 @@
 DataNavigation.onPageNumberChanged
 ==================================
 
-Устанавливает `обработчик события <../../../Core/Script/>`__ на событие
+Устанавливает `обработчик события <../../Core/Script/>`__ на событие
 'onPageNumberChanged'
 
 Description
@@ -26,8 +26,8 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Обработчик события <../../../Core/Script/>`__
-     - `Обработчик события <../../../Core/Script/>`__ о том, что номер страницы был изменен.
+     - `Обработчик события <../../Core/Script/>`__
+     - `Обработчик события <../../Core/Script/>`__ о том, что номер страницы был изменен.
 
 
 Returns
@@ -45,4 +45,4 @@ Examples
 See Also
 --------
 
--  `DataNavigation() <../DataNavigation/>`__
+-  `DataNavigation() <DataNavigation/>`__

@@ -1,7 +1,7 @@
 DataGrid.metadata
 =================
 
-Метаданные типа `DataGrid <../>`__.
+Метаданные типа `DataGrid <./>`__.
 
 Properties
 ----------
@@ -14,7 +14,7 @@ Properties
      - Default
      - Description
    * - Columns
-     - Array.<`DataGridColumn <../DataGridColumn/>`__>
+     - Array.<`DataGridColumn <DataGridColumn/>`__>
      - –
      - Список колонок таблицы.
    * - ShowSelectors
@@ -26,7 +26,7 @@ Properties
      - ``false``
      - Определяет виден ли элемент "Выбрать все" в шапке таблицы.
    * - OnCheckAllChanged
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Устанавливает обработчик изменения состоняие элемента "Выбрать все" в шапке таблицы.
    * - RowBackground
@@ -38,7 +38,7 @@ Properties
      - –
      - Цвет текста строки
    * - RowTextStyle
-     - `TextStyle <../../../Style/TextStyle/>`__(⇔)
+     - `TextStyle <../../Style/TextStyle/>`__(⇔)
      - –
      - Стиль текста строки
    * - RowStyle
@@ -46,17 +46,17 @@ Properties
      - –
      - Имя кастомного стиля, применяемого к строке
    * - onRowClick
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
-     - Устанавливает `обработчик события <../../Core/Script/>`__ на клик по элементам DataGrid.
+     - Устанавливает `обработчик события <../Core/Script/>`__ на клик по элементам DataGrid.
    * - onRowDoubleClick
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
-     - Устанавливает `обработчик события <../../Core/Script/>`__ на двойной клик по элементам DataGrid.
+     - Устанавливает `обработчик события <../Core/Script/>`__ на двойной клик по элементам DataGrid.
 
 
 (⇔) Свойство может быть задано, как
-`DataBinding <../../../Core/DataBinding/DataBinding.metadata.html>`__.
+`DataBinding <../../Core/DataBinding/DataBinding.metadata.html>`__.
 
 Examples
 --------

@@ -2,7 +2,7 @@ BaseAction.metadata
 ===================
 
 Метаданные, которые реализованы во `всех действиях
-InfinniUI <../...html>`__.
+InfinniUI <...html>`__.
 
 Properties
 ----------
@@ -14,7 +14,7 @@ Properties
      - Type
      - Description
    * - OnExecuted
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  Устанавливает обработчик завершения действия.
 
 

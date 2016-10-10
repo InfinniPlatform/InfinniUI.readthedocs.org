@@ -2,7 +2,7 @@ Button.getContent
 =================
 
 Возвращает содержимое кнопки, установленное методом
-`setContent <../Button.setContent.html>`__.
+`setContent <Button.setContent.html>`__.
 
 Syntax
 ------
@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `setContent <../Button.setContent.html>`__
+-  `setContent <Button.setContent.html>`__

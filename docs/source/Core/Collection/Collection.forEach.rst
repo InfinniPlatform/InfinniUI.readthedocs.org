@@ -48,6 +48,6 @@ Examples
 See Also
 --------
 
--  `filter() <../Collection.filter.html>`__
--  `take() <../Collection.take.html>`__
--  `toArray() <../Collection.toArray.html>`__
+-  `filter() <Collection.filter.html>`__
+-  `take() <Collection.take.html>`__
+-  `toArray() <Collection.toArray.html>`__

@@ -2,7 +2,7 @@ DataBinding.setConverter()
 ==========================
 
 Устанавливает `преобразователь данных между элементом и
-источником <../BindingConverter/>`__.
+источником <BindingConverter/>`__.
 
 Syntax
 ------
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `BindingConverter <../BindingConverter/>`__
+     - `BindingConverter <BindingConverter/>`__
      - Преобразователь данных между элементом и источником
 
 
@@ -47,5 +47,5 @@ Examples
 See Also
 --------
 
--  `getConverter() <../DataBinding.getConverter.html>`__
--  `BindingConverter <../BindingConverter/>`__
+-  `getConverter() <DataBinding.getConverter.html>`__
+-  `BindingConverter <BindingConverter/>`__

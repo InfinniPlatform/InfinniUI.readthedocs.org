@@ -1,7 +1,7 @@
 StackPanel.getOrientation()
 ===========================
 
-Возвращает `ориентацию стека элементов <../StackPanelOrientation/>`__.
+Возвращает `ориентацию стека элементов <StackPanelOrientation/>`__.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Ориентация стека элементов <../StackPanelOrientation/>`__.
+`Ориентация стека элементов <StackPanelOrientation/>`__.
 
 Examples
 --------
@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `setOrientation() <../StackPanel.setOrientation.html>`__
--  `StackPanelOrientation <../StackPanelOrientation/>`__
+-  `setOrientation() <StackPanel.setOrientation.html>`__
+-  `StackPanelOrientation <StackPanelOrientation/>`__

@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getTag() <../Element.getTag.html>`__
+-  `getTag() <Element.getTag.html>`__

@@ -1,7 +1,7 @@
 UpdateAction.metadata
 =====================
 
-Метаданные типа `UpdateAction <../>`__.
+Метаданные типа `UpdateAction <./>`__.
 
 Properties
 ----------
@@ -16,10 +16,10 @@ Properties
      - ``String``
      - Название источника данных
    * - OnSuccess
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  Устанавливает обработчик успешного завершения действия
    * - OnError
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  Устанавливает обработчик завершения действия с ошибкой
 
 
@@ -43,4 +43,4 @@ Examples
 See Also
 --------
 
--  `DataSource <../../DataSources/>`__
+-  `DataSource <../DataSources/>`__

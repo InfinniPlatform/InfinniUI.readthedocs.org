@@ -9,7 +9,7 @@ Description
 Вызов метода ``setItems()`` устанавливает указанный массив в качестве
 поставщика данных. Данный метод не обновляет список элементов источника
 данных. Для обновления списка элементов необходимо вызвать метод
-`updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__.
+`updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__.
 
 Syntax
 ------
@@ -51,4 +51,4 @@ Examples
 See Also
 --------
 
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__

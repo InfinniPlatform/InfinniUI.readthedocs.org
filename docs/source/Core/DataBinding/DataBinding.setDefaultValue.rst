@@ -3,7 +3,7 @@ DataBinding.setDefaultValue()
 
 Устанавливает значение по умолчанию для элемента. Элемент принимает это
 значение, если направление обмена данными в привязке установлено в
-`twoWay <../BindingMode/>`__ или `toElement <../BindingMode/>`__, до тех
+`twoWay <BindingMode/>`__ или `toElement <BindingMode/>`__, до тех
 пор, пока источник данных не загрузится и не установит значение для
 элемента.
 
@@ -41,4 +41,4 @@ Examples
 See Also
 --------
 
--  `getDefaultValue() <../DataBinding.getDefaultValue.html>`__
+-  `getDefaultValue() <DataBinding.getDefaultValue.html>`__

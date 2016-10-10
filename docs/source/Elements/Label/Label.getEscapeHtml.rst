@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setEscapeHtml() <../Label.setEscapeHtml.html>`__
+-  `setEscapeHtml() <Label.setEscapeHtml.html>`__

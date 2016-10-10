@@ -46,6 +46,6 @@ Examples
 See Also
 --------
 
--  `forEach() <../Collection.forEach.html>`__
--  `take() <../Collection.take.html>`__
--  `toArray() <../Collection.toArray.html>`__
+-  `forEach() <Collection.forEach.html>`__
+-  `take() <Collection.take.html>`__
+-  `toArray() <Collection.toArray.html>`__

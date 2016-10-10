@@ -1,7 +1,7 @@
 Container.setGroupValueSelector()
 =================================
 
-Устанавливает `функцию <../../../Script/>`__, определяющую условие
+Устанавливает `функцию <../../Script/>`__, определяющую условие
 группировки дочерних элементов контейнера.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция, определяющая условие группировки дочерних элементов контейнера
 
 
@@ -50,4 +50,4 @@ Examples
 See Also
 --------
 
--  `getGroupValueSelector() <../Container.getGroupValueSelector.html>`__
+-  `getGroupValueSelector() <Container.getGroupValueSelector.html>`__

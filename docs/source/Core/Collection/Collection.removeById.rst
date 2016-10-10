@@ -6,11 +6,11 @@ Collection.removeById
 Description
 -----------
 
-Метод `removeById() <../Collection.removeById/>`__ удаляет элемент с
+Метод `removeById() <Collection.removeById/>`__ удаляет элемент с
 указанным идентификатором из коллекции. Успешное выполнение данного
 метода приводит к возникновению события
-`onRemove <../Collection.onRemove/>`__. Вместе с этим событием также
-генерируется событие `onChange <../Collection.onChange/>`__, которое
+`onRemove <Collection.onRemove/>`__. Вместе с этим событием также
+генерируется событие `onChange <Collection.onChange/>`__, которое
 информирует о наличии любых изменений. Аргументы обеих событий в данном
 случае будут идентичны.
 
@@ -50,13 +50,13 @@ Examples
 See Also
 --------
 
--  `pop() <../Collection.pop/>`__
--  `remove() <../Collection.remove/>`__
--  `removeAt() <../Collection.removeAt/>`__
--  `removeAll() <../Collection.removeAll/>`__
--  `removeRange() <../Collection.removeRange/>`__
--  `removeEvery() <../Collection.removeEvery/>`__
--  `clear() <../Collection.clear/>`__
--  `idProperty <../Collection.idProperty/>`__
--  `onRemove <../Collection.onRemove/>`__
--  `onChange <../Collection.onChange/>`__
+-  `pop() <Collection.pop/>`__
+-  `remove() <Collection.remove/>`__
+-  `removeAt() <Collection.removeAt/>`__
+-  `removeAll() <Collection.removeAll/>`__
+-  `removeRange() <Collection.removeRange/>`__
+-  `removeEvery() <Collection.removeEvery/>`__
+-  `clear() <Collection.clear/>`__
+-  `idProperty <Collection.idProperty/>`__
+-  `onRemove <Collection.onRemove/>`__
+-  `onChange <Collection.onChange/>`__

@@ -1,7 +1,7 @@
 TabPanel.getHeaderLocation()
 ============================
 
-Возвращает `расположение закладок <../TabHeaderLocation/>`__.
+Возвращает `расположение закладок <TabHeaderLocation/>`__.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Расположение закладок <../TabHeaderLocation/>`__.
+`Расположение закладок <TabHeaderLocation/>`__.
 
 Examples
 --------
@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `setHeaderLocation() <../TabPanel.setHeaderLocation.html>`__
--  `TabHeaderLocation <../TabHeaderLocation/>`__
+-  `setHeaderLocation() <TabPanel.setHeaderLocation.html>`__
+-  `TabHeaderLocation <TabHeaderLocation/>`__

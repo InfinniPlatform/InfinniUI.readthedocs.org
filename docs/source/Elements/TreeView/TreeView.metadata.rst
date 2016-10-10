@@ -1,7 +1,7 @@
 TreeView.metadata
 =================
 
-Метаданные типа `TreeView <../>`__.
+Метаданные типа `TreeView <./>`__.
 
 Properties
 ----------
@@ -13,13 +13,13 @@ Properties
      - Type
      - Description
    * - KeySelector
-     - `Script <../../../Core/Script>`__
+     - `Script <../../Core/Script>`__
      - Функция выборки из элемента коллекции идентификатора.
    * - KeyProperty
      - ``String``
      - Свойство элемента коллекции с идентификатором.
    * - ParentSelector
-     - `Script <../../../Core/Script>`__
+     - `Script <../../Core/Script>`__
      - Функция выборки из элемента коллекции идентификатора родителя.
    * - ParentProperty
      - ``String``

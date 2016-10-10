@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getPageSize() <../DataNavigation.getPageSize.html>`__
+-  `getPageSize() <DataNavigation.getPageSize.html>`__

@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getHeader() <../DataGridColumn.getHeader.html>`__
+-  `getHeader() <DataGridColumn.getHeader.html>`__

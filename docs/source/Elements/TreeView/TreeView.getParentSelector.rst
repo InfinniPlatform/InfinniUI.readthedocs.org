@@ -1,7 +1,7 @@
 TreeView.getParentSelector
 ==========================
 
-Возвращает `функцию <../../../Core/Script/>`__ выборки из элемента
+Возвращает `функцию <../../Core/Script/>`__ выборки из элемента
 коллекции идентификатора родителя.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Core/Script/>`__ выборки из элемента коллекции
+`Функция <../../Core/Script/>`__ выборки из элемента коллекции
 идентификатора родителя.
 
 Examples
@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setParentSelector <../TreeView.setParentSelector.html>`__
+-  `setParentSelector <TreeView.setParentSelector.html>`__

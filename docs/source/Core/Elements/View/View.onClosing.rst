@@ -1,19 +1,19 @@
 View.onClosing
 ==============
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 представление закрывается.
 
 Description
 -----------
 
-Вызов метода `close() <../View.close.html>`__ приводит к возникновению
+Вызов метода `close() <View.close.html>`__ приводит к возникновению
 события ``onClosing``. Представление будет закрыто, если нет ни одного
 обработчика, подписанного на событие ``onClosing``, либо если все
 обработчики этого события вернули значение, отличное от ``false``.
 Закрытие представления приводит к возникновению события
-`onClosed <../View.onClosed.html>`__. В обработчике события
-`onClosed <../View.onClosed.html>`__ можно зарегистрировать факт закрытия
+`onClosed <View.onClosed.html>`__. В обработчике события
+`onClosed <View.onClosed.html>`__ можно зарегистрировать факт закрытия
 представления.
 
 Syntax
@@ -33,7 +33,7 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что представление закрывается
 
 
@@ -49,5 +49,5 @@ Examples
 See Also
 --------
 
--  `close() <../View.close.html>`__
--  `onClosed <../View.onClosed.html>`__
+-  `close() <View.close.html>`__
+-  `onClosed <View.onClosed.html>`__

@@ -1,7 +1,7 @@
 ViewContext.global
 ==================
 
-Возвращает `глобальный контекст приложения <../../GlobalContext/>`__.
+Возвращает `глобальный контекст приложения <../GlobalContext/>`__.
 
 Syntax
 ------
@@ -20,4 +20,4 @@ Examples
 See Also
 --------
 
--  `GlobalContext <../../GlobalContext/>`__
+-  `GlobalContext <../GlobalContext/>`__

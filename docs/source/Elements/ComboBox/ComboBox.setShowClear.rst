@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getShowClear() <../ComboBox.getShowClear.html>`__
+-  `getShowClear() <ComboBox.getShowClear.html>`__

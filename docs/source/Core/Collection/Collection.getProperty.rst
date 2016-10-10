@@ -53,4 +53,4 @@ Examples
 See Also
 --------
 
--  `setProperty <../Collection.setProperty.html>`__
+-  `setProperty <Collection.setProperty.html>`__

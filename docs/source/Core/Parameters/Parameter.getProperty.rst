@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `setProperty() <../Parameter.setProperty.html>`__
+-  `setProperty() <Parameter.setProperty.html>`__

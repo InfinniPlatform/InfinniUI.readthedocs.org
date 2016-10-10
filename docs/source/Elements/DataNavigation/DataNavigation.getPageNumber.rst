@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setPageNumber() <../DataNavigation.setPageNumber.html>`__
+-  `setPageNumber() <DataNavigation.setPageNumber.html>`__

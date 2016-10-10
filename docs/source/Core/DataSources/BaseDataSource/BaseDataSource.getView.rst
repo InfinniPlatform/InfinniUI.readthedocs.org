@@ -1,7 +1,7 @@
 BaseDataSource.getView()
 ========================
 
-Возвращает родительское `представление <../../../Elements/View/>`__.
+Возвращает родительское `представление <../../Elements/View/>`__.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-Родительское `представление <../../../Elements/View/>`__ источника
+Родительское `представление <../../Elements/View/>`__ источника
 данных.
 
 Examples
@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `View <../../../Elements/View/>`__
+-  `View <../../Elements/View/>`__

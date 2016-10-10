@@ -58,4 +58,4 @@ Examples
 See Also
 --------
 
--  `getMaxValue() <../DateTimePicker.getMaxValue.html>`__
+-  `getMaxValue() <DateTimePicker.getMaxValue.html>`__

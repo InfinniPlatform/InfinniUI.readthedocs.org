@@ -18,9 +18,9 @@ Description
 пользователю в момент ввода данных.
 
 Текст метки можно установить с помощью метода
-`setLabelText() <../TextEditorBase.setLabelText.html>`__, а способ
+`setLabelText() <TextEditorBase.setLabelText.html>`__, а способ
 отображения - с помощью метода
-`setLabelFloating() <../TextEditorBase.setLabelFloating.html>`__.
+`setLabelFloating() <TextEditorBase.setLabelFloating.html>`__.
 
 Syntax
 ------
@@ -46,4 +46,4 @@ Examples
 See Also
 --------
 
--  `setLabelFloating() <../TextEditorBase.setLabelFloating.html>`__
+-  `setLabelFloating() <TextEditorBase.setLabelFloating.html>`__

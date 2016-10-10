@@ -1,7 +1,7 @@
 View.setDialogResult()
 ======================
 
-Устанавливает `результат работы представления <../DialogResult/>`__.
+Устанавливает `результат работы представления <DialogResult/>`__.
 
 Syntax
 ------
@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `DialogResult <../DialogResult/>`__
+     - `DialogResult <DialogResult/>`__
      - Результат работы представления
 
 
@@ -39,5 +39,5 @@ Examples
 See Also
 --------
 
--  `getDialogResult() <../View.getDialogResult.html>`__
--  `DialogResult <../DialogResult/>`__
+-  `getDialogResult() <View.getDialogResult.html>`__
+-  `DialogResult <DialogResult/>`__

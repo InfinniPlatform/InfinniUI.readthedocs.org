@@ -1,7 +1,7 @@
 RestDataSource.metadata
 =======================
 
-Метаданные `RestDataSource <../>`__.
+Метаданные `RestDataSource <./>`__.
 
 Properties
 ----------
@@ -14,13 +14,13 @@ Properties
      - Description
    * - GettingParams
      - ``Object``
-     - `Параметры запроса <../#urlparams-format>`__ на получение данных
+     - `Параметры запроса <#urlparams-format>`__ на получение данных
    * - SettingParams
      - ``Object``
-     - `Параметры запроса <../#urlparams-format>`__ на сохранение данных
+     - `Параметры запроса <#urlparams-format>`__ на сохранение данных
    * - DeletingParams
      - ``Object``
-     - `Параметры запроса <../#urlparams-format>`__ на удаление
+     - `Параметры запроса <#urlparams-format>`__ на удаление
 
 
 Examples

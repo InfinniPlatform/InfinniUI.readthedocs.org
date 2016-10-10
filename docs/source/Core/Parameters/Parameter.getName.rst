@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setName() <../Parameter.setName.html>`__
+-  `setName() <Parameter.setName.html>`__

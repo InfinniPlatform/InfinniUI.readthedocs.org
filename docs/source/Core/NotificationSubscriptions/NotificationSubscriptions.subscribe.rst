@@ -11,7 +11,7 @@ Description
 необязательный параметр: контекст. При появлении сообщения с заданным
 ключем NotificationSubscriptions вызовет данный обработчик сообщения,
 передав ему два параметра: ``context`` и ``args``. В параметре
-``context`` передается `контекст представления <../../ViewContext/>`__,
+``context`` передается `контекст представления <../Context/>`__,
 в рамках которого была осуществлена подписка; в параметре
 ``args.message`` - полученное сообщение.
 
@@ -39,11 +39,11 @@ Parameters
      - ``String``
      - Ключ подписки.
    * - callback
-     - `Обработчик сообщения <../../Script>`__
-     - `Обработчик сообщения <../../Script>`__.
+     - `Обработчик сообщения <../Script>`__
+     - `Обработчик сообщения <../Script>`__.
    * - context
-     - `контекст представления <../../ViewContext/>`__
-     - `Контекст представления <../../ViewContext/>`__.
+     - `контекст представления <../Context/>`__
+     - `Контекст представления <../Context/>`__.
 
 
 Examples
@@ -56,6 +56,6 @@ Examples
 See Also
 --------
 
--  `unsubscribe() <../NotificationSubscriptions.unsubscribe.html>`__
--  `startConnection() <../NotificationSubscriptions.startConnection.html>`__
--  `stopConnection() <../NotificationSubscriptions.stopConnection.html>`__
+-  `unsubscribe() <NotificationSubscriptions.unsubscribe.html>`__
+-  `startConnection() <NotificationSubscriptions.startConnection.html>`__
+-  `stopConnection() <NotificationSubscriptions.stopConnection.html>`__

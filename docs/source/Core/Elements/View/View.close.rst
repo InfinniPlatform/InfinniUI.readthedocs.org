@@ -7,12 +7,12 @@ Description
 -----------
 
 Вызов метода ``close`` приводит к возникновению события
-`onClosing <../View.onClosing.html>`__. Представление будет закрыто, если
+`onClosing <View.onClosing.html>`__. Представление будет закрыто, если
 нет ни одного обработчика, подписанного на событие
-`onClosing <../View.onClosing.html>`__, либо если все обработчики этого
+`onClosing <View.onClosing.html>`__, либо если все обработчики этого
 события вернули значение, отличное от ``false``. Закрытие представления
-приводит к возникновению события `onClosed <../View.onClosed.html>`__. В
-обработчике события `onClosed <../View.onClosed.html>`__ можно
+приводит к возникновению события `onClosed <View.onClosed.html>`__. В
+обработчике события `onClosed <View.onClosed.html>`__ можно
 зарегистрировать факт закрытия представления.
 
 Syntax
@@ -32,10 +32,10 @@ Parameters
      - Type
      - Description
    * - success
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что представление закрыто
    * - error
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что при закрытии произошла ошибка
 
 
@@ -54,6 +54,6 @@ Examples
 See Also
 --------
 
--  `onClosing <../View.onClosing.html>`__
--  `onClosed <../View.onClosed.html>`__
--  `open() <../View.open.html>`__
+-  `onClosing <View.onClosing.html>`__
+-  `onClosed <View.onClosed.html>`__
+-  `open() <View.open.html>`__

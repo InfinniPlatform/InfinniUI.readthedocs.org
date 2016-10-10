@@ -33,4 +33,4 @@ Examples
 See Also
 --------
 
--  `setText() <../Element.setText.html>`__
+-  `setText() <Element.setText.html>`__

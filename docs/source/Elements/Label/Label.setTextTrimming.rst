@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getTextTrimming() <../Label.getTextTrimming.html>`__
+-  `getTextTrimming() <Label.getTextTrimming.html>`__

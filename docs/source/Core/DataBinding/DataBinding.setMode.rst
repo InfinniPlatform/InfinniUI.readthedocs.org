@@ -2,7 +2,7 @@ DataBinding.setMode()
 =====================
 
 Устанавливает `направление обмена данными в
-привязке <../BindingMode/>`__.
+привязке <BindingMode/>`__.
 
 Syntax
 ------
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `BindingMode <../BindingMode/>`__
+     - `BindingMode <BindingMode/>`__
      - Направление обмена данными в привязке
 
 
@@ -40,5 +40,5 @@ Examples
 See Also
 --------
 
--  `getMode() <../DataBinding.getMode.html>`__
--  `BindingMode <../BindingMode/>`__
+-  `getMode() <DataBinding.getMode.html>`__
+-  `BindingMode <BindingMode/>`__

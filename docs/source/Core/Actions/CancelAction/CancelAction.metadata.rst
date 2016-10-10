@@ -1,7 +1,7 @@
 CancelAction.metadata
 =====================
 
-Метаданные типа `CancelAction <../>`__.
+Метаданные типа `CancelAction <./>`__.
 
 Properties
 ----------

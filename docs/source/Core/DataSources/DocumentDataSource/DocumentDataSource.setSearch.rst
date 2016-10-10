@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getSearch() <../DocumentDataSource.getSearch.html>`__
+-  `getSearch() <DocumentDataSource.getSearch.html>`__

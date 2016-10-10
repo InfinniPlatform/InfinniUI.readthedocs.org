@@ -6,11 +6,11 @@ Collection.push
 Description
 -----------
 
-Метод `push() <../Collection.push.html>`__ добавляет указанный элемент в
+Метод `push() <Collection.push.html>`__ добавляет указанный элемент в
 конец коллекции. Успешное выполнение данного метода приводит к
-возникновению события `onAdd <../Collection.onAdd.html>`__. Вместе с этим
+возникновению события `onAdd <Collection.onAdd.html>`__. Вместе с этим
 событием также генерируется событие
-`onChange <../Collection.onChange.html>`__, которое информирует о наличии
+`onChange <Collection.onChange.html>`__, которое информирует о наличии
 любых изменений. Аргументы обеих событий в данном случае будут
 идентичны.
 
@@ -53,9 +53,9 @@ Examples
 See Also
 --------
 
--  `add() <../Collection.add.html>`__
--  `addAll() <../Collection.addAll.html>`__
--  `insert() <../Collection.insert.html>`__
--  `insertAll() <../Collection.insertAll.html>`__
--  `onAdd <../Collection.onAdd.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `add() <Collection.add.html>`__
+-  `addAll() <Collection.addAll.html>`__
+-  `insert() <Collection.insert.html>`__
+-  `insertAll() <Collection.insertAll.html>`__
+-  `onAdd <Collection.onAdd.html>`__
+-  `onChange <Collection.onChange.html>`__

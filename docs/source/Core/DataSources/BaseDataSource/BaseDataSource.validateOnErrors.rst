@@ -7,10 +7,10 @@ Description
 -----------
 
 Вызов метода
-`validateOnErrors() <../BaseDataSource.validateOnErrors.html>`__ начинает
+`validateOnErrors() <BaseDataSource.validateOnErrors.html>`__ начинает
 проверку указанного элемента или всех элементов источника данных на
 наличие ошибок. Завершение проверки приводит к возникновению события
-`onErrorValidator <../BaseDataSource.onErrorValidator.html>`__.
+`onErrorValidator <BaseDataSource.onErrorValidator.html>`__.
 
 Syntax
 ------
@@ -32,14 +32,14 @@ Parameters
      - –
      - Элемент источника данных. Если указан, на наличие ошибок проверяется только указанный элемент; если не указан на наличие ошибок проверяются все элементы
    * - callback
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что проверка на ошибки завершена. Параметр args данного обработчика в поле value содержит результаты проверки в `предопределенном формате <../ValidationResult/>`__
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что проверка на ошибки завершена. Параметр args данного обработчика в поле value содержит результаты проверки в `предопределенном формате <ValidationResult/>`__
 
 
 Returns
 ~~~~~~~
 
-`Результат <../ValidationResult/>`__ проверки на ошибки
+`Результат <ValidationResult/>`__ проверки на ошибки
 
 Examples
 --------
@@ -56,9 +56,9 @@ Examples
 See Also
 --------
 
--  `validateOnWarnings() <../BaseDataSource.validateOnWarnings.html>`__
--  `onErrorValidator <../BaseDataSource.onErrorValidator.html>`__
--  `getErrorValidator() <../BaseDataSource.getErrorValidator.html>`__
--  `setErrorValidator() <../BaseDataSource.setErrorValidator.html>`__
--  `saveItem() <../BaseDataSource.saveItem.html>`__
--  `ValidationResult <../ValidationResult/>`__
+-  `validateOnWarnings() <BaseDataSource.validateOnWarnings.html>`__
+-  `onErrorValidator <BaseDataSource.onErrorValidator.html>`__
+-  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
+-  `setErrorValidator() <BaseDataSource.setErrorValidator.html>`__
+-  `saveItem() <BaseDataSource.saveItem.html>`__
+-  `ValidationResult <ValidationResult/>`__

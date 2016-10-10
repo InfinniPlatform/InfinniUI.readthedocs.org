@@ -31,8 +31,8 @@ Examples
 See Also
 --------
 
--  `setSortable() <../DataGridColumn.setSortable.html>`__
--  `getSortDirection() <../DataGridColumn.getSortDirection.html>`__
--  `setSortDirection() <../DataGridColumn.setSortDirection.html>`__
--  `isSortable() <../DataGridColumn.isSortable.html>`__
--  `onSort() <../DataGridColumn.onSort.html>`__
+-  `setSortable() <DataGridColumn.setSortable.html>`__
+-  `getSortDirection() <DataGridColumn.getSortDirection.html>`__
+-  `setSortDirection() <DataGridColumn.setSortDirection.html>`__
+-  `isSortable() <DataGridColumn.isSortable.html>`__
+-  `onSort() <DataGridColumn.onSort.html>`__

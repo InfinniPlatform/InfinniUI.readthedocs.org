@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getProperty <../BaseAction.getProperty.html>`__
+-  `getProperty <BaseAction.getProperty.html>`__

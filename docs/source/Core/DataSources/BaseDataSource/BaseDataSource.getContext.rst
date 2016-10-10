@@ -1,7 +1,7 @@
 BaseDataSource.getContext()
 ===========================
 
-Возвращает `контекст родительского представления <../../../Context/>`__.
+Возвращает `контекст родительского представления <../../Context/>`__.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Контекст родительского представления <../../../Context/>`__.
+`Контекст родительского представления <../../Context/>`__.
 
 Examples
 --------
@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `ViewContext <../../../Context/>`__
--  `getView <../BaseDataSource.getView.html>`__
+-  `ViewContext <../../Context/>`__
+-  `getView <BaseDataSource.getView.html>`__

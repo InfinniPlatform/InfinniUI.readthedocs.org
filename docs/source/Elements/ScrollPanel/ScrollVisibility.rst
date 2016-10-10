@@ -1,7 +1,7 @@
 ScrollVisibility
 ================
 
-Видимость полосы прокрутки в `ScrollPanel <../>`__.
+Видимость полосы прокрутки в `ScrollPanel <./>`__.
 
 Syntax
 ------
@@ -33,7 +33,7 @@ Members
 See Also
 --------
 
--  `getHorizontalScroll() <../ScrollPanel.getHorizontalScroll.html>`__
--  `setHorizontalScroll() <../ScrollPanel.setHorizontalScroll.html>`__
--  `getVerticalScroll() <../ScrollPanel.getVerticalScroll.html>`__
--  `setVerticalScroll() <../ScrollPanel.setVerticalScroll.html>`__
+-  `getHorizontalScroll() <ScrollPanel.getHorizontalScroll.html>`__
+-  `setHorizontalScroll() <ScrollPanel.setHorizontalScroll.html>`__
+-  `getVerticalScroll() <ScrollPanel.getVerticalScroll.html>`__
+-  `setVerticalScroll() <ScrollPanel.setVerticalScroll.html>`__

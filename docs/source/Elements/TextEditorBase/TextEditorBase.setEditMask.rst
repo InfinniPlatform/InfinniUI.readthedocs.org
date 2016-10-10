@@ -35,4 +35,4 @@ Examples
 See Also
 --------
 
--  `getEditMask() <../TextEditorBase.getEditMask.html>`__
+-  `getEditMask() <TextEditorBase.getEditMask.html>`__

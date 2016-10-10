@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setStartValue() <../NumericBox.setStartValue.html>`__
+-  `setStartValue() <NumericBox.setStartValue.html>`__

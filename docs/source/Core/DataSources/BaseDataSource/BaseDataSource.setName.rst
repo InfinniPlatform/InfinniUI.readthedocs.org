@@ -37,5 +37,5 @@ Examples
 See Also
 --------
 
--  `getName() <../BaseDataSource.getName.html>`__
--  `name <../BaseDataSource.name.html>`__
+-  `getName() <BaseDataSource.getName.html>`__
+-  `name <BaseDataSource.name.html>`__

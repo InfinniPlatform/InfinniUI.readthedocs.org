@@ -26,5 +26,5 @@ Examples
 See Also
 --------
 
--  `getName() <../BaseDataSource.getName.html>`__
--  `setName() <../BaseDataSource.setName.html>`__
+-  `getName() <BaseDataSource.getName.html>`__
+-  `setName() <BaseDataSource.setName.html>`__

@@ -55,4 +55,4 @@ Examples
 See Also
 --------
 
--  `getGettingUrlParams <../RestDataSource.getGettingUrlParams.html>`__
+-  `getGettingUrlParams <RestDataSource.getGettingUrlParams.html>`__

@@ -47,9 +47,9 @@ Examples
 See Also
 --------
 
--  `getByIndex() <../Collection.getByIndex.html>`__
--  `find() <../Collection.find.html>`__
--  `indexOf() <../Collection.indexOf.html>`__
--  `lastIndexOf() <../Collection.lastIndexOf.html>`__
--  `findIndex() <../Collection.findIndex.html>`__
--  `idProperty <../Collection.idProperty.html>`__
+-  `getByIndex() <Collection.getByIndex.html>`__
+-  `find() <Collection.find.html>`__
+-  `indexOf() <Collection.indexOf.html>`__
+-  `lastIndexOf() <Collection.lastIndexOf.html>`__
+-  `findIndex() <Collection.findIndex.html>`__
+-  `idProperty <Collection.idProperty.html>`__

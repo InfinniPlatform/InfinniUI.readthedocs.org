@@ -6,13 +6,13 @@ BaseDataSource.saveItem()
 Description
 -----------
 
-Вызов метода `saveItem() <../BaseDataSource.saveItem.html>`__ производит
+Вызов метода `saveItem() <BaseDataSource.saveItem.html>`__ производит
 сохранение всех изменений указанного элемента в соответствующем
 источнику данных хранилище. Сохранение производится только в том случае,
 если указанный элемент `не содержит
-ошибок <../BaseDataSource.validateOnErrors.html>`__. Успешное сохранение
+ошибок <BaseDataSource.validateOnErrors.html>`__. Успешное сохранение
 элемента приводит к возникновению события
-`onItemSaved <../BaseDataSource.onItemSaved.html>`__.
+`onItemSaved <BaseDataSource.onItemSaved.html>`__.
 
 Syntax
 ------
@@ -32,9 +32,9 @@ Parameters
    * - item\*
      - Элемент источника данных
    * - success
-     - `Обработчик события <../../../Script.html>`__ о том, что элемент сохранен. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <...html>`__, value - сохраненный элемент, result - информация о сохранении
+     - `Обработчик события <../../Script.html>`__ о том, что элемент сохранен. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <...html>`__, value - сохраненный элемент, result - информация о сохранении
    * - error
-     - `Обработчик события <../../../Script/>`__ о том, что при сохранении элемента произошла ошибка. Параметр args данного обработчика содержит поле value, хранящее сообщение об ошибке
+     - `Обработчик события <../../Script/>`__ о том, что при сохранении элемента произошла ошибка. Параметр args данного обработчика содержит поле value, хранящее сообщение об ошибке
 
 
 \* Обязательный аргумент.
@@ -55,7 +55,7 @@ Examples
 See Also
 --------
 
--  `onItemSaved <../BaseDataSource.onItemSaved.html>`__
--  `createItem() <../BaseDataSource.createItem.html>`__
--  `deleteItem() <../BaseDataSource.deleteItem.html>`__
--  `validateOnErrors() <../BaseDataSource.validateOnErrors.html>`__
+-  `onItemSaved <BaseDataSource.onItemSaved.html>`__
+-  `createItem() <BaseDataSource.createItem.html>`__
+-  `deleteItem() <BaseDataSource.deleteItem.html>`__
+-  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__

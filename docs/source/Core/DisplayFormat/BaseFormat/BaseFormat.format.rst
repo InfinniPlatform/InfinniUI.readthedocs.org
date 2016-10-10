@@ -41,4 +41,4 @@ Examples
 See Also
 --------
 
--  `format() <../BaseFormat.format.html>`__
+-  `format() <BaseFormat.format.html>`__

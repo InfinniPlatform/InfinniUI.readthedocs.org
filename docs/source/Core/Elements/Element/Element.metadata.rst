@@ -1,7 +1,7 @@
 Element.metadata
 ================
 
-Метаданные описывающие настройки `Element <../>`__.
+Метаданные описывающие настройки `Element <./>`__.
 
 Properties
 ----------
@@ -34,11 +34,11 @@ Properties
      -  true 
      - Значение, определяющее видимость элемента.
    * - HorizontalAlignment
-     - `HorizontalAlignment <../ElementHorizontalAlignment>`__(⇔)
+     - `HorizontalAlignment <ElementHorizontalAlignment>`__(⇔)
    * - 'Stretch' 
      - Горизонтальное выравнивание элемента.
    * - TextHorizontalAlignment
-     - `TextHorizontalAlignment <../TextHorizontalAlignment>`__(⇔)
+     - `TextHorizontalAlignment <TextHorizontalAlignment>`__(⇔)
    * - 'Left' 
      - Горизонтальное выравнивание внутри элемента.
    * - Style
@@ -46,7 +46,7 @@ Properties
      -  '' 
      - Имя кастомного стиля (на деле это одноименный класс, стили которого можно задать самому в подключаемых на страницу стилях)
    * - TextStyle
-     - `TextStyle <../../../Style/TextStyle/>`__(⇔)
+     - `TextStyle <../../Style/TextStyle/>`__(⇔)
      -  '' 
      - Стиль текста элемента
    * - Foreground
@@ -66,65 +66,65 @@ Properties
      -  null 
      - Произвольное значение, которое можно привязать к элементу.
    * - OnLoaded
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик готовности элемента.
    * - onGotFocus
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик получения фокуса элементом.
    * - OnLostFocus
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик потери фокуса у элемента.
    * - OnClick
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик клика мышью по элементу.
    * - OnDoubleClick
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик двойного клика мышью по элементу.
    * - OnMouseDown
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик нажатия кнопки мыши над элементом (обычный клик срабатывает после отпускания кнопки мыши).
    * - OnMouseUp
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик поднятия кнопки мыши над элементом (обычный клик срабатывает позже).
    * - OnMouseWheel
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик прокрутки скролла над элементом.
    * - OnMouseEnter
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик появления курсора над элементом.
    * - onMouseLeave
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик выхода курсора из области элемента.
    * - OnMouseMove
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик движения курсора в области элемента.
    * - OnKeyDown
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик нажатия клавиши клавиатуры, в момент когда фокус находится на текущем элементе.
    * - OnKeyUp
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик поднятия клавиши клавиатуры, в момент когда фокус находится на текущем элементе.
    * - OnPropertyChanged
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      -  null 
      - Устанавливает обработчик изменения одного из свойств элемента (value, visible и др.).
 
 
 (⇔) Свойство может быть задано, как
-`DataBinding <../../../DataBinding/DataBinding.metadata.html>`__.
+`DataBinding <../../DataBinding/DataBinding.metadata.html>`__.
 
 Exampes
 -------

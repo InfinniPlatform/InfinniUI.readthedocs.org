@@ -45,4 +45,4 @@ Examples
 See Also
 --------
 
--  `getAutocomplete() <../ComboBox.getAutocomplete.html>`__
+-  `getAutocomplete() <ComboBox.getAutocomplete.html>`__

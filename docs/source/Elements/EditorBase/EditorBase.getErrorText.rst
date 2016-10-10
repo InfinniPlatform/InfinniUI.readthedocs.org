@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setErrorText() <../EditorBase.setErrorText.html>`__
+-  `setErrorText() <EditorBase.setErrorText.html>`__

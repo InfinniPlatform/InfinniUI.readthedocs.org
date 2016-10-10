@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getVisible() <../Element.getVisible.html>`__
+-  `getVisible() <Element.getVisible.html>`__

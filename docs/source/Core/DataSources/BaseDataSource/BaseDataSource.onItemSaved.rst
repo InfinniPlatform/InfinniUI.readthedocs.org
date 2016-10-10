@@ -1,16 +1,16 @@
 BaseDataSource.onItemSaved
 ==========================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 элемент сохранен.
 
 Description
 -----------
 
-Вызов метода `saveItem() <../BaseDataSource.saveItem.html>`__ производит
+Вызов метода `saveItem() <BaseDataSource.saveItem.html>`__ производит
 сохранение всех изменений указанного элемента в соответствующем
 источнику данных хранилище. Успешное сохранение элемента приводит к
-возникновению события `onItemSaved <../BaseDataSource.onItemSaved.html>`__.
+возникновению события `onItemSaved <BaseDataSource.onItemSaved.html>`__.
 
 Syntax
 ------
@@ -29,8 +29,8 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что элемент сохранен. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <../>`__, value - сохраненный элемент, result - информация о сохранении
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что элемент сохранен. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <./>`__, value - сохраненный элемент, result - информация о сохранении
 
 
 Examples
@@ -45,5 +45,5 @@ Examples
 See Also
 --------
 
--  `saveItem() <../BaseDataSource.saveItem.html>`__
--  `isModified() <../BaseDataSource.isModified.html>`__
+-  `saveItem() <BaseDataSource.saveItem.html>`__
+-  `isModified() <BaseDataSource.isModified.html>`__

@@ -39,5 +39,5 @@ Examples
 See Also
 --------
 
--  `getFillCreatedItem() <../BaseDataSource.getFillCreatedItem.html>`__
--  `createItem() <../BaseDataSource.createItem.html>`__
+-  `getFillCreatedItem() <BaseDataSource.getFillCreatedItem.html>`__
+-  `createItem() <BaseDataSource.createItem.html>`__

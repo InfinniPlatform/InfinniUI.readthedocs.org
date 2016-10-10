@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `setTextTrimming() <../Label.setTextTrimming.html>`__
+-  `setTextTrimming() <Label.setTextTrimming.html>`__

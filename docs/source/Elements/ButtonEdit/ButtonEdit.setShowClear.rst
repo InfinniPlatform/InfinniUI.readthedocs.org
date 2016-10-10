@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getShowClear() <../ButtonEdit.getShowClear.html>`__
+-  `getShowClear() <ButtonEdit.getShowClear.html>`__

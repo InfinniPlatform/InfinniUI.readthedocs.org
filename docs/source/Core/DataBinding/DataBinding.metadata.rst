@@ -1,7 +1,7 @@
 DataBinding.metadata
 ====================
 
-Метаданные типа `DataBinding <../>`__.
+Метаданные типа `DataBinding <./>`__.
 
 Properties
 ----------
@@ -22,11 +22,11 @@ Properties
      - –
      - Путь к свойству источника данных привязки
    * - Mode
-     - `BindingMode <../BindingMode/>`__
+     - `BindingMode <BindingMode/>`__
      - ``TwoWay``
      - Направление потока данных в привязке
    * - Converter
-     - `BindingConverter <../BindingConverter/>`__
+     - `BindingConverter <BindingConverter/>`__
      - –
      - Преобразователь данных между элементом и источником
 

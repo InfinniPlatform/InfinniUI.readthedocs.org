@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setCellSelector() <../DataGridColumn.setCellSelector.html>`__
+-  `setCellSelector() <DataGridColumn.setCellSelector.html>`__

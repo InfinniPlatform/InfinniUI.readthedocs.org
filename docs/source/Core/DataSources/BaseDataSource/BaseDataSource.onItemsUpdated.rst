@@ -1,19 +1,19 @@
 BaseDataSource.onItemsUpdated
 =============================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 список элементов обновлен.
 
 Description
 -----------
 
-Вызов метода `updateItems() <../BaseDataSource.updateItems.html>`__
+Вызов метода `updateItems() <BaseDataSource.updateItems.html>`__
 производит загрузку списка элементов из соответствующего источнику
 данных хранилища. Если в источнике данных были несохраненные изменения,
 они будут потеряны, так как загруженные ранее данные будут заменены
 (обновлены) новыми. Успешное обновление списка элементов приводит к
 возникновению события
-`onItemsUpdated <../BaseDataSource.onItemsUpdated.html>`__.
+`onItemsUpdated <BaseDataSource.onItemsUpdated.html>`__.
 
 Syntax
 ------
@@ -32,7 +32,7 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что список элементов обновлен. Параметр args данного обработчика содержит новый список элементов источника данных в поле value
 
 
@@ -48,4 +48,4 @@ Examples
 See Also
 --------
 
--  `updateItems() <../BaseDataSource.updateItems.html>`__
+-  `updateItems() <BaseDataSource.updateItems.html>`__

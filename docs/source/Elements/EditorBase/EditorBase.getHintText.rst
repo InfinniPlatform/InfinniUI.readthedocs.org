@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setHintText() <../EditorBase.setHintText.html>`__
+-  `setHintText() <EditorBase.setHintText.html>`__

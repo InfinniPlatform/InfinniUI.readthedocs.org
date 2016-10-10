@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setMaxValue() <../NumericBox.setMaxValue.html>`__
+-  `setMaxValue() <NumericBox.setMaxValue.html>`__

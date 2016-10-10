@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getName() <../Parameter.getName.html>`__
+-  `getName() <Parameter.getName.html>`__

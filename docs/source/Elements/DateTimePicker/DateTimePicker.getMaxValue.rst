@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setMaxValue() <../DateTimePicker.setMaxValue.html>`__
+-  `setMaxValue() <DateTimePicker.setMaxValue.html>`__

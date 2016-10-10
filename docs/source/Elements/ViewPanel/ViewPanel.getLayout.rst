@@ -1,7 +1,7 @@
 ViewPanel.getLayout()
 =====================
 
-Возвращает `представление <../../../Core/Elements/View>`__, которое
+Возвращает `представление <../../Core/Elements/View>`__, которое
 отображается внутри ViewPanel.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Представление <../../../Core/Elements/View>`__, которое отображается
+`Представление <../../Core/Elements/View>`__, которое отображается
 внутри ViewPanel.
 
 Examples
@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setLayout <../ViewPanel.setLayout.html>`__
+-  `setLayout <ViewPanel.setLayout.html>`__

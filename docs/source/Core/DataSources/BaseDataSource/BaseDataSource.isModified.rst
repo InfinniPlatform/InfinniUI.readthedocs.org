@@ -39,6 +39,6 @@ Examples
 See Also
 --------
 
--  `isModifiedItems() <../BaseDataSource.isModifiedItems.html>`__
--  `saveItem() <../BaseDataSource.saveItem.html>`__
--  `updateItems() <../BaseDataSource.updateItems.html>`__
+-  `isModifiedItems() <BaseDataSource.isModifiedItems.html>`__
+-  `saveItem() <BaseDataSource.saveItem.html>`__
+-  `updateItems() <BaseDataSource.updateItems.html>`__

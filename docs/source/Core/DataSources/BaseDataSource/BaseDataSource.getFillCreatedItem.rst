@@ -31,5 +31,5 @@ Examples
 See Also
 --------
 
--  `setFillCreatedItem() <../BaseDataSource.setFillCreatedItem.html>`__
--  `createItem() <../BaseDataSource.createItem.html>`__
+-  `setFillCreatedItem() <BaseDataSource.setFillCreatedItem.html>`__
+-  `createItem() <BaseDataSource.createItem.html>`__

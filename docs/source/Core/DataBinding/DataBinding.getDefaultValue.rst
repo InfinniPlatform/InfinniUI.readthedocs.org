@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setDefaultValue() <../DataBinding.setDefaultValue.html>`__
+-  `setDefaultValue() <DataBinding.setDefaultValue.html>`__

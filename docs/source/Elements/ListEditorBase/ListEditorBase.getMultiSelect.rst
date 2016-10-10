@@ -15,28 +15,28 @@ Description
 осуществления выбора (мышь, клавиатура и т.п.) в данном контексте не
 оговариваются, главное то, что у пользователя есть такая возможность.
 
-Метод `setMultiSelect() <../ListEditorBase.setMultiSelect.html>`__ позволяет
+Метод `setMultiSelect() <ListEditorBase.setMultiSelect.html>`__ позволяет
 переключать режим работы списка, разрешая или запрещая выбор нескольких
 элементов. Данная настройка напрямую влияет на результат работы метода
-`getValue() <../../EditorBase/EditorBase.getValue.html>`__. Если выбор
+`getValue() <../EditorBase/EditorBase.getValue.html>`__. Если выбор
 нескольких элементов разрешен, метод
-`getValue() <../../EditorBase/EditorBase.getValue.html>`__ возвращает
+`getValue() <../EditorBase/EditorBase.getValue.html>`__ возвращает
 массив, элементами которого являются выбранные элементы. Если выбор
 нескольких элементов запрещен, метод
-`getValue() <../../EditorBase/EditorBase.getValue.html>`__ вернет один
+`getValue() <../EditorBase/EditorBase.getValue.html>`__ вернет один
 выбранный элемент.
 
-Метод `setValueSelector() <../ListEditorBase.setValueSelector.html>`__
-позволяет указать `функцию <../../../Core/Script/>`__ выборки из
+Метод `setValueSelector() <ListEditorBase.setValueSelector.html>`__
+позволяет указать `функцию <../../Core/Script/>`__ выборки из
 элемента коллекции значимой части. Эта функция применяется к выделенным
 элементам при вызове метода
-`getValue() <../../EditorBase/EditorBase.getValue.html>`__. Если выбор
+`getValue() <../EditorBase/EditorBase.getValue.html>`__. Если выбор
 нескольких элементов разрешен, метод
-`getValue() <../../EditorBase/EditorBase.getValue.html>`__ вернет массив,
+`getValue() <../EditorBase/EditorBase.getValue.html>`__ вернет массив,
 каждый из элемент которого является результатом работы ранее
 установленной функции выборки, примененной к выбранным элементам. Если
 выбор нескольких элементов запрещен, метод
-`getValue() <../../EditorBase/EditorBase.getValue.html>`__ вернет результат
+`getValue() <../EditorBase/EditorBase.getValue.html>`__ вернет результат
 работы ранее установленной функции выборки, примененной к одному
 выбранному элементу.
 
@@ -60,6 +60,6 @@ Examples
 See Also
 --------
 
--  `setMultiSelect() <../ListEditorBase.setMultiSelect.html>`__
--  `getValueSelector() <../ListEditorBase.getValueSelector.html>`__
--  `setValueSelector() <../ListEditorBase.setValueSelector.html>`__
+-  `setMultiSelect() <ListEditorBase.setMultiSelect.html>`__
+-  `getValueSelector() <ListEditorBase.getValueSelector.html>`__
+-  `setValueSelector() <ListEditorBase.setValueSelector.html>`__

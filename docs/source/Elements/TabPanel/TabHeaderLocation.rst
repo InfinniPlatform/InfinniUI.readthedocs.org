@@ -1,7 +1,7 @@
 TabHeaderLocation
 =================
 
-Расположение закладок в `TabPanel <../>`__.
+Расположение закладок в `TabPanel <./>`__.
 
 Syntax
 ------
@@ -39,5 +39,5 @@ Members
 See Also
 --------
 
--  `getHeaderLocation() <../TabPanel.getHeaderLocation.html>`__
--  `setHeaderLocation() <../TabPanel.setHeaderLocation.html>`__
+-  `getHeaderLocation() <TabPanel.getHeaderLocation.html>`__
+-  `setHeaderLocation() <TabPanel.setHeaderLocation.html>`__

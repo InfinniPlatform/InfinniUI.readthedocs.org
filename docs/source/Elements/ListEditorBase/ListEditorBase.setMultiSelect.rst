@@ -22,6 +22,6 @@ Examples
 See Also
 --------
 
--  `setMultiSelect() <../ListEditorBase.setMultiSelect.html>`__
--  `getValueSelector() <../ListEditorBase.getValueSelector.html>`__
--  `setValueSelector() <../ListEditorBase.setValueSelector.html>`__
+-  `setMultiSelect() <ListEditorBase.setMultiSelect.html>`__
+-  `getValueSelector() <ListEditorBase.getValueSelector.html>`__
+-  `setValueSelector() <ListEditorBase.setValueSelector.html>`__

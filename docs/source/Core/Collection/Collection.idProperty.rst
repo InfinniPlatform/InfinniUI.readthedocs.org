@@ -61,4 +61,4 @@ Examples
 See Also
 --------
 
--  `getById() <../Collection.getById.html>`__
+-  `getById() <Collection.getById.html>`__

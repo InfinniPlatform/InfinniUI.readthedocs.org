@@ -1,7 +1,7 @@
 ViewContext.view
 ================
 
-Возвращает `представление <../../Elements/View/>`__ контекста.
+Возвращает `представление <../Elements/View/>`__ контекста.
 
 Syntax
 ------
@@ -20,4 +20,4 @@ Examples
 See Also
 --------
 
--  `View <../../Elements/View/>`__
+-  `View <../Elements/View/>`__

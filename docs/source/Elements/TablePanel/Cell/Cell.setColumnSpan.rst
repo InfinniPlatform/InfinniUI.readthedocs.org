@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getColumnSpan() <../Cell.getColumnSpan.html>`__
+-  `getColumnSpan() <Cell.getColumnSpan.html>`__

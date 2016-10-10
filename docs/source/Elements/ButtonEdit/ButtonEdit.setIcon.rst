@@ -42,4 +42,4 @@ Examples
 See Also
 --------
 
--  `getIcon() <../ButtonEdit.getIcon.html>`__
+-  `getIcon() <ButtonEdit.getIcon.html>`__

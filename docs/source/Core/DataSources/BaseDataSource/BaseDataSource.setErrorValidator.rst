@@ -1,16 +1,16 @@
 BaseDataSource.setErrorValidator()
 ==================================
 
-Устанавливает `функцию <../../../Script/>`__ проверки элемента на
+Устанавливает `функцию <../../Script/>`__ проверки элемента на
 ошибки.
 
 Description
 -----------
 
-`Функция <../../../Script/>`__ проверки элемента на ошибки в параметре
+`Функция <../../Script/>`__ проверки элемента на ошибки в параметре
 ``args`` принимает элемент источника данных, который необходимо
 проверить. Результатом работы функции является объект `предопределенного
-формата <../ValidationResult/>`__.
+формата <ValidationResult/>`__.
 
 Syntax
 ------
@@ -29,7 +29,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция проверки элемента на ошибки
 
 
@@ -67,9 +67,9 @@ Examples
 See Also
 --------
 
--  `getErrorValidator() <../BaseDataSource.getErrorValidator.html>`__
--  `getWarningValidator() <../BaseDataSource.getWarningValidator.html>`__
--  `setWarningValidator() <../BaseDataSource.setWarningValidator.html>`__
--  `validateOnErrors() <../BaseDataSource.validateOnErrors.html>`__
--  `saveItem() <../BaseDataSource.saveItem.html>`__
--  `ValidationResult <../ValidationResult/>`__
+-  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
+-  `getWarningValidator() <BaseDataSource.getWarningValidator.html>`__
+-  `setWarningValidator() <BaseDataSource.setWarningValidator.html>`__
+-  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__
+-  `saveItem() <BaseDataSource.saveItem.html>`__
+-  `ValidationResult <ValidationResult/>`__

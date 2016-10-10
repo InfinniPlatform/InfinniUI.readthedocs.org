@@ -1,7 +1,7 @@
 Element.onMouseLeave
 ====================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 указатель мыши покинул границы элемента.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что указатель мыши покинул границы элемента. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <../MouseEvent/>`__.
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что указатель мыши покинул границы элемента. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <MouseEvent/>`__.
 
 
 Examples
@@ -43,4 +43,4 @@ See Also
 -  `onMouseWheel <Element.onMouseWheel.html>`__
 -  `onMouseEnter <Element.onMouseEnter.html>`__
 -  `onMouseMove <Element.onMouseMove.html>`__
--  `MouseEvent <../MouseEvent/>`__
+-  `MouseEvent <MouseEvent/>`__

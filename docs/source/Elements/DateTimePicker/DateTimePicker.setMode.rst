@@ -58,4 +58,4 @@ Examples
 See Also
 --------
 
--  `getMode() <../DateTimePicker.getMode.html>`__
+-  `getMode() <DateTimePicker.getMode.html>`__

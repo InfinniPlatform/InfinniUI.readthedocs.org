@@ -32,5 +32,5 @@ Examples
 See Also
 --------
 
--  `resumeUpdate() <../BaseDataSource.resumeUpdate.html>`__
--  `suspendUpdate() <../BaseDataSource.suspendUpdate.html>`__
+-  `resumeUpdate() <BaseDataSource.resumeUpdate.html>`__
+-  `suspendUpdate() <BaseDataSource.suspendUpdate.html>`__

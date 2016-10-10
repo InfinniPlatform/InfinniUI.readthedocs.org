@@ -38,5 +38,5 @@ Examples
 See Also
 --------
 
--  `getIdProperty() <../BaseDataSource.getIdProperty.html>`__
--  `setIdProperty() <../BaseDataSource.setIdProperty.html>`__
+-  `getIdProperty() <BaseDataSource.getIdProperty.html>`__
+-  `setIdProperty() <BaseDataSource.setIdProperty.html>`__

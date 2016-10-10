@@ -51,5 +51,5 @@ Examples
 See Also
 --------
 
--  `contains() <../Collection.contains.html>`__
--  `every() <../Collection.every.html>`__
+-  `contains() <Collection.contains.html>`__
+-  `every() <Collection.every.html>`__

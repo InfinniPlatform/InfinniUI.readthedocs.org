@@ -1,7 +1,7 @@
 Element.onDoubleClick
 =====================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что по
+Устанавливает `обработчик события <../../Script/>`__ о том, что по
 элементу сделали двойной клик мыши.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что по элементу сделали двойной клик мыши. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <../MouseEvent/>`__.
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что по элементу сделали двойной клик мыши. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <MouseEvent/>`__.
 
 
 Examples
@@ -37,5 +37,5 @@ Examples
 See Also
 --------
 
--  `onBeforeClick <../Element.onBeforeClick.html>`__
--  `onClick <../Element.onClick.html>`__
+-  `onBeforeClick <Element.onBeforeClick.html>`__
+-  `onClick <Element.onClick.html>`__

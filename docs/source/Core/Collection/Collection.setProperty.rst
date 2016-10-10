@@ -47,4 +47,4 @@ Examples
 See Also
 --------
 
--  `getProperty <../Collection.getProperty.html>`__
+-  `getProperty <Collection.getProperty.html>`__

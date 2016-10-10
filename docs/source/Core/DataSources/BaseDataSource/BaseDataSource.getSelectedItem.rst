@@ -40,5 +40,5 @@ Examples
 See Also
 --------
 
--  `setSelectedItem() <../BaseDataSource.setSelectedItem.html>`__
--  `onSelectedItemChanged <../BaseDataSource.onSelectedItemChanged.html>`__
+-  `setSelectedItem() <BaseDataSource.setSelectedItem.html>`__
+-  `onSelectedItemChanged <BaseDataSource.onSelectedItemChanged.html>`__

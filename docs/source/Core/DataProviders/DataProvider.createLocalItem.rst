@@ -7,12 +7,12 @@ Description
 -----------
 
 Для создания нового элемента в DataProvider используются 2 метода:
-  ``createLocalItem`` и `createItem <../DataProvider.createItem.html>`__.
+  ``createLocalItem`` и `createItem <DataProvider.createItem.html>`__.
 Существенное отличие методов в том, что ``createLocalItem`` создает
   новый элемент локально, в то время как при вызове
-  `createItem <../DataProvider.createItem.html>`__ создание происходит на
+  `createItem <DataProvider.createItem.html>`__ создание происходит на
   сервере. Для сохранения нового элемента используйте метод
-  `saveItem <../DataProvider.saveItem.html>`__.
+  `saveItem <DataProvider.saveItem.html>`__.
 
 Syntax
 ------
@@ -48,5 +48,5 @@ Examples
 See Also
 --------
 
--  `createItem <../DataProvider.createItem.html>`__
--  `saveItem <../DataProvider.saveItem.html>`__
+-  `createItem <DataProvider.createItem.html>`__
+-  `saveItem <DataProvider.saveItem.html>`__

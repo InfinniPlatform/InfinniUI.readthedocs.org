@@ -25,7 +25,7 @@ Parameters
      - Type
      - Description
    * - parentView
-     - `View <../Elements/View/>`__
+     - `View <../../Elements/View/>`__
      -  Родительское представление 
 
 

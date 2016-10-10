@@ -1,7 +1,7 @@
 Button.getAction
 ================
 
-Возвращает `действие <../../../Core/Actions/>`__ при нажатии на кнопку.
+Возвращает `действие <../../Core/Actions/>`__ при нажатии на кнопку.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Действие <../../../Core/Actions/>`__ при нажатии на кнопку.
+`Действие <../../Core/Actions/>`__ при нажатии на кнопку.
 
 Examples
 --------
@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setAction <../Button.setAction.html>`__
+-  `setAction <Button.setAction.html>`__

@@ -1,7 +1,7 @@
 ImageBox.metadata
 =================
 
-Метаданные типа `ImageBox <../>`__.
+Метаданные типа `ImageBox <./>`__.
 
 Properties
 ----------

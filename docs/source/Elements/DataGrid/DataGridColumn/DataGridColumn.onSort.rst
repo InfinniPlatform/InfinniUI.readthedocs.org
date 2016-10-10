@@ -1,7 +1,7 @@
 DataGridColumn.onSort
 =====================
 
-Устанавливает `обработчик события <../../../../Core/Script/>`__ на
+Устанавливает `обработчик события <../../../Core/Script/>`__ на
 событие 'onSort'
 
 Description
@@ -27,8 +27,8 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Обработчик события <../../../../Core/Script/>`__
-     - `Обработчик события <../../../../Core/Script/>`__ о том, что необходимо изменить сортировку элементов DataGrid.
+     - `Обработчик события <../../../Core/Script/>`__
+     - `Обработчик события <../../../Core/Script/>`__ о том, что необходимо изменить сортировку элементов DataGrid.
 
 
 Returns
@@ -46,8 +46,8 @@ Examples
 See Also
 --------
 
--  `getSortable() <../DataGridColumn.getSortable.html>`__
--  `setSortable() <../DataGridColumn.setSortable.html>`__
--  `getSortDirection() <../DataGridColumn.getSortDirection.html>`__
--  `setSortDirection() <../DataGridColumn.setSortDirection.html>`__
--  `isSortable() <../DataGridColumn.isSortable.html>`__
+-  `getSortable() <DataGridColumn.getSortable.html>`__
+-  `setSortable() <DataGridColumn.setSortable.html>`__
+-  `getSortDirection() <DataGridColumn.getSortDirection.html>`__
+-  `setSortDirection() <DataGridColumn.setSortDirection.html>`__
+-  `isSortable() <DataGridColumn.isSortable.html>`__

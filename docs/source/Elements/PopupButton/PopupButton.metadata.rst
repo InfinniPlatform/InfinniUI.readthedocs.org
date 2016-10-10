@@ -1,7 +1,7 @@
 PopupButton.metadata
 ====================
 
-Метаданные типа `PopupButton <../>`__.
+Метаданные типа `PopupButton <./>`__.
 
 Examples
 --------

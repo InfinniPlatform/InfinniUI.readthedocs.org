@@ -6,11 +6,11 @@ Collection.removeRange
 Description
 -----------
 
-Метод `removeRange() <../Collection.removeRange.html>`__ удаляет диапазон
+Метод `removeRange() <Collection.removeRange.html>`__ удаляет диапазон
 элементов из коллекции. Успешное выполнение данного метода приводит к
-возникновению события `onRemove <../Collection.onRemove.html>`__. Вместе с
+возникновению события `onRemove <Collection.onRemove.html>`__. Вместе с
 этим событием также генерируется событие
-`onChange <../Collection.onChange.html>`__, которое информирует о наличии
+`onChange <Collection.onChange.html>`__, которое информирует о наличии
 любых изменений. Аргументы обеих событий в данном случае будут
 идентичны.
 
@@ -57,12 +57,12 @@ Examples
 See Also
 --------
 
--  `pop() <../Collection.pop.html>`__
--  `remove() <../Collection.remove.html>`__
--  `removeById() <../Collection.removeById.html>`__
--  `removeAt() <../Collection.removeAt.html>`__
--  `removeAll() <../Collection.removeAll.html>`__
--  `removeEvery() <../Collection.removeEvery.html>`__
--  `clear() <../Collection.clear.html>`__
--  `onRemove <../Collection.onRemove.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `pop() <Collection.pop.html>`__
+-  `remove() <Collection.remove.html>`__
+-  `removeById() <Collection.removeById.html>`__
+-  `removeAt() <Collection.removeAt.html>`__
+-  `removeAll() <Collection.removeAll.html>`__
+-  `removeEvery() <Collection.removeEvery.html>`__
+-  `clear() <Collection.clear.html>`__
+-  `onRemove <Collection.onRemove.html>`__
+-  `onChange <Collection.onChange.html>`__

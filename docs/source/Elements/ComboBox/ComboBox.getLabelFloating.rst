@@ -18,8 +18,8 @@ Description
 пользователю в момент ввода данных.
 
 Текст метки можно установить с помощью метода
-`setLabelText() <../ComboBox.setLabelText.html>`__, а способ отображения - с
-помощью метода `setLabelFloating() <../ComboBox.setLabelFloating.html>`__.
+`setLabelText() <ComboBox.setLabelText.html>`__, а способ отображения - с
+помощью метода `setLabelFloating() <ComboBox.setLabelFloating.html>`__.
 
 Syntax
 ------
@@ -50,4 +50,4 @@ Examples
 See Also
 --------
 
--  `setLabelFloating() <../ComboBox.setLabelFloating.html>`__
+-  `setLabelFloating() <ComboBox.setLabelFloating.html>`__

@@ -31,5 +31,5 @@ Examples
 See Also
 --------
 
--  `isDataReady <../BaseDataSource.isDataReady.html>`__
--  `updateItems <../BaseDataSource.updateItems.html>`__
+-  `isDataReady <BaseDataSource.isDataReady.html>`__
+-  `updateItems <BaseDataSource.updateItems.html>`__

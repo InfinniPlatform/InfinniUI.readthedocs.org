@@ -35,7 +35,7 @@ Properties
      - Параметры History API для запуска роутинга. Принимает такие же параметры как и Backbone.history.start()
    * - ``Routes``
      - ``Array``
-     - `Массив объектов конфигурации роутинга приложения. <../InfinniUI.config.Routes>`__
+     - `Массив объектов конфигурации роутинга приложения. <InfinniUI.config.Routes>`__
 
 
 Example
@@ -68,4 +68,4 @@ Example
 See Also
 --------
 
--  `InfinniUI.config.Routes <../InfinniUI.config.Routes>`__
+-  `InfinniUI.config.Routes <InfinniUI.config.Routes>`__

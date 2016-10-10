@@ -1,7 +1,7 @@
 TreeView.getKeySelector
 =======================
 
-Возвращает `функцию <../../../Core/Script/>`__ выборки из элемента
+Возвращает `функцию <../../Core/Script/>`__ выборки из элемента
 коллекции идентификатора.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Core/Script/>`__ выборки из элемента коллекции
+`Функция <../../Core/Script/>`__ выборки из элемента коллекции
 идентификатора.
 
 Examples
@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setKeySelector <../TreeView.setKeySelector.html>`__
+-  `setKeySelector <TreeView.setKeySelector.html>`__

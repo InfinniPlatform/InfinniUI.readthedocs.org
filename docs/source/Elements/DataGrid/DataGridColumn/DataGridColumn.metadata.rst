@@ -1,7 +1,7 @@
 DataGridColumn.metadata
 =======================
 
-Метаданные типа `DataGridColumn <../>`__.
+Метаданные типа `DataGridColumn <./>`__.
 
 Properties
 ----------
@@ -13,23 +13,23 @@ Properties
      - Type
      - Description
    * - HeaderTemplate
-     - `Element <../../../../Core/Elements/Element/>`__
+     - `Element <../../../Core/Elements/Element/>`__
      - Шаблон отображения заголовка колонки.
    * - Header
      - ``String``
      - Заголовок колонки.
    * - CellSelector
-     - `Script <../../../../Core/Script/>`__
+     - `Script <../../../Core/Script/>`__
      - Функция выборки из элемента коллеции значения для ячейки.
    * - CellProperty
      - ``String``
      - Свойство элемента коллекции со значением для ячейки.
    * - CellFormat
      - ``String``
-     - `Format <../../../../Core/DisplayFormat/>`__
+     - `Format <../../../Core/DisplayFormat/>`__
      - Правила форматирования элемента коллекции для ячейки.
    * - CellTemplate
-     - `Element <../../../../Core/Elements/Element/>`__
+     - `Element <../../../Core/Elements/Element/>`__
      - Шаблон отображения элемента коллекции для ячейки.
    * - Width
      - ``String``

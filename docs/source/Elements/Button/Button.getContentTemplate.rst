@@ -1,7 +1,7 @@
 Button.getContentTemplate
 =========================
 
-Возвращает `функцию <../../../Core/Script/>`__ шаблонизации содержимого
+Возвращает `функцию <../../Core/Script/>`__ шаблонизации содержимого
 кнопки.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Core/Script/>`__ шаблонизации содержимого кнопки.
+`Функция <../../Core/Script/>`__ шаблонизации содержимого кнопки.
 
 Examples
 --------
@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `setContentTemplate <../Button.setContentTemplate.html>`__
+-  `setContentTemplate <Button.setContentTemplate.html>`__

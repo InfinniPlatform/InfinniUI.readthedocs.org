@@ -39,6 +39,6 @@ Examples
 See Also
 --------
 
--  `getTrueText() <../BooleanFormat.getTrueText.html>`__
--  `setFalseText() <../BooleanFormat.setFalseText.html>`__
--  `getFalseText() <../BooleanFormat.getFalseText.html>`__
+-  `getTrueText() <BooleanFormat.getTrueText.html>`__
+-  `setFalseText() <BooleanFormat.setFalseText.html>`__
+-  `getFalseText() <BooleanFormat.getFalseText.html>`__

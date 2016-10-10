@@ -1,7 +1,7 @@
 Panel.metadata
 ==============
 
-Метаданные типа `Panel <../>`__.
+Метаданные типа `Panel <./>`__.
 
 Properties
 ----------
@@ -22,27 +22,27 @@ Properties
      - false
      - Значение, определяющее, свернута ли панель
    * - HeaderTemplate
-     - `Element <../../../Core/Elements/Element/>`__
+     - `Element <../../Core/Elements/Element/>`__
      - –
      - Шаблон отображения заголовка панели
    * - Header
-     - ``String``/`BindingMetadata <../../../Core/DataBinding/DataBinding.metadata.html>`__
+     - ``String``/`BindingMetadata <../../Core/DataBinding/DataBinding.metadata.html>`__
      - –
      - Заголовок панели
    * - OnExpanding
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события о том, что панель разворачивается
    * - OnExpanded
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события о том, что панель была развернута
    * - OnCollapsing
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события о том, что панель сворачивается
    * - OnCollapsed
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события о том, что панель была свернута
 

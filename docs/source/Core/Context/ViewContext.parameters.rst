@@ -2,7 +2,7 @@ ViewContext.parameters
 ======================
 
 Возвращает ассоциативный список `параметров
-представления <../../Parameters/>`__.
+представления <../Parameters/>`__.
 
 Syntax
 ------
@@ -22,4 +22,4 @@ Examples
 See Also
 --------
 
--  `Parameter <../../Parameters/>`__
+-  `Parameter <../Parameters/>`__

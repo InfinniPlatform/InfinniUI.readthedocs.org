@@ -1,7 +1,7 @@
 Element.onKeyDown
 =================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что на
+Устанавливает `обработчик события <../../Script/>`__ о том, что на
 элементе нажали клавишу клавиатуры.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что на элементе нажали клавишу клавиатуры. В параметре ``args`` передается информация о произошедшем событии - объект типа `KeyboardEvent <../KeyboardEvent/>`__.
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что на элементе нажали клавишу клавиатуры. В параметре ``args`` передается информация о произошедшем событии - объект типа `KeyboardEvent <KeyboardEvent/>`__.
 
 
 Examples
@@ -37,5 +37,5 @@ Examples
 See Also
 --------
 
--  `onKeyUp <../Element.onKeyUp.html>`__
--  `KeyboardEvent <../KeyboardEvent/>`__
+-  `onKeyUp <Element.onKeyUp.html>`__
+-  `KeyboardEvent <KeyboardEvent/>`__

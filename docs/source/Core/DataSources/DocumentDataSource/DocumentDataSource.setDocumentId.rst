@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `getDocumentId() <../DocumentDataSource.getDocumentId.html>`__
+-  `getDocumentId() <DocumentDataSource.getDocumentId.html>`__

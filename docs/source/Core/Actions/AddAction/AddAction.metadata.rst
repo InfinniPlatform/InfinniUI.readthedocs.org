@@ -1,7 +1,7 @@
 AddAction.metadata
 ==================
 
-Метаданные типа `AddAction <../>`__.
+Метаданные типа `AddAction <./>`__.
 
 Properties
 ----------
@@ -13,8 +13,8 @@ Properties
      - Type
      - Description
    * - LinkView*
-     - `LinkView.metadata <../../../Elements/View/LinkView/LinkView.metadata.html>`__
-     - Объект, который будет создавать и настраивать `представление <../../../Elements/View/>`__
+     - `LinkView.metadata <../../Elements/View/LinkView/LinkView.metadata.html>`__
+     - Объект, который будет создавать и настраивать `представление <../../Elements/View/>`__
    * - SourceValue.Source*
      - ``String``
      - Название редактируемого источника данных на представлении редактирования

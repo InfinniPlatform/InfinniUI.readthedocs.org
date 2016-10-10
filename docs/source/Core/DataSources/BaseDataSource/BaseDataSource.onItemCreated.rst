@@ -1,19 +1,19 @@
 BaseDataSource.onItemCreated
 ============================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 элемент создан.
 
 Description
 -----------
 
-Вызов метода `createItem() <../BaseDataSource.createItem.html>`__ приводит к
+Вызов метода `createItem() <BaseDataSource.createItem.html>`__ приводит к
 созданию нового элемента в источнике данных, однако этот элемент
 создается только в оперативной памяти на стороне клиента, иначе говоря
 не сохраняется на сервере до тех пор, пока явно не будет вызван метод
-`saveItem() <../BaseDataSource.saveItem.html>`__. Успешное создание нового
+`saveItem() <BaseDataSource.saveItem.html>`__. Успешное создание нового
 нового элемента в источнике данных приводит к возникновению события
-`onItemCreated <../BaseDataSource.onItemCreated.html>`__.
+`onItemCreated <BaseDataSource.onItemCreated.html>`__.
 
 Syntax
 ------
@@ -32,7 +32,7 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что элемент создан. Параметр ``args`` данного обработчика содержит поле value - созданный элемент
 
 
@@ -48,7 +48,7 @@ Examples
 See Also
 --------
 
--  `createItem() <../BaseDataSource.createItem.html>`__
--  `isModified() <../BaseDataSource.isModified.html>`__
--  `getFillCreatedItem() <../BaseDataSource.getFillCreatedItem.html>`__
--  `setFillCreatedItem() <../BaseDataSource.setFillCreatedItem.html>`__
+-  `createItem() <BaseDataSource.createItem.html>`__
+-  `isModified() <BaseDataSource.isModified.html>`__
+-  `getFillCreatedItem() <BaseDataSource.getFillCreatedItem.html>`__
+-  `setFillCreatedItem() <BaseDataSource.setFillCreatedItem.html>`__

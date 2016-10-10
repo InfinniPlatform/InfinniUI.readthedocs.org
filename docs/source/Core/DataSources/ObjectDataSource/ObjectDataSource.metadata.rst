@@ -1,7 +1,7 @@
 ObjectDataSource.metadata
 =========================
 
-Метаданные `ObjectDataSource <../>`__.
+Метаданные `ObjectDataSource <./>`__.
 
 Properties
 ----------
@@ -18,7 +18,7 @@ Properties
 
 
 (⇔) Свойство может быть задано, как
-`DataBinding <../../../DataBinding/DataBinding.metadata.html>`__.
+`DataBinding <../../DataBinding/DataBinding.metadata.html>`__.
 
 Examples
 --------

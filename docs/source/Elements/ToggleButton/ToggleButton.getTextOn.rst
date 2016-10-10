@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setTextOn <../ToggleButton.setTextOn.html>`__
+-  `setTextOn <ToggleButton.setTextOn.html>`__

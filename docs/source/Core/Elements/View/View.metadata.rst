@@ -1,7 +1,7 @@
 View.metadata
 =============
 
-Метаданные типа `View <../>`__.
+Метаданные типа `View <./>`__.
 
 Properties
 ----------
@@ -16,17 +16,17 @@ Properties
    * - Scripts
      - ``Array``
      - –
-     - Коллекция `скриптов представления <../../../Script/>`__
+     - Коллекция `скриптов представления <../../Script/>`__
    * - Parameters
      - ``Array``
      - –
-     - Коллекция `параметров представления <../../../Parameters/>`__
+     - Коллекция `параметров представления <../../Parameters/>`__
    * - DataSources
      - ``Array``
      - –
-     - Коллекция `источников данных представления <../../../DataSources/BaseDataSource/>`__
+     - Коллекция `источников данных представления <../../DataSources/BaseDataSource/>`__
    * - HeaderTemplate
-     - `ElementMetadata <../../Element/Element.metadata.html>`__
+     - `ElementMetadata <../Element/Element.metadata.html>`__
      - –
      - Шаблон заголовка представления
    * - CloseButtonVisibility
@@ -38,19 +38,19 @@ Properties
      - –
      - Объект подписок для signalR
    * - OnOpening
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Обработчик события о том, что представление открывается
    * - OnOpened
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Обработчик события о том, что представление было открыто
    * - OnClosing
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Обработчик события о том, что представление закрывается
    * - OnClosed
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Обработчик события о том, что представление было закрыто
 

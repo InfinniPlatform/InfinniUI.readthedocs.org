@@ -1,7 +1,7 @@
 ToggleButton.metadata
 =====================
 
-Метаданные типа `ToggleButton <../>`__.
+Метаданные типа `ToggleButton <./>`__.
 
 Properties
 ----------

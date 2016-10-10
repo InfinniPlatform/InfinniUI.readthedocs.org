@@ -6,7 +6,7 @@ Collection.set
 Description
 -----------
 
-Метод `set() <../Collection.set.html>`__ осуществляет интеллектуальное
+Метод `set() <Collection.set.html>`__ осуществляет интеллектуальное
 обновление списка элементов коллекции на основе заданного массива.
 Элементы, которые не содержатся в коллекции, но не содержатся в заданном
 массиве, будут добавлены. Элементы, которые содержатся и в коллекции и в
@@ -15,8 +15,8 @@ Description
 массиве, будут удалены.
 
 Успешное выполнение данного метода приводит к возникновению события
-`onReset <../Collection.onReset.html>`__. Вместе с этим событием также
-генерируется событие `onChange <../Collection.onChange.html>`__, которое
+`onReset <Collection.onReset.html>`__. Вместе с этим событием также
+генерируется событие `onChange <Collection.onChange.html>`__, которое
 информирует о наличии любых изменений. Аргументы обеих событий в данном
 случае будут идентичны.
 
@@ -82,7 +82,7 @@ Examples
 See Also
 --------
 
--  `reset() <../Collection.reset.html>`__
--  `idProperty <../Collection.idProperty.html>`__
--  `onReset <../Collection.onReset.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `reset() <Collection.reset.html>`__
+-  `idProperty <Collection.idProperty.html>`__
+-  `onReset <Collection.onReset.html>`__
+-  `onChange <Collection.onChange.html>`__

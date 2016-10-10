@@ -1,7 +1,7 @@
 ListBox.metadata
 ================
 
-Метаданные типа `ListBox <../>`__.
+Метаданные типа `ListBox <./>`__.
 
 Properties
 ----------
@@ -16,7 +16,7 @@ Properties
    * - ViewMode
      - ``String``
      - ``common``
-     - `Режим отображения <../../../Core/viewMode/>`__ списка. Может принимать значения: 'common', 'base', 'checking'.
+     - `Режим отображения <../../Core/viewMode/>`__ списка. Может принимать значения: 'common', 'base', 'checking'.
 
 
 Examples

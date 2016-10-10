@@ -1,7 +1,7 @@
 DateTimePicker.metadata
 =======================
 
-Метаданные типа `DateTimePicker <../>`__.
+Метаданные типа `DateTimePicker <./>`__.
 
 Properties
 ----------

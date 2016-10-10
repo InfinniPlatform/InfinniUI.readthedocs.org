@@ -21,5 +21,5 @@ Examples
 See Also
 --------
 
--  `getName() <../Element.getName.html>`__
--  `setName() <../Element.setName.html>`__
+-  `getName() <Element.getName.html>`__
+-  `setName() <Element.setName.html>`__

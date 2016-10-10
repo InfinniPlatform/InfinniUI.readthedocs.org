@@ -1,7 +1,7 @@
 Collection.onChange
 ===================
 
-Устанавливает `обработчик события <../../Script/>`__ о том, что
+Устанавливает `обработчик события <../Script/>`__ о том, что
 произошли какие-то изменения.
 
 Description
@@ -10,7 +10,7 @@ Description
 Любые операции над коллекцией, которые приводят к ее изменению
 (добавление новых элементов, замена существующих элементов, удаление
 существующих элементов, изменение порядка элементов), приводят к
-возникновению события `onChange <../Collection.onChange.html>`__.
+возникновению события `onChange <Collection.onChange.html>`__.
 
 Syntax
 ------
@@ -29,8 +29,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../Script/>`__
-     - `Обработчик события <../../Script/>`__ о том, что в коллекции произошли какие-то изменения. В параметре ``argument`` передается информация о произошедшем событии. Свойство ``argument.action`` содержит тип действия (``'add'``, ``'replace'``, ``'remove'``, ``'move'`` или ``'reset'``). Значение остальных возможных свойств (``argument.oldItems``, ``argument.newItems``, ``argument.oldStartingIndex`` и ``argument.newStartingIndex``) интерпретируются в зависимости от типа действия (см. описание обработчиков соответствующих событий).
+     - `Script <../Script/>`__
+     - `Обработчик события <../Script/>`__ о том, что в коллекции произошли какие-то изменения. В параметре ``argument`` передается информация о произошедшем событии. Свойство ``argument.action`` содержит тип действия (``'add'``, ``'replace'``, ``'remove'``, ``'move'`` или ``'reset'``). Значение остальных возможных свойств (``argument.oldItems``, ``argument.newItems``, ``argument.oldStartingIndex`` и ``argument.newStartingIndex``) интерпретируются в зависимости от типа действия (см. описание обработчиков соответствующих событий).
 
 
 Examples
@@ -50,8 +50,8 @@ Examples
 See Also
 --------
 
--  `onAdd <../Collection.onAdd.html>`__
--  `onReplace <../Collection.onReplace.html>`__
--  `onRemove <../Collection.onRemove.html>`__
--  `onMove <../Collection.onMove.html>`__
--  `onReset <../Collection.onReset.html>`__
+-  `onAdd <Collection.onAdd.html>`__
+-  `onReplace <Collection.onReplace.html>`__
+-  `onRemove <Collection.onRemove.html>`__
+-  `onMove <Collection.onMove.html>`__
+-  `onReset <Collection.onReset.html>`__

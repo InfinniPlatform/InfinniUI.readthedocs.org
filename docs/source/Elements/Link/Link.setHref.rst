@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getHref() <../Link.getHref.html>`__
+-  `getHref() <Link.getHref.html>`__

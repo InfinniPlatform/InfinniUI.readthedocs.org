@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `setPageNumber() <../DocumentDataSource.setPageNumber.html>`__
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `setPageNumber() <DocumentDataSource.setPageNumber.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__

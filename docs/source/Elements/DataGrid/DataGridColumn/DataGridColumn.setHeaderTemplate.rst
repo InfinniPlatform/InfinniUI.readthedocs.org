@@ -1,7 +1,7 @@
 DataGridColumn.setHeaderTemplate
 ================================
 
-Устанавливает `функцию <../../../../Core/Script/>`__ шаблонизации ячейки
+Устанавливает `функцию <../../../Core/Script/>`__ шаблонизации ячейки
 заголовка DataGrid.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../../../Core/Script/>`__
-     - Функция шаблонизации ячейки заголовка DataGrid. Результатом работы функции должен быть `визуальный элемент <../../../../Core/Elements/Element/>`__
+     - `Script <../../../Core/Script/>`__
+     - Функция шаблонизации ячейки заголовка DataGrid. Результатом работы функции должен быть `визуальный элемент <../../../Core/Elements/Element/>`__
 
 
 Returns
@@ -44,4 +44,4 @@ Examples
 See Also
 --------
 
--  `getHeaderTemplate() <../DataGridColumn.getHeaderTemplate.html>`__
+-  `getHeaderTemplate() <DataGridColumn.getHeaderTemplate.html>`__

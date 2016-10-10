@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `setTag() <../Element.setTag.html>`__
+-  `setTag() <Element.setTag.html>`__

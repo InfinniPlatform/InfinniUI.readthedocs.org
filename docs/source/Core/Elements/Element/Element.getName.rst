@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `setName() <../Element.setName.html>`__
--  `name <../Element.name.html>`__
+-  `setName() <Element.setName.html>`__
+-  `name <Element.name.html>`__

@@ -28,7 +28,7 @@ Examples
 See Also
 --------
 
--  `EditorBase.setValue() <../../EditorBase/EditorBase.setValue.html>`__
--  `EditorBase.getValue() <../../EditorBase/EditorBase.getValue.html>`__
--  `setValueSelector() <../ListEditorBase.setValueSelector.html>`__
--  `getValueSelector() <../ListEditorBase.getValueSelector.html>`__
+-  `EditorBase.setValue() <../EditorBase/EditorBase.setValue.html>`__
+-  `EditorBase.getValue() <../EditorBase/EditorBase.getValue.html>`__
+-  `setValueSelector() <ListEditorBase.setValueSelector.html>`__
+-  `getValueSelector() <ListEditorBase.getValueSelector.html>`__

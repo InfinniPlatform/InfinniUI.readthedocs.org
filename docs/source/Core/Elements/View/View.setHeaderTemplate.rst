@@ -1,10 +1,10 @@
 View.setHeaderTemplate()
 ========================
 
-Устанавливает `функцию <../../../Script/>`__ шаблонизации заголовка
+Устанавливает `функцию <../../Script/>`__ шаблонизации заголовка
 представления. Данный шаблон используется для создания заголовка в
 случае, когда представление открывается в режиме
-`диалога <../LinkView/OpenMode/>`__.
+`диалога <LinkView/OpenMode/>`__.
 
 Syntax
 ------
@@ -23,7 +23,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция шаблонизации заголовка представления
 
 
@@ -49,4 +49,4 @@ Examples
 See Also
 --------
 
--  `getHeaderTemplate() <../View.getHeaderTemplate.html>`__
+-  `getHeaderTemplate() <View.getHeaderTemplate.html>`__

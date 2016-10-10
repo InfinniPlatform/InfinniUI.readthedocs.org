@@ -41,4 +41,4 @@ Examples
 See Also
 --------
 
--  `getWidth() <../DataGridColumn.getWidth.html>`__
+-  `getWidth() <DataGridColumn.getWidth.html>`__

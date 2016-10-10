@@ -2,7 +2,7 @@ BaseDataSource.initDataProvider()
 =================================
 
 Определяет обязательное свойство
-`dataProvider <../../../DataProviders/>`__. Наследники BaseDataSource
+`dataProvider <../../DataProviders/>`__. Наследники BaseDataSource
 обязаны переопределять этот метод!
 
 Syntax
@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `DataProvider <../../../DataProviders/>`__
+-  `DataProvider <../../DataProviders/>`__

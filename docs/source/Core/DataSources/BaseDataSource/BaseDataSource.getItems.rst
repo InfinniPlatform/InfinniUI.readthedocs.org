@@ -6,7 +6,7 @@ BaseDataSource.getItems()
 Description
 -----------
 
-Вызов метода `getItems() <../BaseDataSource.getItems.html>`__ возвращает
+Вызов метода `getItems() <BaseDataSource.getItems.html>`__ возвращает
 список элементов источника данных, который был загружен ранее. Список
 элементов содержит актуальное состояние источника данных, включая все
 изменения, которые производились над элементами.
@@ -38,4 +38,4 @@ Examples
 See Also
 --------
 
--  `updateItems() <../BaseDataSource.updateItems.html>`__
+-  `updateItems() <BaseDataSource.updateItems.html>`__

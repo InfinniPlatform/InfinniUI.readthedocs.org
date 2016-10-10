@@ -23,7 +23,7 @@ Parameters
      - ``String``
      - Имя события на которое необходимо подписаться, полный перечень можно найти в `документации к signalR <http://www.asp.net/signalr/overview/guide-to-the-api/hubs-api-guide-javascript-client>`__
    * - callback
-     - `Script <../../Script>`__
+     - `Script <../Script>`__
      - Обработчик события eventName
 
 
@@ -43,9 +43,9 @@ Examples
 See Also
 --------
 
--  `subscribe() <../NotificationSubscriptions.subscribe.html>`__
--  `unsubscribe() <../NotificationSubscriptions.unsubscribe.html>`__
--  `startConnection() <../NotificationSubscriptions.startConnection.html>`__
--  `stopConnection() <../NotificationSubscriptions.stopConnection.html>`__
--  `reconnection() <../NotificationSubscriptions.reconnection.html>`__
--  `isDisconnected() <../NotificationSubscriptions.isDisconnected.html>`__
+-  `subscribe() <NotificationSubscriptions.subscribe.html>`__
+-  `unsubscribe() <NotificationSubscriptions.unsubscribe.html>`__
+-  `startConnection() <NotificationSubscriptions.startConnection.html>`__
+-  `stopConnection() <NotificationSubscriptions.stopConnection.html>`__
+-  `reconnection() <NotificationSubscriptions.reconnection.html>`__
+-  `isDisconnected() <NotificationSubscriptions.isDisconnected.html>`__

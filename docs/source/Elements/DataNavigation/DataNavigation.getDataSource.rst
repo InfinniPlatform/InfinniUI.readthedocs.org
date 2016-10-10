@@ -2,7 +2,7 @@ DataNavigation.getDataSource
 ============================
 
 Возвращает `источник
-данных <../../../Core/DataSources/BaseDataSource/>`__.
+данных <../../Core/DataSources/BaseDataSource/>`__.
 
 Syntax
 ------
@@ -14,7 +14,7 @@ Syntax
 Returns
 ~~~~~~~
 
-`Источник данных <../../../Core/DataSources/BaseDataSource/>`__.
+`Источник данных <../../Core/DataSources/BaseDataSource/>`__.
 
 Examples
 --------
@@ -26,4 +26,4 @@ Examples
 See Also
 --------
 
--  `setDataSource() <../DataNavigation.setDataSource.html>`__
+-  `setDataSource() <DataNavigation.setDataSource.html>`__

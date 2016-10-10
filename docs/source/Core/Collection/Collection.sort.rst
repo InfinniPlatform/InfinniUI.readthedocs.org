@@ -6,10 +6,10 @@ Collection.sort
 Description
 -----------
 
-Метод `sort() <../Collection.sort.html>`__ сортирует список элементов
+Метод `sort() <Collection.sort.html>`__ сортирует список элементов
 коллекции. Успешное выполнение данного метода приводит к возникновению
-события `onReset <../Collection.onReset.html>`__. Вместе с этим событием
-также генерируется событие `onChange <../Collection.onChange.html>`__,
+события `onReset <Collection.onReset.html>`__. Вместе с этим событием
+также генерируется событие `onChange <Collection.onChange.html>`__,
 которое информирует о наличии любых изменений. Аргументы обеих событий в
 данном случае будут идентичны.
 
@@ -31,7 +31,7 @@ Parameters
      - Description
    * - ``comparator``
      - ``Function``
-     - `Функция сравнения элементов коллекции <../Comparator.html>`__. Если не указана, то используется функция `Collection.comparator <../Collection.comparator.html>`__, которая была указана при создании коллекции.
+     - `Функция сравнения элементов коллекции <Comparator.html>`__. Если не указана, то используется функция `Collection.comparator <Collection.comparator.html>`__, которая была указана при создании коллекции.
 
 
 Returns
@@ -50,6 +50,6 @@ Examples
 See Also
 --------
 
--  `move() <../Collection.sort.html>`__
--  `onReset <../Collection.onReset.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `move() <Collection.sort.html>`__
+-  `onReset <Collection.onReset.html>`__
+-  `onChange <Collection.onChange.html>`__

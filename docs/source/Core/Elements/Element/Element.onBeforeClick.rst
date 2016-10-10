@@ -1,7 +1,7 @@
 Element.onBeforeClick
 =====================
 
-Устанавливает `обработчик события <../../../Script/>`__ клика мыши,
+Устанавливает `обработчик события <../../Script/>`__ клика мыши,
 который будет срабатывать при захвате события на элементе.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что по элементу сделали одинарный клик мыши. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <../MouseEvent/>`__.
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что по элементу сделали одинарный клик мыши. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <MouseEvent/>`__.
 
 
 Examples
@@ -37,5 +37,5 @@ Examples
 See Also
 --------
 
--  `onClick <../Element.onClick.html>`__
--  `onDoubleClick <../Element.onDoubleClick.html>`__
+-  `onClick <Element.onClick.html>`__
+-  `onDoubleClick <Element.onDoubleClick.html>`__

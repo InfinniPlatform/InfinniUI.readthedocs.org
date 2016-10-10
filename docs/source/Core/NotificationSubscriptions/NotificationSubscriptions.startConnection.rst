@@ -31,10 +31,10 @@ Parameters
      - ``String``
      - Имя hub proxy. При работе с InfinniPlatform оно равно SignalRPushNotificationServiceHub
    * - onSuccessCallback
-     - `Script <../../Script>`__
+     - `Script <../Script>`__
      - Обработчик события успешного соединения
    * - onErrorCallback
-     - `Script <../../Script>`__
+     - `Script <../Script>`__
      - Обработчик события о том, что при соединений возникла ошибка
 
 
@@ -48,6 +48,6 @@ Examples
 See Also
 --------
 
--  `subscribe() <../NotificationSubscriptions.subscribe.html>`__
--  `unsubscribe() <../NotificationSubscriptions.unsubscribe.html>`__
--  `stopConnection() <../NotificationSubscriptions.stopConnection.html>`__
+-  `subscribe() <NotificationSubscriptions.subscribe.html>`__
+-  `unsubscribe() <NotificationSubscriptions.unsubscribe.html>`__
+-  `stopConnection() <NotificationSubscriptions.stopConnection.html>`__

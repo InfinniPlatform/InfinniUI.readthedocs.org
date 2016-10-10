@@ -6,11 +6,11 @@ Collection.reset
 Description
 -----------
 
-Метод `reset() <../Collection.reset.html>`__ заменяет элементы коллекции
+Метод `reset() <Collection.reset.html>`__ заменяет элементы коллекции
 новым набором элементов. Успешное выполнение данного метода приводит к
-возникновению события `onReset <../Collection.onReset.html>`__. Вместе с
+возникновению события `onReset <Collection.onReset.html>`__. Вместе с
 этим событием также генерируется событие
-`onChange <../Collection.onChange.html>`__, которое информирует о наличии
+`onChange <Collection.onChange.html>`__, которое информирует о наличии
 любых изменений. Аргументы обеих событий в данном случае будут
 идентичны.
 
@@ -52,6 +52,6 @@ Examples
 See Also
 --------
 
--  `set() <../Collection.set.html>`__
--  `onReset <../Collection.onReset.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `set() <Collection.set.html>`__
+-  `onReset <Collection.onReset.html>`__
+-  `onChange <Collection.onChange.html>`__

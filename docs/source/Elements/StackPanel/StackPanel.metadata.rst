@@ -1,7 +1,7 @@
 StackPanel.metadata
 ===================
 
-Метаданные типа `StackPanel <../>`__.
+Метаданные типа `StackPanel <./>`__.
 
 Properties
 ----------
@@ -16,9 +16,9 @@ Properties
    * - ViewMode
      - ``String``
      - –
-     - `Режим отображения <../../../Core/viewMode/>`__. Может принимать значения: 'Base', 'FormGroup'.
+     - `Режим отображения <../../Core/viewMode/>`__. Может принимать значения: 'Base', 'FormGroup'.
    * - Orientation
-     - `StackPanelOrientation <../StackPanelOrientation/>`__
+     - `StackPanelOrientation <StackPanelOrientation/>`__
      - 'Vertical'
      - Ориентация стека элементов
 

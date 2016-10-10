@@ -1,7 +1,7 @@
 Element.onMouseUp
 =================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что на
+Устанавливает `обработчик события <../../Script/>`__ о том, что на
 элементе отпустили кнопку мыши.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что на элементе отпустили кнопку мыши. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <../MouseEvent/>`__.
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что на элементе отпустили кнопку мыши. В параметре ``args`` передается информация о произошедшем событии - объект типа `MouseEvent <MouseEvent/>`__.
 
 
 Examples
@@ -43,4 +43,4 @@ See Also
 -  `onMouseEnter <Element.onMouseEnter.html>`__
 -  `onMouseLeave <Element.onMouseLeave.html>`__
 -  `onMouseMove <Element.onMouseMove.html>`__
--  `MouseEvent <../MouseEvent/>`__
+-  `MouseEvent <MouseEvent/>`__

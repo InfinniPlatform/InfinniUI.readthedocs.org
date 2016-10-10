@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getParam <../ServerAction.getParam.html>`__
+-  `getParam <ServerAction.getParam.html>`__

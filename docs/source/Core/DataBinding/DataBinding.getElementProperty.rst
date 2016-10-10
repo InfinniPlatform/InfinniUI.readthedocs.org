@@ -19,7 +19,7 @@ Returns
 ~~~~~~~
 
 Путь к свойству элемента привязки, установленный вызовом метода
-`bindElement() <../DataBinding.bindElement.html>`__.
+`bindElement() <DataBinding.bindElement.html>`__.
 
 Examples
 --------
@@ -32,5 +32,5 @@ Examples
 See Also
 --------
 
--  `bindElement() <../DataBinding.bindElement.html>`__
--  `getElement() <../DataBinding.getElement.html>`__
+-  `bindElement() <DataBinding.bindElement.html>`__
+-  `getElement() <DataBinding.getElement.html>`__

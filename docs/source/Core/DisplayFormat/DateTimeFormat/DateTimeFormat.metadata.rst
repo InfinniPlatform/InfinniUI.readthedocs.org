@@ -1,7 +1,7 @@
 DateTimeFormat.metadata
 =======================
 
-Метаданные типа `DateTimeFormat <../>`__.
+Метаданные типа `DateTimeFormat <./>`__.
 
 Properties
 ----------
@@ -16,7 +16,7 @@ Properties
    * - Format
      - ``String``
      - ``"G"``
-     - `Строка форматирования даты/времени <../../../Culture/Culture.dateTimeFormatting>`__.
+     - `Строка форматирования даты/времени <../../Culture/Culture.dateTimeFormatting>`__.
 
 
 Examples

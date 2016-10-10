@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setIcon() <../ButtonEdit.setIcon.html>`__
+-  `setIcon() <ButtonEdit.setIcon.html>`__

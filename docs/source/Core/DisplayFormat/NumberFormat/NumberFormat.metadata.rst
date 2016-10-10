@@ -1,7 +1,7 @@
 NumberFormat.metadata
 =====================
 
-Метаданные типа `NumberFormat <../>`__.
+Метаданные типа `NumberFormat <./>`__.
 
 Properties
 ----------
@@ -16,7 +16,7 @@ Properties
    * - Format
      - ``String``
      - ``"n"``
-     - `Строка форматирования числовых значений <../../../Culture/Culture.numberFormatting.html>`__.
+     - `Строка форматирования числовых значений <../../Culture/Culture.numberFormatting.html>`__.
 
 
 Examples

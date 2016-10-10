@@ -37,7 +37,7 @@ Examples
 See Also
 --------
 
--  `resumeUpdate() <../BaseDataSource.resumeUpdate.html>`__
--  `isUpdateSuspended() <../BaseDataSource.isUpdateSuspended.html>`__
--  `setFilter() <../BaseDataSource.setFilter.html>`__
--  `updateItems() <../BaseDataSource.updateItems.html>`__
+-  `resumeUpdate() <BaseDataSource.resumeUpdate.html>`__
+-  `isUpdateSuspended() <BaseDataSource.isUpdateSuspended.html>`__
+-  `setFilter() <BaseDataSource.setFilter.html>`__
+-  `updateItems() <BaseDataSource.updateItems.html>`__

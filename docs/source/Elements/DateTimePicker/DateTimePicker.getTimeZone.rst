@@ -19,4 +19,4 @@ Parameters
 See Also
 --------
 
--  `setTimeZone() <../DateTimePicker.setTimeZone.html>`__
+-  `setTimeZone() <DateTimePicker.setTimeZone.html>`__

@@ -39,5 +39,5 @@ Examples
 See Also
 --------
 
--  `getName() <../Element.getName.html>`__
--  `name <../Element.name.html>`__
+-  `getName() <Element.getName.html>`__
+-  `name <Element.name.html>`__

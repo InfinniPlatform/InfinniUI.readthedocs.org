@@ -1,7 +1,7 @@
 GlobalContext.executeAction
 ===========================
 
-Запускает выполнение указанного `действия <../../Actions/>`__.
+Запускает выполнение указанного `действия <../Actions/>`__.
 
 Syntax
 ------
@@ -20,13 +20,13 @@ Parameters
      - Type
      - Description
    * - ``context``
-     - `ViewContext <../../Context/>`__
+     - `ViewContext <../Context/>`__
      - Контекст представления.
    * - ``executeActionMetadata``
-     - `ActionMetadata <../../Actions/>`__
-     - Метеданные `действия <../../Actions/>`__
+     - `ActionMetadata <../Actions/>`__
+     - Метеданные `действия <../Actions/>`__
    * - ``resultCallback``
-     - `Script <../../Script/>`__
+     - `Script <../Script/>`__
      - Обработчик события о том, что Action был выполнен
 
 
@@ -48,4 +48,4 @@ Examples
 See Also
 --------
 
--  `Actions <../../Actions/>`__
+-  `Actions <../Actions/>`__

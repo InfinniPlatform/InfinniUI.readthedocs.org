@@ -18,9 +18,9 @@ Description
 пользователю в момент ввода данных.
 
 Текст метки можно установить с помощью метода
-`setLabelText() <../PasswordBox.setLabelText.html>`__, а способ отображения
+`setLabelText() <PasswordBox.setLabelText.html>`__, а способ отображения
 - с помощью метода
-`setLabelFloating() <../PasswordBox.setLabelFloating.html>`__.
+`setLabelFloating() <PasswordBox.setLabelFloating.html>`__.
 
 Syntax
 ------
@@ -44,4 +44,4 @@ Examples
 See Also
 --------
 
--  `setLabelText() <../PasswordBox.setLabelText.html>`__
+-  `setLabelText() <PasswordBox.setLabelText.html>`__

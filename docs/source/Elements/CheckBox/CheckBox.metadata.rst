@@ -1,7 +1,7 @@
 CheckBox.metadata
 =================
 
-Метаданные типа `CheckBox <../>`__.
+Метаданные типа `CheckBox <./>`__.
 
 Examples
 --------
@@ -19,4 +19,4 @@ Examples
 See also
 --------
 
-`EditorBase.metadata <../../EditorBase/EditorBase.metadata.html>`__.
+`EditorBase.metadata <../EditorBase/EditorBase.metadata.html>`__.

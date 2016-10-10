@@ -2,7 +2,7 @@ Logger.getLevel
 ===============
 
 Возвращает минимальный `уровень регистрируемых
-сообщений <../LogLevel/>`__.
+сообщений <LogLevel/>`__.
 
 Syntax
 ------
@@ -14,7 +14,7 @@ Syntax
 Returns
 ~~~~~~~
 
-Минимальный `уровень регистрируемых сообщений <../LogLevel/>`__.
+Минимальный `уровень регистрируемых сообщений <LogLevel/>`__.
 
 Examples
 --------
@@ -26,5 +26,5 @@ Examples
 See Also
 --------
 
--  `setLevel() <../Logger.setLevel.html>`__
--  `LogLevel <../LogLevel/>`__
+-  `setLevel() <Logger.setLevel.html>`__
+-  `LogLevel <LogLevel/>`__

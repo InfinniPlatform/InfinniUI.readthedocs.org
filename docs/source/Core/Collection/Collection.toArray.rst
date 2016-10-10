@@ -53,7 +53,7 @@ Examples
 See Also
 --------
 
--  `forEach() <../Collection.forEach.html>`__
--  `filter() <../Collection.filter.html>`__
--  `take() <../Collection.take.html>`__
--  `clone() <../Collection.clone.html>`__
+-  `forEach() <Collection.forEach.html>`__
+-  `filter() <Collection.filter.html>`__
+-  `take() <Collection.take.html>`__
+-  `clone() <Collection.clone.html>`__

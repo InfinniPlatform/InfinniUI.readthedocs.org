@@ -1,7 +1,7 @@
 ScrollPanel.metadata
 ====================
 
-Метаданные типа `ScrollPanel <../>`__.
+Метаданные типа `ScrollPanel <./>`__.
 
 Properties
 ----------
@@ -14,11 +14,11 @@ Properties
      - Default
      - Description
    * - HorizontalScroll
-     - `ScrollVisibility <../ScrollVisibility/>`__
+     - `ScrollVisibility <ScrollVisibility/>`__
      - 'Auto'
      - Видимость полосы прокрутки по горизонтали
    * - VerticalScroll
-     - `ScrollVisibility <../ScrollVisibility/>`__
+     - `ScrollVisibility <ScrollVisibility/>`__
      - 'Auto'
      - Видимость полосы прокрутки по вертикали
 

@@ -1,7 +1,7 @@
 PasswordBox.metadata
 ====================
 
-Метаданные типа `PasswordBox <../>`__.
+Метаданные типа `PasswordBox <./>`__.
 
 Properties
 ----------

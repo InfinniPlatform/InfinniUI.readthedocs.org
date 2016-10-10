@@ -34,4 +34,4 @@ Examples
 See Also
 --------
 
--  `getMinValue() <../NumericBox.getMinValue.html>`__
+-  `getMinValue() <NumericBox.getMinValue.html>`__

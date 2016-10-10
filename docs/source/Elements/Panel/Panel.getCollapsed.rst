@@ -6,10 +6,10 @@ Panel.getCollapsed()
 Description
 -----------
 
-Вызов метода `setCollapsible() <../Panel.setCollapsible.html>`__ управляет
+Вызов метода `setCollapsible() <Panel.setCollapsible.html>`__ управляет
 возможностью сворачивания панели. Если сворачивание запрещено, панель
 нельзя свернуть ни визуально, ни программно - с помощью метода
-`setCollapsed() <../Panel.setCollapsed.html>`__. Если сворачивание было
+`setCollapsed() <Panel.setCollapsed.html>`__. Если сворачивание было
 запрещено в то время, как панель была свернута, панель разворачивается
 автоматически.
 
@@ -43,6 +43,6 @@ Examples
 See Also
 --------
 
--  `setCollapsed() <../Panel.setCollapsed.html>`__
--  `getCollapsible() <../Panel.getCollapsible.html>`__
--  `setCollapsible() <../Panel.setCollapsible.html>`__
+-  `setCollapsed() <Panel.setCollapsed.html>`__
+-  `getCollapsible() <Panel.getCollapsible.html>`__
+-  `setCollapsible() <Panel.setCollapsible.html>`__

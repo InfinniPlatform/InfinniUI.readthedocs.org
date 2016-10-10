@@ -2,7 +2,7 @@ ViewContext.controls
 ====================
 
 Возвращает ассоциативный список `визуальных элементов
-представления <../../Elements/Element/>`__.
+представления <../Elements/Element/>`__.
 
 Syntax
 ------
@@ -22,4 +22,4 @@ Examples
 See Also
 --------
 
--  `Element <../../Elements/Element/>`__
+-  `Element <../Elements/Element/>`__

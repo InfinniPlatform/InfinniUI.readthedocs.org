@@ -1,7 +1,7 @@
 ExtensionPanel.metadata
 =======================
 
-Метаданные типа `ExtensionPanel <../>`__.
+Метаданные типа `ExtensionPanel <./>`__.
 
 Properties
 ----------

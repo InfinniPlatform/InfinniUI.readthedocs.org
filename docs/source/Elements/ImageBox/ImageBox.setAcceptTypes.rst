@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getAcceptTypes <../ImageBox.getAcceptTypes.html>`__
+-  `getAcceptTypes <ImageBox.getAcceptTypes.html>`__

@@ -1,7 +1,7 @@
 ObjectFormat.metadata
 =====================
 
-Метаданные типа `ObjectFormat <../>`__.
+Метаданные типа `ObjectFormat <./>`__.
 
 Properties
 ----------
@@ -14,7 +14,7 @@ Properties
      - Description
    * - Format
      - ``String``
-     - `Строка форматирования объекта <../ObjectFormat.format>`__.
+     - `Строка форматирования объекта <ObjectFormat.format>`__.
 
 
 Examples

@@ -1,7 +1,7 @@
 TextEditorBase.metadata
 =======================
 
-Метаданные типа `TextEditorBase <../>`__.
+Метаданные типа `TextEditorBase <./>`__.
 
 Properties
 ----------

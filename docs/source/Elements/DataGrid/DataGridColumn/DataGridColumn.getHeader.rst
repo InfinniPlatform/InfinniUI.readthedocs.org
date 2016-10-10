@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setHeader() <../DataGridColumn.setHeader.html>`__
+-  `setHeader() <DataGridColumn.setHeader.html>`__

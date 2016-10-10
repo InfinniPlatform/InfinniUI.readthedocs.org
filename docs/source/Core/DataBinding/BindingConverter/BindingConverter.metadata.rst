@@ -1,7 +1,7 @@
 BindingConverter.metadata
 =========================
 
-Метаданные типа `BindingConverter <../>`__.
+Метаданные типа `BindingConverter <./>`__.
 
 Properties
 ----------

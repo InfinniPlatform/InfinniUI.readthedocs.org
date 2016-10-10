@@ -49,4 +49,4 @@ Examples
 See Also
 --------
 
--  `getDeletingUrlParams <../RestDataSource.getDeletingUrlParams.html>`__
+-  `getDeletingUrlParams <RestDataSource.getDeletingUrlParams.html>`__

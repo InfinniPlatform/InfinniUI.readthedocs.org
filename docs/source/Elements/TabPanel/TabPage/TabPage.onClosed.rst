@@ -1,23 +1,23 @@
 TabPage.onClosed
 ================
 
-Устанавливает `обработчик события <../../../../Core/Script/>`__ о том,
+Устанавливает `обработчик события <../../../Core/Script/>`__ о том,
 что страница была закрыта.
 
 Description
 -----------
 
-Вызов метода `close() <../TabPage.close.html>`__ предпринимает попытку
+Вызов метода `close() <TabPage.close.html>`__ предпринимает попытку
 закрытия страницы панели. Закрытие страницы означает, что она будет
-удалена из панели. Метод `close() <../TabPage.close.html>`__ предпринимает
+удалена из панели. Метод `close() <TabPage.close.html>`__ предпринимает
 попытку закрытия страницы, если метод
-`getCanClose() <../TabPage.getCanClose.html>`__ вернул ``true``. Если при
+`getCanClose() <TabPage.getCanClose.html>`__ вернул ``true``. Если при
 этом нет ни одного обработчика, подписанного на событие
-`onClosing <../TabPage.onClosing.html>`__, либо если все обработчики этого
+`onClosing <TabPage.onClosing.html>`__, либо если все обработчики этого
 события вернули значение, отличное от ``false``, страница будет закрыта.
-Иначе вызов метода `close() <../TabPage.close.html>`__ ни к чему не
+Иначе вызов метода `close() <TabPage.close.html>`__ ни к чему не
 приведет. Наконец, если все попытки закончились успехом и страница была
-закрыта, будет вызвано событие `onClosed <../TabPage.onClosed.html>`__, в
+закрыта, будет вызвано событие `onClosed <TabPage.onClosed.html>`__, в
 обработчике которого можно обработать факт закрытия страницы.
 
 Syntax
@@ -37,7 +37,7 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Script <../../../../Core/Script/>`__
+     - `Script <../../../Core/Script/>`__
      - Обработчик события о том, что страница была закрыта
 
 
@@ -58,7 +58,7 @@ Examples
 See Also
 --------
 
--  `close() <../TabPage.close.html>`__
--  `getCanClose() <../TabPage.getCanClose.html>`__
--  `setCanClose() <../TabPage.setCanClose.html>`__
--  `onClosing <../TabPage.onClosing.html>`__
+-  `close() <TabPage.close.html>`__
+-  `getCanClose() <TabPage.getCanClose.html>`__
+-  `setCanClose() <TabPage.setCanClose.html>`__
+-  `onClosing <TabPage.onClosing.html>`__

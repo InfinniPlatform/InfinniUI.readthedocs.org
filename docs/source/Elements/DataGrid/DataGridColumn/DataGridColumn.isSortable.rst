@@ -30,8 +30,8 @@ Examples
 See Also
 --------
 
--  `getSortable() <../DataGridColumn.getSortable.html>`__
--  `setSortable() <../DataGridColumn.setSortable.html>`__
--  `getSortDirection() <../DataGridColumn.getSortDirection.html>`__
--  `setSortDirection() <../DataGridColumn.setSortDirection.html>`__
--  `onSort() <../DataGridColumn.onSort.html>`__
+-  `getSortable() <DataGridColumn.getSortable.html>`__
+-  `setSortable() <DataGridColumn.setSortable.html>`__
+-  `getSortDirection() <DataGridColumn.getSortDirection.html>`__
+-  `setSortDirection() <DataGridColumn.setSortDirection.html>`__
+-  `onSort() <DataGridColumn.onSort.html>`__

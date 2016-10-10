@@ -53,4 +53,4 @@ Examples
 See Also
 --------
 
--  `getSelect() <../DocumentDataSource.getSelect.html>`__
+-  `getSelect() <DocumentDataSource.getSelect.html>`__

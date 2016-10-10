@@ -1,7 +1,7 @@
 Container.getGroupValueSelector()
 =================================
 
-Возвращает `функцию <../../../Script/>`__, определяющую условие
+Возвращает `функцию <../../Script/>`__, определяющую условие
 группировки дочерних элементов контейнера.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Script/>`__, определяющая условие группировки
+`Функция <../../Script/>`__, определяющая условие группировки
 дочерних элементов контейнера.
 
 Данная функция в параметре ``args`` принимает информацию об элементе
@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `setGroupValueSelector() <../Container.setGroupValueSelector.html>`__
+-  `setGroupValueSelector() <Container.setGroupValueSelector.html>`__

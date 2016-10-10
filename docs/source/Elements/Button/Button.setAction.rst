@@ -1,7 +1,7 @@
 Button.setAction
 ================
 
-Устанавливает `действие <../../../Core/Actions/>`__ при нажатии на
+Устанавливает `действие <../../Core/Actions/>`__ при нажатии на
 кнопку.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - action
-     - `Action <../../../Core/Actions/>`__
+     - `Action <../../Core/Actions/>`__
      - Действие
 
 
@@ -41,4 +41,4 @@ Examples
 See Also
 --------
 
--  `getContent <../Button.getContent.html>`__
+-  `getContent <Button.getContent.html>`__

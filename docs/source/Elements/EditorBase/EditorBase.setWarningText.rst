@@ -27,4 +27,4 @@ Examples
 See Also
 --------
 
--  `getWarningText() <../EditorBase.getWarningText.html>`__
+-  `getWarningText() <EditorBase.getWarningText.html>`__

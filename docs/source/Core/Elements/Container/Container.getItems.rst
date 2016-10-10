@@ -1,7 +1,7 @@
 Container.getItems()
 ====================
 
-Возвращает `коллекцию <../../../Collection/>`__ дочерних элементов
+Возвращает `коллекцию <../../Collection/>`__ дочерних элементов
 контейнера.
 
 Syntax
@@ -14,7 +14,7 @@ Syntax
 Returns
 ~~~~~~~
 
-`Коллекция <../../../Collection/>`__ дочерних элементов контейнера.
+`Коллекция <../../Collection/>`__ дочерних элементов контейнера.
 
 Examples
 --------
@@ -26,6 +26,6 @@ Examples
 See Also
 --------
 
--  `getItemTemplate() <../Container.getItemTemplate.html>`__
--  `setItemTemplate() <../Container.setItemTemplate.html>`__
--  `Collection <../../../Collection/>`__
+-  `getItemTemplate() <Container.getItemTemplate.html>`__
+-  `setItemTemplate() <Container.setItemTemplate.html>`__
+-  `Collection <../../Collection/>`__

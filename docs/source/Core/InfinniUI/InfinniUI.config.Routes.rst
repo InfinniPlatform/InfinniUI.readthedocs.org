@@ -58,4 +58,4 @@ Example
 See Also
 --------
 
--  `InfinniUI.config <../InfinniUI.config>`__
+-  `InfinniUI.config <InfinniUI.config>`__

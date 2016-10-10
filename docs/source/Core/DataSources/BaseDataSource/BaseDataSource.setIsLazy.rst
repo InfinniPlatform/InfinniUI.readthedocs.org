@@ -9,8 +9,8 @@ Description
 
 Если источник ленивый, то данные не будут загружаться автоматически.
   Инициировать запрос за данными можно либо создав соответсвующий
-  `DataBinding <../../../DataBinding>`__, либо с помощью вызова
-  `updateItems <../BaseDataSource.updateItems.html>`__.
+  `DataBinding <../../DataBinding>`__, либо с помощью вызова
+  `updateItems <BaseDataSource.updateItems.html>`__.
 По умолчанию источник данных является ленивым.
 
 Syntax
@@ -47,4 +47,4 @@ Examples
 See Also
 --------
 
--  `isLazy() <../BaseDataSource.isLazy.html>`__
+-  `isLazy() <BaseDataSource.isLazy.html>`__

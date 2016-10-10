@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setIsHeaderTemplateEmpty() <../DataGridColumn.setIsHeaderTemplateEmpty.html>`__
+-  `setIsHeaderTemplateEmpty() <DataGridColumn.setIsHeaderTemplateEmpty.html>`__

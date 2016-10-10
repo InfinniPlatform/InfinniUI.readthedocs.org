@@ -1,7 +1,7 @@
 AcceptAction.metadata
 =====================
 
-Метаданные типа `AcceptAction <../>`__.
+Метаданные типа `AcceptAction <./>`__.
 
 Properties
 ----------

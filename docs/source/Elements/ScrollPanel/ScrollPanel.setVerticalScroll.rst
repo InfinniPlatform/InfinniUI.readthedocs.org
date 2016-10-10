@@ -1,7 +1,7 @@
 ScrollPanel.setVerticalScroll()
 ===============================
 
-Устанавливает `видимость полосы прокрутки <../ScrollVisibility/>`__ по
+Устанавливает `видимость полосы прокрутки <ScrollVisibility/>`__ по
 вертикали.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `ScrollVisibility <../ScrollVisibility/>`__
+     - `ScrollVisibility <ScrollVisibility/>`__
      - Видимость полосы прокрутки по вертикали
 
 
@@ -40,7 +40,7 @@ Examples
 See Also
 --------
 
--  `getVerticalScroll() <../ScrollPanel.getVerticalScroll.html>`__
--  `getHorizontalScroll() <../ScrollPanel.getHorizontalScroll.html>`__
--  `setHorizontalScroll() <../ScrollPanel.setHorizontalScroll.html>`__
--  `ScrollVisibility <../ScrollVisibility/>`__
+-  `getVerticalScroll() <ScrollPanel.getVerticalScroll.html>`__
+-  `getHorizontalScroll() <ScrollPanel.getHorizontalScroll.html>`__
+-  `setHorizontalScroll() <ScrollPanel.setHorizontalScroll.html>`__
+-  `ScrollVisibility <ScrollVisibility/>`__

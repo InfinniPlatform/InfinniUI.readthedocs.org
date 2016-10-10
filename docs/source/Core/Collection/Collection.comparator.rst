@@ -1,7 +1,7 @@
 Collection.comparator
 =====================
 
-Возвращает `функцию сравнения элементов коллекции <../Comparator/>`__.
+Возвращает `функцию сравнения элементов коллекции <Comparator/>`__.
 
 Syntax
 ------
@@ -13,7 +13,7 @@ Syntax
 Returns
 ~~~~~~~
 
-`Функция сравнения элементов коллекции <../Comparator/>`__, указанная
+`Функция сравнения элементов коллекции <Comparator/>`__, указанная
 при ее создании.
 
 Examples
@@ -58,5 +58,5 @@ Examples
 See Also
 --------
 
--  `sort() <../Collection.sort.html>`__
--  `Comparator <../Comparator/>`__
+-  `sort() <Collection.sort.html>`__
+-  `Comparator <Comparator/>`__

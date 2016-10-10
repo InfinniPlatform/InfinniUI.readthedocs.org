@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setMode() <../DateTimePicker.setMode.html>`__
+-  `setMode() <DateTimePicker.setMode.html>`__

@@ -54,4 +54,4 @@ Examples
 See Also
 --------
 
--  `setVisible() <../Element.setVisible.html>`__
+-  `setVisible() <Element.setVisible.html>`__

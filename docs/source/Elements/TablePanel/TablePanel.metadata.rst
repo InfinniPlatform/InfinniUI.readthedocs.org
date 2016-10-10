@@ -1,7 +1,7 @@
 TablePanel.metadata
 ===================
 
-Метаданные типа `TablePanel <../>`__.
+Метаданные типа `TablePanel <./>`__.
 
 Properties
 ----------

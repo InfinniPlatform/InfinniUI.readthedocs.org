@@ -46,9 +46,9 @@ Examples
 See Also
 --------
 
--  `getErrorValidator() <../BaseDataSource.getErrorValidator.html>`__
--  `setErrorValidator() <../BaseDataSource.setErrorValidator.html>`__
--  `getWarningValidator() <../BaseDataSource.getWarningValidator.html>`__
--  `setWarningValidator() <../BaseDataSource.setWarningValidator.html>`__
--  `validateOnErrors() <../BaseDataSource.validateOnErrors.html>`__
--  `validateOnWarnings() <../BaseDataSource.validateOnWarnings.html>`__
+-  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
+-  `setErrorValidator() <BaseDataSource.setErrorValidator.html>`__
+-  `getWarningValidator() <BaseDataSource.getWarningValidator.html>`__
+-  `setWarningValidator() <BaseDataSource.setWarningValidator.html>`__
+-  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__
+-  `validateOnWarnings() <BaseDataSource.validateOnWarnings.html>`__

@@ -40,4 +40,4 @@ Returns
 See Also
 --------
 
--  `removeChild() <../Element.removeChild.html>`__
+-  `removeChild() <Element.removeChild.html>`__

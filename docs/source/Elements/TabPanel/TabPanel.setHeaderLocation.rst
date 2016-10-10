@@ -1,7 +1,7 @@
 TabPanel.setHeaderLocation()
 ============================
 
-Устанавливает `расположение закладок <../TabHeaderLocation/>`__.
+Устанавливает `расположение закладок <TabHeaderLocation/>`__.
 
 Syntax
 ------
@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `TabHeaderLocation <../TabHeaderLocation/>`__
+     - `TabHeaderLocation <TabHeaderLocation/>`__
      - Расположение закладок
 
 
@@ -39,5 +39,5 @@ Examples
 See Also
 --------
 
--  `getHeaderLocation() <../TabPanel.getHeaderLocation.html>`__
--  `TabHeaderLocation <../TabHeaderLocation/>`__
+-  `getHeaderLocation() <TabPanel.getHeaderLocation.html>`__
+-  `TabHeaderLocation <TabHeaderLocation/>`__

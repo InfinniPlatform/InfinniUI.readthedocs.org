@@ -39,6 +39,6 @@ Examples
 See Also
 --------
 
--  `setFilterParams <../DocumentDataSource.setFilterParams.html>`__
--  `getFilter() <../DocumentDataSource.getFilter.html>`__
--  `setFilter() <../DocumentDataSource.setFilter.html>`__
+-  `setFilterParams <DocumentDataSource.setFilterParams.html>`__
+-  `getFilter() <DocumentDataSource.getFilter.html>`__
+-  `setFilter() <DocumentDataSource.setFilter.html>`__

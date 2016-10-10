@@ -1,16 +1,16 @@
 BaseDataSource.onItemDeleted
 ============================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 элемент удален.
 
 Description
 -----------
 
-Вызов метода `deleteItem() <../BaseDataSource.deleteItem.html>`__ производит
+Вызов метода `deleteItem() <BaseDataSource.deleteItem.html>`__ производит
 удаление указанного элемента в соответствующем источнику данных
 хранилище. Успешное удаление элемента приводит к возникновению события
-`onItemDeleted <../BaseDataSource.onItemDeleted.html>`__.
+`onItemDeleted <BaseDataSource.onItemDeleted.html>`__.
 
 Syntax
 ------
@@ -29,8 +29,8 @@ Parameters
      - Type
      - Description
    * - callback
-     - `Script <../../../Script/>`__
-     - Обработчик события о том, что элемент удален. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <../>`__, value - удаленный элемент
+     - `Script <../../Script/>`__
+     - Обработчик события о том, что элемент удален. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <./>`__, value - удаленный элемент
 
 
 Examples
@@ -45,4 +45,4 @@ Examples
 See Also
 --------
 
--  `deleteItem() <../BaseDataSource.deleteItem.html>`__
+-  `deleteItem() <BaseDataSource.deleteItem.html>`__

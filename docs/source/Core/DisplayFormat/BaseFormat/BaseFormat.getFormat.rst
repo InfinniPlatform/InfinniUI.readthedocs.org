@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setFormat() <../BaseFormat.setFormat.html>`__
+-  `setFormat() <BaseFormat.setFormat.html>`__

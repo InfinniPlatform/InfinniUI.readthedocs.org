@@ -6,10 +6,10 @@ BaseDataSource.setProperty()
 Description
 -----------
 
-Методы `getProperty() <../BaseDataSource.getProperty.html>`__,
-`setProperty() <../BaseDataSource.setProperty.html>`__ и событие
-`onPropertyChanged <../BaseDataSource.onPropertyChanged.html>`__
-используются механизмом `привязки данных <../../../DataBinding/>`__.
+Методы `getProperty() <BaseDataSource.getProperty.html>`__,
+`setProperty() <BaseDataSource.setProperty.html>`__ и событие
+`onPropertyChanged <BaseDataSource.onPropertyChanged.html>`__
+используются механизмом `привязки данных <../../DataBinding/>`__.
 Вместе с этим они предоставляют универсальный унифицированный интерфейс
 для работы со свойствами источника данных.
 
@@ -29,7 +29,7 @@ Parameters
    * - Name
      - Description
    * - property
-     - Путь к свойству (подробности использования см. в разделе `Path rules <../BaseDataSource.getProperty/#path-rules>`__)
+     - Путь к свойству (подробности использования см. в разделе `Path rules <BaseDataSource.getProperty/#path-rules>`__)
    * - value
      - Значение свойства
 
@@ -49,6 +49,6 @@ Examples
 See Also
 --------
 
--  `getProperty() <../BaseDataSource.getProperty.html>`__
--  `onPropertyChanged <../BaseDataSource.onPropertyChanged.html>`__
--  `DataBinding <../../../DataBinding/>`__
+-  `getProperty() <BaseDataSource.getProperty.html>`__
+-  `onPropertyChanged <BaseDataSource.onPropertyChanged.html>`__
+-  `DataBinding <../../DataBinding/>`__

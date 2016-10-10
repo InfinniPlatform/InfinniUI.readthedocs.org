@@ -6,10 +6,10 @@ Collection.add
 Description
 -----------
 
-Метод `add() <../Collection.add.html>`__ добавляет указанный элемент в конец
+Метод `add() <Collection.add.html>`__ добавляет указанный элемент в конец
 коллекции. Успешное выполнение данного метода приводит к возникновению
-события `onAdd <../Collection.onAdd.html>`__. Вместе с этим событием также
-генерируется событие `onChange <../Collection.onChange.html>`__, которое
+события `onAdd <Collection.onAdd.html>`__. Вместе с этим событием также
+генерируется событие `onChange <Collection.onChange.html>`__, которое
 информирует о наличии любых изменений. Аргументы обеих событий в данном
 случае будут идентичны.
 
@@ -52,9 +52,9 @@ Examples
 See Also
 --------
 
--  `push() <../Collection.push.html>`__
--  `addAll() <../Collection.addAll.html>`__
--  `insert() <../Collection.insert.html>`__
--  `insertAll() <../Collection.insertAll.html>`__
--  `onAdd <../Collection.onAdd.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `push() <Collection.push.html>`__
+-  `addAll() <Collection.addAll.html>`__
+-  `insert() <Collection.insert.html>`__
+-  `insertAll() <Collection.insertAll.html>`__
+-  `onAdd <Collection.onAdd.html>`__
+-  `onChange <Collection.onChange.html>`__

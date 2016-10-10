@@ -1,7 +1,7 @@
 SaveAction.metadata
 ===================
 
-Метаданные типа `SaveAction <../>`__.
+Метаданные типа `SaveAction <./>`__.
 
 Properties
 ----------
@@ -22,11 +22,11 @@ Properties
      - true
      - Значение, определяющее, нужно ли закрыть родительское представление после сохранения
    * - OnSuccess
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Устанавливает обработчик успешного завершения действия
    * - OnError
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Устанавливает обработчик завершения действия с ошибкой
 
@@ -52,4 +52,4 @@ Examples
 See Also
 --------
 
--  `DataSource <../../../DataSources/>`__
+-  `DataSource <../../DataSources/>`__

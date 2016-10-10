@@ -41,4 +41,4 @@ Examples
 See Also
 --------
 
--  `getCellSelector() <../DataGridColumn.getCellSelector.html>`__
+-  `getCellSelector() <DataGridColumn.getCellSelector.html>`__

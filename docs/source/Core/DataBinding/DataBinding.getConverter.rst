@@ -2,7 +2,7 @@ DataBinding.getConverter()
 ==========================
 
 Возвращает `преобразователь данных между элементом и
-источником <../BindingConverter/>`__.
+источником <BindingConverter/>`__.
 
 Syntax
 ------
@@ -20,7 +20,7 @@ Returns
 ~~~~~~~
 
 `Преобразователь данных между элементом и
-источником <../BindingConverter/>`__.
+источником <BindingConverter/>`__.
 
 Examples
 --------
@@ -32,5 +32,5 @@ Examples
 See Also
 --------
 
--  `setConverter() <../DataBinding.setConverter.html>`__
--  `BindingConverter <../BindingConverter/>`__
+-  `setConverter() <DataBinding.setConverter.html>`__
+-  `BindingConverter <BindingConverter/>`__

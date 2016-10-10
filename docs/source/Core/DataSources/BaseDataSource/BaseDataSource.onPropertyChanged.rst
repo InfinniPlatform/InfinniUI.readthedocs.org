@@ -1,16 +1,16 @@
 BaseDataSource.onPropertyChanged
 ================================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что одно
+Устанавливает `обработчик события <../../Script/>`__ о том, что одно
 из свойств источника изменилось.
 
 Description
 -----------
 
-Методы `getProperty() <../BaseDataSource.getProperty.html>`__,
-`setProperty() <../BaseDataSource.setProperty.html>`__ и событие
-`onPropertyChanged <../BaseDataSource.onPropertyChanged.html>`__
-используются механизмом `привязки данных <../../DataBinding/>`__. Вместе
+Методы `getProperty() <BaseDataSource.getProperty.html>`__,
+`setProperty() <BaseDataSource.setProperty.html>`__ и событие
+`onPropertyChanged <BaseDataSource.onPropertyChanged.html>`__
+используются механизмом `привязки данных <../DataBinding/>`__. Вместе
 с этим они предоставляют универсальный унифицированный интерфейс для
 работы со свойствами источника данных.
 
@@ -36,9 +36,9 @@ Parameters
      - Description
    * - property
      - ``String``
-     - Название свойства, изменения которого необходимо отслеживать (подробности использования см. в разделе `Path rules <../BaseDataSource.getProperty/#path-rules>`__)
+     - Название свойства, изменения которого необходимо отслеживать (подробности использования см. в разделе `Path rules <BaseDataSource.getProperty/#path-rules>`__)
    * - callback\*
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что одно из свойств источника изменилось. Параметр ``args`` данного обработчика содержит измененное свойство в поле property
    * - owner
      - –
@@ -59,6 +59,6 @@ Examples
 See Also
 --------
 
--  `getProperty() <../BaseDataSource.getProperty.html>`__
--  `setProperty() <../BaseDataSource.setProperty.html>`__
--  `DataBinding <../../DataBinding/>`__
+-  `getProperty() <BaseDataSource.getProperty.html>`__
+-  `setProperty() <BaseDataSource.setProperty.html>`__
+-  `DataBinding <../DataBinding/>`__

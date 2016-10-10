@@ -7,10 +7,10 @@ Description
 -----------
 
 Если в источнике данных `разрешено обновление списка
-элементов <../../BaseDataSource/BaseDataSource.resumeUpdate.html>`__,
+элементов <../BaseDataSource/BaseDataSource.resumeUpdate.html>`__,
 изменение номера страницы приводит к автоматическому `обновлению списка
 элементов источника
-данных <../../BaseDataSource/BaseDataSource.updateItems.html>`__.
+данных <../BaseDataSource/BaseDataSource.updateItems.html>`__.
 
 Syntax
 ------
@@ -46,7 +46,7 @@ Examples
 See Also
 --------
 
--  `getPageNumber() <../DocumentDataSource.getPageNumber.html>`__
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
--  `suspendUpdate() <../../BaseDataSource/BaseDataSource.suspendUpdate.html>`__
--  `resumeUpdate() <../../BaseDataSource/BaseDataSource.resumeUpdate.html>`__
+-  `getPageNumber() <DocumentDataSource.getPageNumber.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `suspendUpdate() <../BaseDataSource/BaseDataSource.suspendUpdate.html>`__
+-  `resumeUpdate() <../BaseDataSource/BaseDataSource.resumeUpdate.html>`__

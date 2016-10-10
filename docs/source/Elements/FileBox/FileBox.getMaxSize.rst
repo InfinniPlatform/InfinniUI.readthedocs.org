@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setMaxSize <../FileBox.setMaxSize.html>`__
+-  `setMaxSize <FileBox.setMaxSize.html>`__

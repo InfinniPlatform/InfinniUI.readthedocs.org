@@ -1,7 +1,7 @@
 DataBinding.getMode()
 =====================
 
-Возвращает `направление обмена данными в привязке <../BindingMode/>`__.
+Возвращает `направление обмена данными в привязке <BindingMode/>`__.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Направление обмена данными в привязке <../BindingMode/>`__.
+`Направление обмена данными в привязке <BindingMode/>`__.
 
 Examples
 --------
@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `setMode() <../DataBinding.setMode.html>`__
--  `BindingMode <../BindingMode/>`__
+-  `setMode() <DataBinding.setMode.html>`__
+-  `BindingMode <BindingMode/>`__

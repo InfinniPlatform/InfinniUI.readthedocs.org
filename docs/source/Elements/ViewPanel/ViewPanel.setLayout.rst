@@ -1,7 +1,7 @@
 ViewPanel.setLayout()
 =====================
 
-Устанавливает `представление <../../../Core/Elements/View>`__, которое
+Устанавливает `представление <../../Core/Elements/View>`__, которое
 нужно отображать внутри ViewPanel.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `View <../../../Core/Elements/View>`__
+     - `View <../../Core/Elements/View>`__
      - Представление, которое нужно отображать внутри ViewPanel
 
 
@@ -54,4 +54,4 @@ Examples
 See Also
 --------
 
--  `getLayout <../ViewPanel.getLayout.html>`__
+-  `getLayout <ViewPanel.getLayout.html>`__

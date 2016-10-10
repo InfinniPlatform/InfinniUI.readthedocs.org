@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getShowSelectors() <../DataGrid.getShowSelectors.html>`__
+-  `getShowSelectors() <DataGrid.getShowSelectors.html>`__

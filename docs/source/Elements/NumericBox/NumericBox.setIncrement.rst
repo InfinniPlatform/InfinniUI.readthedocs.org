@@ -34,4 +34,4 @@ Examples
 See Also
 --------
 
--  `getIncrement() <../NumericBox.getIncrement.html>`__
+-  `getIncrement() <NumericBox.getIncrement.html>`__

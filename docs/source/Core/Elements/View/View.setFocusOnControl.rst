@@ -33,4 +33,4 @@ Returns
 See Also
 --------
 
--  `getFocusOnControl() <../View.getFocusOnControl.html>`__
+-  `getFocusOnControl() <View.getFocusOnControl.html>`__

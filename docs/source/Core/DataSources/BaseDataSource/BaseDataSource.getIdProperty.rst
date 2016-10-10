@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setIdProperty() <../BaseDataSource.setIdProperty.html>`__
+-  `setIdProperty() <BaseDataSource.setIdProperty.html>`__

@@ -40,7 +40,7 @@ Examples
 See Also
 --------
 
--  `getCheckAllVisible() <../DataGrid.getCheckAllVisible.html>`__
--  `getCheckAll() <../DataGrid.getCheckAll.html>`__
--  `getShowSelectors() <../DataGrid.getShowSelectors.html>`__
--  `setShowSelectors() <../DataGrid.setShowSelectors.html>`__
+-  `getCheckAllVisible() <DataGrid.getCheckAllVisible.html>`__
+-  `getCheckAll() <DataGrid.getCheckAll.html>`__
+-  `getShowSelectors() <DataGrid.getShowSelectors.html>`__
+-  `setShowSelectors() <DataGrid.setShowSelectors.html>`__

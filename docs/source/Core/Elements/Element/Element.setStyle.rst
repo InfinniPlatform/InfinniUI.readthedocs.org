@@ -45,10 +45,10 @@ Examples
 See Also
 --------
 
--  `getStyle() <../Element.getStyle.html>`__
--  `getTextStyle() <../Element.getTextStyle.html>`__
--  `setTextStyle() <../Element.setTextStyle.html>`__
--  `getForeground() <../Element.getForeground.html>`__
--  `setForeground() <../Element.setForeground.html>`__
--  `getBackground() <../Element.getBackground.html>`__
--  `setBackground() <../Element.setBackground.html>`__
+-  `getStyle() <Element.getStyle.html>`__
+-  `getTextStyle() <Element.getTextStyle.html>`__
+-  `setTextStyle() <Element.setTextStyle.html>`__
+-  `getForeground() <Element.getForeground.html>`__
+-  `setForeground() <Element.setForeground.html>`__
+-  `getBackground() <Element.getBackground.html>`__
+-  `setBackground() <Element.setBackground.html>`__

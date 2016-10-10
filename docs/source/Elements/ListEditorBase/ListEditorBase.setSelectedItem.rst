@@ -22,4 +22,4 @@ Examples
 See Also
 --------
 
--  `getSelectedItem() <../ListEditorBase.getSelectedItem.html>`__
+-  `getSelectedItem() <ListEditorBase.getSelectedItem.html>`__

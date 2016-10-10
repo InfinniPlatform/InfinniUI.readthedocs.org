@@ -2,7 +2,7 @@ Element.setHorizontalAlignment()
 ================================
 
 Устанавливает `горизонтальное
-выравнивание <../ElementHorizontalAlignment/>`__ в родительском
+выравнивание <ElementHorizontalAlignment/>`__ в родительском
 элементе.
 
 Syntax
@@ -23,7 +23,7 @@ Parameters
      - Description
    * - value
      - ``String``
-     - `Горизонтальное выравнивание <../ElementHorizontalAlignment/>`__ в родительском элементе.
+     - `Горизонтальное выравнивание <ElementHorizontalAlignment/>`__ в родительском элементе.
 
 
 Returns
@@ -42,5 +42,5 @@ Examples
 See Also
 --------
 
--  `getHorizontalAlignment() <../Element.getHorizontalAlignment.html>`__
--  `ElementHorizontalAlignment <../ElementHorizontalAlignment/>`__
+-  `getHorizontalAlignment() <Element.getHorizontalAlignment.html>`__
+-  `ElementHorizontalAlignment <ElementHorizontalAlignment/>`__

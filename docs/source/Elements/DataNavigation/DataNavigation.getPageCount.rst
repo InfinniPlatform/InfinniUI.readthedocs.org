@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setPageCount() <../DataNavigation.setPageCount.html>`__
+-  `setPageCount() <DataNavigation.setPageCount.html>`__

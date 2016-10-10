@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setPageSize() <../DataNavigation.setPageSize.html>`__
+-  `setPageSize() <DataNavigation.setPageSize.html>`__

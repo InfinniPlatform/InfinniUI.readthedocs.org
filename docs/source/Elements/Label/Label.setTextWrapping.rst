@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `getTextWrapping() <../Label.getTextWrapping/>`__
+-  `getTextWrapping() <Label.getTextWrapping/>`__

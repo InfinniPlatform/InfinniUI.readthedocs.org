@@ -6,10 +6,10 @@ BaseDataSource.deleteItem()
 Description
 -----------
 
-Вызов метода `deleteItem() <../BaseDataSource.deleteItem.html>`__ производит
+Вызов метода `deleteItem() <BaseDataSource.deleteItem.html>`__ производит
 удаление указанного элемента в соответствующем источнику данных
 хранилище. Успешное удаление элемента приводит к возникновению события
-`onItemDeleted <../BaseDataSource.onItemDeleted.html>`__.
+`onItemDeleted <BaseDataSource.onItemDeleted.html>`__.
 
 Syntax
 ------
@@ -29,9 +29,9 @@ Parameters
    * - item\*
      - Элемент источника данных
    * - success
-     - `Обработчик события <../../../Script.html>`__ о том, что элемент удален. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <...html>`__, value - удаленный элемент
+     - `Обработчик события <../../Script.html>`__ о том, что элемент удален. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <...html>`__, value - удаленный элемент
    * - error
-     - `Обработчик события <../../../Script.html>`__ о том, что при удалении элемента произошла ошибка. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <...html>`__, value - удаляемый элемент, error - сообщение об ошибке
+     - `Обработчик события <../../Script.html>`__ о том, что при удалении элемента произошла ошибка. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <...html>`__, value - удаляемый элемент, error - сообщение об ошибке
 
 
 \* Обязательный аргумент.
@@ -52,6 +52,6 @@ Examples
 See Also
 --------
 
--  `onItemDeleted <../BaseDataSource.onItemDeleted.html>`__
--  `createItem() <../BaseDataSource.createItem.html>`__
--  `saveItem() <../BaseDataSource.saveItem.html>`__
+-  `onItemDeleted <BaseDataSource.onItemDeleted.html>`__
+-  `createItem() <BaseDataSource.createItem.html>`__
+-  `saveItem() <BaseDataSource.saveItem.html>`__

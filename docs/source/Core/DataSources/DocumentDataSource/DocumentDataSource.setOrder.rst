@@ -56,4 +56,4 @@ Examples
 See Also
 --------
 
--  `getOrder() <../DocumentDataSource.getOrder.html>`__
+-  `getOrder() <DocumentDataSource.getOrder.html>`__

@@ -1,7 +1,7 @@
 Element.onLostFocus
 ===================
 
-Устанавливает `обработчик события <../../../Script/>`__ о том, что
+Устанавливает `обработчик события <../../Script/>`__ о том, что
 элемент потерял фокус ввода.
 
 Syntax
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Обработчик события о том, что элемент потерял фокус ввода.
 
 
@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `onGotFocus <../Element.onGotFocus.html>`__
+-  `onGotFocus <Element.onGotFocus.html>`__

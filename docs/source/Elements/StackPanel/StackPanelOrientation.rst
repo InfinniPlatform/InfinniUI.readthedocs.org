@@ -1,7 +1,7 @@
 StackPanelOrientation
 =====================
 
-Ориентация `StackPanel <../>`__.
+Ориентация `StackPanel <./>`__.
 
 Syntax
 ------
@@ -30,5 +30,5 @@ Members
 See Also
 --------
 
--  `getOrientation() <../StackPanel.getOrientation.html>`__
--  `setOrientation() <../StackPanel.setOrientation.html>`__
+-  `getOrientation() <StackPanel.getOrientation.html>`__
+-  `setOrientation() <StackPanel.setOrientation.html>`__

@@ -53,7 +53,7 @@ Properties
 
 
 1 `Шаблонизируемая
-величина <../../RestDataSource/#parameters-templating>`__. Заполняется
+величина <../RestDataSource/#parameters-templating>`__. Заполняется
 значениями из FilterParams.
 
 Examples

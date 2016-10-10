@@ -1,7 +1,7 @@
 ViewContext.messageBus
 ======================
 
-Возвращает `шину сообщений представления <../../MessageBus/>`__.
+Возвращает `шину сообщений представления <../MessageBus/>`__.
 
 Syntax
 ------
@@ -20,4 +20,4 @@ Examples
 See Also
 --------
 
--  `MessageBus <../../MessageBus/>`__
+-  `MessageBus <../MessageBus/>`__

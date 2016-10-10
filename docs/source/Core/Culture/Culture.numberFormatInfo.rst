@@ -4,7 +4,7 @@ Culture.numberFormatInfo
 Сведения о формате представления числовых значений.
 
 Описание настроек форматирования для числовых значений приведено в
-разделе `numberFormatting <../Culture.numberFormatting.html>`__.
+разделе `numberFormatting <Culture.numberFormatting.html>`__.
 
 Properties
 ----------

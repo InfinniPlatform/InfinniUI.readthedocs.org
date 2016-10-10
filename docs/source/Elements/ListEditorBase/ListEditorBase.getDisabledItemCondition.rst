@@ -1,7 +1,7 @@
 ListEditorBase.getDisabledItemCondition
 =======================================
 
-Возвращает `функцию <../../../Core/Script/>`__, определяющую запрет на
+Возвращает `функцию <../../Core/Script/>`__, определяющую запрет на
 выбор элемента.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Функция <../../../Core/Script/>`__, определяющая запрет на выбор
+`Функция <../../Core/Script/>`__, определяющая запрет на выбор
 элемента.
 
 Examples
@@ -28,4 +28,4 @@ Examples
 See Also
 --------
 
--  `setDisabledItemCondition() <../ListEditorBase.setDisabledItemCondition.html>`__
+-  `setDisabledItemCondition() <ListEditorBase.setDisabledItemCondition.html>`__

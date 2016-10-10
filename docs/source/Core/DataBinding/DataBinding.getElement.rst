@@ -19,7 +19,7 @@ Returns
 ~~~~~~~
 
 Элемент привязки, установленный вызовом метода
-`bindElement() <../DataBinding.bindElement.html>`__.
+`bindElement() <DataBinding.bindElement.html>`__.
 
 Examples
 --------
@@ -32,5 +32,5 @@ Examples
 See Also
 --------
 
--  `bindElement() <../DataBinding.bindElement.html>`__
--  `getElementProperty() <../DataBinding.getElementProperty.html>`__
+-  `bindElement() <DataBinding.bindElement.html>`__
+-  `getElementProperty() <DataBinding.getElementProperty.html>`__

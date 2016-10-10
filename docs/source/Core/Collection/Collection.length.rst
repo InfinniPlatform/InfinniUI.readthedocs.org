@@ -28,4 +28,4 @@ Examples
 See Also
 --------
 
--  `size() <../Collection.size.html>`__
+-  `size() <Collection.size.html>`__

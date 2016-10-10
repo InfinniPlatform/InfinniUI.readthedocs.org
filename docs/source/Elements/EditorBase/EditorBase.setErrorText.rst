@@ -34,4 +34,4 @@ Examples
 See Also
 --------
 
--  `getErrorText() <../EditorBase.getErrorText.html>`__
+-  `getErrorText() <EditorBase.getErrorText.html>`__

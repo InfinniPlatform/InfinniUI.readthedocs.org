@@ -1,7 +1,7 @@
 TabPanel.metadata
 =================
 
-Метаданные типа `TabPanel <../>`__.
+Метаданные типа `TabPanel <./>`__.
 
 Properties
 ----------
@@ -14,11 +14,11 @@ Properties
      - Default
      - Description
    * - HeaderLocation
-     - `TabHeaderLocation <../TabHeaderLocation/>`__
+     - `TabHeaderLocation <TabHeaderLocation/>`__
      - 'Top'
      - Расположение закладок
    * - OnSelectedItemChanged
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - –
      - Обработчик события о том, что выделенный элемент изменился
 

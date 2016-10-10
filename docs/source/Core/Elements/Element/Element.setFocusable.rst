@@ -10,27 +10,27 @@ Description
 Возможность установки фокуса ввода на элемент зависит от нескольких
 параметров. Во-первых, от значения соответствующего свойства, которое
 можно установить с помощью метода
-`setFocusable() <../Element.setFocusable.html>`__. Во-вторых, от текущего
+`setFocusable() <Element.setFocusable.html>`__. Во-вторых, от текущего
 состояния элемента. Например, элемент может быть
-`заблокирован <../Element.getEnabled.html>`__ или
-`скрыт <../Element.getVisible.html>`__, либо находится внутри контейнера,
+`заблокирован <Element.getEnabled.html>`__ или
+`скрыт <Element.getVisible.html>`__, либо находится внутри контейнера,
 который в свою очередь заблокирован или скрыт. Наконец, некоторые
 элементы на уровне реализации могут запрещать установку фокуса ввода.
 
-Вызов метода `setFocused() <../Element.setFocused.html>`__ с параметром
+Вызов метода `setFocused() <Element.setFocused.html>`__ с параметром
 ``true`` учитывает все вышеперечисленные аспекты и пытается установить
 фокус ввода на элемент. Если все проверки прошли успешно и элемент
 получил фокус ввода, у соответствующего элемента возникает событие
-`onGotFocus <../Element.onGotFocus.html>`__. Следует отметить, что событие
-`onGotFocus <../Element.onGotFocus.html>`__ также может возникать и
+`onGotFocus <Element.onGotFocus.html>`__. Следует отметить, что событие
+`onGotFocus <Element.onGotFocus.html>`__ также может возникать и
 вследствие действий пользователя.
 
 Установка фокуса ввода на элемент означает также то, что другой, ранее
 сфокусированный элемент, теряет фокус ввода, что в свою очередь приводит
 к тому, что у соответствующего элемента возникает событие
-`onLostFocus <../Element.onLostFocus.html>`__. Событие
-`onLostFocus <../Element.onLostFocus.html>`__ также может спровоцировать
-вызов метода `setFocused() <../Element.setFocused.html>`__ с параметром
+`onLostFocus <Element.onLostFocus.html>`__. Событие
+`onLostFocus <Element.onLostFocus.html>`__ также может спровоцировать
+вызов метода `setFocused() <Element.setFocused.html>`__ с параметром
 ``false``, если на элемент был установлен фокус ввода.
 
 Syntax
@@ -69,8 +69,8 @@ Examples
 See Also
 --------
 
--  `getFocusable() <../Element.getFocusable.html>`__
--  `getFocused() <../Element.getFocused.html>`__
--  `setFocused() <../Element.setFocused.html>`__
--  `onGotFocus <../Element.onGotFocus.html>`__
--  `onLostFocus <../Element.onLostFocus.html>`__
+-  `getFocusable() <Element.getFocusable.html>`__
+-  `getFocused() <Element.getFocused.html>`__
+-  `setFocused() <Element.setFocused.html>`__
+-  `onGotFocus <Element.onGotFocus.html>`__
+-  `onLostFocus <Element.onLostFocus.html>`__

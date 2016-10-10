@@ -25,5 +25,5 @@ Examples
 See Also
 --------
 
--  `setEditMask() <../TextEditorBase.setEditMask.html>`__
+-  `setEditMask() <TextEditorBase.setEditMask.html>`__
 -  `EditMask </docs/API/Core/EditMask/>`__

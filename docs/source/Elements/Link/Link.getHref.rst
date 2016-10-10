@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setHref() <../Link.setHref.html>`__
+-  `setHref() <Link.setHref.html>`__

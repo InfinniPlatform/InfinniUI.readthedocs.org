@@ -32,4 +32,4 @@ Examples
 See Also
 --------
 
--  `setShowSelectors() <../DataGrid.setShowSelectors.html>`__
+-  `setShowSelectors() <DataGrid.setShowSelectors.html>`__

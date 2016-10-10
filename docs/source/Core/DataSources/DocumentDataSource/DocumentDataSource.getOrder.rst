@@ -19,7 +19,7 @@ Returns
 ~~~~~~~
 
 Правило сортировки документов (см.
-`формат <../DocumentDataSource.setOrder/#order-format>`__)
+`формат <DocumentDataSource.setOrder/#order-format>`__)
 
 Examples
 --------
@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `setOrder() <../DocumentDataSource.setOrder.html>`__
+-  `setOrder() <DocumentDataSource.setOrder.html>`__

@@ -1,7 +1,7 @@
 SelectAction.metadata
 =====================
 
-Метаданные типа `SelectAction <../>`__.
+Метаданные типа `SelectAction <./>`__.
 
 Properties
 ----------
@@ -13,8 +13,8 @@ Properties
      - Type
      - Description
    * - LinkView*
-     - `LinkView.metadata <../../../Elements/View/LinkView/LinkView.metadata.html>`__
-     - Объект, который будет создавать и настраивать `представление <../../../Elements/View/>`__
+     - `LinkView.metadata <../../Elements/View/LinkView/LinkView.metadata.html>`__
+     - Объект, который будет создавать и настраивать `представление <../../Elements/View/>`__
    * - SourceValue.Source*
      - ``String``
      - Название источника данных, из которого будет заполняться редактируемый источник данных

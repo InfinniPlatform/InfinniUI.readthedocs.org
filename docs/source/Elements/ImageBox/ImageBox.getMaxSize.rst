@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setMaxSize <../ImageBox.setMaxSize.html>`__
+-  `setMaxSize <ImageBox.setMaxSize.html>`__

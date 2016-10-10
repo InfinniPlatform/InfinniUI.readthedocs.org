@@ -1,7 +1,7 @@
 Container.metadata
 ==================
 
-Метаданные типа `Container <../>`__.
+Метаданные типа `Container <./>`__.
 
 Properties
 ----------
@@ -19,16 +19,16 @@ Properties
      - `Element </docs/API/Core/Elements/Element/Element.metadata.html>`__
      - Шаблон дочерних элементов контейнера, 
    * - ItemFormat
-     - `DisplayFormat <../../../DisplayFormat/>`__
+     - `DisplayFormat <../../DisplayFormat/>`__
      - Формат отображения дочерних элементов контейнера
    * - ItemSelector
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция, которая по переданным данным конструирует отображаемое значение
    * - ItemProperty
      - ``String``
      - Свойство дочерних элементов контейнера для отображения в контейнере
    * - GroupValueSelector
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция, определяющую условие группировки дочерних элементов контейнера
    * - GroupValueProperty
      - ``String``
@@ -37,10 +37,10 @@ Properties
      - `Element </docs/API/Core/Elements/Element/Element.metadata.html>`__
      - Функция шаблонизации заголовков групп
    * - GroupItemFormat
-     - `DisplayFormat <../../../DisplayFormat/>`__
+     - `DisplayFormat <../../DisplayFormat/>`__
      - Формат заголовков групп
    * - GroupItemSelector
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция, которая по переданным данным конструирует значение заголовков групп
    * - GroupItemProperty
      - ``String``
@@ -51,7 +51,7 @@ Properties
 
 Если поле Items заданно массивом, то Container не является
 шаблонизируемым и строится по метаданным Items. Если же Items является
-объектом, то он содержит `привязку <../../../DataBinding/>`__ на
+объектом, то он содержит `привязку <../../DataBinding/>`__ на
 источник элементов, для отображения которых необходимо задать шаблон.
 
 ItemSelector и GroupItemSelector должны возвращать элементарные

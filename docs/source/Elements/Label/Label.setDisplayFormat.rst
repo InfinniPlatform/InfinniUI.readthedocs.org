@@ -1,8 +1,8 @@
 Label.setDisplayFormat
 ======================
 
-Устанавливает `функцию <../../Core/Script/>`__ форматирования
-`значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
+Устанавливает `функцию <../Core/Script/>`__ форматирования
+`значения <EditorBase/EditorBase.getValue.html>`__ для отображения.
 
 Syntax
 ------
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - format
-     - `функция <../../Core/Script/>`__
-     - `Функция <../../Core/Script.html>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
+     - `функция <../Core/Script/>`__
+     - `Функция <../Core/Script.html>`__ форматирования `значения <EditorBase/EditorBase.getValue.html>`__ для отображения.
 
 
 Returns
@@ -48,4 +48,4 @@ Examples
 See Also
 --------
 
--  `getDisplayFormat() <../Label.getDisplayFormat.html>`__
+-  `getDisplayFormat() <Label.getDisplayFormat.html>`__

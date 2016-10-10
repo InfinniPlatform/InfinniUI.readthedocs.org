@@ -42,4 +42,4 @@ Examples
 See Also
 --------
 
--  `setTarget() <../Link.setTarget.html>`__
+-  `setTarget() <Link.setTarget.html>`__

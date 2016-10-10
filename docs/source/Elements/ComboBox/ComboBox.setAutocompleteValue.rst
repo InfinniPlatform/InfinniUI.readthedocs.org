@@ -43,6 +43,6 @@ Examples
 See Also
 --------
 
--  `getAutocompleteValue() <../ComboBox.getAutocompleteValue.html>`__
--  `getAutocomplete() <../ComboBox.getAutocomplete.html>`__
--  `setAutocomplete() <../ComboBox.setAutocomplete.html>`__
+-  `getAutocompleteValue() <ComboBox.getAutocompleteValue.html>`__
+-  `getAutocomplete() <ComboBox.getAutocomplete.html>`__
+-  `setAutocomplete() <ComboBox.setAutocomplete.html>`__

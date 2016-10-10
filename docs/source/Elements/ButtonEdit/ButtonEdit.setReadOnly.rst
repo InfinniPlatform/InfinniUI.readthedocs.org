@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `getReadOnly() <../ButtonEdit.getReadOnly.html>`__
+-  `getReadOnly() <ButtonEdit.getReadOnly.html>`__

@@ -1,8 +1,8 @@
 View.getParameters()
 ====================
 
-Возвращает `коллекцию <../../../Collection/>`__ `параметров
-представления <../../../Parameters/>`__.
+Возвращает `коллекцию <../../Collection/>`__ `параметров
+представления <../../Parameters/>`__.
 
 Syntax
 ------
@@ -19,8 +19,8 @@ Parameters
 Returns
 ~~~~~~~
 
-`Коллекция <../../../Collection/>`__ `параметров
-представления <../../../Parameters/>`__.
+`Коллекция <../../Collection/>`__ `параметров
+представления <../../Parameters/>`__.
 
 Examples
 --------
@@ -40,5 +40,5 @@ Examples
 See Also
 --------
 
--  `Collection <../../../Collection/>`__
--  `Parameter <../../../Parameters/>`__
+-  `Collection <../../Collection/>`__
+-  `Parameter <../../Parameters/>`__

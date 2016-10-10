@@ -14,11 +14,11 @@ MessageTypes
      - Description
      - messageBody
    * - onViewBuildError
-     - Ошибка при создании `view <../../Elements/View/>`__
-     - {error: ``string``, metadata: {`путь до метаданных <../../Elements/View/LinkView/LinkView.metadata/AutoView/>`__}}
+     - Ошибка при создании `view <../Elements/View/>`__
+     - {error: ``string``, metadata: {`путь до метаданных <../Elements/View/LinkView/LinkView.metadata/AutoView/>`__}}
    * - onViewCreated
-     - Создана `view <../../Elements/View/>`__
-     - {openMode: `openMode <../../Elements/View/LinkView/OpenMode/>`__, view: `view <../../Elements/View/>`__}
+     - Создана `view <../Elements/View/>`__
+     - {openMode: `openMode <../Elements/View/LinkView/OpenMode/>`__, view: `view <../Elements/View/>`__}
    * - onNotifyUser
      - Оповещение пользователя
      - {messageText: ``string``, messageType: ``string``}
@@ -43,5 +43,5 @@ Examples
 See Also
 --------
 
--  `send() <../MessageBus.send.html>`__
--  `subscribe() <../MessageBus.subscribe.html>`__
+-  `send() <MessageBus.send.html>`__
+-  `subscribe() <MessageBus.subscribe.html>`__

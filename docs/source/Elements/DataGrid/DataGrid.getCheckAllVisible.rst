@@ -31,7 +31,7 @@ Examples
 See Also
 --------
 
--  `setCheckAllVisible <../DataGrid.setCheckAllVisible.html>`__
--  `getCheckAll <../DataGrid.getCheckAll.html>`__
--  `getShowSelectors <../DataGrid.getShowSelectors.html>`__
--  `setShowSelectors <../DataGrid.setShowSelectors.html>`__
+-  `setCheckAllVisible <DataGrid.setCheckAllVisible.html>`__
+-  `getCheckAll <DataGrid.getCheckAll.html>`__
+-  `getShowSelectors <DataGrid.getShowSelectors.html>`__
+-  `setShowSelectors <DataGrid.setShowSelectors.html>`__

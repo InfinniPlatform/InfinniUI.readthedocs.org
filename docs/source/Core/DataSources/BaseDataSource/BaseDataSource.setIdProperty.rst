@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `getIdProperty() <../BaseDataSource.getIdProperty.html>`__
+-  `getIdProperty() <BaseDataSource.getIdProperty.html>`__

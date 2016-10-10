@@ -62,4 +62,4 @@ Examples
 See Also
 --------
 
--  `getTimeZone() <../DateTimePicker.getTimeZone.html>`__
+-  `getTimeZone() <DateTimePicker.getTimeZone.html>`__

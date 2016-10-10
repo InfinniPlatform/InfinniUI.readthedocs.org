@@ -44,5 +44,5 @@ Examples
 See Also
 --------
 
--  `createItem <../DataProvider.createItem.html>`__
--  `createLocalItem <../DataProvider.createLocalItem.html>`__
+-  `createItem <DataProvider.createItem.html>`__
+-  `createLocalItem <DataProvider.createLocalItem.html>`__

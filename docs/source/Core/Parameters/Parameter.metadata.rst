@@ -1,7 +1,7 @@
 Parameter.metadata
 ==================
 
-Метаданные типа `Parameter <../>`__.
+Метаданные типа `Parameter <./>`__.
 
 Properties
 ----------
@@ -17,13 +17,13 @@ Properties
      - Наименование параметра
    * - ``Value``*
      - ``String``
-     - `DataBinding <../../../Core/DataBinding/DataBinding.metadata.html>`__
+     - `DataBinding <../../Core/DataBinding/DataBinding.metadata.html>`__
      - Значение параметра
    * - ``DefaultValue``
      - \*
      - Значение по умолчанию
    * - ``OnPropertyChanged``
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - Обработчик события о том, что значение было изменено
 
 

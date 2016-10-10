@@ -1,7 +1,7 @@
 TreeView.setKeySelector
 =======================
 
-Устанавливает `функцию <../../../Core/Script/>`__ выборки из элемента
+Устанавливает `функцию <../../Core/Script/>`__ выборки из элемента
 коллекции идентификатора.
 
 Syntax
@@ -21,8 +21,8 @@ Parameters
      - Type
      - Description
    * - ``value``
-     - `Script <../../../Core/Script/>`__
-     - `Функция <../../../Core/Script/>`__ выборки из элемента коллекции идентификатора.
+     - `Script <../../Core/Script/>`__
+     - `Функция <../../Core/Script/>`__ выборки из элемента коллекции идентификатора.
 
 
 Returns
@@ -43,4 +43,4 @@ Examples
 See Also
 --------
 
--  `getKeySelector <../TreeView.getKeySelector.html>`__
+-  `getKeySelector <TreeView.getKeySelector.html>`__

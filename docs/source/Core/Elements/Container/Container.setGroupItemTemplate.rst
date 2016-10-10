@@ -1,14 +1,14 @@
 Container.setGroupItemTemplate()
 ================================
 
-Устанавливает `функцию <../../../Script/>`__ шаблонизации заголовков
+Устанавливает `функцию <../../Script/>`__ шаблонизации заголовков
 групп.
 
 Description
 -----------
 
 Если в контейнере `задана
-группировка <../Container.setGroupValueSelector.html>`__, то,
+группировка <Container.setGroupValueSelector.html>`__, то,
 воспользовавшись ``setGroupItemTemplate``, можно определить заголовки
 групп.
 
@@ -29,7 +29,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - Функция шаблонизации заголовков групп
 
 
@@ -39,7 +39,7 @@ Parameters
 -  ``args.item`` - элементы текущей группы.
 
 Результатом работы функции должен быть `визуальный
-элемент <../../Element/>`__.
+элемент <../Element/>`__.
 
 Returns
 ~~~~~~~
@@ -63,5 +63,5 @@ Examples
 See Also
 --------
 
--  `getGroupItemTemplate() <../Container.getGroupItemTemplate.html>`__
--  `setGroupValueSelector() <../Container.setGroupValueSelector.html>`__
+-  `getGroupItemTemplate() <Container.getGroupItemTemplate.html>`__
+-  `setGroupValueSelector() <Container.setGroupValueSelector.html>`__

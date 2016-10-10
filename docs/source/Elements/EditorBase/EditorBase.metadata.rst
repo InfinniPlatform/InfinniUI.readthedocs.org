@@ -1,7 +1,7 @@
 EditorBase.metadata
 ===================
 
-Метаданные типа `EditorBase <../>`__.
+Метаданные типа `EditorBase <./>`__.
 
 Properties
 ----------
@@ -13,7 +13,7 @@ Properties
      - Type
      - Description
    * - Value
-     - `BindingMetadata <../../../Core/DataBinding/DataBinding.metadata.html>`__
+     - `BindingMetadata <../../Core/DataBinding/DataBinding.metadata.html>`__
      - Значение
    * - HintText
      - ``String``
@@ -25,10 +25,10 @@ Properties
      - ``String``
      - Текст с информацией о предупреждении
    * - OnValueChanging
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - Обработчик события о том, что значение изменяется
    * - OnValueChanged
-     - `Script <../../../Core/Script/>`__
+     - `Script <../../Core/Script/>`__
      - Обработчик события о том, что значение было изменено
 
 

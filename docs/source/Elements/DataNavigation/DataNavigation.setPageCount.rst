@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getPageCount() <../DataNavigation.getPageCount.html>`__
+-  `getPageCount() <DataNavigation.getPageCount.html>`__

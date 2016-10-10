@@ -30,6 +30,6 @@ Examples
 See Also
 --------
 
--  `subscribe() <../NotificationSubscriptions.subscribe.html>`__
--  `unsubscribe() <../NotificationSubscriptions.unsubscribe.html>`__
--  `startConnection() <../NotificationSubscriptions.startConnection.html>`__
+-  `subscribe() <NotificationSubscriptions.subscribe.html>`__
+-  `unsubscribe() <NotificationSubscriptions.unsubscribe.html>`__
+-  `startConnection() <NotificationSubscriptions.startConnection.html>`__

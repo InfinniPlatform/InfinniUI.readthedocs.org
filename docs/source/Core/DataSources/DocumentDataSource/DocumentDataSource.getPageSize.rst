@@ -30,5 +30,5 @@ Examples
 See Also
 --------
 
--  `setPageSize() <../DocumentDataSource.setPageSize.html>`__
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `setPageSize() <DocumentDataSource.setPageSize.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__

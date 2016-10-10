@@ -1,7 +1,7 @@
 Button.metadata
 ===============
 
-Метаданные типа `Button <../>`__.
+Метаданные типа `Button <./>`__.
 
 Properties
 ----------
@@ -14,7 +14,7 @@ Properties
      - Default
      - Description
    * - Action
-     - `ActionMetadata <../../../Core/Actions/Action.metadata.html>`__
+     - `ActionMetadata <../../Core/Actions/Action.metadata.html>`__
      - –
      - Основное действие кнопки
    * - Content
@@ -22,11 +22,11 @@ Properties
      - –
      - Содержимое кнопки
    * - ContentTemplate
-     - `ElementMetadata <../../../Core/Elements/Element/Element.metadata.html>`__
+     - `ElementMetadata <../../Core/Elements/Element/Element.metadata.html>`__
      - –
      - Шаблон содержимого кнопки
    * - ViewMode
-     - `viewMode <../../Core/viewMode/>`__
+     - `viewMode <../Core/viewMode/>`__
      - ``common``
      - Может принимать значения: 'link' или 'common'. Если указать значение 'link', то кнопка примет вид ссылки
 

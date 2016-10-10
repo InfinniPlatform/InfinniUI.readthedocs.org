@@ -19,7 +19,7 @@ Returns
 ~~~~~~~
 
 Правило фильтрации документов (см.
-`формат <../DocumentDataSource.setFilter/#filter-format>`__)
+`формат <DocumentDataSource.setFilter/#filter-format>`__)
 
 Examples
 --------
@@ -31,8 +31,8 @@ Examples
 See Also
 --------
 
--  `setFilter() <../DocumentDataSource.setFilter.html>`__
--  `setIdFilter() <../DocumentDataSource.setIdFilter.html>`__
--  `getFilterParams() <../DocumentDataSource.getFilterParams.html>`__
--  `setFilterParams() <../DocumentDataSource.setFilterParams.html>`__
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `setFilter() <DocumentDataSource.setFilter.html>`__
+-  `setIdFilter() <DocumentDataSource.setIdFilter.html>`__
+-  `getFilterParams() <DocumentDataSource.getFilterParams.html>`__
+-  `setFilterParams() <DocumentDataSource.setFilterParams.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__

@@ -4,7 +4,7 @@ ButtonEdit.getShowClear
 Возвращает значение, которое определяет наличие кнопки, очищающей
   указанное значение.
 По умолчанию кнопка отображается. Чтобы убрать её, воспользуйтесь
-  методом `setShowClear() <../ButtonEdit.setShowClear.html>`__.
+  методом `setShowClear() <ButtonEdit.setShowClear.html>`__.
 
 Syntax
 ------
@@ -34,4 +34,4 @@ Examples
 See Also
 --------
 
--  `setShowClear() <../ButtonEdit.setShowClear.html>`__
+-  `setShowClear() <ButtonEdit.setShowClear.html>`__

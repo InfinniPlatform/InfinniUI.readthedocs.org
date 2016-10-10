@@ -48,4 +48,4 @@ Examples
 See Also
 --------
 
--  `updateItems() <../../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__

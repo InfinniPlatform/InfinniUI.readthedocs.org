@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setMinValue() <../DateTimePicker.setMinValue.html>`__
+-  `setMinValue() <DateTimePicker.setMinValue.html>`__

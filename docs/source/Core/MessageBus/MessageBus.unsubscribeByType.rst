@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `subscribe() <../MessageBus.subscribe.html>`__
+-  `subscribe() <MessageBus.subscribe.html>`__

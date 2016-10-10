@@ -40,4 +40,4 @@ Returns
 See Also
 --------
 
--  `addChild() <../Element.addChild.html>`__
+-  `addChild() <Element.addChild.html>`__

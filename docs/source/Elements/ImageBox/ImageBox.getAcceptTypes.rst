@@ -1,7 +1,7 @@
 ImageBox.getAcceptTypes
 =======================
 
-Возвращает `коллекцию <../../../Core/Collection/>`__ допустимых форматов
+Возвращает `коллекцию <../../Core/Collection/>`__ допустимых форматов
 данных.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Коллекция <../../../Core/Collection/>`__ допустимых форматов данных.
+`Коллекция <../../Core/Collection/>`__ допустимых форматов данных.
 
 Examples
 --------
@@ -32,5 +32,5 @@ Examples
 See Also
 --------
 
--  `setAcceptTypes <../ImageBox.setAcceptTypes.html>`__
--  `Collection <../../../Core/Collection/>`__
+-  `setAcceptTypes <ImageBox.setAcceptTypes.html>`__
+-  `Collection <../../Core/Collection/>`__

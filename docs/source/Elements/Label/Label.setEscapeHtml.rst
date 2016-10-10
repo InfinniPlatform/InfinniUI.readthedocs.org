@@ -55,4 +55,4 @@ Examples
 See Also
 --------
 
--  `getEscapeHtml() <../Label.getEscapeHtml.html>`__
+-  `getEscapeHtml() <Label.getEscapeHtml.html>`__

@@ -3,7 +3,7 @@ View.setCloseButtonVisibility()
 
 Устанавливает флаг видимости кнопки закрытия. Кнопка закрытия
 отображается, когда представление открывается в режиме
-`диалога <../LinkView/OpenMode/>`__. По умолчанию она является видимой.
+`диалога <LinkView/OpenMode/>`__. По умолчанию она является видимой.
 
 Syntax
 ------
@@ -42,4 +42,4 @@ Examples
 See Also
 --------
 
--  `getCloseButtonVisibility() <../View.getCloseButtonVisibility.html>`__
+-  `getCloseButtonVisibility() <View.getCloseButtonVisibility.html>`__

@@ -30,8 +30,8 @@ Parameters
      - ``String``
      - Ключ подписки.
    * - context
-     - `контекст представления <../../ViewContext/>`__
-     - `Контекст представления <../../ViewContext/>`__.
+     - `контекст представления <../Context/>`__
+     - `Контекст представления <../Context/>`__.
 
 
 Examples
@@ -44,6 +44,6 @@ Examples
 See Also
 --------
 
--  `subscribe() <../NotificationSubscriptions.subscribe.html>`__
--  `startConnection() <../NotificationSubscriptions.startConnection.html>`__
--  `stopConnection() <../NotificationSubscriptions.stopConnection.html>`__
+-  `subscribe() <NotificationSubscriptions.subscribe.html>`__
+-  `startConnection() <NotificationSubscriptions.startConnection.html>`__
+-  `stopConnection() <NotificationSubscriptions.stopConnection.html>`__

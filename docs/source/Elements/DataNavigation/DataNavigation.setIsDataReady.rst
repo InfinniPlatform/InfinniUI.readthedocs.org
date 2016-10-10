@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getIsDataReady() <../DataNavigation.getIsDataReady.html>`__
+-  `getIsDataReady() <DataNavigation.getIsDataReady.html>`__

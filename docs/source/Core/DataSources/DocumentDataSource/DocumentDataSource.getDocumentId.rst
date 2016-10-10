@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setDocumentId() <../DocumentDataSource.setDocumentId.html>`__
+-  `setDocumentId() <DocumentDataSource.setDocumentId.html>`__

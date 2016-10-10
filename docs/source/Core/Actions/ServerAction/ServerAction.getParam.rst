@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `setParam <../ServerAction.setParam.html>`__
+-  `setParam <ServerAction.setParam.html>`__

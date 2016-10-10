@@ -1,7 +1,7 @@
 ComboBox.metadata
 =================
 
-Метаданные типа `ComboBox <../>`__.
+Метаданные типа `ComboBox <./>`__.
 
 Properties
 ----------
@@ -34,7 +34,7 @@ Properties
      - –
      - Функция шаблонизации выбранного элемента
    * - ValueFormat
-     - `DisplayFormat <../../../Core/DisplayFormat/>`__
+     - `DisplayFormat <../../Core/DisplayFormat/>`__
      - –
      - Формат отображения выбранного элемента
    * - ShowClear

@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setSearch() <../DocumentDataSource.setSearch.html>`__
+-  `setSearch() <DocumentDataSource.setSearch.html>`__

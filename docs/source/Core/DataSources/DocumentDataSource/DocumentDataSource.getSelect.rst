@@ -19,7 +19,7 @@ Returns
 ~~~~~~~
 
 Правило отображения документов (см.
-`формат <../DocumentDataSource.setSelect/#select-format>`__)
+`формат <DocumentDataSource.setSelect/#select-format>`__)
 
 Examples
 --------
@@ -31,4 +31,4 @@ Examples
 See Also
 --------
 
--  `setSelect() <../DocumentDataSource.setSelect.html>`__
+-  `setSelect() <DocumentDataSource.setSelect.html>`__

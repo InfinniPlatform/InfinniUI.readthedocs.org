@@ -1,7 +1,7 @@
 ViewPanel.metadata
 ==================
 
-Метаданные типа `ViewPanel <../>`__.
+Метаданные типа `ViewPanel <./>`__.
 
 Properties
 ----------

@@ -25,4 +25,4 @@ Examples
 See Also
 --------
 
--  `setValue() <../EditorBase.setValue.html>`__
+-  `setValue() <EditorBase.setValue.html>`__

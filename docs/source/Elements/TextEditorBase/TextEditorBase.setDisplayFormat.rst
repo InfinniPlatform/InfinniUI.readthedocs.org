@@ -1,15 +1,15 @@
 TextEditorBase.setDisplayFormat
 ===============================
 
-Устанавливает `функцию <../../../Core/Script/>`__ форматирования
-`значения <../../EditorBase/EditorBase.getValue.html>`__ для отображения.
+Устанавливает `функцию <../../Core/Script/>`__ форматирования
+`значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
 
 Description
 -----------
 
 В некоторых ситуациях для представления данных пользователю требуется их
 предварительная обработка. Метод
-`setDisplayFormat() <../TextEditorBase.setDisplayFormat.html>`__ позволяет
+`setDisplayFormat() <TextEditorBase.setDisplayFormat.html>`__ позволяет
 установить функцию форматирования значения редактора. Результат работы
 этой функции используется в качестве отображаемого значения.
 
@@ -30,8 +30,8 @@ Parameters
      - Type
      - Description
    * - ``value``
-     - `Script <../../../Core/Script/>`__
-     - `Функция <../../../Core/Script.html>`__ форматирования `значения <../../EditorBase/EditorBase.getValue.html>`__ для отображения. В параметре ``argument`` передается информация, необходимая для форматирования. Свойство ``argument.value`` содержит значение редактора. Результатом работы функции должна быть строка.
+     - `Script <../../Core/Script/>`__
+     - `Функция <../../Core/Script.html>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения. В параметре ``argument`` передается информация, необходимая для форматирования. Свойство ``argument.value`` содержит значение редактора. Результатом работы функции должна быть строка.
 
 
 Examples
@@ -48,4 +48,4 @@ Examples
 See Also
 --------
 
--  `getDisplayFormat() <../TextEditorBase.getDisplayFormat.html>`__
+-  `getDisplayFormat() <TextEditorBase.getDisplayFormat.html>`__

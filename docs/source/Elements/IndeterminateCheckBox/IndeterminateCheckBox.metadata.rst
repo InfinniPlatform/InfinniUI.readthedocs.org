@@ -1,7 +1,7 @@
 IndeterminateCheckBox.metadata
 ==============================
 
-Метаданные типа `IndeterminateCheckBox <../>`__.
+Метаданные типа `IndeterminateCheckBox <./>`__.
 
 Examples
 --------
@@ -19,4 +19,4 @@ Examples
 See also
 --------
 
-`CheckBox.metadata <../../CheckBox/CheckBox.metadata.html>`__.
+`CheckBox.metadata <../CheckBox/CheckBox.metadata.html>`__.

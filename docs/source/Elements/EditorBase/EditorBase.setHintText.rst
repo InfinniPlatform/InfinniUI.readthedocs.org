@@ -34,4 +34,4 @@ Examples
 See Also
 --------
 
--  `getHintText() <../EditorBase.getHintText.html>`__
+-  `getHintText() <EditorBase.getHintText.html>`__

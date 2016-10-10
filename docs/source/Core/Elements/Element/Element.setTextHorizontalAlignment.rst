@@ -2,7 +2,7 @@ Element.setTextHorizontalAlignment()
 ====================================
 
 Устанавливает `горизонтальное выравнивание
-текста <../TextHorizontalAlignment/>`__ в элементе.
+текста <TextHorizontalAlignment/>`__ в элементе.
 
 Syntax
 ------
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `TextHorizontalAlignment <../TextHorizontalAlignment/>`__
+     - `TextHorizontalAlignment <TextHorizontalAlignment/>`__
      - Горизонтальное выравнивание текста в элементе
 
 
@@ -40,5 +40,5 @@ Examples
 See Also
 --------
 
--  `getTextHorizontalAlignment() <../Element.getTextHorizontalAlignment.html>`__
--  `TextHorizontalAlignment <../TextHorizontalAlignment/>`__
+-  `getTextHorizontalAlignment() <Element.getTextHorizontalAlignment.html>`__
+-  `TextHorizontalAlignment <TextHorizontalAlignment/>`__

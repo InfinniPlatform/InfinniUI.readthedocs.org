@@ -25,9 +25,9 @@ Examples
 See Also
 --------
 
--  `subscribe() <../NotificationSubscriptions.subscribe.html>`__
--  `unsubscribe() <../NotificationSubscriptions.unsubscribe.html>`__
--  `startConnection() <../NotificationSubscriptions.startConnection.html>`__
--  `stopConnection() <../NotificationSubscriptions.stopConnection.html>`__
--  `isDisconnected() <../NotificationSubscriptions.isDisconnected.html>`__
--  `on() <../NotificationSubscriptions.on.html>`__
+-  `subscribe() <NotificationSubscriptions.subscribe.html>`__
+-  `unsubscribe() <NotificationSubscriptions.unsubscribe.html>`__
+-  `startConnection() <NotificationSubscriptions.startConnection.html>`__
+-  `stopConnection() <NotificationSubscriptions.stopConnection.html>`__
+-  `isDisconnected() <NotificationSubscriptions.isDisconnected.html>`__
+-  `on() <NotificationSubscriptions.on.html>`__

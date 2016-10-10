@@ -60,4 +60,4 @@ Examples
 See Also
 --------
 
--  `getMinValue() <../DateTimePicker.getMinValue.html>`__
+-  `getMinValue() <DateTimePicker.getMinValue.html>`__

@@ -1,7 +1,7 @@
 ServerAction.metadata
 =====================
 
-Метаданные типа `ServerAction <../>`__.
+Метаданные типа `ServerAction <./>`__.
 
 Properties
 ----------
@@ -38,17 +38,17 @@ Properties
      - –
      - Параметры запроса
    * - OnSuccess
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Устанавливает обработчик успешного завершения действия
    * - OnError
-     - `Script <../../../Script/>`__
+     - `Script <../../Script/>`__
      - –
      - Устанавливает обработчик завершения действия с ошибкой
 
 
 \* Обязательное свойство.
-1 `Шаблонизируемая величина <../#parameters-templating>`__.
+1 `Шаблонизируемая величина <#parameters-templating>`__.
 
 Examples
 --------

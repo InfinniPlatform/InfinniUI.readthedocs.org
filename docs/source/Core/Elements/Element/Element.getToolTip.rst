@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setToolTip() <../Element.setToolTip.html>`__
+-  `setToolTip() <Element.setToolTip.html>`__

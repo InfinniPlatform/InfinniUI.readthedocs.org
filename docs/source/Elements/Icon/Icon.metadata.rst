@@ -1,7 +1,7 @@
 Icon.metadata
 =============
 
-Метаданные типа `Icon <../>`__.
+Метаданные типа `Icon <./>`__.
 
 Examples
 --------
@@ -17,4 +17,4 @@ Examples
 See also
 --------
 
-`EditorBase.metadata <../../EditorBase/EditorBase.metadata.html>`__.
+`EditorBase.metadata <../EditorBase/EditorBase.metadata.html>`__.

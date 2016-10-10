@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setParameters <../ExtensionPanel.setParameters.html>`__
+-  `setParameters <ExtensionPanel.setParameters.html>`__

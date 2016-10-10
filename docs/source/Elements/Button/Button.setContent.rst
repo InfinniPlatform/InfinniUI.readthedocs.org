@@ -42,4 +42,4 @@ Examples
 See Also
 --------
 
--  `getContent <../Button.getContent.html>`__
+-  `getContent <Button.getContent.html>`__

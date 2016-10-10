@@ -2,7 +2,7 @@ ViewContext.dataSources
 =======================
 
 Возвращает ассоциативный список `источников данных
-представления <../../DataSources/BaseDataSource/>`__.
+представления <../DataSources/BaseDataSource/>`__.
 
 Syntax
 ------
@@ -22,4 +22,4 @@ Examples
 See Also
 --------
 
--  `BaseDataSource <../../DataSources/BaseDataSource/>`__
+-  `BaseDataSource <../DataSources/BaseDataSource/>`__

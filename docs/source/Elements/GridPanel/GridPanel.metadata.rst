@@ -1,7 +1,7 @@
 GridPanel.metadata
 ==================
 
-Метаданные типа `GridPanel <../>`__.
+Метаданные типа `GridPanel <./>`__.
 
 Properties
 ----------

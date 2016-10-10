@@ -1,16 +1,16 @@
 Collection.onReplace
 ====================
 
-Устанавливает `обработчик события <../../Script/>`__ о том, что
+Устанавливает `обработчик события <../Script/>`__ о том, что
 произошла замена элементов.
 
 Description
 -----------
 
-Успешное выполнение метода `replace() <../Collection.replace.html>`__
+Успешное выполнение метода `replace() <Collection.replace.html>`__
 приводит к возникновению события
-`onReplace <../Collection.onReplace.html>`__. Вместе с этим событием также
-генерируется событие `onChange <../Collection.onChange.html>`__, которое
+`onReplace <Collection.onReplace.html>`__. Вместе с этим событием также
+генерируется событие `onChange <Collection.onChange.html>`__, которое
 информирует о наличии любых изменений. Аргументы обеих событий в данном
 случае будут идентичны.
 
@@ -31,8 +31,8 @@ Parameters
      - Type
      - Description
    * - ``callback``
-     - `Script <../../Script/>`__
-     - `Обработчик события <../../Script/>`__ о том, что произошла замена одного или нескольких элементов в коллекции. В параметре ``argument`` передается информация о произошедшем событии. Свойство ``argument.action`` содержит тип действия и в данном случае равно ``'replace'`` (замена); ``argument.oldItems`` - массив старых элементов, которые были заменены; ``argument.newItems`` - массив новых элементов, которыми были заменены старые элементы.
+     - `Script <../Script/>`__
+     - `Обработчик события <../Script/>`__ о том, что произошла замена одного или нескольких элементов в коллекции. В параметре ``argument`` передается информация о произошедшем событии. Свойство ``argument.action`` содержит тип действия и в данном случае равно ``'replace'`` (замена); ``argument.oldItems`` - массив старых элементов, которые были заменены; ``argument.newItems`` - массив новых элементов, которыми были заменены старые элементы.
 
 
 Examples
@@ -51,5 +51,5 @@ Examples
 See Also
 --------
 
--  `replace() <../Collection.replace.html>`__
--  `onChange <../Collection.onChange.html>`__
+-  `replace() <Collection.replace.html>`__
+-  `onChange <Collection.onChange.html>`__

@@ -30,6 +30,6 @@ Examples
 See Also
 --------
 
--  `setTrueText() <../BooleanFormat.setTrueText.html>`__
--  `setFalseText() <../BooleanFormat.setFalseText.html>`__
--  `getFalseText() <../BooleanFormat.getFalseText.html>`__
+-  `setTrueText() <BooleanFormat.setTrueText.html>`__
+-  `setFalseText() <BooleanFormat.setFalseText.html>`__
+-  `getFalseText() <BooleanFormat.getFalseText.html>`__

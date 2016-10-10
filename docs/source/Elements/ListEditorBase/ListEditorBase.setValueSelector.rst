@@ -1,13 +1,13 @@
 ListEditorBase.setValueSelector
 ===============================
 
-Устанавливает `функцию <../../Core/Script/>`__ выборки из элемента
+Устанавливает `функцию <../Core/Script/>`__ выборки из элемента
 коллекции значимой части.
 
 Description
 -----------
 
-Устанавливает `функцию <../../Core/Script/>`__ выборки значения для
+Устанавливает `функцию <../Core/Script/>`__ выборки значения для
 элемента коллекции, который передается в параметре ``args.value``.
 
 Syntax
@@ -37,4 +37,4 @@ Examples
 See Also
 --------
 
--  `setValueSelector() <../ListEditorBase.getValueSelector.html>`__
+-  `setValueSelector() <ListEditorBase.getValueSelector.html>`__

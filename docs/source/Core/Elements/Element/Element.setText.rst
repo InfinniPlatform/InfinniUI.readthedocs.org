@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getText() <../Element.getText.html>`__
+-  `getText() <Element.getText.html>`__

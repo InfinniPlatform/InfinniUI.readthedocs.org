@@ -30,4 +30,4 @@ Examples
 See Also
 --------
 
--  `setWidth() <../DataGridColumn.setWidth.html>`__
+-  `setWidth() <DataGridColumn.setWidth.html>`__

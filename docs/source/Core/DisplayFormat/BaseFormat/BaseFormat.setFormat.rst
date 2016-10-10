@@ -32,4 +32,4 @@ Returns
 See Also
 --------
 
--  `getFormat() <../BaseFormat.getFormat.html>`__
+-  `getFormat() <BaseFormat.getFormat.html>`__
