@@ -50,8 +50,8 @@ Examples
      - Форматируемое значение
      - Результат форматирования (en-US)
    * - *Простые типы данных*
-     - *
-     - *
+     -  
+     -  
    * - "Hello, {}!"
      - "Ivan"
      - "Hello, Ivan!"
@@ -65,8 +65,8 @@ Examples
      - 123.456
      - "Weight: 123.46 kg"
    * - *Сложные типы данных*
-     - *
-     - *
+     -  
+     -  
    * - "Hello, {FirstName} {MiddleName}!"
      - { FirstName: "Ivan", MiddleName: "Ivanovich" }
      - "Hello, Ivan Ivanovich!"
