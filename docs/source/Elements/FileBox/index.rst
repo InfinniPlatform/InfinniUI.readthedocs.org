@@ -47,12 +47,3 @@ Methods
    * - `setAcceptTypes <FileBox.setAcceptTypes.html>`__
      - Устанавливает список допустимых форматов данных.
 
-
-
-.. toctree::
-
-   FileBox.getAcceptTypes.rst
-   FileBox.getMaxSize.rst
-   FileBox.metadata.rst
-   FileBox.setAcceptTypes.rst
-   FileBox.setMaxSize.rst

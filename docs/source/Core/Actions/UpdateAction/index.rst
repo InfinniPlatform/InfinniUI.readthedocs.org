@@ -76,3 +76,9 @@ Examples
     var updateAction = new UpdateAction(parentView);
     updateAction.setProperty('dataSource', parentView.context.dataSources['DataSource1']);
     updateAction.execute(); // обновит DataSource1
+
+
+.. toctree::
+   :hidden:
+
+   UpdateAction.metadata.rst

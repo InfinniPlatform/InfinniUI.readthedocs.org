@@ -144,3 +144,29 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+   :hidden:
+
+   DocumentDataSource.getDocumentId.rst
+   DocumentDataSource.getFilter.rst
+   DocumentDataSource.getFilterParams.rst
+   DocumentDataSource.getNeedTotalCount.rst
+   DocumentDataSource.getOrder.rst
+   DocumentDataSource.getPageNumber.rst
+   DocumentDataSource.getPageSize.rst
+   DocumentDataSource.getSearch.rst
+   DocumentDataSource.getSelect.rst
+   DocumentDataSource.getTotalCount.rst
+   DocumentDataSource.metadata.rst
+   DocumentDataSource.setDocumentId.rst
+   DocumentDataSource.setFilter.rst
+   DocumentDataSource.setFilterParams.rst
+   DocumentDataSource.setIdFilter.rst
+   DocumentDataSource.setNeedTotalCount.rst
+   DocumentDataSource.setOrder.rst
+   DocumentDataSource.setPageNumber.rst
+   DocumentDataSource.setPageSize.rst
+   DocumentDataSource.setSearch.rst
+   DocumentDataSource.setSelect.rst

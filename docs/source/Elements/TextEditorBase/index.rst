@@ -55,16 +55,3 @@ Methods
    * - `setEditMask <TextEditorBase.setEditMask.html>`__
      - Устанавливает `маску ввода данных </docs/API/Core/EditMask/>`__.
 
-
-
-.. toctree::
-
-   TextEditorBase.getDisplayFormat.rst
-   TextEditorBase.getEditMask.rst
-   TextEditorBase.getLabelFloating.rst
-   TextEditorBase.getLabelText.rst
-   TextEditorBase.metadata.rst
-   TextEditorBase.setDisplayFormat.rst
-   TextEditorBase.setEditMask.rst
-   TextEditorBase.setLabelFloating.rst
-   TextEditorBase.setLabelText.rst

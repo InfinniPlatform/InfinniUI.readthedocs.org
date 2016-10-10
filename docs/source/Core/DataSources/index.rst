@@ -29,6 +29,7 @@ DataSources
 
 
 .. toctree::
+   :hidden:
 
    BaseDataSource/index.rst
    DocumentDataSource/index.rst

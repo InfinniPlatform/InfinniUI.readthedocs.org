@@ -34,8 +34,3 @@ Events
 ------
 
 Нет
-
-
-.. toctree::
-
-   RadioGroup.metadata.rst

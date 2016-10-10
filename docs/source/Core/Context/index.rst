@@ -35,6 +35,7 @@ Properties
 
 
 .. toctree::
+   :hidden:
 
    ViewContext.controls.rst
    ViewContext.dataSources.rst

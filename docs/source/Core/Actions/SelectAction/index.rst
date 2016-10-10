@@ -108,3 +108,9 @@ See Also
 
 -  `getProperty <../BaseAction/BaseAction.getProperty.html>`__
 -  `setProperty <../BaseAction/BaseAction.setProperty.html>`__
+
+
+.. toctree::
+   :hidden:
+
+   SelectAction.metadata.rst

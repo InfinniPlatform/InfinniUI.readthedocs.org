@@ -60,6 +60,7 @@ Methods
 
 
 .. toctree::
+   :hidden:
 
    Logger.debug.rst
    Logger.error.rst

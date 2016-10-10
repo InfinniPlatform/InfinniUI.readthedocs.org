@@ -120,6 +120,7 @@ Events
 
 
 .. toctree::
+   :hidden:
 
    BindingConverter/index.rst
    BindingMode/index.rst

@@ -119,3 +119,11 @@ Methods
    * - `setParam <ServerAction.setParam.html>`__
      - Устанавливает значение параметра
 
+
+
+.. toctree::
+   :hidden:
+
+   ServerAction.getParam.rst
+   ServerAction.metadata.rst
+   ServerAction.setParam.rst

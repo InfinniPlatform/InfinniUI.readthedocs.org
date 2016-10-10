@@ -99,3 +99,33 @@ Events
    * - `onBeforeLoaded <View.onBeforeLoaded.html>`__
      - Устанавливает `обработчик события <../../Script.html>`__ о том, что представление было загружено. Данный обработчик сработает до `onLoaded <../Element/Element.onLoaded.html>`__
 
+
+
+.. toctree::
+   :hidden:
+
+   DialogResult/index.rst
+   LinkView/index.rst
+   DialogResult.rst
+   View.close.rst
+   View.getApplicationView.rst
+   View.getCloseButtonVisibility.rst
+   View.getContext.rst
+   View.getDataSources.rst
+   View.getDialogResult.rst
+   View.getFocusOnControl.rst
+   View.getHeaderTemplate.rst
+   View.getParameters.rst
+   View.getScripts.rst
+   View.metadata.rst
+   View.onBeforeLoaded.rst
+   View.onClosed.rst
+   View.onClosing.rst
+   View.onOpened.rst
+   View.onOpening.rst
+   View.open.rst
+   View.setCloseButtonVisibility.rst
+   View.setDialogResult.rst
+   View.setFocusOnControl.rst
+   View.setHeaderTemplate.rst
+   View.setOpenStrategy.rst

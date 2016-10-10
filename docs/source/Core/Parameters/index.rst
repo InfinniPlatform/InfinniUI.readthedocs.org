@@ -68,6 +68,7 @@ Events
 
 
 .. toctree::
+   :hidden:
 
    Parameter.getName.rst
    Parameter.getProperty.rst

@@ -25,3 +25,10 @@ See also
 --------
 
 `Настройки форматирования объекта <ObjectFormat.format>`__
+
+
+.. toctree::
+   :hidden:
+
+   ObjectFormat.format.rst
+   ObjectFormat.metadata.rst

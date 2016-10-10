@@ -86,3 +86,9 @@ See Also
 -  `DeleteAction <../DeleteAction/>`__
 -  `getProperty <../BaseAction/BaseAction.getProperty.html>`__
 -  `setProperty <../BaseAction/BaseAction.setProperty.html>`__
+
+
+.. toctree::
+   :hidden:
+
+   EditAction.metadata.rst

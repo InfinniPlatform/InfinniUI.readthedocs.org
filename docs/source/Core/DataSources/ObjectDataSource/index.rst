@@ -66,3 +66,10 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+   :hidden:
+
+   ObjectDataSource.metadata.rst
+   ObjectDataSource.setItems.rst

@@ -50,5 +50,6 @@ Methods
 
 
 .. toctree::
+   :hidden:
 
    GlobalContext.executeAction.rst

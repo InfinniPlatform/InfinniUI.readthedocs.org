@@ -68,15 +68,3 @@ Events
 ------
 
 Нет
-
-
-.. toctree::
-
-   Button.click.rst
-   Button.getAction.rst
-   Button.getContent.rst
-   Button.getContentTemplate.rst
-   Button.metadata.rst
-   Button.setAction.rst
-   Button.setContent.rst
-   Button.setContentTemplate.rst

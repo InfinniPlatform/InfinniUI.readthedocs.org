@@ -134,3 +134,16 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+   :hidden:
+
+   RestDataSource.getDeletingUrlParams.rst
+   RestDataSource.getGettingUrlParams.rst
+   RestDataSource.getSettingUrlParams.rst
+   RestDataSource.metadata.rst
+   RestDataSource.setDeletingUrlParams.rst
+   RestDataSource.setGettingUrlParams.rst
+   RestDataSource.setSettingUrlParams.rst
+   RestDataSource.setUpdatingItemsConverter.rst

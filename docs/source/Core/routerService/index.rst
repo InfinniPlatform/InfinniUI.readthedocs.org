@@ -40,6 +40,7 @@ Methods
 
 
 .. toctree::
+   :hidden:
 
    RouterService.getLinkByName.rst
    RouterService.startRouter.rst

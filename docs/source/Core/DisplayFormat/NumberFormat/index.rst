@@ -26,3 +26,9 @@ See also
 
 `Настройки форматирования для числового
 значения <../../Culture/Culture.numberFormatting.html>`__
+
+
+.. toctree::
+   :hidden:
+
+   NumberFormat.metadata.rst

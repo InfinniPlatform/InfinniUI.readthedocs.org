@@ -50,3 +50,16 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+   :hidden:
+
+   LinkView.metadata/index.rst
+   LinkView.createView.rst
+   LinkView.getOpenMode.rst
+   LinkView.setContainer.rst
+   LinkView.setDialogWidth.rst
+   LinkView.setOpenMode.rst
+   LinkView.setViewTemplate.rst
+   OpenMode.rst

@@ -25,3 +25,9 @@ See also
 --------
 
 `dateTimeFormatting <../../Culture/Culture.dateTimeFormatting.html>`__
+
+
+.. toctree::
+   :hidden:
+
+   DateTimeFormat.metadata.rst

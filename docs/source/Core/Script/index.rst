@@ -90,6 +90,7 @@ Script
 
 
 .. toctree::
+   :hidden:
 
    ScriptBuilder/index.rst
    Script.metadata.rst

@@ -32,6 +32,7 @@ Events
 
 
 .. toctree::
+   :hidden:
 
    DataProvider.createIdFilter.rst
    DataProvider.createItem.rst

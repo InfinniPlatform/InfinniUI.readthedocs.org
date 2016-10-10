@@ -51,14 +51,3 @@ Methods
    * - `setAutocomplete <PasswordBox.setAutocomplete.html>`__
      - Устанавливает значение, определяющее, будет ли срабатывать стандартная автоподстановка пароля.
 
-
-
-.. toctree::
-
-   PasswordBox.getAutocomplete.rst
-   PasswordBox.getLabelFloating.rst
-   PasswordBox.getLabelText.rst
-   PasswordBox.metadata.rst
-   PasswordBox.setAutocomplete.rst
-   PasswordBox.setLabelFloating.rst
-   PasswordBox.setLabelText.rst

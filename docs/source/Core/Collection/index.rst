@@ -123,6 +123,7 @@ Events
 
 
 .. toctree::
+   :hidden:
 
    Collection.add.rst
    Collection.addAll.rst

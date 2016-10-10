@@ -5,3 +5,10 @@ LinkView.metadata
 
 -  `InlineView <InlineView/>`__
 -  `AutoView <AutoView/>`__
+
+
+.. toctree::
+   :hidden:
+
+   AutoView.rst
+   InlineView.rst

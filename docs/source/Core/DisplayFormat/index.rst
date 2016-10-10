@@ -21,6 +21,7 @@ See also
 
 
 .. toctree::
+   :hidden:
 
    BaseFormat/index.rst
    BooleanFormat/index.rst

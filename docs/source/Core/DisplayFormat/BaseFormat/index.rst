@@ -34,3 +34,12 @@ Methods
    * - `setFormat <BaseFormat.setFormat>`__
      - Устанавливает строку форматирования значения.
 
+
+
+.. toctree::
+   :hidden:
+
+   BaseFormat.format.rst
+   BaseFormat.formatValue.rst
+   BaseFormat.getFormat.rst
+   BaseFormat.setFormat.rst

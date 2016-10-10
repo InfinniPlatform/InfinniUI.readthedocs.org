@@ -200,3 +200,73 @@ Events
    * - `onPropertyChanged <Element.onPropertyChanged.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что одно из свойств элемента изменилось
 
+
+
+.. toctree::
+   :hidden:
+
+   ElementBuilder/index.rst
+   ElementHorizontalAlignment/index.rst
+   KeyboardEvent/index.rst
+   MouseEvent/index.rst
+   TextHorizontalAlignment/index.rst
+   Element.addChild.rst
+   Element.findAllChildrenByName.rst
+   Element.findAllChildrenByType.rst
+   Element.getBackground.rst
+   Element.getChildElements.rst
+   Element.getEnabled.rst
+   Element.getFocusable.rst
+   Element.getFocused.rst
+   Element.getForeground.rst
+   Element.getHorizontalAlignment.rst
+   Element.getName.rst
+   Element.getParent.rst
+   Element.getProperty.rst
+   Element.getStyle.rst
+   Element.getTag.rst
+   Element.getText.rst
+   Element.getTextHorizontalAlignment.rst
+   Element.getTextStyle.rst
+   Element.getToolTip.rst
+   Element.getValidationState.rst
+   Element.getView.rst
+   Element.getVisible.rst
+   Element.isLoaded.rst
+   Element.metadata.rst
+   Element.name.rst
+   Element.onBeforeClick.rst
+   Element.onClick.rst
+   Element.onDoubleClick.rst
+   Element.onGotFocus.rst
+   Element.onKeyDown.rst
+   Element.onKeyUp.rst
+   Element.onLoaded.rst
+   Element.onLostFocus.rst
+   Element.onMouseDown.rst
+   Element.onMouseEnter.rst
+   Element.onMouseLeave.rst
+   Element.onMouseMove.rst
+   Element.onMouseUp.rst
+   Element.onMouseWheel.rst
+   Element.onPropertyChanged.rst
+   Element.remove.rst
+   Element.removeChild.rst
+   Element.render.rst
+   Element.setBackground.rst
+   Element.setEnabled.rst
+   Element.setFocusable.rst
+   Element.setFocused.rst
+   Element.setForeground.rst
+   Element.setHorizontalAlignment.rst
+   Element.setName.rst
+   Element.setParent.rst
+   Element.setProperty.rst
+   Element.setStyle.rst
+   Element.setTag.rst
+   Element.setText.rst
+   Element.setTextHorizontalAlignment.rst
+   Element.setTextStyle.rst
+   Element.setToolTip.rst
+   Element.setValidationState.rst
+   Element.setVisible.rst

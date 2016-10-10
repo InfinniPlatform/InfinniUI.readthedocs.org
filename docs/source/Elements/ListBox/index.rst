@@ -109,8 +109,3 @@ Events
 ------
 
 Нет
-
-
-.. toctree::
-
-   ListBox.metadata.rst

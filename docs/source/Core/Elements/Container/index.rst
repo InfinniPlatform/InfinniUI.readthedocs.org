@@ -68,3 +68,16 @@ Events
 ------
 
 Нет
+
+
+.. toctree::
+   :hidden:
+
+   Container.getGroupItemTemplate.rst
+   Container.getGroupValueSelector.rst
+   Container.getItems.rst
+   Container.getItemTemplate.rst
+   Container.metadata.rst
+   Container.setGroupItemTemplate.rst
+   Container.setGroupValueSelector.rst
+   Container.setItemTemplate.rst

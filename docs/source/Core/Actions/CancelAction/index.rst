@@ -48,3 +48,9 @@ See Also
 --------
 
 -  `AcceptAction <../AcceptAction/>`__
+
+
+.. toctree::
+   :hidden:
+
+   CancelAction.metadata.rst

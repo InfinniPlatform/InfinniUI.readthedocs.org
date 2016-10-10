@@ -34,7 +34,10 @@ Actions
    * - `RouteToAction <RouteToAction/>`__
      - Переходит по заданному маршруту
 
+
+
 .. toctree::
+   :hidden:
 
    AcceptAction/index.rst
    AddAction/index.rst

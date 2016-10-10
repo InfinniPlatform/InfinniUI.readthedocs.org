@@ -35,3 +35,13 @@ Example
     $elementForExample.append('<hr>');
     $elementForExample.append(format.formatValue(false));
 
+
+
+.. toctree::
+   :hidden:
+
+   BooleanFormat.getFalseText.rst
+   BooleanFormat.getTrueText.rst
+   BooleanFormat.metadata.rst
+   BooleanFormat.setFalseText.rst
+   BooleanFormat.setTrueText.rst

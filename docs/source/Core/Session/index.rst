@@ -58,6 +58,7 @@ Events
 
 
 .. toctree::
+   :hidden:
 
    Session.addClaim.rst
    Session.changeActiveRole.rst

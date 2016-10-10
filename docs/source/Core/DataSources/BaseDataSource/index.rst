@@ -164,3 +164,50 @@ Events
    * - `onErrorValidator <BaseDataSource.onErrorValidator.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что проверка на ошибки завершена
 
+
+
+.. toctree::
+   :hidden:
+
+   BaseDataSource.beforeDeleteItem.rst
+   BaseDataSource.createItem.rst
+   BaseDataSource.deleteItem.rst
+   BaseDataSource.getContext.rst
+   BaseDataSource.getErrorValidator.rst
+   BaseDataSource.getFillCreatedItem.rst
+   BaseDataSource.getIdProperty.rst
+   BaseDataSource.getItems.rst
+   BaseDataSource.getName.rst
+   BaseDataSource.getProperty.rst
+   BaseDataSource.getSelectedItem.rst
+   BaseDataSource.getView.rst
+   BaseDataSource.idOfItem.rst
+   BaseDataSource.initDataProvider.rst
+   BaseDataSource.isDataReady.rst
+   BaseDataSource.isLazy.rst
+   BaseDataSource.isModified.rst
+   BaseDataSource.isModifiedItems.rst
+   BaseDataSource.isUpdateSuspended.rst
+   BaseDataSource.metadata.rst
+   BaseDataSource.name.rst
+   BaseDataSource.onErrorValidator.rst
+   BaseDataSource.onItemCreated.rst
+   BaseDataSource.onItemDeleted.rst
+   BaseDataSource.onItemSaved.rst
+   BaseDataSource.onItemsUpdated.rst
+   BaseDataSource.onPropertyChanged.rst
+   BaseDataSource.onSelectedItemChanged.rst
+   BaseDataSource.resumeUpdate.rst
+   BaseDataSource.saveItem.rst
+   BaseDataSource.setErrorValidator.rst
+   BaseDataSource.setFillCreatedItem.rst
+   BaseDataSource.setIdProperty.rst
+   BaseDataSource.setIsLazy.rst
+   BaseDataSource.setName.rst
+   BaseDataSource.setProperty.rst
+   BaseDataSource.setSelectedItem.rst
+   BaseDataSource.suspendUpdate.rst
+   BaseDataSource.tryInitData.rst
+   BaseDataSource.updateItems.rst
+   BaseDataSource.validateOnErrors.rst
+   ValidationResult.rst

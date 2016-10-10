@@ -3,6 +3,7 @@ Elements
 
 
 .. toctree::
+   :hidden:
 
    Container/index.rst
    Element/index.rst

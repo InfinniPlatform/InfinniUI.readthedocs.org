@@ -23,3 +23,10 @@ Properties
      - –
      - –
 
+
+
+.. toctree::
+   :hidden:
+
+   InfinniUI.config.Routes.rst
+   InfinniUI.config.rst

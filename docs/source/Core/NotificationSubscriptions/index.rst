@@ -48,6 +48,7 @@ Methods
 
 
 .. toctree::
+   :hidden:
 
    NotificationSubscriptions.isDisconnected.rst
    NotificationSubscriptions.on.rst

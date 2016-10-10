@@ -21,3 +21,9 @@ Methods
    * - `build <ElementBuilder.build>`__
      -  Создает и настраивает элемент, по переданным метаданным 
 
+
+
+.. toctree::
+   :hidden:
+
+   ScriptBuilder.build.rst

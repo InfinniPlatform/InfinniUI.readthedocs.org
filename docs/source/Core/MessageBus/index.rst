@@ -66,6 +66,7 @@ Methods
 
 
 .. toctree::
+   :hidden:
 
    InfinniUIMessages.rst
    MessageBus.getView.rst

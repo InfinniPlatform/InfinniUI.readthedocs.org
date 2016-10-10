@@ -70,6 +70,7 @@ yourProject/styles/bootstrap-variables.less (если вы делаете сво
 
 
 .. toctree::
+   :hidden:
 
    ColorStyle/index.rst
    TextStyle/index.rst

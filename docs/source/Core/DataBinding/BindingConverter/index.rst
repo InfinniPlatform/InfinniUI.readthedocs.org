@@ -52,3 +52,9 @@ See Also
 
 -  `getConverter() <../DataBinding.getConverter.html>`__
 -  `setConverter() <../DataBinding.setConverter.html>`__
+
+
+.. toctree::
+   :hidden:
+
+   BindingConverter.metadata.rst
