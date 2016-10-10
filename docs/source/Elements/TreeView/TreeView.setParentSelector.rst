@@ -14,9 +14,16 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\|
-``value``\ \|\ `Script <../../../Core/Script/>`__\ \|\ `Функция <../../../Core/Script/>`__
-выборки из элемента коллекции идентификатора родителя.
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - ``value``
+     - `Script <../../../Core/Script/>`__
+     - `Функция <../../../Core/Script/>`__ выборки из элемента коллекции идентификатора родителя.
+
 
 Returns
 ~~~~~~~
@@ -36,4 +43,4 @@ Examples
 See Also
 --------
 
--  `getParentSelector <../TreeView.getParentSelector/>`__
+-  `getParentSelector <../TreeView.getParentSelector.html>`__

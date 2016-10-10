@@ -18,7 +18,6 @@ Parameters
 
    * - Name
      - Type
-     - Default
      - Description
    * - ``value``
      - ``Boolean``

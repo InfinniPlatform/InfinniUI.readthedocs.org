@@ -15,7 +15,8 @@ Properties
      - Description
    * - ViewMode
      - ``String``
-   * - `Режим отображения <../../../Core/viewMode/>`__. Может принимать значения: 'Base', 'FormGroup'.
+     - –
+     - `Режим отображения <../../../Core/viewMode/>`__. Может принимать значения: 'Base', 'FormGroup'.
    * - Orientation
      - `StackPanelOrientation <../StackPanelOrientation/>`__
      - 'Vertical'

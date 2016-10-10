@@ -11,7 +11,6 @@ Properties
 
    * - Name
      - Type
-     - Default
      - Description
    * - ``Name``*
      - ``String``

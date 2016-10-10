@@ -15,7 +15,8 @@ Properties
      - Description
    * - LabelText
      - ``String``
-   * - Текст метки
+     - –
+     - Текст метки
    * - LabelFloating
      - ``Boolean``
      - false
@@ -26,13 +27,16 @@ Properties
      - Значение, определяющее, разрешено ли автозавершение ввода
    * - AutocompleteProperty
      - ``String``
-   * - Свойство, по которому будет выполняться автозавершение ввода. Если не указывать AutocompleteProperty, то автозавершение будет выполняться на основе полнотекстового поиска
+     - –
+     - Свойство, по которому будет выполняться автозавершение ввода. Если не указывать AutocompleteProperty, то автозавершение будет выполняться на основе полнотекстового поиска
    * - ValueTemplate
      - `Element </docs/API/Core/Elements/Element/Element.metadata.html>`__
-   * - Функция шаблонизации выбранного элемента
+     - –
+     - Функция шаблонизации выбранного элемента
    * - ValueFormat
      - `DisplayFormat <../../../Core/DisplayFormat/>`__
-   * - Формат отображения выбранного элемента
+     - –
+     - Формат отображения выбранного элемента
    * - ShowClear
      - ``Boolean``
      - true

@@ -24,6 +24,7 @@ MessageTypes
      - {messageText: ``string``, messageType: ``string``}
    * - onDataLoading
      - Отправлен запрос
+     - –
    * - onDataLoaded
      - Полечен результат запроса
      - {success: ``boolean``}

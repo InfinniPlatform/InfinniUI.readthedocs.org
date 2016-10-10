@@ -45,13 +45,16 @@ Properties
      - Description
    * - origin*
      - ``String``1
-   * - Хост и порт
+     - –
+     - Хост и порт
    * - path*
      - ``String``1
-   * - Строка пути (относительно хоста)
+     - –
+     - Строка пути (относительно хоста)
    * - data
      - ``Object``1
-   * - Данные запроса
+     - –
+     - Данные запроса
    * - contentType
      - ``String``
      - 'application/x-www-form-urlencoded; charset=utf-8'

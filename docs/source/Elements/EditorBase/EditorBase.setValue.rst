@@ -31,7 +31,6 @@ Parameters
    :header-rows: 1
 
    * - Name
-     - Type
      - Description
    * - ``value``
      - Значение редактора.

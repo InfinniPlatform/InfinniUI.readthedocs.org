@@ -23,7 +23,8 @@ Parameters
      - Description
    * - ``item``\*
      - \*
-   * - Искомый элемент коллекции.
+     - –
+     - Искомый элемент коллекции.
    * - ``fromIndex``
      - ``Index``
      - Collection.length - 1

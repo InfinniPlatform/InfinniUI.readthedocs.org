@@ -15,6 +15,7 @@ Properties
      - Description
    * - DisplayFormat
      - ``DisplayFormatMetadata``
+     - –
      - Форматирование значения для отображения
    * - TextTrimming
      - ``Boolean``

@@ -15,9 +15,11 @@ Properties
      - Description
    * - MinValue
      - ``Number``
+     - –
      - Минимальное значение
    * - MaxValue
      - ``Number``
+     - –
      - Максимальное значение
    * - Increment
      - ``Number``
@@ -25,6 +27,7 @@ Properties
      - Приращение значения
    * - StartValue
      - ``Number``
+     - –
      - Начальное значение по умолчанию
 
 

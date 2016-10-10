@@ -14,9 +14,16 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\|
-``value``\ \|\ `Script <../../../Core/Script/>`__\ \|\ `Функция <../../../Core/Script/>`__
-выборки из элемента коллекции идентификатора.
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - ``value``
+     - `Script <../../../Core/Script/>`__
+     - `Функция <../../../Core/Script/>`__ выборки из элемента коллекции идентификатора.
+
 
 Returns
 ~~~~~~~
@@ -36,4 +43,4 @@ Examples
 See Also
 --------
 
--  `getKeySelector <../TreeView.getKeySelector/>`__
+-  `getKeySelector <../TreeView.getKeySelector.html>`__

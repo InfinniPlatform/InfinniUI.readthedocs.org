@@ -15,13 +15,16 @@ Properties
      - Description
    * - Action
      - `ActionMetadata <../../../Core/Actions/Action.metadata.html>`__
-   * - Основное действие кнопки
+     - –
+     - Основное действие кнопки
    * - Content
      - ``String``
-   * - Содержимое кнопки
+     - –
+     - Содержимое кнопки
    * - ContentTemplate
      - `ElementMetadata <../../../Core/Elements/Element/Element.metadata.html>`__
-   * - Шаблон содержимого кнопки
+     - –
+     - Шаблон содержимого кнопки
    * - ViewMode
      - `viewMode <../../Core/viewMode/>`__
      - ``common``

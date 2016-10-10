@@ -45,7 +45,8 @@ Properties
      - Description
    * - dataSource
      - `DataSource <../../DataSources/>`__
-   * - Источник данных, который будет сохранятся
+     - –
+     - Источник данных, который будет сохранятся
    * - canClose
      - ``Boolean``
      - true

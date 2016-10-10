@@ -22,16 +22,20 @@ Properties
      - Название `стратегии отображения <../../OpenMode>`__ представления
    * - DialogWidth
      - ``String``
-   * - Ширина диалогового окна (актуально в случае OpenMode = 'Dialog')
+     - –
+     - Ширина диалогового окна (актуально в случае OpenMode = 'Dialog')
    * - Container
      - ``String``
-   * - Название контейнера (актуально в случае OpenMode = 'Container')
+     - –
+     - Название контейнера (актуально в случае OpenMode = 'Container')
    * - Path
      - ``String``
-   * - Путь до метаданных. Полный путь до метаданных будет выглядеть так: `InfinniUI.config </docs/API/Core/InfinniUI/InfinniUI.config.html>`__.serverUrl + '/' + Path.
+     - –
+     - Путь до метаданных. Полный путь до метаданных будет выглядеть так: `InfinniUI.config </docs/API/Core/InfinniUI/InfinniUI.config.html>`__.serverUrl + '/' + Path.
    * - Parameters
      - ``Array``
-   * - Коллекция `параметров представления <../../../../../Parameters/>`__
+     - –
+     - Коллекция `параметров представления <../../../../../Parameters/>`__
 
 
 Examples

@@ -15,6 +15,7 @@ Properties
      - Description
    * - ``LabelText``
      - ``String``
+     - –
      - Текст метки
    * - ``LabelFloating``
      - ``Boolean``
@@ -22,9 +23,11 @@ Properties
      - Является ли метка плавающей
    * - ``DisplayFormat``
      - ``String``
+     - –
      - Формат отображения значения
    * - ``EditMask``
      - `EditMask </docs/API/Core/EditMask/>`__
+     - –
      - Маска ввода значения
 
 
