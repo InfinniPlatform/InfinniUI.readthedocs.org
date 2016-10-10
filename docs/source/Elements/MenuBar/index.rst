@@ -32,22 +32,11 @@ Parameters
 Methods
 -------
 
-+-------+-------------+
-Name  | Description |
-+=======+=============+
-`high | Устанавлива |
-light | ет/снимает  |
-Item  | выделение   |
-<Menu | элемента    |
-Bar.h | меню с      |
-ighli | указанным   |
-ghtIt | именем      |
-em/>` |             |
-__    |             |
-+-------+-------------+
+.. list-table::
+   :header-rows: 1
 
+   * - Name
+     - Description
+   * - `highlightItem <MenuBar.highlightItem.html>`__
+     - Устанавливает/снимает выделение элемента меню с указанным именем
 
-.. toctree::
-
-   MenuBar.highlightItem.rst
-   MenuBar.metadata.rst

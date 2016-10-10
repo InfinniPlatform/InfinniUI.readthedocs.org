@@ -62,7 +62,8 @@ Parameters
      - Description
    * - parent
      - `Element <../../Core/Elements/Element>`__
-   * - Родительский элемент
+     - –
+     - Родительский элемент
    * - viewMode
      - ``String``
      - 'Base'
@@ -93,11 +94,3 @@ See Also
 
 -  `StackPanelOrientation <StackPanelOrientation/>`__
 -  `Container <../../Core/Elements/Container/>`__
-
-
-.. toctree::
-
-   StackPanel.getOrientation.rst
-   StackPanel.metadata.rst
-   StackPanel.setOrientation.rst
-   StackPanelOrientation.rst

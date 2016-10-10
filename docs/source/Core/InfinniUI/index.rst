@@ -20,10 +20,6 @@ Properties
      - `GlobalContext <../GlobalContext>`__
      - Глобальный контекст приложения.
    * - ``localizations``
+     - –
+     - –
 
-
-
-.. toctree::
-
-   InfinniUI.config.Routes.rst
-   InfinniUI.config.rst

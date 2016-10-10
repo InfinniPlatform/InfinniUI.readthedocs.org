@@ -32,131 +32,37 @@ Parameters
 Methods
 -------
 
-+-------+-------------+
-Name  | Description |
-+=======+=============+
-`getC | Возвращает  |
-olumn | `коллекцию  |
-s <Da | <../../Core |
-taGri | /Collection |
-d.get | />`__       |
-Colum | колонок     |
-ns/>` | таблицы.    |
-__    |             |
-+-------+-------------+
-`getS | Возвращает  |
-howSe | значение,   |
-lecto | определяюще |
-rs <D | е           |
-ataGr | показывать  |
-id.ge | ли колонку  |
-tShow | с           |
-Selec | CheckBox/Ra |
-tors/ | dio         |
->`__  | для выбора  |
-      | элементов.  |
-+-------+-------------+
-`setS | Устанавлива |
-howSe | ет          |
-lecto | значение,   |
-rs <D | определяюще |
-ataGr | е           |
-id.se | показывать  |
-tShow | ли колонку  |
-Selec | с           |
-tors/ | CheckBox/Ra |
->`__  | dio         |
-      | для выбора  |
-      | элементов.  |
-+-------+-------------+
-`getC | Возвращает  |
-heckA | значение,   |
-llVis | определяюще |
-ible  | е           |
-<Data | виден ли    |
-Grid. | элемент     |
-getCh | "Выбрать    |
-eckAl | все" в      |
-lVisi | шапке       |
-ble/> | таблицы.    |
-`__   |             |
-+-------+-------------+
-`setC | Устанавлива |
-heckA | ет          |
-llVis | значение,   |
-ible  | определяюще |
-<Data | е           |
-Grid. | виден ли    |
-setCh | элемент     |
-eckAl | "Выбрать    |
-lVisi | все" в      |
-ble/> | шапке       |
-`__   | таблицы.    |
-+-------+-------------+
-`getC | Возвращает  |
-heckA | состояние   |
-ll <D | элемента    |
-ataGr | "Выбрать    |
-id.ge | все" из     |
-tChec | шапки       |
-kAll/ | таблицы.    |
->`__  |             |
-+-------+-------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `getColumns <DataGrid.getColumns.html>`__
+     - Возвращает `коллекцию <../../Core/Collection/>`__ колонок таблицы.
+   * - `getShowSelectors <DataGrid.getShowSelectors.html>`__
+     - Возвращает значение, определяющее показывать ли колонку с CheckBox/Radio для выбора элементов.
+   * - `setShowSelectors <DataGrid.setShowSelectors.html>`__
+     - Устанавливает значение, определяющее показывать ли колонку с CheckBox/Radio для выбора элементов.
+   * - `getCheckAllVisible <DataGrid.getCheckAllVisible.html>`__
+     - Возвращает значение, определяющее виден ли элемент "Выбрать все" в шапке таблицы.
+   * - `setCheckAllVisible <DataGrid.setCheckAllVisible.html>`__
+     - Устанавливает значение, определяющее виден ли элемент "Выбрать все" в шапке таблицы.
+   * - `getCheckAll <DataGrid.getCheckAll.html>`__
+     - Возвращает состояние элемента "Выбрать все" из шапки таблицы.
+
 
 Events
 ------
 
-+-------+-------------+
-Name  | Description |
-+=======+=============+
-`onCh | Устанавлива |
-eckAl | ет          |
-lChan | `обработчик |
-ged < | события <.. |
-DataG | /../Core/Sc |
-rid.o | ript/>`__   |
-nChec | о том, что  |
-kAllC | состоняие   |
-hange | элемента    |
-d/>`_ | "Выбрать    |
-_     | все" в      |
-      | шапке       |
-      | таблицы     |
-      | изменилось. |
-+-------+-------------+
-`onRo | Устанавлива |
-wClic | ет          |
-k <Da | `обработчик |
-taGri | события <.. |
-d.onR | /../Core/Sc |
-owCli | ript/>`__   |
-ck/>` | на клик по  |
-__    | элементам   |
-      | DataGrid.   |
-+-------+-------------+
-`onRo | Устанавлива |
-wDoub | ет          |
-leCli | `обработчик |
-ck <D | события <.. |
-ataGr | /../Core/Sc |
-id.on | ript/>`__   |
-RowDo | на двойной  |
-ubleC | клик по     |
-lick/ | элементам   |
->`__  | DataGrid.   |
-+-------+-------------+
+.. list-table::
+   :header-rows: 1
 
+   * - Name
+     - Description
+   * - `onCheckAllChanged <DataGrid.onCheckAllChanged.html>`__
+     - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что состоняие элемента "Выбрать все" в шапке таблицы изменилось.
+   * - `onRowClick <DataGrid.onRowClick.html>`__
+     - Устанавливает `обработчик события <../../Core/Script/>`__ на клик по элементам DataGrid.
+   * - `onRowDoubleClick <DataGrid.onRowDoubleClick.html>`__
+     - Устанавливает `обработчик события <../../Core/Script/>`__ на двойной клик по элементам DataGrid.
 
-.. toctree::
-
-   DataGridColumn/index.rst
-   DataGrid.getCheckAll.rst
-   DataGrid.getCheckAllVisible.rst
-   DataGrid.getColumns.rst
-   DataGrid.getShowSelectors.rst
-   DataGrid.metadata.rst
-   DataGrid.onCheckAllChanged.rst
-   DataGrid.onRowClick.rst
-   DataGrid.onRowDoubleClick.rst
-   DataGrid.setCheckAllVisible.rst
-   DataGrid.setShowSelectors.rst

@@ -32,161 +32,38 @@ Parameters
 Methods
 -------
 
-+-------+-------------+
-Name  | Description |
-+=======+=============+
-`getL | Возвращает  |
-abelT | текст метки |
-ext < |             |
-Combo |             |
-Box.g |             |
-etLab |             |
-elTex |             |
-t/>`_ |             |
-_     |             |
-+-------+-------------+
-`setL | Устанавлива |
-abelT | ет          |
-ext < | текст метки |
-Combo |             |
-Box.s |             |
-etLab |             |
-elTex |             |
-t/>`_ |             |
-_     |             |
-+-------+-------------+
-`getL | Возвращает  |
-abelF | значение,   |
-loati | определяюще |
-ng <C | е,          |
-omboB | является ли |
-ox.ge | метка       |
-tLabe | плавающей   |
-lFloa |             |
-ting/ |             |
->`__  |             |
-+-------+-------------+
-`setL | Устанавлива |
-abelF | ет          |
-loati | значение,   |
-ng <C | определяюще |
-omboB | е,          |
-ox.se | является ли |
-tLabe | метка       |
-lFloa | плавающей   |
-ting/ |             |
->`__  |             |
-+-------+-------------+
-`getA | Возвращает  |
-utoco | значение,   |
-mplet | определяюще |
-e <Co | е,          |
-mboBo | разрешено   |
-x.get | ли          |
-Autoc | автозаверше |
-omple | ние         |
-te/>` | ввода       |
-__    |             |
-+-------+-------------+
-`setA | Устанавлива |
-utoco | ет          |
-mplet | значение,   |
-e <Co | определяюще |
-mboBo | е,          |
-x.set | разрешено   |
-Autoc | ли          |
-omple | автозаверше |
-te/>` | ние         |
-__    | ввода       |
-+-------+-------------+
-`getV | Возвращает  |
-alueT | `функцию <. |
-empla | ./../../Cor |
-te <C | e/Script/>` |
-omboB | __          |
-ox.ge | шаблонизаци |
-tValu | и           |
-eTemp | выбранного  |
-late/ | значения    |
->`__  |             |
-+-------+-------------+
-`setV | Устанавлива |
-alueT | ет          |
-empla | `функцию <. |
-te <C | ./../../Cor |
-omboB | e/Script/>` |
-ox.se | __          |
-tValu | шаблонизаци |
-eTemp | и           |
-late/ | выбранного  |
->`__  | значения    |
-+-------+-------------+
-`getS | Возвращает  |
-howCl | значение,   |
-ear < | которое     |
-Combo | определяет  |
-Box.g | наличие     |
-etSho | кнопки,     |
-wClea | очищающей   |
-r/>`_ | выбранное   |
-_     | значение    |
-+-------+-------------+
-`setS | Устанавлива |
-howCl | ет          |
-ear < | значение,   |
-Combo | которое     |
-Box.s | определяет  |
-etSho | наличие     |
-wClea | кнопки,     |
-r/>`_ | очищающей   |
-_     | выбранное   |
-      | значение    |
-+-------+-------------+
-`getA | Возвращает  |
-utoco | значение,   |
-mplet | для поиска  |
-eValu | в           |
-e <Co | выпадающем  |
-mboBo | списке      |
-x.get | значений    |
-Autoc |             |
-omple |             |
-teVal |             |
-ue/>` |             |
-__    |             |
-+-------+-------------+
-`setA | Устанавлива |
-utoco | ет          |
-mplet | значение,   |
-eValu | для поиска  |
-e <Co | в           |
-mboBo | выпадающем  |
-x.set | списке      |
-Autoc | значений    |
-omple |             |
-teVal |             |
-ue/>` |             |
-__    |             |
-+-------+-------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `getLabelText <ComboBox.getLabelText.html>`__
+     - Возвращает текст метки
+   * - `setLabelText <ComboBox.setLabelText.html>`__
+     - Устанавливает текст метки
+   * - `getLabelFloating <ComboBox.getLabelFloating.html>`__
+     - Возвращает значение, определяющее, является ли метка плавающей
+   * - `setLabelFloating <ComboBox.setLabelFloating.html>`__
+     - Устанавливает значение, определяющее, является ли метка плавающей
+   * - `getAutocomplete <ComboBox.getAutocomplete.html>`__
+     - Возвращает значение, определяющее, разрешено ли автозавершение ввода
+   * - `setAutocomplete <ComboBox.setAutocomplete.html>`__
+     - Устанавливает значение, определяющее, разрешено ли автозавершение ввода
+   * - `getValueTemplate <ComboBox.getValueTemplate.html>`__
+     - Возвращает `функцию <../../../Core/Script/>`__ шаблонизации выбранного значения
+   * - `setValueTemplate <ComboBox.setValueTemplate.html>`__
+     - Устанавливает `функцию <../../../Core/Script/>`__ шаблонизации выбранного значения
+   * - `getShowClear <ComboBox.getShowClear.html>`__
+     - Возвращает значение, которое определяет наличие кнопки, очищающей выбранное значение
+   * - `setShowClear <ComboBox.setShowClear.html>`__
+     - Устанавливает значение, которое определяет наличие кнопки, очищающей выбранное значение
+   * - `getAutocompleteValue <ComboBox.getAutocompleteValue.html>`__
+     - Возвращает значение, для поиска в выпадающем списке значений
+   * - `setAutocompleteValue <ComboBox.setAutocompleteValue.html>`__
+     - Устанавливает значение, для поиска в выпадающем списке значений
+
 
 Events
 ------
 
 Нет
-
-
-.. toctree::
-
-   ComboBox.getAutocomplete.rst
-   ComboBox.getAutocompleteValue.rst
-   ComboBox.getLabelFloating.rst
-   ComboBox.getLabelText.rst
-   ComboBox.getShowClear.rst
-   ComboBox.getValueTemplate.rst
-   ComboBox.metadata.rst
-   ComboBox.setAutocomplete.rst
-   ComboBox.setAutocompleteValue.rst
-   ComboBox.setLabelFloating.rst
-   ComboBox.setLabelText.rst
-   ComboBox.setShowClear.rst
-   ComboBox.setValueTemplate.rst

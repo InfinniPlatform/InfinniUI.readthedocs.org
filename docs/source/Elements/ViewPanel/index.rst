@@ -18,27 +18,32 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\|
-``parent``\ \|\ `Element <../../Core/Elements/Element>`__\ \|Родительский
-`элемент <../../Core/Elements/Element/>`__.
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - ``parent``
+     - `Element <../../Core/Elements/Element>`__
+     - Родительский `элемент <../../Core/Elements/Element/>`__.
+
 
 Methods
 -------
 
-\|Name\|Description\| `getLayout <ViewPanel.getLayout/>`__\ \|Возвращает
-`представление <../../Core/Elements/View>`__, которое отображается
-внутри ViewPanel. `setLayout <ViewPanel.setLayout/>`__\ \|Устанавливает
-`представление <../../Core/Elements/View>`__, которое нужно отображать
-внутри ViewPanel.
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `getLayout <ViewPanel.getLayout.html>`__
+     - Возвращает `представление <../../Core/Elements/View>`__, которое отображается внутри ViewPanel.
+   * - `setLayout <ViewPanel.setLayout.html>`__
+     - Устанавливает `представление <../../Core/Elements/View>`__, которое нужно отображать внутри ViewPanel.
+
 
 Events
 ------
 
 Нет
-
-
-.. toctree::
-
-   ViewPanel.getLayout.rst
-   ViewPanel.metadata.rst
-   ViewPanel.setLayout.rst

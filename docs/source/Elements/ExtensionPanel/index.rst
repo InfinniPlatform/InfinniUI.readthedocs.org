@@ -114,31 +114,24 @@ Parameters
 Methods
 -------
 
-+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------+
-Name                                                      | Description                                                                                   |
-+===========================================================+===============================================================================================+
-`setExtensionName <ExtensionPanel.setExtensionName.html>`__   | Устанавливает название прикладного элемента                                                   |
-+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------+
-`setContext <ExtensionPanel.setContext.html>`__               | Устанавливает `контекст представления </docs/Api/Core/Context/>`__                            |
-+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------+
-`setBuilder <ExtensionPanel.setBuilder.html>`__               | Устанавливает `Builder </docs/Api/Core/Builders/>`__                                          |
-+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------+
-`getParameters <ExtensionPanel.getParameters.html>`__         | Возвращает `параметры </docs/Api/Core/Parameters/>`__, передаваемые в прикладной элемент      |
-+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------+
-`setParameters <ExtensionPanel.setParameters.html>`__         | Устанавливает `параметры </docs/Api/Core/Parameters/>`__, передаваемые в прикладной элемент   |
-+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `setExtensionName <ExtensionPanel.setExtensionName.html>`__
+     - Устанавливает название прикладного элемента
+   * - `setContext <ExtensionPanel.setContext.html>`__
+     - Устанавливает `контекст представления </docs/Api/Core/Context/>`__
+   * - `setBuilder <ExtensionPanel.setBuilder.html>`__
+     - Устанавливает `Builder </docs/Api/Core/Builders/>`__
+   * - `getParameters <ExtensionPanel.getParameters.html>`__
+     - Возвращает `параметры </docs/Api/Core/Parameters/>`__, передаваемые в прикладной элемент
+   * - `setParameters <ExtensionPanel.setParameters.html>`__
+     - Устанавливает `параметры </docs/Api/Core/Parameters/>`__, передаваемые в прикладной элемент
+
 
 Events
 ------
 
 Нет
-
-
-.. toctree::
-
-   ExtensionPanel.getParameters.rst
-   ExtensionPanel.metadata.rst
-   ExtensionPanel.setBuilder.rst
-   ExtensionPanel.setContext.rst
-   ExtensionPanel.setExtensionName.rst
-   ExtensionPanel.setParameters.rst

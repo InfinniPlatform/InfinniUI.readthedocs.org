@@ -18,63 +18,57 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-+----------+---------------------------------------------+----------------------------------------------------------+
-Name     | Type                                        | Description                                              |
-+==========+=============================================+==========================================================+
-parent   | `Element <../../Core/Elements/Element>`__   | Родительский `элемент <../../Core/Elements/Element>`__   |
-+----------+---------------------------------------------+----------------------------------------------------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - parent
+     - `Element <../../Core/Elements/Element>`__
+     - Родительский `элемент <../../Core/Elements/Element>`__
+
 
 Methods
 -------
 
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-Name                                                                | Description                                                                     |
-+=====================================================================+=================================================================================+
-`getDataSource <DataNavigation.getDataSource.html>`__                   | Возвращает `источник данных <../../Core/DataSources/BaseDataSource/>`__.        |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`setDataSource <DataNavigation.setDataSource.html>`__                   | Устанавливает `источник данных <../../Core/DataSources/BaseDataSource/>`__.     |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`getAvailablePageSizes <DataNavigation.getAvailablePageSizes.html>`__   | Возвращает `коллекцию <../../Core/Collection/>`__ доступных размеров страниц.   |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`getPageNumber <DataNavigation.getPageNumber>`__                    | Возвращает номер текущей страницы.                                              |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`setPageNumber <DataNavigation.setPageNumber>`__                    | Устанавливает номер текущей страницы.                                           |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`getPageSize <DataNavigation.getPageSize>`__                        | Возвращает размер страницы.                                                     |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`setPageSize <DataNavigation.setPageSize>`__                        | Устанавливает размер страницы.                                                  |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`getPageCount <DataNavigation.getPageCount>`__                      | Возвращает количество страниц.                                                  |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`setPageCount <DataNavigation.setPageCount>`__                      | Устанавливает количество страниц.                                               |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`getIsDataReady <DataNavigation.getIsDataReady>`__                  | Возвращает значение о том, готовы данные или нет.                               |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-`setIsDataReady <DataNavigation.setIsDataReady>`__                  | Устанавливает значение о том, готовы данные или нет.                            |
-+---------------------------------------------------------------------+---------------------------------------------------------------------------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `getDataSource <DataNavigation.getDataSource.html>`__
+     - Возвращает `источник данных <../../Core/DataSources/BaseDataSource/>`__.
+   * - `setDataSource <DataNavigation.setDataSource.html>`__
+     - Устанавливает `источник данных <../../Core/DataSources/BaseDataSource/>`__.
+   * - `getAvailablePageSizes <DataNavigation.getAvailablePageSizes.html>`__
+     - Возвращает `коллекцию <../../Core/Collection/>`__ доступных размеров страниц.
+   * - `getPageNumber <DataNavigation.getPageNumber>`__
+     - Возвращает номер текущей страницы.
+   * - `setPageNumber <DataNavigation.setPageNumber>`__
+     - Устанавливает номер текущей страницы.
+   * - `getPageSize <DataNavigation.getPageSize>`__
+     - Возвращает размер страницы.
+   * - `setPageSize <DataNavigation.setPageSize>`__
+     - Устанавливает размер страницы.
+   * - `getPageCount <DataNavigation.getPageCount>`__
+     - Возвращает количество страниц.
+   * - `setPageCount <DataNavigation.setPageCount>`__
+     - Устанавливает количество страниц.
+   * - `getIsDataReady <DataNavigation.getIsDataReady>`__
+     - Возвращает значение о том, готовы данные или нет.
+   * - `setIsDataReady <DataNavigation.setIsDataReady>`__
+     - Устанавливает значение о том, готовы данные или нет.
+
 
 Events
 ------
 
-`onPageSizeChanged <DataNavigation.onPageSizeChanged>`__|`Обработчик
-события <../../Core/Script/>`__ о том, что размер страницы изменился.
-`onPageNumberChanged <DataNavigation.onPageNumberChanged>`__|`Обработчик
-события <../../Core/Script/>`__ о том, что номер страницы изменился.
+.. list-table::
+   :header-rows: 1
 
+   * - `onPageSizeChanged <DataNavigation.onPageSizeChanged>`__
+     - `Обработчик события <../../Core/Script/>`__ о том, что размер страницы изменился.
+   * - `onPageNumberChanged <DataNavigation.onPageNumberChanged>`__
+     - `Обработчик события <../../Core/Script/>`__ о том, что номер страницы изменился.
 
-.. toctree::
-
-   DataNavigation.getAvailablePageSizes.rst
-   DataNavigation.getDataSource.rst
-   DataNavigation.getIsDataReady.rst
-   DataNavigation.getPageCount.rst
-   DataNavigation.getPageNumber.rst
-   DataNavigation.getPageSize.rst
-   DataNavigation.metadata.rst
-   DataNavigation.onPageNumberChanged.rst
-   DataNavigation.onPageSizeChanged.rst
-   DataNavigation.setDataSource.rst
-   DataNavigation.setIsDataReady.rst
-   DataNavigation.setPageCount.rst
-   DataNavigation.setPageNumber.rst
-   DataNavigation.setPageSize.rst
