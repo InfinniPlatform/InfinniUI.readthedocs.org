@@ -19,8 +19,6 @@ Start Application
 
 Самый простой способ начать разработку на InfinniUI - использовать заготовку проекта. Для этого зайдите в директорию платформы, в папку ``example``.
 
-Настройте сборку конфигурации. Для этого в файле ``<example>/gulpfile.js/gulptasks/sourceForTasks.js`` проверьте/исправьте значения переменных infinniUIpath, fromInfinniToNewStylesPath, projectRootFolder, projectFolderForPlatform, projectFolderForExtensions.
-
 Запустите файл ``runExample.bat`` (для его корректной работы необходим `Node.js <https://nodejs.org/en/>`_). В результате будет выполнена полную сборка проекта и запущен веб-сервер, доступный по адресу http://localhost:4444.
 
 Метаданные страницы
