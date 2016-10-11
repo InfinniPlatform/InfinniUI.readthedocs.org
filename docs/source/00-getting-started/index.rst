@@ -10,20 +10,18 @@ InfinniUI можно установить с помощью bower::
 
    bower install infinni-ui
 
-клонировать репозиторий с `github <https://github.com/InfinniPlatform/InfinniUI>`_
+или склонировать репозиторий с `github <https://github.com/InfinniPlatform/InfinniUI>`_,
 
 или :download:`скачать <../_files/infinni-ui.zip>`.
 
-Example
----------
+Start Application
+------------------
 
-Зайдите в директорию платформы, в папке ``example`` Вы найдёте пример разработки на базе InfinniUI.
+Самый простой способ начать разработку на InfinniUI - использовать заготовку проекта. Для этого зайдите в директорию платформы, в папку ``example``.
 
 Настройте сборку конфигурации. Для этого в файле ``<example>/gulpfile.js/gulptasks/sourceForTasks.js`` проверьте/исправьте значения переменных infinniUIpath, fromInfinniToNewStylesPath, projectRootFolder, projectFolderForPlatform, projectFolderForExtensions.
 
-Файл ``runExample.bat`` (для его корректной работы необходим `Node.js <https://nodejs.org/en/>`_) делает полную сборку платформы и конфигурации, а также запуск сервера.
-
-Результат сборки можно посмотреть по адресу http://localhost:4444.
+Запустите файл ``runExample.bat`` (для его корректной работы необходим `Node.js <https://nodejs.org/en/>`_). В результате будет выполнена полную сборка проекта и запущен веб-сервер, доступный по адресу http://localhost:4444.
 
 Метаданные страницы
 ~~~~~~~~~~~~~~~~~~~~
