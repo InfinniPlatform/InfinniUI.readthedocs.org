@@ -44,7 +44,7 @@ Examples
 --------
 
 .. figure:: styling_md.png
-   :alt: 
+   :alt: styling
 
 See Also
 --------

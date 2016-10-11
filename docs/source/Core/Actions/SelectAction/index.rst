@@ -61,7 +61,7 @@ Properties
 
 
 .. figure:: Scheme.png
-   :alt: 
+   :alt: Схема работы SelectAction
 
 Метод execute
 -------------

@@ -38,7 +38,7 @@ Description
 обеспечивает предсказуемость поведения всех элементов.
 
 .. figure:: DataBindingAspects.png
-   :alt: 
+   :alt: DataBindingAspects
 
 Syntax
 ------

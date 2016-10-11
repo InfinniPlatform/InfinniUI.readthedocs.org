@@ -64,7 +64,7 @@ Properties
 элементов, соответствующий destinationProperty.
 
 .. figure:: Scheme.png
-   :alt: 
+   :alt: Схема работы AddAction
 
 Examples
 --------

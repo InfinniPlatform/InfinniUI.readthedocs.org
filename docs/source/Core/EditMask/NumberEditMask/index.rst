@@ -3,12 +3,9 @@ NumberEditMask
 
 Маска ввода числового значения.
 
-.. list-table::
-   :header-rows: 1
-
-   * - image0
-   * - image1
-   * - image2
+|image0|
+|image1|
+|image2|
 
 
 Маска должна записываться в формате, который описан в разделе

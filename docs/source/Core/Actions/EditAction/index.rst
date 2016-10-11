@@ -57,7 +57,7 @@ Properties
 
 
 .. figure:: Scheme.png
-   :alt: 
+   :alt: Схема работы EditAction
 
 Examples
 --------

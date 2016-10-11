@@ -37,7 +37,7 @@ Examples
 --------
 
 .. figure:: TextStyle.png
-   :alt: 
+   :alt: TextStyle
 
 See Also
 --------
