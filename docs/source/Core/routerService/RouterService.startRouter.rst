@@ -7,7 +7,7 @@ Description
 -----------
 
 Запускает роутер с описанными в
-`InfinniUI.config.Routes <../InfinniUI/InfinniUI.config>`__
+`InfinniUI.config.Routes <../InfinniUI/InfinniUI.config.html>`__
 маршрутами.
 
 Syntax

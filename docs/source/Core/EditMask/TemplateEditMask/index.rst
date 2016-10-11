@@ -63,13 +63,13 @@ Mask
    * - Символ
      - Описание
    * - ``/``
-     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__.`Culture.dateTimeFormatInfo.dateSeparator <../../Culture/Culture.dateTimeFormatInfo#dateseparator>`__.
+     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__. `Culture.dateTimeFormatInfo.dateSeparator <../../Culture/Culture.dateTimeFormatInfo.html#dateseparator>`__.
    * - ``:``
-     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__.`Culture.dateTimeFormatInfo.timeSeparator <../../Culture/Culture.dateTimeFormatInfo#timeseparator>`__.
+     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__. `Culture.dateTimeFormatInfo.timeSeparator <../../Culture/Culture.dateTimeFormatInfo.html#timeseparator>`__.
    * - ``%``
-     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__.`Culture.numberFormatInfo.percentSymbol <../../Culture/Culture.numberFormatInfo#percentsymbol>`__.
+     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__. `Culture.numberFormatInfo.percentSymbol <../../Culture/Culture.numberFormatInfo.html#percentsymbol>`__.
    * - ``$``
-     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__.`Culture.numberFormatInfo.currencySymbol <../../Culture/Culture.numberFormatInfo#currencysymbol>`__.
+     - Должен заменяться на `GlobalContext <../../GlobalContext/>`__. `Culture.numberFormatInfo.currencySymbol <../../Culture/Culture.numberFormatInfo.html#currencysymbol>`__.
 
 
 Литералы

@@ -14,9 +14,9 @@ RouterService предоставляет возможность настройк
 
 Во время загрузки страницы, после того, как ваше приложение откроет
 HomePage view и будут созданы все роуты описанные в
-`InfinniUI.config.Routes <../InfinniUI/InfinniUI.config>`__,
+`InfinniUI.config.Routes <../InfinniUI/InfinniUI.config.html>`__,
 автоматически будет запущен роутер используя настройки History API из
-`InfinniUI.config.HistoryAPI <../InfinniUI/InfinniUI.config>`__.
+`InfinniUI.config.HistoryAPI <../InfinniUI/InfinniUI.config.html>`__.
 RouterService представляет собой обертку над Backbone.Router.
 
 Parameters

@@ -14,7 +14,7 @@ Properties
      - Description
    * - Format
      - ``String``
-     - `Строка форматирования объекта <ObjectFormat.format>`__.
+     - `Строка форматирования объекта <ObjectFormat.format.html>`__.
 
 
 Examples

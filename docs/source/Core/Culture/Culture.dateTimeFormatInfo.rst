@@ -4,7 +4,7 @@ Culture.dateTimeFormatInfo
 Сведения о формате представления даты и времени.
 
 Описание настроек форматирования для даты и времени приведено в разделе
-`DateTimeFormatting <Culture.dateTimeFormatting>`__.
+`DateTimeFormatting <Culture.dateTimeFormatting.html>`__.
 
 Properties
 ----------

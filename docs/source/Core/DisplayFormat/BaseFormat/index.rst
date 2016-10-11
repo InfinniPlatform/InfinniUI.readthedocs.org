@@ -27,11 +27,11 @@ Methods
      - Description
    * - `format <BaseFormat.format.html>`__
      - Форматирует один или несколько объектов.
-   * - `formatValue <BaseFormat.formatValue>`__
+   * - `formatValue <BaseFormat.formatValue.html>`__
      - Форматирует значение.
-   * - `getFormat <BaseFormat.getFormat>`__
+   * - `getFormat <BaseFormat.getFormat.html>`__
      - Возвращает строку форматирования значения.
-   * - `setFormat <BaseFormat.setFormat>`__
+   * - `setFormat <BaseFormat.setFormat.html>`__
      - Устанавливает строку форматирования значения.
 
 

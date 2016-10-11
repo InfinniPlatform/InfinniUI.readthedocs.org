@@ -43,21 +43,21 @@ Methods
      - Устанавливает `источник данных <../../Core/DataSources/BaseDataSource/>`__.
    * - `getAvailablePageSizes <DataNavigation.getAvailablePageSizes.html>`__
      - Возвращает `коллекцию <../../Core/Collection/>`__ доступных размеров страниц.
-   * - `getPageNumber <DataNavigation.getPageNumber>`__
+   * - `getPageNumber <DataNavigation.getPageNumber.html>`__
      - Возвращает номер текущей страницы.
-   * - `setPageNumber <DataNavigation.setPageNumber>`__
+   * - `setPageNumber <DataNavigation.setPageNumber.html>`__
      - Устанавливает номер текущей страницы.
-   * - `getPageSize <DataNavigation.getPageSize>`__
+   * - `getPageSize <DataNavigation.getPageSize.html>`__
      - Возвращает размер страницы.
-   * - `setPageSize <DataNavigation.setPageSize>`__
+   * - `setPageSize <DataNavigation.setPageSize.html>`__
      - Устанавливает размер страницы.
-   * - `getPageCount <DataNavigation.getPageCount>`__
+   * - `getPageCount <DataNavigation.getPageCount.html>`__
      - Возвращает количество страниц.
-   * - `setPageCount <DataNavigation.setPageCount>`__
+   * - `setPageCount <DataNavigation.setPageCount.html>`__
      - Устанавливает количество страниц.
-   * - `getIsDataReady <DataNavigation.getIsDataReady>`__
+   * - `getIsDataReady <DataNavigation.getIsDataReady.html>`__
      - Возвращает значение о том, готовы данные или нет.
-   * - `setIsDataReady <DataNavigation.setIsDataReady>`__
+   * - `setIsDataReady <DataNavigation.setIsDataReady.html>`__
      - Устанавливает значение о том, готовы данные или нет.
 
 
@@ -67,8 +67,8 @@ Events
 .. list-table::
    :header-rows: 1
 
-   * - `onPageSizeChanged <DataNavigation.onPageSizeChanged>`__
+   * - `onPageSizeChanged <DataNavigation.onPageSizeChanged.html>`__
      - `Обработчик события <../../Core/Script/>`__ о том, что размер страницы изменился.
-   * - `onPageNumberChanged <DataNavigation.onPageNumberChanged>`__
+   * - `onPageNumberChanged <DataNavigation.onPageNumberChanged.html>`__
      - `Обработчик события <../../Core/Script/>`__ о том, что номер страницы изменился.
 

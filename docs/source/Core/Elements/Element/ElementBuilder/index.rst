@@ -16,7 +16,7 @@ Methods
 
    * - Name
      - Description
-   * - `build <ElementBuilder.build>`__
+   * - `build <ElementBuilder.build.html>`__
      -  Создает и настраивает элемент, по переданным метаданным 
 
 

@@ -3,7 +3,7 @@ ObjectFormat
 
 Формат отображения объекта. Строка форматирования должна записываться в
 формате, который описан в разделе
-`ObjectFormat.format <ObjectFormat.format>`__.
+`ObjectFormat.format <ObjectFormat.format.html>`__.
 
 Extends
 -------
@@ -24,7 +24,7 @@ Example
 See also
 --------
 
-`Настройки форматирования объекта <ObjectFormat.format>`__
+`Настройки форматирования объекта <ObjectFormat.format.html>`__
 
 
 .. toctree::

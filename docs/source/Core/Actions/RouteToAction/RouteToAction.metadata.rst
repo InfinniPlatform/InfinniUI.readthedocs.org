@@ -14,7 +14,7 @@ Properties
      - Description
    * - Name\*
      - ``String``
-     - Имя маршрута. Имя должно быть однозначно определенно в `InfinniUI.config.Routes <../../InfinniUI/InfinniUI.config.Routes>`__
+     - Имя маршрута. Имя должно быть однозначно определенно в `InfinniUI.config.Routes <../../InfinniUI/InfinniUI.config.Routes.html>`__
    * - Params
      - ``Object``
      - Массив с параметрами маршрута, которые будут переданы в callback. Где Name - имя параметра, а Value - значение параметра. Значение параметра можно задать как через ``String``, так и через `DataBinding <../../DataBinding>`__

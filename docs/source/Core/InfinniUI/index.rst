@@ -13,7 +13,7 @@ Properties
    * - Name
      - Type
      - Description
-   * - `config <InfinniUI.config>`__
+   * - `config <InfinniUI.config.html>`__
      - ``Object``
      - Параметры конфигурации приложения
    * - ``global``
