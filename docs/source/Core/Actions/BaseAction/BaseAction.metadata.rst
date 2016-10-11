@@ -2,7 +2,7 @@ BaseAction.metadata
 ===================
 
 Метаданные, которые реализованы во `всех действиях
-InfinniUI <...html>`__.
+InfinniUI <./>`__.
 
 Properties
 ----------

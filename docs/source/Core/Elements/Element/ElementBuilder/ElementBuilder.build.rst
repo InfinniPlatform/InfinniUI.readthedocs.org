@@ -22,6 +22,6 @@ Parameters
      -  ``Object`` 
      -  Метаданные элемента 
    * - args.parent
-     -  `Element <...html>`__ 
+     -  `Element <../>`__ 
      -  Родительский элемент 
 

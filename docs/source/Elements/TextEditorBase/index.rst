@@ -47,9 +47,9 @@ Methods
    * - `setLabelFloating <TextEditorBase.setLabelFloating.html>`__
      - Устанавливает значение, определяющее, является ли метка плавающей.
    * - `getDisplayFormat <TextEditorBase.getDisplayFormat.html>`__
-     - Возвращает `функцию <../../Core/Script.html>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
+     - Возвращает `функцию <../../Core/Script/>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
    * - `setDisplayFormat <TextEditorBase.setDisplayFormat.html>`__
-     - Устанавливает `функцию <../../Core/Script.html>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
+     - Устанавливает `функцию <../../Core/Script/>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
    * - `getEditMask <TextEditorBase.getEditMask.html>`__
      - Возвращает `маску ввода данных </docs/API/Core/EditMask/>`__.
    * - `setEditMask <TextEditorBase.setEditMask.html>`__

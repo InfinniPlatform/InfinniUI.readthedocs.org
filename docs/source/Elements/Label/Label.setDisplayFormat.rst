@@ -22,7 +22,7 @@ Parameters
      - Description
    * - format
      - `функция <../Core/Script/>`__
-     - `Функция <../Core/Script.html>`__ форматирования `значения <EditorBase/EditorBase.getValue.html>`__ для отображения.
+     - `Функция <../Core/Script/>`__ форматирования `значения <EditorBase/EditorBase.getValue.html>`__ для отображения.
 
 
 Returns

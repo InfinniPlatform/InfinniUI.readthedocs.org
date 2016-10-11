@@ -97,7 +97,7 @@ Events
    * - `onClosed <View.onClosed.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что представление было закрыто
    * - `onBeforeLoaded <View.onBeforeLoaded.html>`__
-     - Устанавливает `обработчик события <../../Script.html>`__ о том, что представление было загружено. Данный обработчик сработает до `onLoaded <../Element/Element.onLoaded.html>`__
+     - Устанавливает `обработчик события <../../Script/>`__ о том, что представление было загружено. Данный обработчик сработает до `onLoaded <../Element/Element.onLoaded.html>`__
 
 
 

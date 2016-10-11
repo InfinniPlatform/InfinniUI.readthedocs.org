@@ -38,8 +38,8 @@ Parameters
      - ``String``
      - Тип сообщения.
    * - ``callback``
-     - `Script <...html>`__
-     - `Обработчик сообщения <../Script>`__.
+     - `Script <../Script/>`__
+     - Обработчик сообщения.
 
 
 Examples

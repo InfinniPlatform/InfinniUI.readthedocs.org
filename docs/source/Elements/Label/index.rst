@@ -42,9 +42,9 @@ Methods
    * - Name
      - Description
    * - `getDisplayFormat <Label.getDisplayFormat.html>`__
-     - Возвращает `функцию <../../../Core/Script.html>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
+     - Возвращает `функцию <../../../Core/Script/>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
    * - `setDisplayFormat <Label.setDisplayFormat.html>`__
-     - Устанавливает `функцию <../../../Core/Script.html>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
+     - Устанавливает `функцию <../../../Core/Script/>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
    * - `getTextTrimming <Label.getTextTrimming.html>`__
      - Возвращает значение, определяющее, усекается ли текст при переполнении.
    * - `setTextTrimming <Label.setTextTrimming.html>`__

@@ -22,6 +22,6 @@ Parameters
      -  ``Object`` 
      -  Метаданные скрипта 
    * - args.parent
-     -  `Element <...html>`__ 
+     -  `Element <../../Elements/Element/>`__ 
      -  Родительский элемент 
 
