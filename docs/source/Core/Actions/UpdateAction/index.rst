@@ -82,3 +82,6 @@ Examples
    :hidden:
 
    UpdateAction.metadata.rst
+
+
+.. include:: UpdateAction.metadata.rst

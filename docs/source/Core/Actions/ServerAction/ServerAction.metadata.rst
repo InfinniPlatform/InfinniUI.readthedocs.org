@@ -1,10 +1,10 @@
 ServerAction.metadata
-=====================
+---------------------
 
 Метаданные типа `ServerAction <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -51,7 +51,7 @@ Properties
 1 `Шаблонизируемая величина <#parameters-templating>`__.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

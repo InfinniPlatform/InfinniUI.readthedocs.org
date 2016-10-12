@@ -94,3 +94,6 @@ Script
 
    ScriptBuilder/index.rst
    Script.metadata.rst
+
+
+.. include:: Script.metadata.rst

@@ -69,3 +69,6 @@ Events
    * - `onSelectedItemChanged <ListEditorBase.onSelectedItemChanged.html>`__
      - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что выделенный элемент изменился.
 
+
+
+.. include:: ListEditorBase.metadata.rst

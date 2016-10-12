@@ -66,3 +66,6 @@ Events
    * - `onRowDoubleClick <DataGrid.onRowDoubleClick.html>`__
      - Устанавливает `обработчик события <../../Core/Script/>`__ на двойной клик по элементам DataGrid.
 
+
+
+.. include:: DataGrid.metadata.rst

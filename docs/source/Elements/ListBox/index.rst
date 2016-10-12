@@ -109,3 +109,6 @@ Events
 ------
 
 Нет
+
+
+.. include:: ListBox.metadata.rst

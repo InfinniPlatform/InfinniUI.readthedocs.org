@@ -67,3 +67,6 @@ Events
    * - `onButtonClick <ButtonEdit.onButtonClick.html>`__
      - Устанавливает `обработчик события <../../Core/Script/>`__ нажатия на кнопку
 
+
+
+.. include:: ButtonEdit.metadata.rst

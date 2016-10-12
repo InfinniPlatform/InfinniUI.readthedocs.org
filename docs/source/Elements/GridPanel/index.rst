@@ -57,6 +57,10 @@ Events
 
 Нет
 
+
+
+.. include:: GridPanel.metadata.rst
+
 See Also
 --------
 

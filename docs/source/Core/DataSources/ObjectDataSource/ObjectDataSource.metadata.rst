@@ -1,10 +1,10 @@
 ObjectDataSource.metadata
-=========================
+-------------------------
 
 Метаданные `ObjectDataSource <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -21,7 +21,7 @@ Properties
 `DataBinding <../../DataBinding/DataBinding.metadata.html>`__.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

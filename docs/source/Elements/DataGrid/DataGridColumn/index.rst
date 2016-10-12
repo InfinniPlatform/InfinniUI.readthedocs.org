@@ -52,6 +52,10 @@ Name                                  | Description                             
 `onSort <DataGridColumn.onSort.html>`__   | Устанавливает функцию которая будет вызвана при событии 'onSort'.   |
 +---------------------------------------+---------------------------------------------------------------------+
 
+
+
+.. include:: DataGridColumn.metadata.rst
+
 See Also
 --------
 

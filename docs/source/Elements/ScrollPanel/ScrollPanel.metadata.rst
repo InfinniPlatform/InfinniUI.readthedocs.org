@@ -1,10 +1,10 @@
 ScrollPanel.metadata
-====================
+--------------------
 
 Метаданные типа `ScrollPanel <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -24,7 +24,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 ::
 

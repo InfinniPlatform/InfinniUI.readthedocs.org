@@ -31,3 +31,6 @@ See also
    :hidden:
 
    DateTimeFormat.metadata.rst
+
+
+.. include:: DateTimeFormat.metadata.rst

@@ -46,3 +46,6 @@ Methods
    * - `setParentSelector <TreeView.setParentSelector.html>`__
      - Устанавливает `функцию <../../Core/Script/>`__ выборки из элемента коллекции идентификатора родителя.
 
+
+
+.. include:: TreeView.metadata.rst

@@ -1,10 +1,10 @@
 OpenAction.metadata
-===================
+-------------------
 
 Метаданные типа `OpenAction <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -20,7 +20,7 @@ Properties
 \* Обязательное свойство.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 
@@ -35,6 +35,6 @@ Examples
     }
 
 See Also
---------
+~~~~~~~~
 
 -  `LinkView <../../Elements/View/LinkView/>`__

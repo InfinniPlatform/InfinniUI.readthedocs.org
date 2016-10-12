@@ -1,10 +1,10 @@
 RouteToAction.metadata
-======================
+----------------------
 
 Метаданные типа `RouteToAction <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -26,7 +26,7 @@ Properties
 \* Обязательное свойство.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 
@@ -61,6 +61,6 @@ Examples
     }
 
 See Also
---------
+~~~~~~~~
 
 -  `RouterService <../../RouterService/>`__

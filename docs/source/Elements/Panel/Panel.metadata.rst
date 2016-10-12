@@ -1,10 +1,10 @@
 Panel.metadata
-==============
+--------------
 
 Метаданные типа `Panel <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -48,7 +48,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 ::
 

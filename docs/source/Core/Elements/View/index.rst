@@ -129,3 +129,6 @@ Events
    View.setFocusOnControl.rst
    View.setHeaderTemplate.rst
    View.setOpenStrategy.rst
+
+
+.. include:: View.metadata.rst

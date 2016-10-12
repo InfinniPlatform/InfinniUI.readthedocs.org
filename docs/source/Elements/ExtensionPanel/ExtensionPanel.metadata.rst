@@ -1,10 +1,10 @@
 ExtensionPanel.metadata
-=======================
+-----------------------
 
 Метаданные типа `ExtensionPanel <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -21,7 +21,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

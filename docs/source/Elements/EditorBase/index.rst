@@ -68,3 +68,6 @@ Events
    * - `onValueChanged <EditorBase.onValueChanged.html>`__
      - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что значение было изменено.
 
+
+
+.. include:: EditorBase.metadata.rst

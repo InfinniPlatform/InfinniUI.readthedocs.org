@@ -68,3 +68,6 @@ Events
 ------
 
 Нет
+
+
+.. include:: Button.metadata.rst

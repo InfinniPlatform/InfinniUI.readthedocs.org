@@ -1,11 +1,11 @@
 DocumentDataSource.metadata
-===========================
+---------------------------
 
 Метаданные источника данных представления для документов
 InfinniPlatform.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -57,7 +57,7 @@ Properties
 значениями из FilterParams.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

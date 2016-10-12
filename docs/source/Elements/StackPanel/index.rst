@@ -89,6 +89,10 @@ Events
 
 Нет
 
+
+
+.. include:: StackPanel.metadata.rst
+
 See Also
 --------
 

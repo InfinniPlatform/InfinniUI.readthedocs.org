@@ -147,3 +147,6 @@ Events
    RestDataSource.setGettingUrlParams.rst
    RestDataSource.setSettingUrlParams.rst
    RestDataSource.setUpdatingItemsConverter.rst
+
+
+.. include:: RestDataSource.metadata.rst

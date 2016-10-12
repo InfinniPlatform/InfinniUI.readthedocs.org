@@ -1,10 +1,10 @@
 ImageBox.metadata
-=================
+-----------------
 
 Метаданные типа `ImageBox <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -21,7 +21,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

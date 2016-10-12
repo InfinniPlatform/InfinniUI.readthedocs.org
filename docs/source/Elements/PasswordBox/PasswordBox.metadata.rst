@@ -1,10 +1,10 @@
 PasswordBox.metadata
-====================
+--------------------
 
 Метаданные типа `PasswordBox <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -28,7 +28,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

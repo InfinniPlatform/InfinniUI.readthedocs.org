@@ -103,6 +103,10 @@ Examples
 
     selectAction.execute(selectActionCallback);//откроет окно выбора пациента. Выбранный пацент будет записан в текущей госпитализации
 
+
+
+.. include:: SelectAction.metadata.rst
+
 See Also
 --------
 

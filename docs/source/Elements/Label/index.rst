@@ -58,3 +58,6 @@ Methods
    * - `setEscapeHtml <Label.setEscapeHtml.html>`__
      - Устанавливает значение, определяющее, экранируется ли HTML-разметка.
 
+
+
+.. include:: Label.metadata.rst

@@ -211,3 +211,6 @@ Events
    BaseDataSource.updateItems.rst
    BaseDataSource.validateOnErrors.rst
    ValidationResult.rst
+
+
+.. include:: BaseDataSource.metadata.rst

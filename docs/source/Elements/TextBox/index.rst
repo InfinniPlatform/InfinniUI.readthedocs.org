@@ -46,3 +46,6 @@ Methods
    * - `setLineCount <TextBox.setLineCount.html>`__
      - Устанавливает максимально видимое количество строк.
 
+
+
+.. include:: TextBox.metadata.rst

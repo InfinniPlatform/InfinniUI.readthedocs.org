@@ -40,3 +40,6 @@ Methods
    * - `highlightItem <MenuBar.highlightItem.html>`__
      - Устанавливает/снимает выделение элемента меню с указанным именем
 
+
+
+.. include:: MenuBar.metadata.rst

@@ -66,3 +66,6 @@ Events
    BaseAction.initDefaultValues.rst
    BaseAction.metadata.rst
    BaseAction.setProperty.rst
+
+
+.. include:: BaseAction.metadata.rst

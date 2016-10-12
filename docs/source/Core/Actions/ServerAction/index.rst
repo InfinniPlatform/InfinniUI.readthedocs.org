@@ -127,3 +127,6 @@ Methods
    ServerAction.getParam.rst
    ServerAction.metadata.rst
    ServerAction.setParam.rst
+
+
+.. include:: ServerAction.metadata.rst

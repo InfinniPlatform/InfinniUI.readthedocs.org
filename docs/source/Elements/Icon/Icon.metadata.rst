@@ -1,10 +1,10 @@
 Icon.metadata
-=============
+-------------
 
 Метаданные типа `Icon <./>`__.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 
@@ -15,6 +15,6 @@ Examples
     }
 
 See also
---------
+~~~~~~~~
 
 `EditorBase.metadata <../EditorBase/EditorBase.metadata.html>`__.

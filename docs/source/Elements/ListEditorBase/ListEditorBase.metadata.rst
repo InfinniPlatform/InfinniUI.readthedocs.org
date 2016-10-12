@@ -1,10 +1,10 @@
 ListEditorBase.metadata
-=======================
+-----------------------
 
 Метаданные типа `ListEditorBase <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -36,7 +36,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

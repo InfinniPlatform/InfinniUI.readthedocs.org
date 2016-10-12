@@ -47,3 +47,6 @@ Methods
    * - `setAcceptTypes <ImageBox.setAcceptTypes.html>`__
      - Устанавливает список допустимых форматов данных.
 
+
+
+.. include:: ImageBox.metadata.rst

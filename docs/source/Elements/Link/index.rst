@@ -46,3 +46,6 @@ Methods
    * - `setTarget <Link.setTarget.html>`__
      - Устанавливает режим загрузки документа.
 
+
+
+.. include:: Link.metadata.rst

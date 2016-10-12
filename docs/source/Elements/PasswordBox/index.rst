@@ -51,3 +51,6 @@ Methods
    * - `setAutocomplete <PasswordBox.setAutocomplete.html>`__
      - Устанавливает значение, определяющее, будет ли срабатывать стандартная автоподстановка пароля.
 
+
+
+.. include:: PasswordBox.metadata.rst

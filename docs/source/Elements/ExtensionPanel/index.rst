@@ -135,3 +135,6 @@ Events
 ------
 
 Нет
+
+
+.. include:: ExtensionPanel.metadata.rst

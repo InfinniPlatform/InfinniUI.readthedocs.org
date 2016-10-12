@@ -34,3 +34,6 @@ Events
 ------
 
 Нет
+
+
+.. include:: RadioGroup.metadata.rst

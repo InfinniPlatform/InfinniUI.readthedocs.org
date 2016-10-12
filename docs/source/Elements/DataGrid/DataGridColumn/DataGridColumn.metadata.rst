@@ -1,10 +1,10 @@
 DataGridColumn.metadata
-=======================
+-----------------------
 
 Метаданные типа `DataGridColumn <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -46,7 +46,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

@@ -1,10 +1,10 @@
 UpdateAction.metadata
-=====================
+---------------------
 
 Метаданные типа `UpdateAction <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -26,7 +26,7 @@ Properties
 \* Обязательное свойство.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 
@@ -41,6 +41,6 @@ Examples
     }
 
 See Also
---------
+~~~~~~~~
 
 -  `DataSource <../DataSources/>`__

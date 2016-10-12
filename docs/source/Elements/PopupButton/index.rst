@@ -34,3 +34,6 @@ Parameters
      - ``common``
      - Режим отображения
 
+
+
+.. include:: PopupButton.metadata.rst

@@ -35,6 +35,10 @@ Examples
     var routeToAction = new RouteToAction();
     routeToAction.execute();
 
+
+
+.. include:: RouteToAction.metadata.rst
+
 See Also
 --------
 

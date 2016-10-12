@@ -45,3 +45,6 @@ Example
    BooleanFormat.metadata.rst
    BooleanFormat.setFalseText.rst
    BooleanFormat.setTrueText.rst
+
+
+.. include:: BooleanFormat.metadata.rst

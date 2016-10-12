@@ -32,3 +32,6 @@ See also
    :hidden:
 
    NumberFormat.metadata.rst
+
+
+.. include:: NumberFormat.metadata.rst

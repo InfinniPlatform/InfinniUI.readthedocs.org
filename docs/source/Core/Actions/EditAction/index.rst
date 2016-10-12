@@ -79,6 +79,10 @@ Examples
 
     editAction.execute(); // откроется форма редактирования текущего пациента
 
+
+
+.. include:: EditAction.metadata.rst
+
 See Also
 --------
 

@@ -32,3 +32,6 @@ See also
 
    ObjectFormat.format.rst
    ObjectFormat.metadata.rst
+
+
+.. include:: ObjectFormat.metadata.rst

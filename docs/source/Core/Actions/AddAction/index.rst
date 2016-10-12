@@ -109,6 +109,10 @@ Patients):
 
     addAction.execute(); 
 
+
+
+.. include:: AddAction.metadata.rst
+
 See Also
 --------
 

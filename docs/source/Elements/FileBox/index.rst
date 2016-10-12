@@ -47,3 +47,6 @@ Methods
    * - `setAcceptTypes <FileBox.setAcceptTypes.html>`__
      - Устанавливает список допустимых форматов данных.
 
+
+
+.. include:: FileBox.metadata.rst

@@ -41,3 +41,6 @@ Parameters
      - `Element <../../Core/Elements/Element>`__
      - Родительский `элемент <../../Core/Elements/Element>`__
 
+
+
+.. include:: CheckBox.metadata.rst

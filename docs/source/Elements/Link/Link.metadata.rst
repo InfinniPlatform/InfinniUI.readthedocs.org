@@ -1,10 +1,10 @@
 Link.metadata
-=============
+-------------
 
 Метаданные типа `Link <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -25,7 +25,7 @@ Properties
 
 
 Href.metadata
-~~~~~~~~~~~~~
+"""""""""""""
 
 .. list-table::
    :header-rows: 1
@@ -47,7 +47,7 @@ Href.metadata
 \* Обязательное свойство.
 
 Href.paramObject
-~~~~~~~~~~~~~~~~
+""""""""""""""""
 
 .. list-table::
    :header-rows: 1
@@ -67,7 +67,7 @@ Href.paramObject
 \* Обязательное свойство.
 
 Examples
---------
+~~~~~~~~
 
 Простая ссылка:
 

@@ -270,3 +270,6 @@ Events
    Element.setToolTip.rst
    Element.setValidationState.rst
    Element.setVisible.rst
+
+
+.. include:: Element.metadata.rst

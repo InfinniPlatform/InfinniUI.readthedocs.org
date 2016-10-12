@@ -55,3 +55,6 @@ Methods
    * - `setEditMask <TextEditorBase.setEditMask.html>`__
      - Устанавливает `маску ввода данных </docs/API/Core/EditMask/>`__.
 
+
+
+.. include:: TextEditorBase.metadata.rst

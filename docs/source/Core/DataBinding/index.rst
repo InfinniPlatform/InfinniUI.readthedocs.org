@@ -137,3 +137,6 @@ Events
    DataBinding.setConverter.rst
    DataBinding.setDefaultValue.rst
    DataBinding.setMode.rst
+
+
+.. include:: DataBinding.metadata.rst

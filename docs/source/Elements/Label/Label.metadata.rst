@@ -1,10 +1,10 @@
 Label.metadata
-==============
+--------------
 
 Метаданные типа `Label <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -32,7 +32,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

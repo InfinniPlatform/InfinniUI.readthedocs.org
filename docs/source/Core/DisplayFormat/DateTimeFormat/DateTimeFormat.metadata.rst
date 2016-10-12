@@ -1,10 +1,10 @@
 DateTimeFormat.metadata
-=======================
+-----------------------
 
 Метаданные типа `DateTimeFormat <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -20,7 +20,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

@@ -54,3 +54,6 @@ Methods
    * - `setStartValue <NumericBox.setStartValue.html>`__
      - Устанавливает начальное значение по умолчанию.
 
+
+
+.. include:: NumericBox.metadata.rst

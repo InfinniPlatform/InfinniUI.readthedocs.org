@@ -78,3 +78,6 @@ Events
    Parameter.setName.rst
    Parameter.setProperty.rst
    Parameter.setValue.rst
+
+
+.. include:: Parameter.metadata.rst

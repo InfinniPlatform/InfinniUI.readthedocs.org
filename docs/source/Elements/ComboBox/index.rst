@@ -67,3 +67,6 @@ Events
 ------
 
 Нет
+
+
+.. include:: ComboBox.metadata.rst

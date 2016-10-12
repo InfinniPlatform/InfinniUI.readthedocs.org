@@ -44,6 +44,10 @@ Examples
     var acceptAction = new AcceptAction(parentView);
     acceptAction.execute(); //parentView.getDialogResult() === DialogResult.accepted
 
+
+
+.. include:: AcceptAction.metadata.rst
+
 See Also
 --------
 

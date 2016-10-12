@@ -69,6 +69,10 @@ Examples
     deleteAction.setProperty('destinationProperty', '$.Hospitalizations.0');
     deleteAction.execute(); // удалит первую госпитализацию у текущего пациента
 
+
+
+.. include:: DeleteAction.metadata.rst
+
 See Also
 --------
 

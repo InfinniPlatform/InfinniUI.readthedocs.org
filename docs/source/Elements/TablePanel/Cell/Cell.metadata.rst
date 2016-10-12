@@ -1,10 +1,10 @@
 Cell.metadata
-=============
+-------------
 
 Метаданные типа `Cell <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -20,7 +20,7 @@ Properties
 
 
 Example
--------
+~~~~~~~
 
 .. code:: json
 

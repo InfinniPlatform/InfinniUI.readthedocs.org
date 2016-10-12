@@ -1,10 +1,10 @@
 Button.metadata
-===============
+---------------
 
 Метаданные типа `Button <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -32,7 +32,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

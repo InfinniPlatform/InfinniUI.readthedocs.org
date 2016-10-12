@@ -1,10 +1,10 @@
 CheckBox.metadata
-=================
+-----------------
 
 Метаданные типа `CheckBox <./>`__.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 
@@ -17,6 +17,6 @@ Examples
     }
 
 See also
---------
+~~~~~~~~
 
 `EditorBase.metadata <../EditorBase/EditorBase.metadata.html>`__.

@@ -73,3 +73,6 @@ Events
 
    ObjectDataSource.metadata.rst
    ObjectDataSource.setItems.rst
+
+
+.. include:: ObjectDataSource.metadata.rst

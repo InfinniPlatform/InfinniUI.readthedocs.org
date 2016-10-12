@@ -1,10 +1,10 @@
 TabPage.metadata
-================
+----------------
 
 Метаданные типа `TabPage <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -28,7 +28,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 ::
 

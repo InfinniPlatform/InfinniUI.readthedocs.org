@@ -1,10 +1,10 @@
 PopupButton.metadata
-====================
+--------------------
 
 Метаданные типа `PopupButton <./>`__.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

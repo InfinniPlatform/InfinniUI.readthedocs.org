@@ -47,6 +47,10 @@ Examples
         }
     }
 
+
+
+.. include:: BindingConverter.metadata.rst
+
 See Also
 --------
 

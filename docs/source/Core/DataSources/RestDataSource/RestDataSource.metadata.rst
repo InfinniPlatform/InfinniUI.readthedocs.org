@@ -1,10 +1,10 @@
 RestDataSource.metadata
-=======================
+-----------------------
 
 Метаданные `RestDataSource <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -24,7 +24,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

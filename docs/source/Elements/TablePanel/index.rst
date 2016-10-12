@@ -55,6 +55,10 @@ Events
 
 Нет
 
+
+
+.. include:: TablePanel.metadata.rst
+
 See Also
 --------
 

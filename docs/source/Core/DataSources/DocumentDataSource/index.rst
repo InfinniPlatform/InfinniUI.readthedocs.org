@@ -170,3 +170,6 @@ Events
    DocumentDataSource.setPageSize.rst
    DocumentDataSource.setSearch.rst
    DocumentDataSource.setSelect.rst
+
+
+.. include:: DocumentDataSource.metadata.rst

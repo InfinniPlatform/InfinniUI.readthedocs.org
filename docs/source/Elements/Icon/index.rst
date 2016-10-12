@@ -40,3 +40,6 @@ Parameters
      - -
      - Родительский элемент
 
+
+
+.. include:: Icon.metadata.rst

@@ -1,10 +1,10 @@
 NumberFormat.metadata
-=====================
+---------------------
 
 Метаданные типа `NumberFormat <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -20,7 +20,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

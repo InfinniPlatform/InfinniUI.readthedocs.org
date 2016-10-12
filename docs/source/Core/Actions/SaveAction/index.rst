@@ -84,6 +84,10 @@ Examples
     saveAction.setProperty('canClose', true);
     saveAction.execute(); // сохранит выбранный элемент DataSource1 и закроет parentView
 
+
+
+.. include:: SaveAction.metadata.rst
+
 See Also
 --------
 

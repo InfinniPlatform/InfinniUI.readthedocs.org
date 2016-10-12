@@ -35,3 +35,6 @@ Events
 ------
 
 Нет.
+
+
+.. include:: Frame.metadata.rst

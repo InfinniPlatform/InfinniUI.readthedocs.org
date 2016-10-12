@@ -68,6 +68,10 @@ Events
      - Устанавливает `обработчик события <../../../Core/Script/>`__ о том, что страница была закрыта
 
 
+
+
+.. include:: TabPage.metadata.rst
+
 See Also
 --------
 

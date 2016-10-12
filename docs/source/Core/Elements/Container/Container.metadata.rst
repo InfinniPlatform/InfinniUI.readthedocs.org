@@ -1,10 +1,10 @@
 Container.metadata
-==================
+------------------
 
 Метаданные типа `Container <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -66,7 +66,7 @@ ItemSelector и GroupItemSelector должны возвращать элемен
   GroupItemSelector и GroupItemProperty.
 
 Examples
---------
+~~~~~~~~
 
 Рассмотрим случай, когда Items является массивом.
 

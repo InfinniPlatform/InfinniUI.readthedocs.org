@@ -44,6 +44,10 @@ Examples
     var cancelAction = new CancelAction(parentView);
     cancelAction.execute(); //parentView.getDialogResult() === DialogResult.canceled
 
+
+
+.. include:: CancelAction.metadata.rst
+
 See Also
 --------
 

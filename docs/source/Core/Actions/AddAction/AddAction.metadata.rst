@@ -1,10 +1,10 @@
 AddAction.metadata
-==================
+------------------
 
 Метаданные типа `AddAction <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -29,7 +29,7 @@ Properties
 \* Обязательное свойство.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

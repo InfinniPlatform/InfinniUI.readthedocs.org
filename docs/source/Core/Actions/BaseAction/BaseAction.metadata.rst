@@ -1,11 +1,11 @@
 BaseAction.metadata
-===================
+-------------------
 
 Метаданные, которые реализованы во `всех действиях
 InfinniUI <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -19,7 +19,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

@@ -1,10 +1,10 @@
 View.metadata
-=============
+-------------
 
 Метаданные типа `View <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -56,7 +56,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

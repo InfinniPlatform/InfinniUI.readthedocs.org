@@ -81,3 +81,6 @@ Events
    Container.setGroupItemTemplate.rst
    Container.setGroupValueSelector.rst
    Container.setItemTemplate.rst
+
+
+.. include:: Container.metadata.rst

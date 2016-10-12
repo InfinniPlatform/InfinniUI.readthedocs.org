@@ -1,10 +1,10 @@
 DeleteAction.metadata
-=====================
+---------------------
 
 Метаданные типа `DeleteAction <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -38,7 +38,7 @@ Properties
 \* Обязательное свойство.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

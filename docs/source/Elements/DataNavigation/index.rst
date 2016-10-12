@@ -72,3 +72,6 @@ Events
    * - `onPageNumberChanged <DataNavigation.onPageNumberChanged.html>`__
      - `Обработчик события <../../Core/Script/>`__ о том, что номер страницы изменился.
 
+
+
+.. include:: DataNavigation.metadata.rst

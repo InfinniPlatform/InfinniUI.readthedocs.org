@@ -73,6 +73,10 @@ Events
      - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что выделенный элемент изменился
 
 
+
+
+.. include:: TabPanel.metadata.rst
+
 See Also
 --------
 

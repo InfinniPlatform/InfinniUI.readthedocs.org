@@ -1,10 +1,10 @@
 ButtonEdit.metadata
-===================
+-------------------
 
 Метаданные типа `ButtonEdit <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -41,7 +41,7 @@ OnButtonClick сработает раньше, чем Action.
 `Icons <http://fontawesome.io/icons/>`__.
 
 Examples
---------
+~~~~~~~~
 
 ButtonEdit удобно использовать для редактирования полей-объектов (вроде
 адреса).

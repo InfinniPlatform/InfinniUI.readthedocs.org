@@ -1,10 +1,10 @@
 ComboBox.metadata
-=================
+-----------------
 
 Метаданные типа `ComboBox <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -44,7 +44,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

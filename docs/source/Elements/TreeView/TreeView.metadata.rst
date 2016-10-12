@@ -1,10 +1,10 @@
 TreeView.metadata
-=================
+-----------------
 
 Метаданные типа `TreeView <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -27,7 +27,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

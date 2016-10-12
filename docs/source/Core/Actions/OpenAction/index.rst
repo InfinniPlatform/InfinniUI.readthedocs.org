@@ -83,6 +83,10 @@ Examples
     openAction.setProperty('linkView', linkView);
     openAction.execute(openActionCallback);
 
+
+
+.. include:: OpenAction.metadata.rst
+
 See Also
 --------
 

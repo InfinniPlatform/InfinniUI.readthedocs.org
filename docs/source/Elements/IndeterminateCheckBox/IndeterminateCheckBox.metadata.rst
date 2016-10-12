@@ -1,10 +1,10 @@
 IndeterminateCheckBox.metadata
-==============================
+------------------------------
 
 Метаданные типа `IndeterminateCheckBox <./>`__.
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 
@@ -17,6 +17,6 @@ Examples
     }
 
 See also
---------
+~~~~~~~~
 
 `CheckBox.metadata <../CheckBox/CheckBox.metadata.html>`__.

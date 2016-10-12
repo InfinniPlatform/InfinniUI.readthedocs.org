@@ -81,6 +81,10 @@ Events
      - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что панель была свернута
 
 
+
+
+.. include:: Panel.metadata.rst
+
 See Also
 --------
 

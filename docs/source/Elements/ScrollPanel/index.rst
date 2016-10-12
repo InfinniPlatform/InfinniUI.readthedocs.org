@@ -61,6 +61,10 @@ Events
 
 Нет
 
+
+
+.. include:: ScrollPanel.metadata.rst
+
 See Also
 --------
 

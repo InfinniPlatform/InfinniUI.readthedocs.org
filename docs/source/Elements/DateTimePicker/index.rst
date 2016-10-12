@@ -56,3 +56,6 @@ Methods
    * - `getTimeZone <DateTimePicker.getTimeZone.html>`__
      - Возвращает смещение часового пояса.
 
+
+
+.. include:: DateTimePicker.metadata.rst

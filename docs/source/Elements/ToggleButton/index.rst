@@ -49,3 +49,6 @@ Methods
    * - `setTextOff <ToggleButton.setTextOff.html>`__
      - Устанавливает текст на выключенное состояние.
 
+
+
+.. include:: ToggleButton.metadata.rst

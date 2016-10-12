@@ -47,3 +47,6 @@ Events
 ------
 
 Нет
+
+
+.. include:: ViewPanel.metadata.rst

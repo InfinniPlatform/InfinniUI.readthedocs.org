@@ -1,10 +1,10 @@
 ViewPanel.metadata
-==================
+------------------
 
 Метаданные типа `ViewPanel <./>`__.
 
 Properties
-----------
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -18,7 +18,7 @@ Properties
 
 
 Examples
---------
+~~~~~~~~
 
 .. code:: json
 

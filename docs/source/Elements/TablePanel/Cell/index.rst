@@ -56,6 +56,10 @@ Events
 
 Нет
 
+
+
+.. include:: Cell.metadata.rst
+
 See Also
 --------
 
