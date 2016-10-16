@@ -1,59 +1,61 @@
 Getting Started
 ===================================
 
-Данная статья поможет сделать необходимые предустановки для начала разработки на базе InfinniUI.
+This article will guide you to make required prerequisities to start out developing with infinniUI.
 
 Install
 ---------
 
-InfinniUI можно установить с помощью bower::
+Install InfinniUI as a bower package::
 
    bower install infinni-ui
 
-или склонировать репозиторий с `github <https://github.com/InfinniPlatform/InfinniUI>`_,
+or clone the git repository `github <https://github.com/InfinniPlatform/InfinniUI>`_,
 
-или :download:`скачать <../_files/infinni-ui.zip>`.
+or :download:`download <../_files/infinni-ui.zip>` as a regular file.
+
+To proceed with running innfinniUI you must install Node.js. Please  ` download Node.js here <https://nodejs.org/en/>`_. 
 
 Start Application
 ------------------
 
-Самый простой способ начать разработку на InfinniUI - использовать заготовку проекта. Для этого зайдите в директорию платформы, в папку ``example``.
+The easiest way to begin with infinniUI development is to use a example project. Go to the folder where InfinniUI was installed and find a folder ``example``.
 
-Запустите файл ``runExample.bat`` (для его корректной работы необходим `Node.js <https://nodejs.org/en/>`_). В результате будет выполнена полную сборка проекта и запущен веб-сервер, доступный по адресу http://localhost:4444.
+Execute ``runExample.bat``. This will start a project build and run a local web server available at http://localhost:4444.
 
-Редактирование содержимого страницы
+Editing project 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Содержимое страницы описывается с помощью метаданных в формате JSON. В example по умолчанию отображается страница, заданная в ``<example>/testConfigurations/stab.json``. В той же папке Вы найдёте другие примеры метаданных страницы. Изменить источник метаданных можно в файле ``<example>/www/config.js`` (параметр window.InfinniUI.config.homePage).
+Project contents are metadata described as JSON-schema compatible text. Example project displays a generated page by default defined in ``<example>/testConfigurations/stab.json``. In this folder you will find other examples of JSON-schemas pages. You can change metadata source in the following file ``<example>/www/config.js`` - change``window.InfinniUI.config.homePage`` parameter.
 
-Элементы, которые можно использовать в метаданных, а так же правила их использования можно посмотреть в `документации </Elements/>`_. Кроме того, можно расширять InfinniUI своими элементами, подробнее об этом можно почитать `здесь <./#extention>`_
+To view more elements which can be used in JSON-schema as well as their syntax please refer to `documentation </Elements/>`_. InfinniUI functionality can be expanded by custom developed elements; you can read more more about it `here <./#extention>`_
 
-Конфигурационные переменные
+Configuration variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Описание конфигурационных переменных InfinniUI можно посмотреть в разделе :doc:`/Core/InfinniUI/InfinniUI.config`.
+To read description of configuration variables please refer to the following part of documentation :doc:`/Core/InfinniUI/InfinniUI.config`.
 
-Чтобы перекрыть требуемые поля, нужно задать их до подключения основного js-файла с платформой.
+To overlap required fields one should define them before linking to the platform main js-file.
 
-В примере, это происходит в файле ``<example>/www/config.js`` (обратите внимание, что ``config.js`` подключается до ``platform.js``)
+In example you may see that in ``<example>/www/config.js`` file please note ``config.js`` is linked before ``platform.js`` is.
 
-
-Стилизация
+Styling
 ~~~~~~~~~~
 
-InfinniUI предоставляет гибкие возможности стилизации - от настройки основных параметров (базовые цвета и размеры) до стилей отдельных элементов. 
-Подробности можно найти в `соответсвующем разделе документации </Core/Style/#bootstrap>`_.
+InfinniUI gives flexible styling features from setting up basic colors and sizes to styles of each element. 
+To read more about styling please refer to `the following part of documentation </Core/Style/#bootstrap>`_.
 
 
 .. _extention:
 
-Расширение функциональности
+Extending functionality
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Новая функциональность добавляется проще всего, достаточно просто подключить файлы с ее реализацией на страницу.
-Желательно сделать это ниже подключения InfinniUI, чтобы был доступ к глобальным переменным платформы.
+New functionality can be added easily just link a file with required functionality.
 
-Кроме того, вы можете задавать новые элементы (см пример в папке ``<example>/js/elements/``).
-Либо использовать возможности :doc:`/Elements/ExtensionPanel/index`, пример можно глянуть в папке ``<example>/js/extentionPanels/``.
+You should do this before linking infinniUI to keep access to platform global variables.
 
-Так же обратите внимание, что многие важные настроики происходят в файле ``<example>/www/js/main.js``.
+You can either create completely new elements, please refer to an example in folder ``<example>/js/elements/`` or
+use functionality of :doc:`/Elements/ExtensionPanel/index`, please refer an example in ``<example>/js/extentionPanels/``.
+
+Keep in mind that many crucial settings are located in ``<example>/www/js/main.js``.
