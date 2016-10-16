@@ -1,19 +1,12 @@
 Collection
 ==========
 
-Коллекция элементов с возможностью получения уведомлений о ее
-изменениях.
+Collections of elements can recieve notifications upon change updates.
 
 Description
 -----------
 
-Во многих случаях, данные, с которыми работает пользователь, являются
-коллекцией элементов. При этом требуется, чтобы при модификации
-коллекции изменения находили отражение в интерфейсе пользователя. Для
-решения указанных проблем используется тип ``Collection``, который
-предоставляет все методы, необходимые для работы с коллекцией элементов,
-плюс, имеет список событий, позволяющих узнать обо всех произошедших в
-коллекции изменениях.
+In many cases data is processed by user is a collection of elements. It is required while modifying collection that changes are properly indicated in UI. To resolve this ``Collection`` type can be implemented. It has all methods required to work with the collection and list of events to get notified about all changes that occured to the collection.
 
 Syntax
 ------
@@ -25,23 +18,18 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\| \|\ ``items``\ \|\ ``Array``\ \|Массив для
-инициализации коллекции.\|
-\|\ ``idProperty``\ \|\ ``String``\ \|Свойство с идентификатором
-элемента коллекции.\|
-\|\ ``comparator``\ \|\ `comparator <Comparator/>`__\ \|\ `Функция
-сравнения элементов коллекции <Comparator/>`__.\|
+\|Name\|Type\|Description\| \|\ ``items``\ \|\ ``Array``\ \|Array to initialize collection.\|
+\|\ ``idProperty``\ \|\ ``String``\ \|Property identificator of collection elements.\|
+\|\ ``comparator``\ \|\ `comparator <Comparator/>`__\ \|\ `Function that compares collection of elements <Comparator/>`__.\|
 
 Properties
 ----------
 
 \|Name\|Type\|Description\|
-\|\ `length <Collection.length/>`__\ \|\ ``Integer``\ \|Возвращает
-количество элементов в коллекции.\|
-\|\ `idProperty <Collection.idProperty/>`__\ \|\ ``String``\ \|Возвращает
-свойство с идентификатором элемента коллекции.\|
-\|\ `comparator <Collection.comparator/>`__\ \|\ `comparator <Comparator/>`__\ \|Возвращает
-`функцию сравнения элементов коллекции <Comparator/>`__.
+\|\ `length <Collection.length/>`__\ \|\ ``Integer``\ \|Returns number of elements in collection.\|
+\|\ `idProperty <Collection.idProperty/>`__\ \|\ ``String``\ \|Returns identificator property of element in collection.\|
+\|\ `comparator <Collection.comparator/>`__\ \|\ `comparator <Comparator/>`__\ \|Returns
+`function of comparison of elements in collection <Comparator/>`__.
 
 Methods
 -------
