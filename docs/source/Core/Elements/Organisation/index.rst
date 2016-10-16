@@ -1,46 +1,35 @@
-Организация Элементов
+Organazing elements
 =====================
 
-Каждый элемент состоит из нескольких частей, каждая из которых обладает
-своей ответственностью.
+Every element comprises of a few parts each one has its own functions.
 
--  Билдер элемента
--  Элемент
--  Контрол
--  Модель контрола
--  Представление контрола
+-  Element builder
+-  Element
+-  Control
+-  Control model
+-  View control
 
-Билдер элемента
+Element builder
 ---------------
 
-Javascript-объект, который создает и настраевает элемент, по переданным
-в билдер метаданным.
+Javascript-object which creates and sets up element accordingly to metadata transmitted to builder.
 
-Элемент
+Element
 -------
 
-Javascript-объект, представляющий определенный визуальный элемент. При
-этом, данный Javascript-объект реализует все требуемые от данного
-элемента API. По сути, элемент является фасадом, для некого контрола,
-который может быть взят из сторонней библиотеки контролов и не
-соответствующий требуемым API, однако соответствующий требованиям к
-визуальному элементу.
+Javascript-object representing certain visual element. This Javascript-object has got all required API for the current element. Thus practically this element is a facade for some control which can be derived from a third party library not compliant with required API however compliant to the requirements of the visual element.
 
-Контрол
+Control
 -------
 
-Как и элемент, контрол это Javascript-объект, представляющий
-определенный визуальный элемент. На данный момент, в Infinni UI
-используются элементы, написанные с помощью библиотеки Backbone. Каждый
-элемент состоит из Backbone-модели и Backbone-представления. Контрол же
-является связывающим их звеном.
+Control is a Javascript-object specifically representing a visual element. At the moment, InfinniUI uses elements coded with Backbone library. Each element comprises of a Backbone-model and Backbone-view, control is the link between those.
 
-Модель контрола
+Control model
 ---------------
 
-Backbone-модель конкретного контрола.
+Backbone-model of a specific control.
 
-Представление контрола
+Control view
 ----------------------
 
-Backbone-представление конкретного контрола.
+Backbone-view of a specific control.
