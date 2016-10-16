@@ -1,8 +1,7 @@
 InfinniUI
 =========
 
-Область видимости платформы. Содержит совместно используемые данные,
-методы и объекты приложения.
+Plaform visibility zone. Contains jointly used data, methods and application objects.
 
 Properties
 ----------
@@ -15,10 +14,10 @@ Properties
      - Description
    * - `config <InfinniUI.config.html>`__
      - ``Object``
-     - Параметры конфигурации приложения
+     - Application configuration parameter
    * - ``global``
      - `GlobalContext <../GlobalContext>`__
-     - Глобальный контекст приложения.
+     - Application global context.
    * - ``localizations``
      - –
      - –
