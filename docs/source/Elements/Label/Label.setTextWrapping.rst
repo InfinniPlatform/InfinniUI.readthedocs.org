@@ -14,8 +14,15 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\| \|value\|\ ``Boolean``\ \|Значение,
-определяющее, переносится ли текст при переполнении.
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - value
+     - ``Boolean``
+     - Значение, определяющее, переносится ли текст при переполнении.
 
 Returns
 ~~~~~~~

@@ -13,8 +13,15 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\| \|RouteName\|\ ``String``\ \|Имя маршрута
-заданного в конфигурации
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - RouteName
+     - ``String``
+     - Имя маршрута заданного в конфигурации.
 
 Returns
 ~~~~~~~
