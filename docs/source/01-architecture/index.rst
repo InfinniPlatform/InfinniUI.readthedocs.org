@@ -1,34 +1,24 @@
-Architecture
-============
+Architecture description
+=========================
 
-Самые крупные блоки в архитектуре infinniUI это источники данных и набор
-элементов пользовательского интерфейса. Эти два блока абсолютно
-независимы.
+The biggest blocks in infinniUI architecture are data sources and elements of User Interface. Those two are completely independent on each other.
 
-Источники данных
+Data sources
 -----------------
 
-Источни данных отвечают за данные, которые они могут получать из разных
-источников - различных удаленных сервисов, а так же прикладной логики.
-Источники предаставляют CRUD к данным, за которые они отвечают, а так же
-позволяют подписываться на изменение этих данных.
+Data sources rely on data can be retireved from various sources for instance remote services like http-services and applied logic. Sources can grant CRUD access to the data and subscribe to the data update as well.
 
-Элменты пользовательского интерфейса
+User interface elements
 -------------------------------------
 
-Каждый элемент отвечают за такие объекты пользовательского интерфейса
-как кнопка, поле ввода, лейбл, различные контейнерные элементы (например
-панели) и т. д..
+Each element defines UI entities for instance button, text field, label, contaner elements like panels and so on.
 
-Связывание источников данных и элементов интерфейса. Метаданные.
+Data source and elements binding. Metadata.
 --------------------------------------------------------------------
 
-Связывание происходит автоматически, на основе заданных прикладным
-разработчиком метаданных. Метаданные представляют из себя JSON-документ,
-в котором описывается структура интерфейса, перечень источников данных,
-а так же привязки данных к элементам интерфейса.
+Binding process is automatic based on defined metadata. Metadata is a JSON-schema document which has UI structure, data sources list and data bindings described in it.
 
-Структура интерфейса описывается таким образом:
+UI structure can be described as:
 
 .. code:: js
 
@@ -65,8 +55,7 @@ Architecture
 
     }
 
-Источник данных (в данном примере локальный - с заранее определенным
-набором данных) задается следующим образом:
+Data source, in this case pre-defined local data set, can be defined as:
 
 .. code:: js
 
@@ -81,7 +70,7 @@ Architecture
         }]
     }
 
-Привязка данных к нашему текстовому полю:
+Data binding to a text field:
 
 .. code:: js
 
@@ -132,10 +121,9 @@ Architecture
         }]
     }
 
-Построением интерфейсов по конкретным метаданным занимаются билдеры.
-Таким образом, процесс работы Infinni UI получается следующий:
 
--  В Infinni UI передаются метаданные.
--  Infinni UI передает метаданные билдерам.
--  По инструкциям из метаданных, билдеры строят web-интерфейс, создают
-   источники данных и связывают интерфейс с данными.
+Thus InfinniUI processes data in the following way:
+
+-  InfinniUI recieves metadata described as JSON-schema.
+-  InfinniUI transits metadata to builders.
+-  In accordance with metadata descriptions builders generate web user interface, create data sources and perform data binding.
