@@ -4,7 +4,7 @@ Session
 Description
 -----------
 
-Провайдер для работы сессией пользователя.
+User session provider.
 
 Methods
 -------
@@ -15,29 +15,29 @@ Methods
    * - Name
      - Description
    * - `getCurrentUser <Session.getCurrentUser.html>`__
-     - Возвращает информацию о текущем пользователе.
+     - Returns info on the current user.
    * - `changePassword <Session.changePassword.html>`__
-     - Изменяет пароль текущего пользователя.
+     - Changes password of the current user.
    * - `changeProfile <Session.changeProfile.html>`__
-     - Изменяет персональную информацию текущего пользователя.
+     - Changes personal information of the current user.
    * - `changeActiveRole <Session.changeActiveRole.html>`__
-     - Изменяет активную роль текущего пользователя.
+     - Changes active role of the current user.
    * - `signInInternal <Session.signInInternal.html>`__
-     - Осуществляет вход пользователя в систему через внутренний провайдер.
+     - Sings user in to system via internal provider.
    * - `getSignInExternalForm <Session.getSignInExternalForm.html>`__
-     - Возвращает форму входа пользователя в систему через внешний провайдер.
+     - Returns user sign-in form via external provider.
    * - `getLinkExternalLoginForm <Session.getLinkExternalLoginForm.html>`__
-     - Возвращает форму добавления текущему пользователю имени входа у внешнего провайдера.
+     - Returns login form link from external provider.
    * - `unlinkExternalLogin <Session.unlinkExternalLogin.html>`__
-     - Удаляет у текущего пользователя имя входа у внешнего провайдера.
+     - Unlinks from the current user login from external provider.
    * - `addClaim <Session.addClaim.html>`__
-     - Добавляет "утверждения" пользователя.
+     - Adds user claim.
    * - `setSessionData <Session.setSessionData.html>`__
-     - Устанавливает "утверждения" текущего пользователя.
+     - Sets the current user claim.
    * - `getSessionData <Session.getSessionData.html>`__
-     - Получает "утверждения" текущего пользователя.
+     - Gets the current user claim.
    * - `signOut <Session.signOut.html>`__
-     - Выход пользователя из системы.
+     - Signs the current user out.
 
 
 Events
@@ -49,11 +49,11 @@ Events
    * - Name
      - Description
    * - `onActiveRoleChanged <Session.onActiveRoleChanged.html>`__
-     - Устанавливает обработчик события изменения активной роли текущего пользователя.
+     - Sets event processor on active role change.
    * - `onSignInInternal <Session.onSignInInternal.html>`__
-     - Устанавливает обработчик события входа пользователя в систему через внутренний провайдер.
+     - Sets event processor on sign user in via internal provider.
    * - `onSignOut <Session.onSignOut.html>`__
-     - Устанавливает обработчик события выхода пользователя из системы.
+     - Sets event processor on sign user out.
 
 
 
