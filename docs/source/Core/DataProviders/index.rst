@@ -1,7 +1,7 @@
 DataProvider
 ============
 
-Поставщик данных.
+Method that provides data
 
 Methods
 -------
@@ -12,23 +12,22 @@ Methods
    * - Name
      - Description
    * - `getItems <DataProvider.getItems.html>`__
-     - Запрашивает список элементов
+     - Requests list of elements
    * - `createItem <DataProvider.createItem.html>`__
-     - Асинхронно создает новый элемент
+     - Creates asynchronously new element
    * - `createLocalItem <DataProvider.createLocalItem.html>`__
-     - Синхронно создает новый элемент
+     - Creates synchronously new element
    * - `saveItem <DataProvider.saveItem.html>`__
-     - Сохраняет элемент
+     - Saves element
    * - `deleteItem <DataProvider.deleteItem.html>`__
-     - Удаляет элемент
+     - Deletes element
    * - `createIdFilter <DataProvider.createIdFilter.html>`__
-     - Возвращает фильтр по идентификатору элемента
-
+     - Returns identificator of element filter 
 
 Events
 ------
 
-Нет
+No
 
 
 .. toctree::
