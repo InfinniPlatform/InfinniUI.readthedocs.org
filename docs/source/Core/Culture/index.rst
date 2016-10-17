@@ -1,10 +1,9 @@
 Culture
 =======
 
-Культура (языковые и региональные настройки).
+Culture is language and regional settings.
 
-Культура предоставляет сведения о наименовании культуры, а также о
-формате представления значений для различных типов данных.
+Culture represents info on culture name and its view formats for various data types.
 
 Properties
 ----------
@@ -17,16 +16,16 @@ Properties
      - Description
    * - name
      - ``String``
-     - `Наименование культуры <http://tools.ietf.org/html/rfc5646>`__.
+     - `Culture name <http://tools.ietf.org/html/rfc5646>`__.
    * - caption
      - ``String``
-     - Отображаемое наименование культуры.
+     - Original culture name.
    * - dateTimeFormatInfo
      - `DateTimeFormatInfo <Culture.dateTimeFormatInfo.html>`__
-     - Сведения о формате представления даты и времени.
+     - Info on date and time format
    * - numberFormatInfo
      - `NumberFormatInfo <Culture.numberFormatInfo.html>`__
-     - Сведения о формате представления числовых значений.
+     - Info on numeric view formats.
 
 
 
