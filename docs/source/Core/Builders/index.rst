@@ -1,21 +1,13 @@
 Builders
 ========
 
-Билдеры в InfinniUI интерпритируют переданные им метаданные, создавая и
-настраивая элементы и источники данных, а так же связывают их.
+InfinniUI builders interprete metadata transmitted to them creating and setting up elements and data sources, as well as, binding them.
 
-Существуют билдеры отдельных элементов (только кнопок или только
-определенных источников данных). Все они регистрируются в общем билдере
-(Builder), который может принимать метаданные любых элементов и
-интерпритировать их.
+There are single type element builders (ie only for buttons or for aprticular data sources). All of them must be registered in main builder which may recieve data from each element and interprete them.
 
-Требование к билдерам отдельных элементов
+Single type element builders requirements
 -----------------------------------------
 
-К билдерам, создающим отдельные элементы и источники данных, имеется
-лишь одно требование - реализация метода ``build(context, args)``.
+Only one requirement exists for single type element builders that is implementation of method ``build(context, args)``.
 
-В ``context`` передается `контекст представления <../Context>`__, в
-котором был вызван билдер. В ``args`` будет передаваться параметры для
-создания элементов. Всегда будет присутствовать ``args.metadata`` с
-метаданными элемента, ``args.parent`` с родительским элементом.
+``Context`` must recieve  `View context <../Context>`__ in which the builder is invoked by. ``Args`` recieves parameters for elements creation, always accompanied by ``args.metadata`` and  parent element``args.parent``.
