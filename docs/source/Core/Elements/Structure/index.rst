@@ -1,4 +1,4 @@
-Organazing elements
+Element structure
 =====================
 
 Every element comprises of a few parts each one has its own functions.
