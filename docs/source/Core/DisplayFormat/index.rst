@@ -1,10 +1,7 @@
 DisplayFormat
 =============
 
-Формат отображения.
-
-Формат отображения данных для указания способа отображения данных. Для
-описания способа ввода данных используется `EditMask <../EditMask/>`__.
+Display format is way to display data. To describe the way of data input `EditMask <../EditMask/>`__ is used.
 
 Extends
 -------
