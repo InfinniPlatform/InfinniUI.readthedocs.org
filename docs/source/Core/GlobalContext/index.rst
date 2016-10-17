@@ -1,8 +1,7 @@
 GlobalContext
 =============
 
-Глобальный контекст приложения. Контекст предоставляет доступ (API) к
-совместно используемым методам и свойствам приложения.
+Application global context. Context provides API to appication methods and properties that are used jointly.
 
 Properties
 ----------
@@ -15,25 +14,25 @@ Properties
      - Description
    * - ``containers``
      - ``Object``
-     - Список доступных контейнеров для открытия представлений в режиме ``OpenMode="Container"``.
+     - List of containers to view in mode ``OpenMode="Container"``.
    * - ``culture``
      - `Culture <../Culture/>`__
-     - Языковые и региональные настройки.
+     - Language and regional settings.
    * - ``factory``
      - `ApplicationBuilder <../Builders/>`__
-     - Общий `билдер <../Builders/>`__ приложения.
+     - Common application `builder <../Builders/>`__.
    * - ``logger``
      - `Logger <../Logger/>`__
-     - `Сервис регистрации сообщений <../Logger/>`__.
+     - `Message logging service <../Logger/>`__.
    * - ``messageBus``
      - `MessageBus <../MessageBus/>`__
-     - `Шина сообщений <../MessageBus/>`__ приложения.
+     - `Application message bus <../MessageBus/>`__ .
    * - ``session``
      - `Session <../Session/>`__
-     - Провайдер для работы `сессией пользователя <../Session/>`__.
+     -  `User session <../Session/>`__ provider.
    * - ``notificationSubsription``
      - `NotificationSubscriptions <../NotificationSubscriptions/>`__
-     - Сервис, позволяющий подписаться на уведомления от сервера.
+     - Server notification service.
 
 
 Methods
@@ -45,7 +44,7 @@ Methods
    * - Name
      - Description
    * - `executeAction <GlobalContext.executeAction.html>`__
-     - Запускает выполнение указанного `действия <../Actions/>`__.
+     - Fires up execution of an `action <../Actions/>`__.
 
 
 
