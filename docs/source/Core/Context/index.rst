@@ -24,7 +24,7 @@ Properties
    * - `dataSources <ViewContext.dataSources.html>`__
      - Returns associative list of `Data Sources View <../DataSources/BaseDataSource/>`__
    * - `controls <ViewContext.controls.html>`__
-     - Returns associative list of `Visual View Elements<../Elements/Element/>`__
+     - Returns associative list of `Visual View Elements <../Elements/Element/>`__
 
 
 

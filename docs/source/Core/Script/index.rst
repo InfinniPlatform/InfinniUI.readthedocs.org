@@ -18,7 +18,6 @@ generally scripts are defined and used at the metadata level. They can be define
 
 .. code:: js
 
-    //infinni-ui-demo
     {
         "DataSources": [
         ],
@@ -52,7 +51,6 @@ without view registration:
 
 .. code:: js
 
-    //infinni-ui-demo
     {
         "DataSources": [
         ],

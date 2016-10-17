@@ -6,7 +6,7 @@ Message logging service.
 Description
 -----------
 
-Message logging service is a program object which provides methods to register log messages of different `levels <LogLevel/>`__:
+Message logging service is a program object which provides methods to register log messages of different `levels <LogLevel.html>`__:
 Debug, info, warning, errors and tracing messages. The serivce also can set the level of registered messages defining how elaborate logging indo will be.
 
 Syntax
@@ -26,8 +26,8 @@ Parameters
      - Type
      - Description
    * - ``level``
-     - `LogLevel <LogLevel/>`__
-     - Min `level of logging <LogLevel/>`__.
+     - `LogLevel <LogLevel.html>`__
+     - Min `level of logging <LogLevel.html>`__.
 
 
 Methods
@@ -39,9 +39,9 @@ Methods
    * - Name
      - Description
    * - `getLevel <Logger.getLevel.html>`__
-     - Returns min  `logging level <LogLevel/>`__.
+     - Returns min  `logging level <LogLevel.html>`__.
    * - `setLevel <Logger.setLevel.html>`__
-     - Sets min `logging level <LogLevel/>`__.
+     - Sets min `logging level <LogLevel.html>`__.
    * - `debug <Logger.debug.html>`__
      - Registers debugging message.
    * - `info <Logger.info.html>`__

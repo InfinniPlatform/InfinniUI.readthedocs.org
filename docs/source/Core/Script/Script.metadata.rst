@@ -31,7 +31,6 @@ Exampes
 
 .. code:: js
 
-    //infinni-ui-demo
     {
         "DataSources": [
         ],

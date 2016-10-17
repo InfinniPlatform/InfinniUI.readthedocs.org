@@ -19,7 +19,6 @@ elements <ColorStyle>`__ as well as `typography inside elements <TextStyle>`__.
 
 .. code:: js
 
-    //infinni-ui-demo
     {
         "DataSources": [
         ],
@@ -53,7 +52,7 @@ Overlapping is best to be done in
 ``<yourProject>/styles/bootstrap-variables.less`` file (if you are proceeding with 
 ``example`` template project).
 If you require to overlap bootstrap styles, it can be done 
-in``<yourProject>/styles/bootstrap-theme.less`` file.
+in ``<yourProject>/styles/bootstrap-theme.less`` file.
 
 Manual styling of css for certain app elements
 ---------------------------------------------------------------

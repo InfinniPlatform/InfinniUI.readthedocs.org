@@ -10,14 +10,15 @@ Data binding allows synchronize property values of two different objects. One is
 `representations of <../Elements/>`__ `visual view <../Elements/View/>`__ while sources are - `data sources <../DataSources/>`__. Typically that doesn't matter which element will be the element and wich be the source because both represent the same interface. Objects that can bind data are all types of `visual elements <../Elements/>`__, all types of
 `Data Sources <../DataSources/>`__ and `View Parameters <../Parameters/>`__.
 
-Any data binding can be representd as non-visual programm object which can define the data conversion rules <BindingConverter/>`__ for both element and source, as well as desirable 
+Any data binding can be representd as non-visual programm object which can define `the data conversion rules <BindingConverter/>`__ for both element and source, as well as desirable 
 `direction of data streams in binding mode <BindingMode/>`__:
 
 -  Bi-directional exchange between element and source - if source has got updates then element gets updated otherwise if element has got updates then element gets updated accordingly.
 -  To source updates - if source has got updates then no change to element is done, otherwise if element has got updates then source gets updated.
 -  To element update -  if source has got updates element gets updated otherwise source gets no update.
 
-Data binding thus conceals complexity of synchronizing between elements and sources and simplifies the code to great extent and makes behaviour of all elements controllable .
+Data binding thus conceals complexity of synchronizing between elements and sources and simplifies the code to great extent and makes behaviour of all elements controllable.
+
 .. figure:: DataBindingAspects.png
    :alt: DataBindingAspects
 

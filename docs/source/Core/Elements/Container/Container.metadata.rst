@@ -57,13 +57,12 @@ Properties
 ItemSelector и GroupItemSelector должны возвращать элементарные
 значения: строку или число.
 
-Свойства ItemTemplate, ItemFormat, ItemSelector и ItemProperty
-  являются взаимоисключающими. Если указать несколько из них, то для
-  отображения будет выбрано наиболее приоритетное. В схеме свойства
-  указаны в порядке приоритета.
+Свойства ItemTemplate, ItemFormat, ItemSelector и ItemProperty являются взаимоисключающими. 
+Если указать несколько из них, то для отображения будет выбрано наиболее приоритетное. 
+В схеме свойства указаны в порядке приоритета.
 Кроме того, взаимноисключающими являются GroupValueSelector и
-  GroupValueProperty, а также GroupItemTemplate, GroupItemFormat,
-  GroupItemSelector и GroupItemProperty.
+GroupValueProperty, а также GroupItemTemplate, GroupItemFormat,
+GroupItemSelector и GroupItemProperty.
 
 Examples
 ~~~~~~~~
