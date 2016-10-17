@@ -18,97 +18,142 @@ Syntax
 Parameters
 ~~~~~~~~~~
 
-\|Name\|Type\|Description\| \|\ ``items``\ \|\ ``Array``\ \|Array to initialize collection.\|
-\|\ ``idProperty``\ \|\ ``String``\ \|Property identificator of collection elements.\|
-\|\ ``comparator``\ \|\ `comparator <Comparator/>`__\ \|\ `Function that compares collection of elements <Comparator/>`__.\|
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - items
+     - ``Array``
+     - Array to initialize collection.
+   * - idProperty
+     - ``String``
+     - Property identificator of collection elements.
+   * - comparator
+     - `comparator <Comparator.html>`__
+     - Function that compares collection of elements.
 
 Properties
 ----------
 
-\|Name\|Type\|Description\|
-\|\ `length <Collection.length/>`__\ \|\ ``Integer``\ \|Returns number of elements in collection.\|
-\|\ `idProperty <Collection.idProperty/>`__\ \|\ ``String``\ \|Returns identificator property of element in collection.\|
-\|\ `comparator <Collection.comparator/>`__\ \|\ `comparator <Comparator/>`__\ \|Returns
-`function of comparison of elements in collection <Comparator/>`__.
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - `length <Collection.length.html>`__
+     - ``Integer``
+     - Returns number of elements in collection.
+   * - `idProperty <Collection.idProperty.html>`__
+     - ``String``
+     - Returns identificator property of element in collection.
+   * - `comparator <Collection.comparator.html>`__
+     - `comparator <Comparator.html>`__
+     - Returns `function of comparison of elements in collection <Comparator.html>`__.
 
 Methods
 -------
 
-\|Name\|Description\| \|\ `size <Collection.size/>`__\ \|Возвращает
-количество элементов в коллекции.\|
-\|\ `push <Collection.push/>`__\ \|Добавляет элемент в конец
-коллекции.\| \|\ `add <Collection.add/>`__\ \|Добавляет элемент в конец
-коллекции.\| \|\ `addAll <Collection.addAll/>`__\ \|Добавляет элементы в
-конец коллекции.\| \|\ `insert <Collection.insert/>`__\ \|Вставляет
-элемент в указанную позицию коллекции.\|
-\|\ `insertAll <Collection.insertAll/>`__\ \|Вставляет элементы, начиная
-с указанной позиции коллекции.\|
-\|\ `reset <Collection.reset/>`__\ \|Устанавливает список элементов
-коллекции.\| \|\ `set <Collection.set/>`__\ \|Обновляет список элементов
-коллекции.\| \|\ `replace <Collection.replace/>`__\ \|Заменяет элемент
-коллекции на указанный.\| \|\ `pop <Collection.pop/>`__\ \|Удаляет
-последний элемент из коллекции.\|
-\|\ `remove <Collection.remove/>`__\ \|Удаляет указанный элемент из
-коллекции.\| \|\ `removeById <Collection.removeById/>`__\ \|Удаляет
-элемент с указанным идентификатором из коллекции.\|
-\|\ `removeAt <Collection.removeAt/>`__\ \|Удаляет элемент с указанным
-индексом из коллекции.\|
-\|\ `removeAll <Collection.removeAll/>`__\ \|Удаляет указанные элементы
-из коллекции.\| \|\ `removeRange <Collection.removeRange/>`__\ \|Удаляет
-диапазон элементов из коллекции.\|
-\|\ `removeEvery <Collection.removeEvery/>`__\ \|Удаляет все элементы из
-коллекции, удовлетворяющие указанному условию.\|
-\|\ `clear <Collection.clear/>`__\ \|Удаляет все элементы из
-коллекции.\| \|\ `getById <Collection.getById/>`__\ \|Возвращает элемент
-коллекции с заданным идентификатором.\|
-\|\ `getByIndex <Collection.getByIndex/>`__\ \|Возвращает элемент
-коллекции с заданным индексом.\|
-\|\ `find <Collection.find/>`__\ \|Возвращает первый найденный элемент
-коллекции, удовлетворяющий условию.
-\|\ `indexOf <Collection.indexOf/>`__\ \|Возвращает индекс первого
-найденного элемента коллекции при поиске с начала.\|
-\|\ `lastIndexOf <Collection.lastIndexOf/>`__\ \|Возвращает индекс
-первого найденного элемента коллекции при поиске с конца.\|
-\|\ `findIndex <Collection.findIndex/>`__\ \|Возвращает индекс первого
-найденного элемента коллекции, удовлетворяющего условию.\|
-\|\ `contains <Collection.contains/>`__\ \|Проверяет наличие указанного
-элемента в коллекции.\| \|\ `every <Collection.every/>`__\ \|Проверяет,
-что каждый элемент коллекции удовлетворяет указанному условию.\|
-\|\ `some <Collection.some/>`__\ \|Проверяет, что некоторый элемент
-коллекции удовлетворяет указанному условию.\|
-\|\ `forEach <Collection.forEach/>`__\ \|Перечисляет все элементы
-коллекции. \|\ `filter <Collection.filter/>`__\ \|Возвращает элементы
-коллекции, удовлетворяющие указанному условию.\|
-\|\ `take <Collection.take/>`__\ \|Возвращает указанный диапазон
-элементов коллекции.\|
-\|\ `toArray <Collection.toArray/>`__\ \|Возвращает массив всех
-элементов коллекции.\| \|\ `move <Collection.move/>`__\ \|Перемещает
-элемент коллекции в позицию с указанным индексом.\|
-\|\ `sort <Collection.sort/>`__\ \|Сортирует список элементов
-коллекции.\| \|\ `clone <Collection.clone/>`__\ \|Создает копию
-коллекции элементов.\|
-\|\ `setProperty <Collection.setProperty/>`__\ \|Устанавливает значение
-атрибута для элемента.\|
-\|\ `getProperty <Collection.getProperty/>`__\ \|Возвращает значение
-атрибута элемента.\|
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `size <Collection.size.html>`__
+     - Возвращает количество элементов в коллекции.
+   * - `push <Collection.push.html>`__
+     - Добавляет элемент в конец коллекции.
+   * - `add <Collection.add.html>`__
+     - Добавляет элемент в конец коллекции.
+   * - `addAll <Collection.addAll.html>`__
+     - Добавляет элементы в конец коллекции.
+   * - `insert <Collection.insert.html>`__
+     - Вставляет элемент в указанную позицию коллекции.
+   * - `insertAll <Collection.insertAll.html>`__
+     - Вставляет элементы, начиная с указанной позиции коллекции.
+   * - `reset <Collection.reset.html>`__
+     - Устанавливает список элементов коллекции.
+   * - `set <Collection.set.html>`__
+     - Обновляет список элементов коллекции.
+   * - `replace <Collection.replace.html>`__
+     - Заменяет элемент коллекции на указанный.
+   * - `pop <Collection.pop.html>`__
+     - Удаляет последний элемент из коллекции.
+   * - `remove <Collection.remove.html>`__
+     - Удаляет указанный элемент из коллекции.
+   * - `removeById <Collection.removeById.html>`__
+     - Удаляет элемент с указанным идентификатором из коллекции.
+   * - `removeAt <Collection.removeAt.html>`__
+     - Удаляет элемент с указанным индексом из коллекции.
+   * - `removeAll <Collection.removeAll.html>`__
+     - Удаляет указанные элементы из коллекции.
+   * - `removeRange <Collection.removeRange.html>`__
+     - Удаляет диапазон элементов из коллекции.
+   * - `removeEvery <Collection.removeEvery.html>`__
+     - Удаляет все элементы из коллекции, удовлетворяющие указанному условию.
+   * - `clear <Collection.clear.html>`__
+     - Удаляет все элементы из коллекции.
+   * - `getById <Collection.getById.html>`__
+     - Возвращает элемент коллекции с заданным идентификатором.
+   * - `getByIndex <Collection.getByIndex.html>`__
+     - Возвращает элемент коллекции с заданным индексом.
+   * - `find <Collection.find.html>`__
+     - Возвращает первый найденный элемент коллекции, удовлетворяющий условию.
+   * - `indexOf <Collection.indexOf.html>`__
+     - Возвращает индекс первого найденного элемента коллекции при поиске с начала.
+   * - `lastIndexOf <Collection.lastIndexOf.html>`__
+     - Возвращает индекс первого найденного элемента коллекции при поиске с конца.
+   * - `findIndex <Collection.findIndex.html>`__
+     - Возвращает индекс первого найденного элемента коллекции, удовлетворяющего условию.
+   * - `contains <Collection.contains.html>`__
+     - Проверяет наличие указанного элемента в коллекции.
+   * - `contains <Collection.contains.html>`__
+     - Проверяет наличие указанного элемента в коллекции.
+   * - `every <Collection.every.html>`__
+     - Проверяет, что каждый элемент коллекции удовлетворяет указанному условию.
+   * - `some <Collection.some.html>`__
+     - Проверяет, что некоторый элемент коллекции удовлетворяет указанному условию.
+   * - `forEach <Collection.forEach.html>`__
+     - Перечисляет все элементы коллекции.
+   * - `filter <Collection.filter.html>`__
+     - Возвращает элементы коллекции, удовлетворяющие указанному условию.
+   * - `take <Collection.take.html>`__
+     - Возвращает указанный диапазон элементов коллекции.
+   * - `toArray <Collection.toArray.html>`__
+     - Возвращает массив всех элементов коллекции.
+   * - `move <Collection.move.html>`__
+     - Перемещает элемент коллекции в позицию с указанным индексом.
+   * - `sort <Collection.sort.html>`__
+     - Сортирует список элементов коллекции.
+   * - `clone <Collection.clone.html>`__
+     - Создает копию коллекции элементов.
+   * - `setProperty <Collection.setProperty.html>`__
+     - Устанавливает значение атрибута для элемента.
+   * - `getProperty <Collection.getProperty.html>`__
+     - Возвращает значение атрибута элемента.
 
 Events
 ------
 
-\|Name\|Description\| \|\ `onAdd <Collection.onAdd/>`__\ \|Устанавливает
-`обработчик события <../Script/>`__ о том, что произошло добавление
-элементов.\| \|\ `onReplace <Collection.onReplace/>`__\ \|Устанавливает
-`обработчик события <../Script/>`__ о том, что произошла замена
-элементов.\| \|\ `onRemove <Collection.onRemove/>`__\ \|Устанавливает
-`обработчик события <../Script/>`__ о том, что произошло удаление
-элементов.\| \|\ `onMove <Collection.onMove/>`__\ \|Устанавливает
-`обработчик события <../Script/>`__ о том, что произошло перемещение
-элементов.\| \|\ `onReset <Collection.onReset/>`__\ \|Устанавливает
-`обработчик события <../Script/>`__ о том, что произошли существенные
-изменения.\| \|\ `onChange <Collection.onChange/>`__\ \|Устанавливает
-`обработчик события <../Script/>`__ о том, что произошли какие-то
-изменения.\|
+.. list-table::
+   :header-rows: 1
 
+   * - Name
+     - Description
+   * - `onAdd <Collection.onAdd.html>`__
+     - Устанавливает `обработчик события <../Script/>`__ о том, что произошло добавление элементов.
+   * - `onReplace <Collection.onReplace.html>`__
+     - Устанавливает `обработчик события <../Script/>`__ о том, что произошла замена элементов.
+   * - `onRemove <Collection.onRemove.html>`__
+     - Устанавливает `обработчик события <../Script/>`__ о том, что произошло удаление элементов.
+   * - `onMove <Collection.onMove.html>`__
+     - Устанавливает `обработчик события <../Script/>`__ о том, что произошло перемещение элементов.
+   * - `onReset <Collection.onReset.html>`__
+     - Устанавливает `обработчик события <../Script/>`__ о том, что произошли существенные изменения.
+   * - `onChange <Collection.onChange.html>`__
+     - Устанавливает `обработчик события <../Script/>`__ о том, что произошли какие-то изменения.
 
 .. toctree::
    :hidden:

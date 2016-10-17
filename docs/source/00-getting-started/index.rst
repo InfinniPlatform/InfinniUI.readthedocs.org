@@ -14,7 +14,7 @@ or clone the git repository `github <https://github.com/InfinniPlatform/InfinniU
 
 or :download:`download <../_files/infinni-ui.zip>` as a regular file.
 
-To proceed with running innfinniUI you must install Node.js. Please  ` download Node.js here <https://nodejs.org/en/>`_. 
+To proceed with running innfinniUI you must install Node.js. Please `download Node.js here <https://nodejs.org/en/>`_. 
 
 Start Application
 ------------------
@@ -26,9 +26,9 @@ Execute ``runExample.bat``. This will start a project build and run a local web 
 Editing project 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Project contents are metadata described as JSON-schema compatible text. Example project displays a generated page by default defined in ``<example>/testConfigurations/stab.json``. In this folder you will find other examples of JSON-schemas pages. You can change metadata source in the following file ``<example>/www/config.js`` - change``window.InfinniUI.config.homePage`` parameter.
+Project contents are metadata described as JSON-schema compatible text. Example project displays a generated page by default defined in ``<example>/testConfigurations/stab.json``. In this folder you will find other examples of JSON-schemas pages. You can change metadata source in the following file ``<example>/www/config.js`` - change ``window.InfinniUI.config.homePage`` parameter.
 
-To view more elements which can be used in JSON-schema as well as their syntax please refer to `documentation </Elements/>`_. InfinniUI functionality can be expanded by custom developed elements; you can read more more about it `here <./#extention>`_
+To view more elements which can be used in JSON-schema as well as their syntax please refer to `documentation </Elements/>`_. InfinniUI functionality can be expanded by custom developed elements; you can read more about it `here <./#extention>`_.
 
 Configuration variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

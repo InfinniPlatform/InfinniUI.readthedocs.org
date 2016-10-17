@@ -1,8 +1,7 @@
 Actions
 =======
 
-Actions are used to perform typical actions in infinniUI. All actions form 
- `base API <BaseAction/>`__.
+Actions are used to perform typical actions in infinniUI. Actions implement `base API <BaseAction/>`__.
 
 At this moment Infinni UI has got the following actions:
 
