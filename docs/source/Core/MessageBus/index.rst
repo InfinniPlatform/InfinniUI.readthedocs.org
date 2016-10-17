@@ -1,29 +1,14 @@
 MessageBus
 ==========
 
-Шина сообщений представления - программный объект, который предоставляет
-инфраструктуру для обмена сообщениями (событиями) между различными
-элементами представления (как визуальными, так и невизуальными).
+Message bus is a program object which shares infrastructure to exchange events (messages) between various view elements both visual and non-visual.
 
 Description
 -----------
 
-Шина сообщений создается для каждого экземпляра представления. Отправка
-сообщений осуществляется асинхронно, то есть отправитель не дожидается
-момента окончания обработки сообщения. Обмен сообщениями в рамках
-экземпляра одного представления никак не влияет на экземпляры других
-представлений.
+Message bus is created for each view instance. Messages are sent asynchronously that is sender doesn't get acknowledgement when the message is finally processed. Message exchange within a single instance view doesn't affect the other view instances.
 
-Каждый элемент представления (как визуальный, так и невизуальный) может
-выступать в качестве источника и/или в качестве подписчика на сообщения.
-Когда именно элемент будет осуществлять отправку сообщений, зависит от
-логики работы самого элемента. Когда именно элемент обработает
-поступившее сообщение, также зависит от элемента. Иначе говоря, момент
-отправки и момент окончания обработки сообщения в общем случае не
-детерминирован (возможно, сообщение никогда не будет отправлено;
-возможно, сообщение никогда не будет обработано), единственное, что
-гарантирует шина сообщений - доставку сообщения от источника всем
-существующим подписчикам.
+Each element both visual and non-visual may be a message source and/or be a message subscriber. The time when element will initiate a message sending depends on element working logic. The time when element will process a newly recieved message depends on element. Thus the moment when the message is sent and the moment when its processing is stopped is not determined perhaps the message has never been sent and perhaps will have never been processed). In other words, the only thing that message bus guarantees is delivery to all existing subscribers.
 
 Syntax
 ------
@@ -43,7 +28,7 @@ Parameters
      - Description
    * - ``view``
      - `View <../Elements/View/>`__
-     - Родительское `представление <../Elements/View/>`__ шины сообщений.
+     - Parent `view <../Elements/View/>`__ of message bus.
 
 
 Methods
@@ -55,13 +40,13 @@ Methods
    * - Name
      - Description
    * - `getView <MessageBus.getView.html>`__
-     - Возвращает родительское `представление <../Elements/View/>`__.
+     - Returns parent `view <../Elements/View/>`__.
    * - `send <MessageBus.send.html>`__
-     - Отправляет сообщение заданного типа.
+     - Sends a message of a certain type.
    * - `subscribe <MessageBus.subscribe.html>`__
-     - Подписывает на сообщения заданного типа.
+     - Subscribes to certain type messages.
    * - `unsubscribeByType <MessageBus.unsubscribeByType.html>`__
-     - Отписывается на сообщения заданного типа.
+     - Unsubscribes from certain type messages.
 
 
 
