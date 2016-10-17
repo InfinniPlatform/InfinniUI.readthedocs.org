@@ -1,17 +1,13 @@
 Logger
 ======
 
-Сервис регистрации сообщений.
+Message logging service.
 
 Description
 -----------
 
-Сервис регистрации сообщений - программный объект, который предоставляет
-методы для регистрации сообщений разных `уровней <LogLevel/>`__:
-отладка, информация, предупреждения, ошибки и трассировка. Также сервис
-предоставляет возможность установить минимальный уровень регистрируемых
-сообщений, что позволяет управлять тем, насколько подробной будет
-регистрируемая информация.
+Message logging service is a program object which provides methods to register log messages of different `levels <LogLevel/>`__:
+Debug, info, warning, errors and tracing messages. The serivce also can set the level of registered messages defining how elaborate logging indo will be.
 
 Syntax
 ------
@@ -31,7 +27,7 @@ Parameters
      - Description
    * - ``level``
      - `LogLevel <LogLevel/>`__
-     - Минимальный `уровень регистрируемых сообщений <LogLevel/>`__.
+     - Min `level of logging <LogLevel/>`__.
 
 
 Methods
@@ -43,19 +39,19 @@ Methods
    * - Name
      - Description
    * - `getLevel <Logger.getLevel.html>`__
-     - Возвращает минимальный `уровень регистрируемых сообщений <LogLevel/>`__.
+     - Returns min  `logging level <LogLevel/>`__.
    * - `setLevel <Logger.setLevel.html>`__
-     - Устанавливает минимальный `уровень регистрируемых сообщений <LogLevel/>`__.
+     - Sets min `logging level <LogLevel/>`__.
    * - `debug <Logger.debug.html>`__
-     - Регистрирует отладочное сообщение.
+     - Registers debugging message.
    * - `info <Logger.info.html>`__
-     - Регистрирует информационное сообщение.
+     - Registers info message.
    * - `warn <Logger.warn.html>`__
-     - Регистрирует сообщение с предупреждением.
+     - Registers warning message.
    * - `error <Logger.error.html>`__
-     - Регистрирует сообщение с ошибкой.
+     - Registers error message.
    * - `trace <Logger.trace.html>`__
-     - Регистрирует сообщение трассировки.
+     - Register tracing message.
 
 
 
