@@ -1,28 +1,28 @@
 RouterService
 =============
 
-RouterService позволяет настроить маршрутизацию для Single Page
+RouterService allows to set up routing for Single Page
 Application
 
 Description
 -----------
 
-RouterService предоставляет возможность настройки маршрутизации на
-стороне клиента, а также связывания этих действий с событиями. Для
-браузеров, которые не поддерживают History API, RouterService проделает
-то же самое, используя фрагментарную структуру URL.
+RouterService allows to set up routing at the
+client side and link this with events,  For browsers not supporting
+History API, RouterService does the same by implementing fragmentary URL.
 
-Во время загрузки страницы, после того, как ваше приложение откроет
-HomePage view и будут созданы все роуты описанные в
+
+While the page is loading and after your application opens
+HomePage view, all routes will be created as defined in
 `InfinniUI.config.Routes <../InfinniUI/InfinniUI.config.html>`__,
-автоматически будет запущен роутер используя настройки History API из
+router will be automatically fired up in accordance with History API settings from
 `InfinniUI.config.HistoryAPI <../InfinniUI/InfinniUI.config.html>`__.
-RouterService представляет собой обертку над Backbone.Router.
+RouterService is a harness for Backbone.Router.
 
 Parameters
 ~~~~~~~~~~
 
-Нет.
+No
 
 Methods
 -------
@@ -33,9 +33,9 @@ Methods
    * - Name
      - Description
    * - `getLinkByName() <RouterService.getLinkByName.html>`__
-     - Возвращает путь соответсвующий переданому имени
+     - Returns link by name path
    * - `startRouter() <RouterService.startRouter.html>`__
-     - Запускает роутинг
+     - Starts routing
 
 
 
