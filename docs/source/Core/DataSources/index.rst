@@ -1,7 +1,8 @@
 DataSources
 ===========
 
-Web interface is always linked with certain type of data. To work with data InfinniUI uses Data Sources. Each Data Source is  `base API <BaseDataSource/>`__ which can be expanded dependently on Data Source type.
+Web interface is always linked with certain type of data. To work with data InfinniUI uses Data Sources. 
+Each Data Source implements `base API <BaseDataSource/>`_, but each type of Data Source also has particular functions.
 
 Data source provides the following closely related functionality:
 
