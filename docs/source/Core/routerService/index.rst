@@ -17,7 +17,7 @@ HomePage view, all routes will be created as defined in
 `InfinniUI.config.Routes <../InfinniUI/InfinniUI.config.html>`__,
 router will be automatically fired up in accordance with History API settings from
 `InfinniUI.config.HistoryAPI <../InfinniUI/InfinniUI.config.html>`__.
-RouterService is a harness for Backbone.Router.
+RouterService is a harness for `Backbone.Router <http://backbonejs.org/#Router>`_.
 
 Parameters
 ~~~~~~~~~~
@@ -36,7 +36,12 @@ Methods
      - Returns link by name path
    * - `startRouter() <RouterService.startRouter.html>`__
      - Starts routing
-
+   * - `setContext() <RouterService.setContext.html>`__
+     - Set Context used in scripts
+   * - `setParams() <RouterService.setParams.html>`__
+     - Set Params used in scripts
+   * - `addParams() <RouterService.addParams.html>`__
+     - Add Params used in scripts
 
 
 .. toctree::
@@ -44,3 +49,6 @@ Methods
 
    RouterService.getLinkByName.rst
    RouterService.startRouter.rst
+   RouterService.setContext.rst
+   RouterService.setParams.rst
+   RouterService.addParams.rst
