@@ -16,6 +16,8 @@ or :download:`download <../_files/infinni-ui.zip>` as a regular file.
 
 To proceed with running innfinniUI you must install Node.js. Please `download Node.js here <https://nodejs.org/en/>`_. 
 
+Then add `./node_modules/.bin` to the PATH environment variable.
+
 Start Application
 ------------------
 
