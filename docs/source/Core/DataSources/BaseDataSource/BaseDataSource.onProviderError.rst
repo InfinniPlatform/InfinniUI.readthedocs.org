@@ -1,7 +1,7 @@
 BaseDataSource.onProviderError
 ==============================
 
-Устанавливает `обработчик события <../../Script/>`__ о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку
+Устанавливает `обработчик события <../../Script/>`__ о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку. Узнать (только получить, но не переопределить!) текущий обработчик можно с помощью свойства `onProviderErrorHandler <BaseDataSource.onProviderErrorHandler.html>`_.
 
 Syntax
 ------
@@ -36,4 +36,5 @@ Examples
 See Also
 --------
 
+-  `onProviderErrorHandler <BaseDataSource.onProviderErrorHandler.html>`__
 -  `DataProvider </Core/DataProviders/>`__

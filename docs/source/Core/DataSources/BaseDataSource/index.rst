@@ -42,6 +42,9 @@ Properties
    * - `name <BaseDataSource.name.html>`__
      - ``String``
      - Содержит наименование источника данных
+   * - `onProviderErrorHandler <BaseDataSource.onProviderErrorHandler.html>`__
+     - `Script <../../Script/>`_ 
+     - Содержит `обработчик события <../../Script/>`_ о том, что `поставщик данных </Core/DataProviders/>`_ вернул ошибку
 
 
 Specific Properties
