@@ -30,7 +30,7 @@ Properties
      - –
      - Свойство, по которому будет выполняться автозавершение ввода. Если не указывать AutocompleteProperty, то автозавершение будет выполняться на основе полнотекстового поиска
    * - ValueTemplate
-     - `Element </docs/API/Core/Elements/Element/Element.metadata.html>`__
+     - `Element </Core/Elements/Element/Element.metadata.html>`__
      - –
      - Функция шаблонизации выбранного элемента
    * - ValueFormat

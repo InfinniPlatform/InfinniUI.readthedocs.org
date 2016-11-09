@@ -26,7 +26,7 @@ Properties
      - –
      - Формат отображения значения
    * - ``EditMask``
-     - `EditMask </docs/API/Core/EditMask/>`__
+     - `EditMask </Core/EditMask/>`__
      - –
      - Маска ввода значения
 

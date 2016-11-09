@@ -40,11 +40,11 @@ Parameters
      - Type
      - Description
    * - context
-     - `ViewContext </docs/API/Core/Context>`__
+     - `ViewContext </Core/Context>`__
      - Контекст представления
    * - args
      - ``Object``
-     - Объект с полями: ● $el - элемент выделенный под ExtensionPanel, ● parameters - `параметры <ExtensionPanel.getParameters.html>`__, ● builder - `построитель элементов </docs/Api/Core/Builders.html>`__, ● itemTemplate - `функция шаблонизации дочерних элементов </docs/API/Core/Elements/Container/Container.getItemTemplate.html>`__, ● items - `коллекция дочерних элементов </docs/API/Core/Elements/Container/Container.getItems.html>`__
+     - Объект с полями: ● $el - элемент выделенный под ExtensionPanel, ● parameters - `параметры <ExtensionPanel.getParameters.html>`__, ● builder - `построитель элементов </Core/Builders/>`__, ● itemTemplate - `функция шаблонизации дочерних элементов </Core/Elements/Container/Container.getItemTemplate.html>`__, ● items - `коллекция дочерних элементов </Core/Elements/Container/Container.getItems.html>`__
 
 
 Examples
@@ -88,7 +88,7 @@ Examples
 Extends
 -------
 
-`Container </docs/API/Core/Elements/Container/>`__
+`Container </Core/Elements/Container/>`__
 
 Syntax
 ------
@@ -122,13 +122,13 @@ Methods
    * - `setExtensionName <ExtensionPanel.setExtensionName.html>`__
      - Устанавливает название прикладного элемента
    * - `setContext <ExtensionPanel.setContext.html>`__
-     - Устанавливает `контекст представления </docs/Api/Core/Context/>`__
+     - Устанавливает `контекст представления </Core/Context/>`__
    * - `setBuilder <ExtensionPanel.setBuilder.html>`__
-     - Устанавливает `Builder </docs/Api/Core/Builders/>`__
+     - Устанавливает `Builder </Core/Builders/>`__
    * - `getParameters <ExtensionPanel.getParameters.html>`__
-     - Возвращает `параметры </docs/Api/Core/Parameters/>`__, передаваемые в прикладной элемент
+     - Возвращает `параметры </Core/Parameters/>`__, передаваемые в прикладной элемент
    * - `setParameters <ExtensionPanel.setParameters.html>`__
-     - Устанавливает `параметры </docs/Api/Core/Parameters/>`__, передаваемые в прикладной элемент
+     - Устанавливает `параметры </Core/Parameters/>`__, передаваемые в прикладной элемент
 
 
 Events

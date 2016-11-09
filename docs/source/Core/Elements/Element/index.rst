@@ -138,17 +138,17 @@ Methods
    * - `setValidationState <Element.setValidationState.html>`__
      - Устанавливает заданный валидационный статус и валидационное сообщение
    * - `getTextStyle <Element.getTextStyle.html>`__
-     - Возвращает `стиль текста </docs/API/Core/Style/TextStyle/>`__ элемента
+     - Возвращает `стиль текста </Core/Style/TextStyle/>`__ элемента
    * - `setTextStyle <Element.setTextStyle.html>`__
-     - Устанавливает `стиль текста </docs/API/Core/Style/TextStyle/>`__ элемента
+     - Устанавливает `стиль текста </Core/Style/TextStyle/>`__ элемента
    * - `getForeground <Element.getForeground.html>`__
-     - Возвращает `цвет </docs/API/Core/Style/ColorStyle/>`__ текста элемента
+     - Возвращает `цвет </Core/Style/ColorStyle/>`__ текста элемента
    * - `setForeground <Element.setForeground.html>`__
-     - Устанавливает `цвет </docs/API/Core/Style/ColorStyle/>`__ текста элемента
+     - Устанавливает `цвет </Core/Style/ColorStyle/>`__ текста элемента
    * - `getBackground <Element.getBackground.html>`__
-     - Возвращает `цвет </docs/API/Core/Style/ColorStyle/>`__ фона элемента
+     - Возвращает `цвет </Core/Style/ColorStyle/>`__ фона элемента
    * - `setBackground <Element.setBackground.html>`__
-     - Устанавливает `цвет </docs/API/Core/Style/ColorStyle/>`__ фона элемента
+     - Устанавливает `цвет </Core/Style/ColorStyle/>`__ фона элемента
    * - `getStyle <Element.getStyle.html>`__
      - Возвращает кастомный стиль элемента (на деле это класс, стили которых могут быть заданы в подключаемых на страницу стилях)
    * - `setStyle <Element.setStyle.html>`__
@@ -186,7 +186,7 @@ Events
    * - `onMouseUp <Element.onMouseUp.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что на элементе отпустили кнопку мыши
    * - `onMouseWheel <Element.onMouseWheel.html>`__
-     - Устанавливает `обработчик события <../Script/>`__ о том, что на элементе прокрутили колесо мыши
+     - Устанавливает `обработчик события <../../Script/>`__ о том, что на элементе прокрутили колесо мыши
    * - `onMouseEnter <Element.onMouseEnter.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что указатель мыши вошел в границы элемента
    * - `onMouseLeave <Element.onMouseLeave.html>`__

@@ -16,7 +16,7 @@ Properties
      - ``Array``/``Object``
      - Элементы контейнера
    * - ItemTemplate
-     - `Element </docs/API/Core/Elements/Element/Element.metadata.html>`__
+     - `Element </Core/Elements/Element/Element.metadata.html>`__
      - Шаблон дочерних элементов контейнера, 
    * - ItemFormat
      - `DisplayFormat <../../DisplayFormat/>`__
@@ -34,7 +34,7 @@ Properties
      - ``String``
      - Свойство, определяющее условие группировки дочерних элементов контейнера
    * - GroupItemTemplate
-     - `Element </docs/API/Core/Elements/Element/Element.metadata.html>`__
+     - `Element </Core/Elements/Element/Element.metadata.html>`__
      - Функция шаблонизации заголовков групп
    * - GroupItemFormat
      - `DisplayFormat <../../DisplayFormat/>`__

@@ -1,7 +1,7 @@
 TextEditorBase.getEditMask
 ==========================
 
-Возвращает `маску ввода данных </docs/API/Core/EditMask/>`__.
+Возвращает `маску ввода данных </Core/EditMask/>`__.
 
 Syntax
 ------
@@ -13,7 +13,7 @@ Syntax
 Returns
 ~~~~~~~
 
-`Маска ввода данных </docs/API/Core/EditMask/>`__.
+`Маска ввода данных </Core/EditMask/>`__.
 
 Examples
 --------
@@ -26,4 +26,4 @@ See Also
 --------
 
 -  `setEditMask() <TextEditorBase.setEditMask.html>`__
--  `EditMask </docs/API/Core/EditMask/>`__
+-  `EditMask </Core/EditMask/>`__

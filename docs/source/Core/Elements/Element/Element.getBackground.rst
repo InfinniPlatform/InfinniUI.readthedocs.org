@@ -1,7 +1,7 @@
 Element.getBackground()
 =======================
 
-Возвращает `цвет </docs/API/Core/Style/ColorStyle/>`__ фона элемента.
+Возвращает `цвет </Core/Style/ColorStyle/>`__ фона элемента.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Цвет </docs/API/Core/Style/ColorStyle/>`__ фона элемента.
+`Цвет </Core/Style/ColorStyle/>`__ фона элемента.
 
 Examples
 --------
@@ -37,4 +37,4 @@ See Also
 -  `setTextStyle() <Element.setTextStyle.html>`__
 -  `getStyle() <Element.getStyle.html>`__
 -  `setStyle() <Element.setStyle.html>`__
--  `ColorStyle </docs/API/Core/Style/ColorStyle/>`__
+-  `ColorStyle </Core/Style/ColorStyle/>`__

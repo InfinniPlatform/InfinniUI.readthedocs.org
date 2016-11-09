@@ -1,7 +1,7 @@
 Element.setContext()
 ====================
 
-Устанавливает `контекст представления </docs/Api/Core/Context/>`__.
+Устанавливает `контекст представления </Core/Context/>`__.
 
 Syntax
 ------
@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `ViewContext </docs/Api/Core/Context/>`__
+     - `ViewContext </Core/Context/>`__
      - Контекст представления
 
 

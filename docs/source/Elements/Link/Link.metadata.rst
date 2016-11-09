@@ -35,7 +35,7 @@ Href.metadata
      - Description
    * - Name\*
      - ``String``
-     - Название маршрута из `InfinniUI.config.Routes </docs/API/Core/InfinniUI/InfinniUI.config.Routes.html>`__.
+     - Название маршрута из `InfinniUI.config.Routes </Core/InfinniUI/InfinniUI.config.Routes.html>`__.
    * - Params
      - ``Array``.<`Href.paramObject <#hrefparamobject>`__>
      - Параметры запроса.
@@ -60,7 +60,7 @@ Href.paramObject
      - Название параметра.
    * - Value*
      - ``String``
-     - `DataBinding </docs/API/Core/DataBinding/DataBinding.metadata.html>`__
+     - `DataBinding </Core/DataBinding/DataBinding.metadata.html>`__
      - Значение параметра.
 
 
@@ -83,7 +83,7 @@ Examples
 
 Рассмотрим случай, когда ссылка должна изменяться в зависимости от неких
 параметров. Тогда в массив
-`InfinniUI.config.Routes </docs/API/Core/InfinniUI/InfinniUI.config.Routes.html>`__
+`InfinniUI.config.Routes </Core/InfinniUI/InfinniUI.config.Routes.html>`__
 необходимо добавить соответсвующий путь. Пусть
 
 .. code:: js

@@ -1,9 +1,9 @@
 ExtensionPanel.setBuilder()
 ===========================
 
-Устанавливает `Builder </docs/Api/Core/Builders/>`__. Builder может быть
+Устанавливает `Builder </Core/Builders/>`__. Builder может быть
 полезен, когда по каким-либо причинам
-`itemTemplate </docs/API/Core/Elements/Container/Container.setItemTemplate.html>`__
+`itemTemplate </Core/Elements/Container/Container.setItemTemplate.html>`__
 неприменим.
 
 Syntax
@@ -23,7 +23,7 @@ Parameters
      - Type
      - Description
    * - value
-     - `Builder </docs/Api/Core/Builders/>`__
+     - `Builder </Core/Builders/>`__
      - Построитель элементов
 
 

@@ -13,7 +13,7 @@ Properties
      - Type
      - Description
    * - LinkView
-     - `LinkView </docs/API/Core/Elements/View/LinkView/LinkView.metadata.html>`__
+     - `LinkView </Core/Elements/View/LinkView/LinkView.metadata.html>`__
      - Объект, который создает и настраивает представление, отображаемое внутри ViewPanel
 
 

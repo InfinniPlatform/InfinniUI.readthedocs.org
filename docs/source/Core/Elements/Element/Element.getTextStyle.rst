@@ -1,7 +1,7 @@
 Element.getTextStyle()
 ======================
 
-Возвращает `стиль текста </docs/API/Core/Style/TextStyle/>`__ элемента.
+Возвращает `стиль текста </Core/Style/TextStyle/>`__ элемента.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Стиль текста </docs/API/Core/Style/TextStyle/>`__ элемента.
+`Стиль текста </Core/Style/TextStyle/>`__ элемента.
 
 Examples
 --------
@@ -37,4 +37,4 @@ See Also
 -  `setBackground() <Element.setBackground.html>`__
 -  `getStyle() <Element.getStyle.html>`__
 -  `setStyle() <Element.setStyle.html>`__
--  `TextStyle </docs/API/Core/Style/TextStyle/>`__
+-  `TextStyle </Core/Style/TextStyle/>`__

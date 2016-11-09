@@ -1,7 +1,7 @@
 Element.setForeground()
 =======================
 
-Устанавливает `цвет </docs/API/Core/Style/ColorStyle/>`__ текста
+Устанавливает `цвет </Core/Style/ColorStyle/>`__ текста
 элемента.
 
 Syntax
@@ -22,7 +22,7 @@ Parameters
      - Description
    * - value
      - ``String``
-     - `Цвет </docs/API/Core/Style/ColorStyle/>`__ текста элемента.
+     - `Цвет </Core/Style/ColorStyle/>`__ текста элемента.
 
 
 Returns
@@ -47,4 +47,4 @@ See Also
 -  `setTextStyle() <Element.setTextStyle.html>`__
 -  `getStyle() <Element.getStyle.html>`__
 -  `setStyle() <Element.setStyle.html>`__
--  `ColorStyle </docs/API/Core/Style/ColorStyle/>`__
+-  `ColorStyle </Core/Style/ColorStyle/>`__

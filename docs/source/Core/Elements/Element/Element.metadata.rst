@@ -18,47 +18,47 @@ Properties
      -  null 
      - Имя элемента (строка). Желательно делать его уникальным внутри представления.
    * - Text
-     - ``String``(⇔)
-     -  '' 
+     - ``String`` (⇔)
+     -  "" 
      - Текст элемента. В разных потомках Element, поле text используется по разному. Например, во View это заголовок представления, а в ImageBox это текст кнопки, инициирующей выбор загружаемого изображения.
    * - Focusable
-     - ``Boolean``(⇔)
+     - ``Boolean`` (⇔)
      -  true 
      - Значение, определяющее, может ли элемент получить фокус.
    * - Enabled
-     - ``Boolean``(⇔)
+     - ``Boolean`` (⇔)
      -  true 
      - Значение, определяющее, значение, возможен ли доступ к элементу.
    * - Visible
-     - ``Boolean``(⇔)
+     - ``Boolean`` (⇔)
      -  true 
      - Значение, определяющее видимость элемента.
    * - HorizontalAlignment
-     - `HorizontalAlignment <ElementHorizontalAlignment>`__(⇔)
-   * - 'Stretch' 
+     - `HorizontalAlignment <ElementHorizontalAlignment>`__ (⇔)
+     - "Stretch"
      - Горизонтальное выравнивание элемента.
    * - TextHorizontalAlignment
-     - `TextHorizontalAlignment <TextHorizontalAlignment>`__(⇔)
-   * - 'Left' 
+     - `TextHorizontalAlignment <TextHorizontalAlignment>`__ (⇔)
+     - "Left"
      - Горизонтальное выравнивание внутри элемента.
    * - Style
-     - ``String``(⇔)
-     -  '' 
+     - ``String`` (⇔)
+     -  "" 
      - Имя кастомного стиля (на деле это одноименный класс, стили которого можно задать самому в подключаемых на страницу стилях)
    * - TextStyle
-     - `TextStyle <../../Style/TextStyle/>`__(⇔)
-     -  '' 
+     - `TextStyle <../../Style/TextStyle/>`__ (⇔)
+     -  "" 
      - Стиль текста элемента
    * - Foreground
-     - `Color </docs/API/Core/Style/ColorStyle/>`__(⇔)
-     -  '' 
+     - `Color </Core/Style/ColorStyle/>`__ (⇔)
+     -  "" 
      - Цвет текста.
    * - Background
-     - `Color </docs/API/Core/Style/ColorStyle/>`__(⇔)
-     -  '' 
+     - `Color </Core/Style/ColorStyle/>`__ (⇔)
+     -  "" 
      - Цвет фона.
    * - ToolTip
-     - ``String``, `Element <..>`__
+     - ``String``, `Element <.>`__
      -  null 
      - Всплывающая над элементом подсказка.
    * - Tag

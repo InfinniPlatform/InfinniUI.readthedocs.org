@@ -1,7 +1,7 @@
 TextEditorBase.setEditMask
 ==========================
 
-Устанавливает `маску ввода данных </docs/API/Core/EditMask/>`__.
+Устанавливает `маску ввода данных </Core/EditMask/>`__.
 
 Syntax
 ------
@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - ``value``
-     - `EditMask </docs/API/Core/EditMask/>`__
+     - `EditMask </Core/EditMask/>`__
      - Маска ввода данных.
 
 

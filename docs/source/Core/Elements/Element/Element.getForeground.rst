@@ -1,7 +1,7 @@
 Element.getForeground()
 =======================
 
-Возвращает `цвет </docs/API/Core/Style/ColorStyle/>`__ текста элемента.
+Возвращает `цвет </Core/Style/ColorStyle/>`__ текста элемента.
 
 Syntax
 ------
@@ -18,7 +18,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Цвет </docs/API/Core/Style/ColorStyle/>`__ текста элемента.
+`Цвет </Core/Style/ColorStyle/>`__ текста элемента.
 
 Examples
 --------
@@ -37,4 +37,4 @@ See Also
 -  `setTextStyle() <Element.setTextStyle.html>`__
 -  `getStyle() <Element.getStyle.html>`__
 -  `setStyle() <Element.setStyle.html>`__
--  `ColorStyle </docs/API/Core/Style/ColorStyle/>`__
+-  `ColorStyle </Core/Style/ColorStyle/>`__

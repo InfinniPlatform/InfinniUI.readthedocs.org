@@ -51,9 +51,9 @@ Methods
    * - `setDisplayFormat <TextEditorBase.setDisplayFormat.html>`__
      - Устанавливает `функцию <../../Core/Script/>`__ форматирования `значения <../EditorBase/EditorBase.getValue.html>`__ для отображения.
    * - `getEditMask <TextEditorBase.getEditMask.html>`__
-     - Возвращает `маску ввода данных </docs/API/Core/EditMask/>`__.
+     - Возвращает `маску ввода данных </Core/EditMask/>`__.
    * - `setEditMask <TextEditorBase.setEditMask.html>`__
-     - Устанавливает `маску ввода данных </docs/API/Core/EditMask/>`__.
+     - Устанавливает `маску ввода данных </Core/EditMask/>`__.
 
 
 

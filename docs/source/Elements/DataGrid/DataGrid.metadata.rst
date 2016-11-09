@@ -30,11 +30,11 @@ Properties
      - –
      - Устанавливает обработчик изменения состоняие элемента "Выбрать все" в шапке таблицы.
    * - RowBackground
-     - `Color </docs/API/Core/Style/ColorStyle/>`__(⇔)
+     - `Color </Core/Style/ColorStyle/>`__(⇔)
      - –
      - Цвет фона строки
    * - RowForeground
-     - `Color </docs/API/Core/Style/ColorStyle/>`__(⇔)
+     - `Color </Core/Style/ColorStyle/>`__(⇔)
      - –
      - Цвет текста строки
    * - RowTextStyle
