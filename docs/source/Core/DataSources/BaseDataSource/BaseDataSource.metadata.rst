@@ -57,6 +57,10 @@ Properties
      - `Script <../../Script/>`__
      - –
      - Обработчик события о том, что список элементов обновлен
+   * - OnProviderError
+     - `Script <../../Script/>`__
+     - –
+     - Обработчик события о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку
 
 
 Exampes

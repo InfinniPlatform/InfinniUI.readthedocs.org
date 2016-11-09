@@ -6,10 +6,8 @@ BaseDataSource
 Description
 -----------
 
-Источники данных, представленные в InfinniUI, являются потомками
-  BaseDataSource.
-В BaseDataSource реализованы базовые API, которые предоставлят все
-  источники данных InfinniUI.
+Источники данных, представленные в InfinniUI, являются потомками BaseDataSource.
+В BaseDataSource реализованы базовые API, которые предоставлят все источники данных InfinniUI.
 
 Syntax
 ------
@@ -49,12 +47,8 @@ Properties
 Specific Properties
 -------------------
 
-Для работы с данными свойствами используйте методы
-  `getProperty <BaseDataSource.getProperty.html>`__ и
-  `setProperty <BaseDataSource.setProperty.html>`__.
-Обратите внимание, что для работы с данными свойствами необходимо
-  `указывать точку в
-  названии <BaseDataSource.getProperty/#path-rules>`__.
+Для работы с данными свойствами используйте методы `getProperty <BaseDataSource.getProperty.html>`__ и `setProperty <BaseDataSource.setProperty.html>`__.
+Обратите внимание, что для работы с данными свойствами необходимо `указывать точку в названии <BaseDataSource.getProperty/#path-rules>`__.
 
 .. list-table::
    :header-rows: 1
@@ -163,6 +157,8 @@ Events
      - Устанавливает `обработчик события <../../Script/>`__ о том, что список элементов обновлен
    * - `onErrorValidator <BaseDataSource.onErrorValidator.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что проверка на ошибки завершена
+   * - `onProviderError <BaseDataSource.onProviderError.html>`__
+     - Устанавливает `обработчик события <../../Script/>`__ о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку
 
 
 
