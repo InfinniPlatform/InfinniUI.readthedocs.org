@@ -1,0 +1,20 @@
+{% extends "!layout.html" %}
+{% set script_files = script_files + [pathto("/infinni-ui/underscore-min.js", True), pathto("/infinni-ui/config.js", True), pathto("/infinni-ui/templates.js", True), pathto("/infinni-ui/platform.js", True), pathto("/liveInfinniExample.js", True), pathto("/liveJsExample.js", True)] %}
+
+{%- block linktags %} 
+<link type="text/css" href="{{ pathto("/infinni-ui/css/vendor.css", True) }}" rel="stylesheet">
+<link type="text/css" href="{{ pathto("/infinni-ui/css/main.css", True) }}" rel="stylesheet">
+
+<link type="text/css" href="{{ pathto("/iui-live-example.css", True) }}" rel="stylesheet">
+{% endblock %}
+
+
+{%- block extrahead %} 
+<script type="text/javascript" src="{{ pathto("/infinni-ui/vendor.js", True) }}"> </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+			new LiveInfinniExample();
+			new LiveJsExample();
+		});
+</script>
+{% endblock %}
