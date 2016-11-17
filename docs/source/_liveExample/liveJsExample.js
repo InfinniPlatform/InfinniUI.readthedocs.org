@@ -1,14 +1,11 @@
-function LiveJsExample() {
+function LiveJsExample(exampleWrapperUrl) {
     var $liveExample = this.findHighlightedWithLiveExampleOnPage();
     var that = this;
-
-    this.template = '<div class="iui-live-example"></div>';
-
 
     $liveExample.each(function(i, el){
         var $el = $(el);
 
-        that.addLiveExample($el);
+        that.addLiveExample($el, exampleWrapperUrl);
         that.clipText($el);
     });
 }
@@ -22,18 +19,21 @@ LiveJsExample.prototype.findHighlightedWithLiveExampleOnPage = function(){
     return $highlighted.filter(':contains(//js-demo)');
 };
 
-LiveJsExample.prototype.addLiveExample = function($el){
-    var scriptText =  $el.text();
-    var func = new Function('$elementForExample', scriptText);
-    var $liveExampleWrap = this.createLiveExampleWrap($el);
+LiveJsExample.prototype.addLiveExample = function($el, exampleWrapperUrl){
+    var scriptText = $el.text();
 
-    func($liveExampleWrap);
-};
-
-LiveJsExample.prototype.createLiveExampleWrap = function($el){
-    var $liveExample = $(this.template);
-    $el.after($liveExample);
-    return $liveExample;
+	var newFrame = document.createElement("iframe");
+	newFrame.src = exampleWrapperUrl;	
+	newFrame.classList.add("liveExampleFrame");	
+	newFrame.onload = function(event) {
+		var frame = event.target;
+		frame.contentWindow.runScript(scriptText);
+		
+		var frameContentHeight = $(frame.contentWindow.$.find('.iui-live-example')[0]).outerHeight(true);
+		frame.height = frameContentHeight;
+	};
+	
+	$el.after(newFrame);
 };
 
 LiveJsExample.prototype.clipText = function($el){

@@ -1,14 +1,11 @@
-function LiveInfinniExample() {
+function LiveInfinniExample(exampleWrapperUrl) {
     var $liveExample = this.findHighlightedWithLiveExampleOnPage();
     var that = this;
 
-    this.template = '<div class="iui-live-example"></div>';
-
-
     $liveExample.each(function(i, el){
         var $el = $(el);
-
-        that.addLiveExample($el);
+		
+        that.addLiveExample($el, exampleWrapperUrl);
         that.clipText($el);
     });
 }
@@ -22,10 +19,9 @@ LiveInfinniExample.prototype.findHighlightedWithLiveExampleOnPage = function(){
     return $highlighted.filter(':contains(//infinni-ui-demo)');
 };
 
-LiveInfinniExample.prototype.addLiveExample = function($el){
+LiveInfinniExample.prototype.addLiveExample = function($el, exampleWrapperUrl){
     var text =  this.clearExampleText($el.text());
     var metadata = JSON.parse(text);
-    var $liveExampleWrap = this.createLiveExampleWrap($el);
 
     metadata = {
         LinkView: {
@@ -35,27 +31,18 @@ LiveInfinniExample.prototype.addLiveExample = function($el){
         }
     };
 
-    this.runPlatformWithMetadata(metadata, $liveExampleWrap);
-};
-
-LiveInfinniExample.prototype.createLiveExampleWrap = function($el){
-    var $liveExample = $(this.template);
-    $el.after($liveExample);
-    return $liveExample;
-};
-
-LiveInfinniExample.prototype.runPlatformWithMetadata = function(metadata, $el){
-    var builder = new InfinniUI.ApplicationBuilder(),
-        rootView = new SpecialApplicationView(),
-        mainView;
-
-    rootView.open($el);
-    InfinniUI.config.$rootContainer = $el;
-
-    var action = builder.buildType('OpenAction', metadata, {parentView: rootView});
-    action.execute();
-
-    var view = 1;
+	var newFrame = document.createElement("iframe");
+	newFrame.src = exampleWrapperUrl;	
+	newFrame.classList.add("liveExampleFrame");	
+	newFrame.onload = function(event) {
+		var frame = event.target;
+		frame.contentWindow.runPlatformWithMetadata(metadata);
+		
+		var frameContentHeight = $(frame.contentWindow.$.find('.iui-live-example')[0]).outerHeight(true);
+		frame.height = frameContentHeight;
+	};
+	
+	$el.after(newFrame);
 };
 
 LiveInfinniExample.prototype.clearExampleText = function(text){
@@ -69,42 +56,3 @@ LiveInfinniExample.prototype.clipText = function($el){
     s = s.replace(/^[ \S]*\/\/[ \S]*infinni[ \S]*-[ \S]*ui[ \S]*-[ \S]*display[ \S]*-[ \S]*end[\s\S]*/m, '');
     $pre.get(0).innerHTML = s;
 };
-
-//----------------
-moment.locale('ru');
-
-(function ($target/*, metadata*/, homePageMetadata) {
-
-    var host = InfinniUI.config.serverUrl;
-
-    InfinniUI.providerRegister.register('ObjectDataSource', InfinniUI.Providers.ObjectDataProvider);
-
-    InfinniUI.providerRegister.register('MetadataDataSource', function (metadataValue) {
-        var $pageContent = $('body');
-        return new InfinniUI.Providers.MetadataProviderREST(new InfinniUI.Providers.QueryConstructorMetadata(host, metadataValue));
-    });
-
-    InfinniUI.providerRegister.register('DocumentDataSource', InfinniUI.Providers.RestDataProvider);
-
-})();
-
-
-function SpecialApplicationView() {
-    var $container;
-
-    this.getContainer = function () {
-        return this.$container;
-    };
-
-    this.open = function ($el) {
-        this.$container = $el;
-    };
-
-    this.getApplicationView = function () {
-        return this;
-    };
-
-    this.getContext = function(){
-        return null;
-    }
-}
