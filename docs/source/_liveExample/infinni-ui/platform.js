@@ -87,14 +87,6 @@ InfinniUI.ScrollVisibility = {
 };
 
 
-//####app\elements\stackPanel\enums\stackPanelOrientation.js
-InfinniUI.StackPanelOrientation = {
-    horizontal: 'Horizontal',
-    vertical: 'Vertical'
-};
-
-
-
 //####app\elements\tabPanel\enums\tabHeaderLocation.js
 InfinniUI.TabHeaderLocation = {
     none: 'None',
@@ -109,6 +101,14 @@ InfinniUI.TabHeaderOrientation = {
     horizontal: 'Horizontal',
     vertical: 'Vertical'
 };
+//####app\elements\stackPanel\enums\stackPanelOrientation.js
+InfinniUI.StackPanelOrientation = {
+    horizontal: 'Horizontal',
+    vertical: 'Vertical'
+};
+
+
+
 //####app\config.js
 _.defaults( InfinniUI.config, {
     lang: 'ru-RU',
@@ -124,7 +124,7 @@ _.defaults( InfinniUI.config, {
 
 });
 
-InfinniUI.VERSION = '2.2.1';
+InfinniUI.VERSION = '2.2.2';
 
 //####app\localizations\culture.js
 function Culture(name){
@@ -2255,6 +2255,12 @@ var filterItems = (function() {
 			}
 			return value;
 		}
+		function stringToNumAsString(value) {
+			if( typeof value === 'string' && value.slice(0, 1) === "'" ) {
+				value = value.slice(1, -1);
+			}
+			return value;
+		}
 		function stringToBoolean(value) {
 			if( value === 'true' ) {
 				value = true;
@@ -2274,6 +2280,7 @@ var filterItems = (function() {
 					}
 					value[i] = stringToBoolean( value[i] );
 					value[i] = stringToNum( value[i] );
+					value[i] = stringToNumAsString( value[i] );
 				}
 			}
 			return value;
@@ -2300,6 +2307,7 @@ var filterItems = (function() {
 				if( filterTree.children[j].type === 'value' || filterTree.children[j].newType === 'value' ) {
 					if( filterTree.children[j].type === 'value' ) {
 						filterTree.children[j].valueName = stringToNum( filterTree.children[j].valueName ); // check on Number
+						filterTree.children[j].valueName = stringToNumAsString( filterTree.children[j].valueName ); // check on Number as string
 						filterTree.children[j].valueName = stringToBoolean( filterTree.children[j].valueName ); // check on Boolean
 						filterTree.children[j].valueName = stringToArr( filterTree.children[j].valueName ); // check on Array
 					}
@@ -2367,7 +2375,9 @@ filterItems.filterTreeBuilder = (function() {
 						tmpArr[0] = tmpArr[0].slice(0, -1);
 					}
 					if( tmpArr[0].length > 1 && tmpArr[0].slice(0, 1) === "'" ) {
-						tmpArr[0] = tmpArr[0].slice(1, -1);
+						if( isNaN( tmpArr[0].slice(1, -1) ) ) {
+							tmpArr[0] = tmpArr[0].slice(1, -1);
+						}
 					}
 					if( tmpArr[0].search(/tmpRE/) !== -1 ) {
 						tmpArr[0] = tmpArr[0].slice(1, -1).split(',');
@@ -5892,7 +5902,9 @@ var TextEditorView = Backbone.View.extend({
             default:
                 //замена выделенного текста, по нажатию
                 var char = InfinniUI.Keyboard.getCharByKeyCode(event.keyCode);
+
                 event.preventDefault();
+
                 if (this.getSelectionLength() > 0) {
                     position = editMask.deleteSelectedText(this.getCaretPosition(), this.getSelectionLength(), char);
                 } else {
@@ -5901,17 +5913,16 @@ var TextEditorView = Backbone.View.extend({
                 }
 
                 this.model.setText(editMask.getText());
+
                 if (position !== false) {
                     this.setCaretPosition(position);
                 }
+
                 break;
         }
-
-
     },
 
     onKeyupHandler: function (event) {
-
         this.trigger('onKeyDown', {
             keyCode: event.which,
             value: this.model.getValue()
@@ -5920,7 +5931,6 @@ var TextEditorView = Backbone.View.extend({
 
     onClickHandler: function (event) {
         this.checkCurrentPosition();
-        event.preventDefault();
     },
 
     onPasteHandler: function (event) {
@@ -5979,8 +5989,6 @@ var TextEditorView = Backbone.View.extend({
 
         var originalEvent = event.originalEvent;
         var text = originalEvent.dataTransfer.getData('text/plain');
-
-
 
         this.textTyping(text, 0);
         this.$el.focus();
@@ -6138,9 +6146,7 @@ var TextEditorView = Backbone.View.extend({
                 this.checkCurrentPosition(position);
             }
         }
-
     }
-
 });
 //####app\controls\_base\textEditor\_mode\textEditorModelBaseModeStrategy.js
 /**
@@ -10570,7 +10576,6 @@ var DataGridView = ListEditorBaseView.extend({
                         model.toggleValue(valueSelector(undefined, {value:items.getByIndex(index)}));
                     }
                 });
-                element.childElements = element.control.controlView.childElements;
                 that.addRowElement(item, element);
 
                 var $element = element.render();
@@ -10713,7 +10718,7 @@ var DataGridRowView = ControlView.extend({
 
     initialize: function () {
         ControlView.prototype.initialize.call(this);
-        this.childElements = [];
+
         this.on('render', function () {
             this.ui.toggleCell.on('click', this.onToggleHandler.bind(this));
         }, this);
@@ -10746,15 +10751,13 @@ var DataGridRowView = ControlView.extend({
         $el.html(template());
         this.bindUIElements();
 
-        var templates = this.model.get('cellTemplates');
+        var cellElements = this.model.get('cellElements');
         var templateDataCell = this.template.dataCell;
-        if (Array.isArray(templates)) {
-            templates.forEach(function (template, index) {
+        if (Array.isArray(cellElements)) {
+            cellElements.forEach(function (cellElement, index) {
                 var $cell = $(templateDataCell());
-                var cellElement = template();
                 $cell.append(cellElement.render());
                 $el.append($cell);
-                row.addChildElement(cellElement);
             });
         }
         this.updateProperties();
@@ -10789,23 +10792,6 @@ var DataGridRowView = ControlView.extend({
 
     onToggleHandler: function (event) {
         this.trigger('toggle');
-    },
-
-    addChildElement: function (element) {
-        this.childElements.push(element);
-    },
-
-    removeChildElements: function () {
-        this.childElements.forEach(function (element) {
-            element.remove();
-        });
-
-        this.childElements.length = 0;
-    },
-
-    remove: function () {
-        this.removeChildElements();
-        ControlView.prototype.remove.call(this);
     }
 
 
@@ -13782,122 +13768,6 @@ var TreeViewNodeRadio = TreeViewNodeBase.extend({
 
 });
 
-//####app\controls\checkBox\checkBoxControl.js
-function CheckBoxControl(parent) {
-    _.superClass(CheckBoxControl, this, parent);
-    this.initialize_editorBaseControl();
-}
-
-_.inherit(CheckBoxControl, Control);
-
-_.extend(CheckBoxControl.prototype, {
-
-    createControlModel: function () {
-        return new CheckBoxModel();
-    },
-
-    createControlView: function (model) {
-        return new CheckBoxView({model: model});
-    }
-}, editorBaseControlMixin);
-
-
-//####app\controls\checkBox\checkBoxModel.js
-var CheckBoxModel = ControlModel.extend( _.extend({
-
-    defaults: _.defaults({
-        value: false
-    }, ControlModel.prototype.defaults),
-
-    initialize: function () {
-        ControlModel.prototype.initialize.apply(this, arguments);
-        this.initialize_editorBaseModel();
-    }
-
-}, editorBaseModelMixin));
-//####app\controls\checkBox\checkBoxView.js
-/**
- * @class CheckBoxView
- * @augments ControlView
- * @mixes editorBaseViewMixin
- */
-var CheckBoxView = ControlView.extend(/** @lends CheckBoxView.prototype */ _.extend({}, editorBaseViewMixin, {
-
-    template: InfinniUI.Template["controls/checkBox/template/checkBox.tpl.html"],
-
-    UI: _.extend({}, editorBaseViewMixin.UI, {
-        text: '.checkbox-label',
-        input: 'input'
-    }),
-
-    events: {
-        'click input': 'onClickHandler'
-    },
-
-    initHandlersForProperties: function(){
-        ControlView.prototype.initHandlersForProperties.call(this);
-        editorBaseViewMixin.initHandlersForProperties.call(this);
-    },
-
-    updateProperties: function(){
-        ControlView.prototype.updateProperties.call(this);
-        editorBaseViewMixin.updateProperties.call(this);
-    },
-
-    updateFocusable: function () {
-        var focusable = this.model.get('focusable');
-
-        if (!focusable) {
-            this.ui.input.attr('tabindex', -1);
-        } else {
-            this.ui.input.removeAttr('tabindex');
-        }
-    },
-
-    updateText: function () {
-        var text = this.model.get('text');
-
-        this.ui.text.text(text ? text : '');
-    },
-
-    updateEnabled: function () {
-        ControlView.prototype.updateEnabled.call(this);
-        var enabled = this.model.get('enabled');
-        this.ui.input.prop('disabled', !enabled);
-    },
-
-    render: function () {
-        this.prerenderingActions();
-        this.renderTemplate(this.template);
-        this.updateProperties();
-
-        this.trigger('render');
-        this.postrenderingActions();
-        //devblockstart
-        window.InfinniUI.global.messageBus.send('render', {element: this});
-        //devblockstop
-        return this;
-    },
-
-    onClickHandler: function () {
-        var model = this.model;
-
-        var enabled = model.get('enabled');
-        if (enabled) {
-            model.set('value', !model.get('value'));
-        }
-    },
-
-    updateValue: function () {
-        var value = this.model.get('value');
-        this.ui.input.prop('checked', !!value);
-    },
-
-    setFocus: function () {
-        this.ui.input.focus();
-    }
-}));
-
 //####app\controls\comboBox\comboBoxControl.js
 function ComboBoxControl(viewMode) {
     _.superClass(ListBoxControl, this, viewMode);
@@ -14334,6 +14204,122 @@ var ComboBoxView = ListEditorBaseView.extend({
 
 });
 
+//####app\controls\checkBox\checkBoxControl.js
+function CheckBoxControl(parent) {
+    _.superClass(CheckBoxControl, this, parent);
+    this.initialize_editorBaseControl();
+}
+
+_.inherit(CheckBoxControl, Control);
+
+_.extend(CheckBoxControl.prototype, {
+
+    createControlModel: function () {
+        return new CheckBoxModel();
+    },
+
+    createControlView: function (model) {
+        return new CheckBoxView({model: model});
+    }
+}, editorBaseControlMixin);
+
+
+//####app\controls\checkBox\checkBoxModel.js
+var CheckBoxModel = ControlModel.extend( _.extend({
+
+    defaults: _.defaults({
+        value: false
+    }, ControlModel.prototype.defaults),
+
+    initialize: function () {
+        ControlModel.prototype.initialize.apply(this, arguments);
+        this.initialize_editorBaseModel();
+    }
+
+}, editorBaseModelMixin));
+//####app\controls\checkBox\checkBoxView.js
+/**
+ * @class CheckBoxView
+ * @augments ControlView
+ * @mixes editorBaseViewMixin
+ */
+var CheckBoxView = ControlView.extend(/** @lends CheckBoxView.prototype */ _.extend({}, editorBaseViewMixin, {
+
+    template: InfinniUI.Template["controls/checkBox/template/checkBox.tpl.html"],
+
+    UI: _.extend({}, editorBaseViewMixin.UI, {
+        text: '.checkbox-label',
+        input: 'input'
+    }),
+
+    events: {
+        'click input': 'onClickHandler'
+    },
+
+    initHandlersForProperties: function(){
+        ControlView.prototype.initHandlersForProperties.call(this);
+        editorBaseViewMixin.initHandlersForProperties.call(this);
+    },
+
+    updateProperties: function(){
+        ControlView.prototype.updateProperties.call(this);
+        editorBaseViewMixin.updateProperties.call(this);
+    },
+
+    updateFocusable: function () {
+        var focusable = this.model.get('focusable');
+
+        if (!focusable) {
+            this.ui.input.attr('tabindex', -1);
+        } else {
+            this.ui.input.removeAttr('tabindex');
+        }
+    },
+
+    updateText: function () {
+        var text = this.model.get('text');
+
+        this.ui.text.text(text ? text : '');
+    },
+
+    updateEnabled: function () {
+        ControlView.prototype.updateEnabled.call(this);
+        var enabled = this.model.get('enabled');
+        this.ui.input.prop('disabled', !enabled);
+    },
+
+    render: function () {
+        this.prerenderingActions();
+        this.renderTemplate(this.template);
+        this.updateProperties();
+
+        this.trigger('render');
+        this.postrenderingActions();
+        //devblockstart
+        window.InfinniUI.global.messageBus.send('render', {element: this});
+        //devblockstop
+        return this;
+    },
+
+    onClickHandler: function () {
+        var model = this.model;
+
+        var enabled = model.get('enabled');
+        if (enabled) {
+            model.set('value', !model.get('value'));
+        }
+    },
+
+    updateValue: function () {
+        var value = this.model.get('value');
+        this.ui.input.prop('checked', !!value);
+    },
+
+    setFocus: function () {
+        this.ui.input.focus();
+    }
+}));
+
 //####app\controls\contextMenu\contextMenuControl.js
 function ContextMenuControl() {
     _.superClass(ContextMenuControl, this);
@@ -14650,6 +14636,109 @@ var ExtensionPanelView = ContainerView.extend({
         this.extensionObject = new window[extensionName](context, {$el: this.$el, parameters: parameters, itemTemplate: itemTemplate, items: items, builder: builder});
     }
 });
+
+//####app\controls\frame\frameControl.js
+/**
+ *
+ * @constructor
+ * @augments Control
+ * @mixes editorBaseControlMixin
+ */
+var FrameControl = function () {
+    _.superClass(FrameControl, this);
+    this.initialize_editorBaseControl();
+};
+
+_.inherit(FrameControl, Control);
+
+_.extend(FrameControl.prototype, {
+
+    createControlModel: function () {
+        return new FrameModel();
+    },
+
+    createControlView: function (model) {
+        return new FrameView({model: model});
+    }
+
+}, editorBaseControlMixin);
+//####app\controls\frame\frameModel.js
+var FrameModel = ControlModel.extend(_.extend({
+
+    defaults: _.defaults({},
+        editorBaseModelMixin.defaults_editorBaseModel,
+        ControlModel.prototype.defaults
+    ),
+
+    initialize: function(){
+        ControlModel.prototype.initialize.apply(this, arguments);
+        this.initialize_editorBaseModel();
+    }
+}, editorBaseModelMixin));
+//####app\controls\frame\frameView.js
+/**
+ * @class FrameView
+ * @augments ControlView
+ * @mixes editorBaseViewMixin
+ */
+var FrameView = ControlView.extend(_.extend({}, editorBaseViewMixin, /** @lends FrameView.prototype */{
+
+    className: 'pl-frame',
+
+    template: InfinniUI.Template["controls/frame/template/frame.tpl.html"],
+
+    UI: _.extend({}, editorBaseViewMixin.UI, {
+        iframe: 'iframe'
+    }),
+
+    initialize: function () {
+        ControlView.prototype.initialize.apply(this);
+    },
+
+    initHandlersForProperties: function(){
+        ControlView.prototype.initHandlersForProperties.call(this);
+        editorBaseViewMixin.initHandlersForProperties.call(this);
+    },
+
+    updateProperties: function(){
+        ControlView.prototype.updateProperties.call(this);
+        editorBaseViewMixin.updateProperties.call(this);
+    },
+
+    updateValue: function(){
+        var value = this.model.get('value');
+
+        this.ui.iframe.attr('src', value);
+    },
+
+    getData: function () {
+        return _.extend(
+            {},
+            ControlView.prototype.getData.call(this),
+            editorBaseViewMixin.getData.call(this),
+            {
+
+            }
+        );
+    },
+
+    render: function () {
+        var model = this.model;
+
+        this.prerenderingActions();
+        this.renderTemplate(this.template);
+
+        this.updateProperties();
+
+        this.trigger('render');
+        this.postrenderingActions();
+        //devblockstart
+        window.InfinniUI.global.messageBus.send('render', {element: this});
+        //devblockstop
+        return this;
+    }
+
+}));
 
 //####app\controls\fileBox\fileBoxControl.js
 /**
@@ -15068,6 +15157,124 @@ var FileBoxView = ControlView.extend(/** @lends FileBoxView.prototype */ _.exten
 
 }));
 
+//####app\controls\gridPanel\gridPanelControl.js
+/**
+ *
+ * @param parent
+ * @constructor
+ * @augments ContainerControl
+ */
+function GridPanelControl(parent) {
+    _.superClass(GridPanelControl, this, parent);
+}
+
+_.inherit(GridPanelControl, ContainerControl);
+
+_.extend(GridPanelControl.prototype,
+    /** @lends GridPanelControl.prototype */
+    {
+        createControlModel: function () {
+            return new GridPanelModel();
+        },
+
+        createControlView: function (model) {
+            return new GridPanelView({model: model});
+        }
+    }
+);
+
+
+//####app\controls\gridPanel\gridPanelModel.js
+/**
+ * @constructor
+ * @augments ContainerModel
+ */
+var GridPanelModel = ContainerModel.extend(
+    /** @lends GridPanelModel.prototype */
+    {
+        initialize: function () {
+            ContainerModel.prototype.initialize.apply(this, Array.prototype.slice.call(arguments));
+        }
+    }
+);
+//####app\controls\gridPanel\gridPanelView.js
+/**
+ * @class
+ * @augments ControlView
+ */
+var GridPanelView = ContainerView.extend(
+    /** @lends GridPanelView.prototype */
+    {
+        className: 'pl-grid-panel pl-clearfix',
+
+        columnCount: 12,
+
+        template: {
+            row: InfinniUI.Template["controls/gridPanel/template/row.tpl.html"]
+        },
+
+        initialize: function (options) {
+            ContainerView.prototype.initialize.call(this, options);
+        },
+
+        render: function () {
+            this.prerenderingActions();
+
+            this.removeChildElements();
+
+            this.renderItemsContents();
+            this.updateProperties();
+            this.trigger('render');
+
+            this.postrenderingActions();
+            //devblockstart
+            window.InfinniUI.global.messageBus.send('render', {element: this});
+            //devblockstop
+            return this;
+        },
+
+        renderItemsContents: function(){
+            var items = this.model.get('items'),
+                itemTemplate = this.model.get('itemTemplate'),
+                view = this,
+                row = [],
+                rowSize = 0,
+                element, item;
+
+            //this.$el.hide();
+            items.forEach(function(item, i){
+                element = itemTemplate(undefined, {item: item, index: i});
+                var span = element.getColumnSpan();
+                if (rowSize + span > view.columnCount) {
+                    view.renderRow(row);
+                    row.length = 0;
+                    rowSize = 0;
+                }
+
+                row.push(element);
+                rowSize += span;
+            });
+
+            if (row.length) {
+                view.renderRow(row);
+            }
+            //this.$el.show();
+        },
+
+        renderRow: function (row) {
+            var view = this;
+            var $row = $(this.template.row());
+            $row.append(row.map(function(element) {
+                view.addChildElement(element);
+                return element.render();
+            }));
+            this.$el.append($row);
+        },
+
+        updateGrouping: function(){}
+    }
+);
+
 //####app\controls\form\formControl.js
 function FormControl(parent) {
 	_.superClass(FormControl, this, parent);
@@ -15205,227 +15412,6 @@ var FormView = StackPanelView.extend({
 	}
 
 });
-
-//####app\controls\frame\frameControl.js
-/**
- *
- * @constructor
- * @augments Control
- * @mixes editorBaseControlMixin
- */
-var FrameControl = function () {
-    _.superClass(FrameControl, this);
-    this.initialize_editorBaseControl();
-};
-
-_.inherit(FrameControl, Control);
-
-_.extend(FrameControl.prototype, {
-
-    createControlModel: function () {
-        return new FrameModel();
-    },
-
-    createControlView: function (model) {
-        return new FrameView({model: model});
-    }
-
-}, editorBaseControlMixin);
-//####app\controls\frame\frameModel.js
-var FrameModel = ControlModel.extend(_.extend({
-
-    defaults: _.defaults({},
-        editorBaseModelMixin.defaults_editorBaseModel,
-        ControlModel.prototype.defaults
-    ),
-
-    initialize: function(){
-        ControlModel.prototype.initialize.apply(this, arguments);
-        this.initialize_editorBaseModel();
-    }
-}, editorBaseModelMixin));
-//####app\controls\frame\frameView.js
-/**
- * @class FrameView
- * @augments ControlView
- * @mixes editorBaseViewMixin
- */
-var FrameView = ControlView.extend(_.extend({}, editorBaseViewMixin, /** @lends FrameView.prototype */{
-
-    className: 'pl-frame',
-
-    template: InfinniUI.Template["controls/frame/template/frame.tpl.html"],
-
-    UI: _.extend({}, editorBaseViewMixin.UI, {
-        iframe: 'iframe'
-    }),
-
-    initialize: function () {
-        ControlView.prototype.initialize.apply(this);
-    },
-
-    initHandlersForProperties: function(){
-        ControlView.prototype.initHandlersForProperties.call(this);
-        editorBaseViewMixin.initHandlersForProperties.call(this);
-    },
-
-    updateProperties: function(){
-        ControlView.prototype.updateProperties.call(this);
-        editorBaseViewMixin.updateProperties.call(this);
-    },
-
-    updateValue: function(){
-        var value = this.model.get('value');
-
-        this.ui.iframe.attr('src', value);
-    },
-
-    getData: function () {
-        return _.extend(
-            {},
-            ControlView.prototype.getData.call(this),
-            editorBaseViewMixin.getData.call(this),
-            {
-
-            }
-        );
-    },
-
-    render: function () {
-        var model = this.model;
-
-        this.prerenderingActions();
-        this.renderTemplate(this.template);
-
-        this.updateProperties();
-
-        this.trigger('render');
-        this.postrenderingActions();
-        //devblockstart
-        window.InfinniUI.global.messageBus.send('render', {element: this});
-        //devblockstop
-        return this;
-    }
-
-}));
-
-//####app\controls\gridPanel\gridPanelControl.js
-/**
- *
- * @param parent
- * @constructor
- * @augments ContainerControl
- */
-function GridPanelControl(parent) {
-    _.superClass(GridPanelControl, this, parent);
-}
-
-_.inherit(GridPanelControl, ContainerControl);
-
-_.extend(GridPanelControl.prototype,
-    /** @lends GridPanelControl.prototype */
-    {
-        createControlModel: function () {
-            return new GridPanelModel();
-        },
-
-        createControlView: function (model) {
-            return new GridPanelView({model: model});
-        }
-    }
-);
-
-
-//####app\controls\gridPanel\gridPanelModel.js
-/**
- * @constructor
- * @augments ContainerModel
- */
-var GridPanelModel = ContainerModel.extend(
-    /** @lends GridPanelModel.prototype */
-    {
-        initialize: function () {
-            ContainerModel.prototype.initialize.apply(this, Array.prototype.slice.call(arguments));
-        }
-    }
-);
-//####app\controls\gridPanel\gridPanelView.js
-/**
- * @class
- * @augments ControlView
- */
-var GridPanelView = ContainerView.extend(
-    /** @lends GridPanelView.prototype */
-    {
-        className: 'pl-grid-panel pl-clearfix',
-
-        columnCount: 12,
-
-        template: {
-            row: InfinniUI.Template["controls/gridPanel/template/row.tpl.html"]
-        },
-
-        initialize: function (options) {
-            ContainerView.prototype.initialize.call(this, options);
-        },
-
-        render: function () {
-            this.prerenderingActions();
-
-            this.removeChildElements();
-
-            this.renderItemsContents();
-            this.updateProperties();
-            this.trigger('render');
-
-            this.postrenderingActions();
-            //devblockstart
-            window.InfinniUI.global.messageBus.send('render', {element: this});
-            //devblockstop
-            return this;
-        },
-
-        renderItemsContents: function(){
-            var items = this.model.get('items'),
-                itemTemplate = this.model.get('itemTemplate'),
-                view = this,
-                row = [],
-                rowSize = 0,
-                element, item;
-
-            //this.$el.hide();
-            items.forEach(function(item, i){
-                element = itemTemplate(undefined, {item: item, index: i});
-                var span = element.getColumnSpan();
-                if (rowSize + span > view.columnCount) {
-                    view.renderRow(row);
-                    row.length = 0;
-                    rowSize = 0;
-                }
-
-                row.push(element);
-                rowSize += span;
-            });
-
-            if (row.length) {
-                view.renderRow(row);
-            }
-            //this.$el.show();
-        },
-
-        renderRow: function (row) {
-            var view = this;
-            var $row = $(this.template.row());
-            $row.append(row.map(function(element) {
-                view.addChildElement(element);
-                return element.render();
-            }));
-            this.$el.append($row);
-        },
-
-        updateGrouping: function(){}
-    }
-);
 
 //####app\controls\icon\iconControl.js
 /**
@@ -15859,6 +15845,47 @@ var IndeterminateCheckBoxView = CheckBoxView.extend({
 	}
 });
 
+//####app\controls\loaderIndicator\loaderIndicator.js
+(function () {
+    var template = InfinniUI.Template["controls/loaderIndicator/template.tpl.html"];
+
+    InfinniUI.loaderIndicator = {
+        show: function(){
+            $.blockUI({
+                message: $(template()),
+                ignoreIfBlocked: true,
+                baseZ: 99999
+            });
+        },
+        hide: function(){
+            $.unblockUI();
+        }
+    };
+
+    if (!InfinniUI.config.useLoaderIndicator) {
+        return;
+    }
+
+    jQuery(function () {
+        var $indicator = $(template());
+        $('body').append($indicator);
+        $.blockUI.defaults.css = {};
+        $(document).ajaxStart(function () {
+                $.blockUI({
+                    message: $indicator,
+                    ignoreIfBlocked: true,
+                    baseZ: 99999
+                });
+            })
+            .ajaxStop(function () {
+                $.unblockUI();
+            })
+            .ajaxError(function () {
+                $.unblockUI();
+            });
+    });
+
+})();
 //####app\controls\link\linkElementControl.js
 /**
  *
@@ -15964,47 +15991,6 @@ var LinkElementView = CommonButtonView.extend({
 
 });
 
-//####app\controls\loaderIndicator\loaderIndicator.js
-(function () {
-    var template = InfinniUI.Template["controls/loaderIndicator/template.tpl.html"];
-
-    InfinniUI.loaderIndicator = {
-        show: function(){
-            $.blockUI({
-                message: $(template()),
-                ignoreIfBlocked: true,
-                baseZ: 99999
-            });
-        },
-        hide: function(){
-            $.unblockUI();
-        }
-    };
-
-    if (!InfinniUI.config.useLoaderIndicator) {
-        return;
-    }
-
-    jQuery(function () {
-        var $indicator = $(template());
-        $('body').append($indicator);
-        $.blockUI.defaults.css = {};
-        $(document).ajaxStart(function () {
-                $.blockUI({
-                    message: $indicator,
-                    ignoreIfBlocked: true,
-                    baseZ: 99999
-                });
-            })
-            .ajaxStop(function () {
-                $.unblockUI();
-            })
-            .ajaxError(function () {
-                $.unblockUI();
-            });
-    });
-
-})();
 //####app\controls\menuBar\menuBarControl.js
 /**
  *
@@ -16103,217 +16089,6 @@ var MenuBarView = ContainerView.extend(
         updateGrouping: function(){}
     }
 );
-
-//####app\controls\numericBox\numericBoxControl.js
-/**
- *
- * @param parent
- * @constructor
- * @augments TextEditorBaseControl
- */
-function NumericBoxControl(parent) {
-    _.superClass(NumericBoxControl, this, parent);
-}
-
-_.inherit(NumericBoxControl, TextEditorBaseControl);
-
-_.extend(NumericBoxControl.prototype, {
-
-    createControlModel: function () {
-        return new NumericBoxModel();
-    },
-
-    createControlView: function (model) {
-        return new NumericBoxView({model: model});
-    }
-});
-
-
-//####app\controls\numericBox\numericBoxModel.js
-/**
- * @class
- * @augments TextEditorBaseModel
- */
-var NumericBoxModel = TextEditorBaseModel.extend(/** @lends TextBoxModel.prototype */{
-    defaults: _.defaults(
-        {
-            increment: 1,
-            inputType: 'number'
-        },
-        TextEditorBaseModel.prototype.defaults
-    ),
-
-    incValue: function () {
-        var delta = this.get('increment');
-        this.addToValue(delta);
-    },
-
-    decValue: function () {
-        var delta = this.get('increment');
-        this.addToValue(-delta);
-    },
-
-    addToValue: function (delta) {
-
-        var value = this.get('value');
-        var startValue = this.get('startValue');
-        var minValue = this.get('minValue');
-        var maxValue = this.get('maxValue');
-
-        var newValue = _.isNumber(value) ? value : +value;
-
-        if (this.isSetValue(value) && _.isNumber(value)) {
-            newValue += delta;
-        } else {
-            newValue = (_.isNumber(startValue)) ? startValue : 0;
-        }
-
-        if (_.isNumber(minValue) && newValue < minValue) {
-            newValue = minValue;
-        } else if (_.isNumber(maxValue) && newValue > maxValue) {
-            newValue = maxValue;
-        }
-
-        this.set('value', newValue);
-    },
-
-    initialize: function () {
-        TextEditorBaseModel.prototype.initialize.apply(this, Array.prototype.slice.call(arguments));
-    },
-
-    validateValue: function (value, callback) {
-
-        var
-            isValid = true,
-            min = this.get('minValue'),
-            max = this.get('maxValue');
-
-        if (!this.isSetValue(value)) {
-            return true;
-        }
-
-        if (_.isNumber(min) && _.isNumber(max)) {
-            if (value < min || value > max) {
-                isValid = false
-            }
-        } else if (_.isNumber(min) && value < min) {
-            isValid = false;
-        } else if (_.isNumber(max) && value > max) {
-            isValid = false;
-        }
-
-        return isValid;
-    }
-
-
-});
-//####app\controls\numericBox\numericBoxView.js
-/**
- * @class
- * @augments TextEditorBaseView
- */
-var NumericBoxView = TextEditorBaseView.extend(/** @lends TextBoxView.prototype */{
-
-    className: "pl-numericbox form-group",
-
-    template: InfinniUI.Template["controls/numericBox/template/numericBox.tpl.html"],
-
-    UI: _.extend({}, TextEditorBaseView.prototype.UI, {
-        min: '.pl-numeric-box-min',
-        max: '.pl-numeric-box-max'
-    }),
-
-    events: _.extend({}, TextEditorBaseView.prototype.events, {
-        'click .pl-numeric-box-min': 'onClickMinControlHandler',
-        'click .pl-numeric-box-max': 'onClickMaxControlHandler',
-        'mousedown .pl-numeric-box-min': 'onMousedownMinControlHandler',
-        'mousedown .pl-numeric-box-max': 'onMousedownMaxControlHandler'
-    }),
-
-    render: function () {
-        this.prerenderingActions();
-        this.renderTemplate(this.template);
-        this.renderNumericBoxEditor();
-        this.updateProperties();
-        this.trigger('render');
-        this.postrenderingActions();
-        //devblockstart
-        window.InfinniUI.global.messageBus.send('render', {element: this});
-        //devblockstop
-        return this;
-    },
-
-    getData: function () {
-        var
-            model = this.model;
-
-        return _.extend({},
-            TextEditorBaseView.prototype.getData.call(this), {
-                minValue: model.get('minValue'),
-                maxValue: model.get('maxValue'),
-                increment: model.get('increment')
-            });
-    },
-
-    renderNumericBoxEditor: function () {
-        this.renderControlEditor();
-    },
-
-    onChangeEnabledHandler: function (model, value) {
-        this.ui.control.prop('disabled', !value);
-        this.ui.min.prop('disabled', !value);
-        this.ui.max.prop('disabled', !value);
-    },
-
-    onClickMinControlHandler: function () {
-        if (this.canChangeValue()) {
-            this.model.decValue();
-        }
-    },
-
-    onClickMaxControlHandler: function () {
-        if (this.canChangeValue()) {
-            this.model.incValue();
-        }
-    },
-
-    onMousedownMinControlHandler: function (event) {
-        if (this.canChangeValue()) {
-            this.repeatUpdateValue(this.model.decValue.bind(this.model));
-        }
-    },
-
-    onMousedownMaxControlHandler: function (event) {
-        if (this.canChangeValue()) {
-            this.repeatUpdateValue(this.model.incValue.bind(this.model));
-        }
-    },
-
-    repeatUpdateValue: function (cb) {
-        var intervalId;
-
-        window.document.addEventListener('mouseup', stopRepeat);
-
-        intervalId = setInterval(cb, 200);
-
-        function stopRepeat() {
-            if (intervalId) {
-                clearInterval(intervalId);
-                intervalId = null;
-            }
-            window.document.removeEventListener('mouseup', stopRepeat);
-        }
-
-    },
-
-    canChangeValue: function () {
-        var model = this.model,
-            enabled = model.get('enabled');
-
-        return enabled === true;
-    }
-
-});
 
 //####app\controls\panel\panelControl.js
 /**
@@ -16568,6 +16343,217 @@ var PanelView = ContainerView.extend(/** @lends PanelView.prototype */ {
         } else {
             this.onEventCallback();
         }
+    }
+
+});
+
+//####app\controls\numericBox\numericBoxControl.js
+/**
+ *
+ * @param parent
+ * @constructor
+ * @augments TextEditorBaseControl
+ */
+function NumericBoxControl(parent) {
+    _.superClass(NumericBoxControl, this, parent);
+}
+
+_.inherit(NumericBoxControl, TextEditorBaseControl);
+
+_.extend(NumericBoxControl.prototype, {
+
+    createControlModel: function () {
+        return new NumericBoxModel();
+    },
+
+    createControlView: function (model) {
+        return new NumericBoxView({model: model});
+    }
+});
+
+
+//####app\controls\numericBox\numericBoxModel.js
+/**
+ * @class
+ * @augments TextEditorBaseModel
+ */
+var NumericBoxModel = TextEditorBaseModel.extend(/** @lends TextBoxModel.prototype */{
+    defaults: _.defaults(
+        {
+            increment: 1,
+            inputType: 'number'
+        },
+        TextEditorBaseModel.prototype.defaults
+    ),
+
+    incValue: function () {
+        var delta = this.get('increment');
+        this.addToValue(delta);
+    },
+
+    decValue: function () {
+        var delta = this.get('increment');
+        this.addToValue(-delta);
+    },
+
+    addToValue: function (delta) {
+
+        var value = this.get('value');
+        var startValue = this.get('startValue');
+        var minValue = this.get('minValue');
+        var maxValue = this.get('maxValue');
+
+        var newValue = _.isNumber(value) ? value : +value;
+
+        if (this.isSetValue(value) && _.isNumber(value)) {
+            newValue += delta;
+        } else {
+            newValue = (_.isNumber(startValue)) ? startValue : 0;
+        }
+
+        if (_.isNumber(minValue) && newValue < minValue) {
+            newValue = minValue;
+        } else if (_.isNumber(maxValue) && newValue > maxValue) {
+            newValue = maxValue;
+        }
+
+        this.set('value', newValue);
+    },
+
+    initialize: function () {
+        TextEditorBaseModel.prototype.initialize.apply(this, Array.prototype.slice.call(arguments));
+    },
+
+    validateValue: function (value, callback) {
+
+        var
+            isValid = true,
+            min = this.get('minValue'),
+            max = this.get('maxValue');
+
+        if (!this.isSetValue(value)) {
+            return true;
+        }
+
+        if (_.isNumber(min) && _.isNumber(max)) {
+            if (value < min || value > max) {
+                isValid = false
+            }
+        } else if (_.isNumber(min) && value < min) {
+            isValid = false;
+        } else if (_.isNumber(max) && value > max) {
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+
+});
+//####app\controls\numericBox\numericBoxView.js
+/**
+ * @class
+ * @augments TextEditorBaseView
+ */
+var NumericBoxView = TextEditorBaseView.extend(/** @lends TextBoxView.prototype */{
+
+    className: "pl-numericbox form-group",
+
+    template: InfinniUI.Template["controls/numericBox/template/numericBox.tpl.html"],
+
+    UI: _.extend({}, TextEditorBaseView.prototype.UI, {
+        min: '.pl-numeric-box-min',
+        max: '.pl-numeric-box-max'
+    }),
+
+    events: _.extend({}, TextEditorBaseView.prototype.events, {
+        'click .pl-numeric-box-min': 'onClickMinControlHandler',
+        'click .pl-numeric-box-max': 'onClickMaxControlHandler',
+        'mousedown .pl-numeric-box-min': 'onMousedownMinControlHandler',
+        'mousedown .pl-numeric-box-max': 'onMousedownMaxControlHandler'
+    }),
+
+    render: function () {
+        this.prerenderingActions();
+        this.renderTemplate(this.template);
+        this.renderNumericBoxEditor();
+        this.updateProperties();
+        this.trigger('render');
+        this.postrenderingActions();
+        //devblockstart
+        window.InfinniUI.global.messageBus.send('render', {element: this});
+        //devblockstop
+        return this;
+    },
+
+    getData: function () {
+        var
+            model = this.model;
+
+        return _.extend({},
+            TextEditorBaseView.prototype.getData.call(this), {
+                minValue: model.get('minValue'),
+                maxValue: model.get('maxValue'),
+                increment: model.get('increment')
+            });
+    },
+
+    renderNumericBoxEditor: function () {
+        this.renderControlEditor();
+    },
+
+    onChangeEnabledHandler: function (model, value) {
+        this.ui.control.prop('disabled', !value);
+        this.ui.min.prop('disabled', !value);
+        this.ui.max.prop('disabled', !value);
+    },
+
+    onClickMinControlHandler: function () {
+        if (this.canChangeValue()) {
+            this.model.decValue();
+        }
+    },
+
+    onClickMaxControlHandler: function () {
+        if (this.canChangeValue()) {
+            this.model.incValue();
+        }
+    },
+
+    onMousedownMinControlHandler: function (event) {
+        if (this.canChangeValue()) {
+            this.repeatUpdateValue(this.model.decValue.bind(this.model));
+        }
+    },
+
+    onMousedownMaxControlHandler: function (event) {
+        if (this.canChangeValue()) {
+            this.repeatUpdateValue(this.model.incValue.bind(this.model));
+        }
+    },
+
+    repeatUpdateValue: function (cb) {
+        var intervalId;
+
+        window.document.addEventListener('mouseup', stopRepeat);
+
+        intervalId = setInterval(cb, 200);
+
+        function stopRepeat() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+            window.document.removeEventListener('mouseup', stopRepeat);
+        }
+
+    },
+
+    canChangeValue: function () {
+        var model = this.model,
+            enabled = model.get('enabled');
+
+        return enabled === true;
     }
 
 });
@@ -17137,6 +17123,82 @@ var ToolBarView = ContainerView.extend({
     updateGrouping: function(){}
 });
 
+//####app\controls\viewPanel\viewPanelControl.js
+var ViewPanelControl = function () {
+    _.superClass(ViewPanelControl, this);
+};
+
+_.inherit(ViewPanelControl, Control);
+
+ViewPanelControl.prototype.createControlModel = function () {
+    return new ViewPanelModel();
+};
+
+ViewPanelControl.prototype.createControlView = function (model) {
+    return new ViewPanelView({model: model});
+};
+//####app\controls\viewPanel\viewPanelModel.js
+var ViewPanelModel = ControlModel.extend({
+    defaults: _.defaults({
+        layout: null
+    }, ControlModel.prototype.defaults),
+
+    initialize: function(){
+        var that = this;
+
+        ControlModel.prototype.initialize.apply(this);
+
+        this.once('change:layout', function (model, layout) {
+            if(layout && layout.onLoaded){
+                that.subscribeOnLoaded();
+            }
+        });
+    },
+
+    subscribeOnLoaded: function(){
+        var that = this;
+        var layout = this.get('layout');
+
+        layout.onLoaded(function(){
+            that.set('isLoaded', true);
+        });
+    }
+});
+//####app\controls\viewPanel\viewPanelView.js
+var ViewPanelView = ControlView.extend({
+    className: 'pl-view-panel',
+
+    initialize: function () {
+        ControlView.prototype.initialize.apply(this);
+        this.listenTo(this.model, 'change:layout', this.onChangeLayoutHandler);
+    },
+
+    onChangeLayoutHandler: function (model, layout) {
+        this.$el.empty();
+        if(layout){
+            this.$el.append(layout.render());
+        }
+    },
+
+    render: function () {
+        this.prerenderingActions();
+
+        var layout = this.model.get('layout');
+
+        if(layout){
+            this.$el.append(layout.render());
+        }
+
+        this.updateProperties();
+        this.trigger('render');
+
+        this.postrenderingActions(false);
+        //devblockstart
+        window.InfinniUI.global.messageBus.send('render', {element: this});
+        //devblockstop
+        return this;
+    }
+});
 //####app\controls\view\viewControl.js
 /**
  *
@@ -17240,82 +17302,6 @@ var ViewView = ContainerView.extend(
     }
 );
 
-//####app\controls\viewPanel\viewPanelControl.js
-var ViewPanelControl = function () {
-    _.superClass(ViewPanelControl, this);
-};
-
-_.inherit(ViewPanelControl, Control);
-
-ViewPanelControl.prototype.createControlModel = function () {
-    return new ViewPanelModel();
-};
-
-ViewPanelControl.prototype.createControlView = function (model) {
-    return new ViewPanelView({model: model});
-};
-//####app\controls\viewPanel\viewPanelModel.js
-var ViewPanelModel = ControlModel.extend({
-    defaults: _.defaults({
-        layout: null
-    }, ControlModel.prototype.defaults),
-
-    initialize: function(){
-        var that = this;
-
-        ControlModel.prototype.initialize.apply(this);
-
-        this.once('change:layout', function (model, layout) {
-            if(layout && layout.onLoaded){
-                that.subscribeOnLoaded();
-            }
-        });
-    },
-
-    subscribeOnLoaded: function(){
-        var that = this;
-        var layout = this.get('layout');
-
-        layout.onLoaded(function(){
-            that.set('isLoaded', true);
-        });
-    }
-});
-//####app\controls\viewPanel\viewPanelView.js
-var ViewPanelView = ControlView.extend({
-    className: 'pl-view-panel',
-
-    initialize: function () {
-        ControlView.prototype.initialize.apply(this);
-        this.listenTo(this.model, 'change:layout', this.onChangeLayoutHandler);
-    },
-
-    onChangeLayoutHandler: function (model, layout) {
-        this.$el.empty();
-        if(layout){
-            this.$el.append(layout.render());
-        }
-    },
-
-    render: function () {
-        this.prerenderingActions();
-
-        var layout = this.model.get('layout');
-
-        if(layout){
-            this.$el.append(layout.render());
-        }
-
-        this.updateProperties();
-        this.trigger('render');
-
-        this.postrenderingActions(false);
-        //devblockstart
-        window.InfinniUI.global.messageBus.send('render', {element: this});
-        //devblockstop
-        return this;
-    }
-});
 //####app\data\dataSource\_mixins\dataSourceValidationNotifierMixin.js
 /**
  *
@@ -17490,7 +17476,10 @@ var BaseDataSource = Backbone.Model.extend({
     },
 
     onProviderError: function (handler) {
+        this.off('onProviderError');
         this.on('onProviderError', handler);
+
+        this.onProviderErrorHandler = handler;
     },
 
     getName: function () {
@@ -17816,8 +17805,7 @@ var BaseDataSource = Backbone.Model.extend({
             ds = this,
             logger = window.InfinniUI.global.logger,
             that = this,
-            validateResult,
-            errorInProvider = this._compensateOnErrorOfProviderHandler.bind(this, error);
+            validateResult;
 
         if (!this.isModified(item)) {
             this._notifyAboutItemSaved({item: item, result: null}, 'notModified');
@@ -17844,7 +17832,8 @@ var BaseDataSource = Backbone.Model.extend({
         }, function(data) {
             var result = that._getValidationResult(data);
             that._notifyAboutValidation(result, 'error');
-            that._executeCallback(errorInProvider, {item: item, result: result});
+            that._executeCallback(error, {item: item, result: result, data: data});
+            that.trigger('onProviderError', {item: item, data: data});
         });
     },
 
@@ -17876,8 +17865,7 @@ var BaseDataSource = Backbone.Model.extend({
         var dataProvider = this.get('dataProvider'),
             that = this,
             itemId = this.idOfItem(item),
-            isItemInSet = this.get('itemsById')[itemId] !== undefined,
-            errorInProvider = this._compensateOnErrorOfProviderHandler.bind(this, error);
+            isItemInSet = this.get('itemsById')[itemId] !== undefined;
 
         if ( item == null || ( itemId !== undefined && !isItemInSet ) ) {
             this._notifyAboutMissingDeletedItem(item, error);
@@ -17897,7 +17885,8 @@ var BaseDataSource = Backbone.Model.extend({
         }, function(data) {
             var result = that._getValidationResult(data);
             that._notifyAboutValidation(result, 'error');
-            that._executeCallback(errorInProvider, {item: item, result: result});
+            that._executeCallback(error, {item: item, result: result, data: data});
+            that.trigger('onProviderError', {item: item, data: data});
         });
     },
 
@@ -17967,6 +17956,7 @@ var BaseDataSource = Backbone.Model.extend({
                 },
                 function (data) {
                     that._onErrorProviderUpdateItemsHandle(data, onError);
+                    that.trigger('onProviderError', {data: data});
                 }
             );
 
@@ -18003,12 +17993,7 @@ var BaseDataSource = Backbone.Model.extend({
         var handlers = this.get('waitingOnUpdateItemsHandlers'),
             context = this.getContext();
 
-        if( handlers.length == 0 && !_.isFunction(callback) ){
-            this._compensateOnErrorOfProviderHandler(data);
-            return;
-        }
-
-        // вызываем обработчики которые были переданы на отложенных updateItems (из за замороженного источника)
+        // вызываем обработчики которые были переданы на отложенных updateItems (из-за замороженного источника)
         for(var i = 0, ii = handlers.length; i < ii; i++){
             if(handlers[i].onError){
                 handlers[i].onError(context, data);
@@ -18020,10 +18005,6 @@ var BaseDataSource = Backbone.Model.extend({
         if(_.isFunction(callback)) {
             callback(context, data);
         }
-    },
-
-    _compensateOnErrorOfProviderHandler: function(){
-        this.trigger('onProviderError', arguments);
     },
 
     setIsWaiting: function(value){
@@ -19250,7 +19231,7 @@ _.extend(RestDataSourceBuilder.prototype, {
         var tmpParams;
 
         if ( metadata['OnProviderError'] == null ) {
-            this.initProviderErrorHandling(dataSource);
+            dataSource.onProviderError( this._getCompensateProviderErrorHandler() );
         }
 
         if('GettingParams' in metadata){
@@ -19334,12 +19315,12 @@ _.extend(RestDataSourceBuilder.prototype, {
         }
     },
 
-    initProviderErrorHandling: function(dataSource){
-        dataSource.onProviderError(function(){
+    _getCompensateProviderErrorHandler: function(dataSource){
+        return function(){
             var exchange = window.InfinniUI.global.messageBus;
             exchange.send(messageTypes.onNotifyUser, {messageText: 'Ошибка на сервере', messageType: "error"});
 
-        });
+        };
     }
 });
 
@@ -19907,7 +19888,7 @@ _.extend(Element.prototype, {
 
         if (this.parent && this.parent.removeChild && !isInitiatedByParent) {
             if(this.parent.isRemoved){
-                logger.warn('Element.remove: Попытка удалить элемент из родителя, который помечан как удаленный');
+                logger.warn('Element.remove: Попытка удалить элемент из родителя, который помечен как удаленный');
             }else{
                 this.parent.removeChild(this);
             }
@@ -22739,53 +22720,6 @@ _.extend(ComboBoxBuilder.prototype, /** @lends ComboBoxBuilder.prototype */{
     }
 });
 
-//####app\elements\contextMenu\contextMenu.js
-/**
- * @class
- * @constructor
- * @arguments Container
- */
-function ContextMenu(parent) {
-    _.superClass(ContextMenu, this, parent);
-}
-
-window.InfinniUI.ContextMenu = ContextMenu;
-
-_.inherit(ContextMenu, Container);
-
-_.extend(ContextMenu.prototype, {
-
-    createControl: function () {
-        return new ContextMenuControl();
-    }
-
-});
-
-//####app\elements\contextMenu\contextMenuBuilder.js
-/**
- * @constructor
- * @arguments ContainerBuilder
- */
-function ContextMenuBuilder() {
-	_.superClass(ContextMenuBuilder, this);
-}
-
-window.InfinniUI.ContextMenuBuilder = ContextMenuBuilder;
-
-_.inherit(ContextMenuBuilder, ContainerBuilder);
-
-_.extend(ContextMenuBuilder.prototype, /** @lends ContextMenuBuilder.prototype */{
-
-	createElement: function (params) {
-		return new ContextMenu(params.parent);
-	},
-
-	applyMetadata: function (params) {
-		ContainerBuilder.prototype.applyMetadata.call(this, params);
-	}
-
-});
-
 //####app\elements\dataGrid\dataGrid.js
 function DataGrid(parent) {
     _.superClass(DataGrid, this, parent);
@@ -22958,12 +22892,15 @@ _.extend(DataGridBuilder.prototype, /** @lends DataGridBuilder.prototype */{
 
             var columns = dataGrid.getColumns();
 
-            var cellItemTemplates = columns.toArray().map(function (column, index) {
+            var cellElements = columns.toArray().map(function (column, index) {
                 var cellTemplate = column.getCellTemplate();
                 var template = cellTemplate(itemsBinding);
-                return template.bind(column, context, args);
+                var cellEl = template(context, args);
+
+                row.addChild(cellEl);
+                return cellEl;
             });
-            row.setCellTemplates(cellItemTemplates);
+            row.setCellElements(cellElements);
             row.setMultiSelect(dataGrid.getMultiSelect());
             row.setShowSelectors(dataGrid.getShowSelectors());
             return row;
@@ -23563,6 +23500,53 @@ _.extend(DataNavigationBuilder.prototype, {
 
 });
 
+//####app\elements\contextMenu\contextMenu.js
+/**
+ * @class
+ * @constructor
+ * @arguments Container
+ */
+function ContextMenu(parent) {
+    _.superClass(ContextMenu, this, parent);
+}
+
+window.InfinniUI.ContextMenu = ContextMenu;
+
+_.inherit(ContextMenu, Container);
+
+_.extend(ContextMenu.prototype, {
+
+    createControl: function () {
+        return new ContextMenuControl();
+    }
+
+});
+
+//####app\elements\contextMenu\contextMenuBuilder.js
+/**
+ * @constructor
+ * @arguments ContainerBuilder
+ */
+function ContextMenuBuilder() {
+	_.superClass(ContextMenuBuilder, this);
+}
+
+window.InfinniUI.ContextMenuBuilder = ContextMenuBuilder;
+
+_.inherit(ContextMenuBuilder, ContainerBuilder);
+
+_.extend(ContextMenuBuilder.prototype, /** @lends ContextMenuBuilder.prototype */{
+
+	createElement: function (params) {
+		return new ContextMenu(params.parent);
+	},
+
+	applyMetadata: function (params) {
+		ContainerBuilder.prototype.applyMetadata.call(this, params);
+	}
+
+});
+
 //####app\elements\divider\divider.js
 /**
  *
@@ -23677,6 +23661,157 @@ _.extend(ExtensionPanelBuilder.prototype, {
         return element;
     }
 });
+
+//####app\elements\form\form.js
+/**
+ *
+ * @param parent
+ * @constructor
+ * @augment StackPanel
+ */
+function Form(parent) {
+	_.superClass(Form, this, parent);
+}
+
+window.InfinniUI.Form = Form;
+
+_.inherit(Form, StackPanel);
+
+Form.prototype.createControl = function (parent) {
+	return new FormControl(parent);
+};
+
+Form.prototype.onSubmit = function (handler) {
+	var that = this,
+			callback = function (nativeEventData) {
+				handler(nativeEventData);
+			};
+	return this.control.onSubmit(callback);
+};
+
+Form.prototype.setSubmitFunction = function(func) {
+	this.control.setSubmitFunction(func);
+};
+
+Form.prototype.getSubmitFunction = function() {
+	return this.control.getSubmitFunction();
+};
+
+Form.prototype.setMethod = function(method) {
+	this.control.setMethod(method);
+};
+
+Form.prototype.getMethod = function() {
+	return this.control.getMethod();
+};
+
+Form.prototype.setAction = function(action) {
+	this.control.setAction(action);
+};
+
+Form.prototype.getAction = function() {
+	return this.control.getAction();
+};
+
+//####app\elements\form\formBuilder.js
+/**
+ *
+ * @constructor
+ * @augments StackPanelBuilder
+ */
+function FormBuilder() {
+	_.superClass(FormBuilder, this);
+}
+
+window.InfinniUI.FormBuilder = FormBuilder;
+
+_.inherit(FormBuilder, StackPanelBuilder);
+
+_.extend(FormBuilder.prototype, {
+
+	createElement: function (params) {
+		return new Form(params.parent);
+	},
+
+	applyMetadata: function(params) {
+		var element = params.element,
+				metadata = params.metadata;
+		StackPanelBuilder.prototype.applyMetadata.call(this, params);
+
+		if( metadata.OnSubmit ) {
+			element.onSubmit(function() {
+				return new ScriptExecutor(element.getScriptsStorage()).executeScript(metadata.OnSubmit.Name || metadata.OnSubmit);
+			});
+		}
+
+		if( metadata.Method ) {
+			element.setMethod(metadata.Method);
+		}
+
+		if( metadata.Action ) {
+			element.setAction(metadata.Action);
+		}
+	}
+});
+
+//####app\elements\frame\frame.js
+/**
+ *
+ * @constructor
+ * @augments Element
+ * @mixes editorBaseMixin
+ */
+function Frame() {
+    _.superClass(Frame, this);
+    this.initialize_editorBase();
+}
+
+window.InfinniUI.Frame = Frame;
+
+_.inherit(Frame, Element);
+
+_.extend(Frame.prototype, {
+
+        createControl: function () {
+            return new FrameControl();
+        }
+
+    },
+    editorBaseMixin
+);
+
+//####app\elements\frame\frameBuilder.js
+/**
+ *
+ * @constructor
+ * @augments TextEditorBaseBuilder
+ * @mixes displayFormatBuilderMixin
+ * @mixes editorBaseBuilderMixin
+ */
+function FrameBuilder() {
+    _.superClass(TextEditorBaseBuilder, this);
+    this.initialize_editorBaseBuilder();
+}
+
+window.InfinniUI.FrameBuilder = FrameBuilder;
+
+_.inherit(FrameBuilder, TextEditorBaseBuilder);
+
+_.extend(FrameBuilder.prototype, {
+        applyMetadata: function(params){
+            var element = params.element;
+            ElementBuilder.prototype.applyMetadata.call(this, params);
+            this.applyMetadata_editorBaseBuilder(params);
+        },
+
+        createElement: function(params){
+            var element = new Frame(params.parent);
+            return element;
+        }
+
+    },
+    editorBaseBuilderMixin
+);
 
 //####app\elements\fileBox\fileBox.js
 /**
@@ -23892,156 +24027,57 @@ FileBoxValueConverter.prototype.toElement = function (context, args) {
     return url;
 };
 
-//####app\elements\form\form.js
-/**
- *
- * @param parent
- * @constructor
- * @augment StackPanel
- */
-function Form(parent) {
-	_.superClass(Form, this, parent);
+//####app\elements\icon\icon.js
+function Icon(parent) {
+    _.superClass(Icon, this, parent);
 }
 
-window.InfinniUI.Form = Form;
+window.InfinniUI.Icon = Icon;
 
-_.inherit(Form, StackPanel);
+_.inherit(Icon, Element);
 
-Form.prototype.createControl = function (parent) {
-	return new FormControl(parent);
-};
+_.extend(Icon.prototype, {
 
-Form.prototype.onSubmit = function (handler) {
-	var that = this,
-			callback = function (nativeEventData) {
-				handler(nativeEventData);
-			};
-	return this.control.onSubmit(callback);
-};
+    createControl: function () {
+        return new IconControl();
+    },
 
-Form.prototype.setSubmitFunction = function(func) {
-	this.control.setSubmitFunction(func);
-};
+    setValue: function(value){
+        this.control.set('value', value);
+    },
 
-Form.prototype.getSubmitFunction = function() {
-	return this.control.getSubmitFunction();
-};
+    getValue: function(){
+        return this.control.get('value');
+    },
 
-Form.prototype.setMethod = function(method) {
-	this.control.setMethod(method);
-};
+    onValueChanged: function(){}
 
-Form.prototype.getMethod = function() {
-	return this.control.getMethod();
-};
-
-Form.prototype.setAction = function(action) {
-	this.control.setAction(action);
-};
-
-Form.prototype.getAction = function() {
-	return this.control.getAction();
-};
-
-//####app\elements\form\formBuilder.js
-/**
- *
- * @constructor
- * @augments StackPanelBuilder
- */
-function FormBuilder() {
-	_.superClass(FormBuilder, this);
-}
-
-window.InfinniUI.FormBuilder = FormBuilder;
-
-_.inherit(FormBuilder, StackPanelBuilder);
-
-_.extend(FormBuilder.prototype, {
-
-	createElement: function (params) {
-		return new Form(params.parent);
-	},
-
-	applyMetadata: function(params) {
-		var element = params.element,
-				metadata = params.metadata;
-		StackPanelBuilder.prototype.applyMetadata.call(this, params);
-
-		if( metadata.OnSubmit ) {
-			element.onSubmit(function() {
-				return new ScriptExecutor(element.getScriptsStorage()).executeScript(metadata.OnSubmit.Name || metadata.OnSubmit);
-			});
-		}
-
-		if( metadata.Method ) {
-			element.setMethod(metadata.Method);
-		}
-
-		if( metadata.Action ) {
-			element.setAction(metadata.Action);
-		}
-	}
 });
 
-//####app\elements\frame\frame.js
-/**
- *
- * @constructor
- * @augments Element
- * @mixes editorBaseMixin
- */
-function Frame() {
-    _.superClass(Frame, this);
-    this.initialize_editorBase();
+//####app\elements\icon\iconBuilder.js
+function IconBuilder() {
+    _.superClass(ButtonBuilder, this);
 }
 
-window.InfinniUI.Frame = Frame;
+window.InfinniUI.IconBuilder = IconBuilder;
 
-_.inherit(Frame, Element);
+_.inherit(IconBuilder, ElementBuilder);
 
-_.extend(Frame.prototype, {
+_.extend(IconBuilder.prototype, {
 
-        createControl: function () {
-            return new FrameControl();
-        }
-
+    createElement: function (params) {
+        return new Icon(params.parent);
     },
-    editorBaseMixin
-);
 
-//####app\elements\frame\frameBuilder.js
-/**
- *
- * @constructor
- * @augments TextEditorBaseBuilder
- * @mixes displayFormatBuilderMixin
- * @mixes editorBaseBuilderMixin
- */
-function FrameBuilder() {
-    _.superClass(TextEditorBaseBuilder, this);
-    this.initialize_editorBaseBuilder();
-}
+    applyMetadata: function (params) {
+        ElementBuilder.prototype.applyMetadata.call(this, params);
 
-window.InfinniUI.FrameBuilder = FrameBuilder;
+        var metadata = params.metadata;
 
-_.inherit(FrameBuilder, TextEditorBaseBuilder);
+        this.initBindingToProperty(params, 'Value');
+    }
 
-_.extend(FrameBuilder.prototype, {
-        applyMetadata: function(params){
-            var element = params.element;
-            ElementBuilder.prototype.applyMetadata.call(this, params);
-            this.applyMetadata_editorBaseBuilder(params);
-        },
-
-        createElement: function(params){
-            var element = new Frame(params.parent);
-            return element;
-        }
-
-    },
-    editorBaseBuilderMixin
-);
+});
 
 //####app\elements\gridPanel\gridPanel.js
 /**
@@ -24097,58 +24133,6 @@ _.extend(GridPanelBuilder.prototype,
         }
 
     });
-
-//####app\elements\icon\icon.js
-function Icon(parent) {
-    _.superClass(Icon, this, parent);
-}
-
-window.InfinniUI.Icon = Icon;
-
-_.inherit(Icon, Element);
-
-_.extend(Icon.prototype, {
-
-    createControl: function () {
-        return new IconControl();
-    },
-
-    setValue: function(value){
-        this.control.set('value', value);
-    },
-
-    getValue: function(){
-        return this.control.get('value');
-    },
-
-    onValueChanged: function(){}
-
-});
-
-//####app\elements\icon\iconBuilder.js
-function IconBuilder() {
-    _.superClass(ButtonBuilder, this);
-}
-
-window.InfinniUI.IconBuilder = IconBuilder;
-
-_.inherit(IconBuilder, ElementBuilder);
-
-_.extend(IconBuilder.prototype, {
-
-    createElement: function (params) {
-        return new Icon(params.parent);
-    },
-
-    applyMetadata: function (params) {
-        ElementBuilder.prototype.applyMetadata.call(this, params);
-
-        var metadata = params.metadata;
-
-        this.initBindingToProperty(params, 'Value');
-    }
-
-});
 
 //####app\elements\imageBox\imageBox.js
 /**
@@ -24360,6 +24344,106 @@ _.extend(IndeterminateCheckBoxBuilder.prototype, {
 });
 
 
+//####app\elements\link\link.js
+/**
+ * @param parent
+ * @augments Button
+ * @constructor
+ */
+function Link(parent) {
+    _.superClass(Link, this, parent);
+}
+
+window.InfinniUI.Link = Link;
+
+_.inherit(Link, Button);
+
+Link.prototype.createControl = function () {
+    return new LinkElementControl();
+};
+
+Link.prototype.setHref = function (value) {
+    this.control.set('href', value);
+};
+
+Link.prototype.getHref = function () {
+    return this.control.get('href');
+};
+
+Link.prototype.setTarget = function (value) {
+    this.control.set('target', value);
+};
+
+Link.prototype.getTarget = function () {
+    return this.control.get('target');
+};
+
+//####app\elements\link\linkBuilder.js
+function LinkBuilder() {
+	_.superClass(LinkBuilder, this);
+}
+
+window.InfinniUI.LinkBuilder = LinkBuilder;
+
+_.inherit(LinkBuilder, ButtonBuilder);
+
+_.extend(LinkBuilder.prototype, routerServiceMixin, {
+
+	createElement: function (params) {
+		return new Link(params.parent);
+	},
+
+	applyMetadata: function (params) {
+		ButtonBuilder.prototype.applyMetadata.call(this, params);
+
+		var metadata = params.metadata,
+				element = params.element;
+
+		if( metadata.Href && typeof metadata.Href === 'string' ) {
+			element.setHref(metadata.Href);
+		} else if( metadata.Href ) {
+			var pathName = metadata.Href.Name,
+					hrefParams = metadata.Href.Params,
+					query = metadata.Href.Query,
+					href = routerService.getLinkByName(pathName, 'no'),
+					newHref = href;
+
+			element.setHref(newHref);
+			if( hrefParams ) {
+				for( var i = 0, ii = hrefParams.length; i < ii; i += 1 ) {
+					if( typeof hrefParams[i].Value === 'string' ) {
+						if( element.getHref() !== newHref ) {
+							newHref = element.getHref();
+						}
+						newHref = this.replaceParamsInHref(newHref, hrefParams[i].Name, hrefParams[i].Value);
+						element.setHref(newHref);
+					} else {
+						this.bindParams(params, hrefParams[i].Name, hrefParams[i].Value, newHref);
+					}
+				}
+			}
+			if( query ) {
+				for( var i = 0, ii = query.length; i < ii; i += 1 ) {
+					if( typeof query[i].Value === 'string' ) {
+						if( element.getHref() !== newHref ) {
+							newHref = element.getHref();
+						}
+						newHref = this.replaceParamsInQuery(newHref, query[i].Name, query[i].Value);
+						element.setHref(newHref);
+					} else {
+						this.bindQuery(params, query[i].Name, query[i].Value, newHref);
+					}
+				}
+			}
+		}
+
+		if( metadata.Target ) { 
+			element.setTarget(metadata.Target);
+		}
+	}
+
+});
+
 //####app\elements\label\label.js
 function Label(parent, viewMode) {
     _.superClass(Label, this, parent, viewMode);
@@ -24506,106 +24590,6 @@ _.extend(LabelBuilder.prototype, {
     displayFormatBuilderMixin
 );
 
-//####app\elements\link\link.js
-/**
- * @param parent
- * @augments Button
- * @constructor
- */
-function Link(parent) {
-    _.superClass(Link, this, parent);
-}
-
-window.InfinniUI.Link = Link;
-
-_.inherit(Link, Button);
-
-Link.prototype.createControl = function () {
-    return new LinkElementControl();
-};
-
-Link.prototype.setHref = function (value) {
-    this.control.set('href', value);
-};
-
-Link.prototype.getHref = function () {
-    return this.control.get('href');
-};
-
-Link.prototype.setTarget = function (value) {
-    this.control.set('target', value);
-};
-
-Link.prototype.getTarget = function () {
-    return this.control.get('target');
-};
-
-//####app\elements\link\linkBuilder.js
-function LinkBuilder() {
-	_.superClass(LinkBuilder, this);
-}
-
-window.InfinniUI.LinkBuilder = LinkBuilder;
-
-_.inherit(LinkBuilder, ButtonBuilder);
-
-_.extend(LinkBuilder.prototype, routerServiceMixin, {
-
-	createElement: function (params) {
-		return new Link(params.parent);
-	},
-
-	applyMetadata: function (params) {
-		ButtonBuilder.prototype.applyMetadata.call(this, params);
-
-		var metadata = params.metadata,
-				element = params.element;
-
-		if( metadata.Href && typeof metadata.Href === 'string' ) {
-			element.setHref(metadata.Href);
-		} else if( metadata.Href ) {
-			var pathName = metadata.Href.Name,
-					hrefParams = metadata.Href.Params,
-					query = metadata.Href.Query,
-					href = routerService.getLinkByName(pathName, 'no'),
-					newHref = href;
-
-			element.setHref(newHref);
-			if( hrefParams ) {
-				for( var i = 0, ii = hrefParams.length; i < ii; i += 1 ) {
-					if( typeof hrefParams[i].Value === 'string' ) {
-						if( element.getHref() !== newHref ) {
-							newHref = element.getHref();
-						}
-						newHref = this.replaceParamsInHref(newHref, hrefParams[i].Name, hrefParams[i].Value);
-						element.setHref(newHref);
-					} else {
-						this.bindParams(params, hrefParams[i].Name, hrefParams[i].Value, newHref);
-					}
-				}
-			}
-			if( query ) {
-				for( var i = 0, ii = query.length; i < ii; i += 1 ) {
-					if( typeof query[i].Value === 'string' ) {
-						if( element.getHref() !== newHref ) {
-							newHref = element.getHref();
-						}
-						newHref = this.replaceParamsInQuery(newHref, query[i].Name, query[i].Value);
-						element.setHref(newHref);
-					} else {
-						this.bindQuery(params, query[i].Name, query[i].Value, newHref);
-					}
-				}
-			}
-		}
-
-		if( metadata.Target ) { 
-			element.setTarget(metadata.Target);
-		}
-	}
-
-});
-
 //####app\elements\menuBar\menuBar.js
 /**
  * @param parent
@@ -24666,139 +24650,6 @@ _.extend(MenuBarBuilder.prototype,
         }
 
     });
-
-//####app\elements\numericBox\numericBox.js
-/**
- *
- * @param parent
- * @constructor
- * @augments TextEditorBase
- */
-function NumericBox(parent) {
-    _.superClass(NumericBox, this, parent);
-}
-
-window.InfinniUI.NumericBox = NumericBox;
-
-_.inherit(NumericBox, TextEditorBase);
-
-NumericBox.prototype.createControl = function (parent) {
-    return new NumericBoxControl(parent);
-};
-
-NumericBox.prototype.getMinValue = function () {
-    return this.control.get('minValue');
-};
-
-NumericBox.prototype.setMinValue = function (value) {
-    this.control.set('minValue', value);
-};
-
-NumericBox.prototype.getMaxValue = function () {
-    return this.control.get('maxValue');
-};
-
-NumericBox.prototype.setMaxValue = function (value) {
-    this.control.set('maxValue', value);
-};
-
-NumericBox.prototype.getIncrement = function () {
-    return this.control.get('increment');
-};
-
-NumericBox.prototype.setIncrement = function (value) {
-    this.control.set('increment', value);
-};
-
-/**
- * @public
- * @description Устанваливает начальное значение
- * @param {Number} value
- */
-NumericBox.prototype.setStartValue = function (value) {
-    this.control.set('startValue', value);
-};
-
-NumericBox.prototype.validateValue = function (value) {
-    var error,
-        min = this.getMinValue(),
-        max = this.getMaxValue();
-
-    value = this.convertValue(value);
-
-    if (value === null || typeof value === 'undefined') {
-        return error;
-    }
-
-    if (!_.isNumber(value)) {
-        error = 'Значение должно быть числом';
-    } else  if (_.isNumber(min)) {
-        if (_.isNumber(max)) {
-            if (value < min || value > max) {
-                error = 'Значение должно быть от ' + min + ' до ' + max;
-            }
-        } else {
-            if (value < min) {
-                error = 'Значение должно быть больше ' + min;
-            }
-        }
-    } else {
-        if (_.isNumber(max)) {
-            if (value > max) {
-                error = 'Значение должно быть меьше ' + max;
-            }
-        }
-    }
-
-    return error;
-};
-
-NumericBox.prototype.convertValue = function (value) {
-    var val = (value === null || value === '' || typeof value === 'undefined') ? null : +value;
-
-    return _.isNumber(val) ? val : null;
-};
-
-/**
- * @public
- * @description Возвращает начальное значение
- * @returns {Number}
- */
-NumericBox.prototype.getStartValue = function () {
-    return this.control.get('startValue');
-};
-
-//####app\elements\numericBox\numericBoxBuilder.js
-/**
- *
- * @constructor
- * @augments TextEditorBaseBuilder
- */
-function NumericBoxBuilder() {
-    _.superClass(NumericBoxBuilder, this);
-}
-
-window.InfinniUI.NumericBoxBuilder = NumericBoxBuilder;
-
-_.inherit(NumericBoxBuilder, TextEditorBaseBuilder);
-
-NumericBoxBuilder.prototype.createElement = function (params) {
-    return new NumericBox(params.parent);
-};
-
-NumericBoxBuilder.prototype.applyMetadata = function (params) {
-    TextEditorBaseBuilder.prototype.applyMetadata.call(this, params);
-
-    /** @type NumericBox **/
-    var element = params.element;
-    var metadata = params.metadata;
-
-    element.setMinValue(metadata.MinValue);
-    element.setMaxValue(metadata.MaxValue);
-    element.setIncrement(metadata.Increment);
-    element.setStartValue(metadata.StartValue);
-};
-
 
 //####app\elements\panel\panel.js
 /**
@@ -25089,85 +24940,138 @@ _.extend(PanelBuilder.prototype, /** @lends PanelBuilder.prototype*/ {
 
 });
 
-//####app\elements\passwordBox\passwordBox.js
+//####app\elements\numericBox\numericBox.js
+/**
+ *
+ * @param parent
+ * @constructor
+ * @augments TextEditorBase
+ */
+function NumericBox(parent) {
+    _.superClass(NumericBox, this, parent);
+}
+
+window.InfinniUI.NumericBox = NumericBox;
+
+_.inherit(NumericBox, TextEditorBase);
+
+NumericBox.prototype.createControl = function (parent) {
+    return new NumericBoxControl(parent);
+};
+
+NumericBox.prototype.getMinValue = function () {
+    return this.control.get('minValue');
+};
+
+NumericBox.prototype.setMinValue = function (value) {
+    this.control.set('minValue', value);
+};
+
+NumericBox.prototype.getMaxValue = function () {
+    return this.control.get('maxValue');
+};
+
+NumericBox.prototype.setMaxValue = function (value) {
+    this.control.set('maxValue', value);
+};
+
+NumericBox.prototype.getIncrement = function () {
+    return this.control.get('increment');
+};
+
+NumericBox.prototype.setIncrement = function (value) {
+    this.control.set('increment', value);
+};
+
+/**
+ * @public
+ * @description Устанваливает начальное значение
+ * @param {Number} value
+ */
+NumericBox.prototype.setStartValue = function (value) {
+    this.control.set('startValue', value);
+};
+
+NumericBox.prototype.validateValue = function (value) {
+    var error,
+        min = this.getMinValue(),
+        max = this.getMaxValue();
+
+    value = this.convertValue(value);
+
+    if (value === null || typeof value === 'undefined') {
+        return error;
+    }
+
+    if (!_.isNumber(value)) {
+        error = 'Значение должно быть числом';
+    } else  if (_.isNumber(min)) {
+        if (_.isNumber(max)) {
+            if (value < min || value > max) {
+                error = 'Значение должно быть от ' + min + ' до ' + max;
+            }
+        } else {
+            if (value < min) {
+                error = 'Значение должно быть больше ' + min;
+            }
+        }
+    } else {
+        if (_.isNumber(max)) {
+            if (value > max) {
+                error = 'Значение должно быть меьше ' + max;
+            }
+        }
+    }
+
+    return error;
+};
+
+NumericBox.prototype.convertValue = function (value) {
+    var val = (value === null || value === '' || typeof value === 'undefined') ? null : +value;
+
+    return _.isNumber(val) ? val : null;
+};
+
+/**
+ * @public
+ * @description Возвращает начальное значение
+ * @returns {Number}
+ */
+NumericBox.prototype.getStartValue = function () {
+    return this.control.get('startValue');
+};
+
+//####app\elements\numericBox\numericBoxBuilder.js
 /**
  *
  * @constructor
- * @augments Element
- * @mixes editorBaseMixin
- * @mixes labelTextElementMixin
+ * @augments TextEditorBaseBuilder
  */
-function PasswordBox(parent) {
-    _.superClass(PasswordBox, this, parent);
-    this.initialize_editorBase();
+function NumericBoxBuilder() {
+    _.superClass(NumericBoxBuilder, this);
 }
 
-window.InfinniUI.PasswordBox = PasswordBox;
+window.InfinniUI.NumericBoxBuilder = NumericBoxBuilder;
 
-_.inherit(PasswordBox, Element);
+_.inherit(NumericBoxBuilder, TextEditorBaseBuilder);
 
-_.extend(PasswordBox.prototype, /* @lends PasswordBox.prototype */ {
+NumericBoxBuilder.prototype.createElement = function (params) {
+    return new NumericBox(params.parent);
+};
 
-        setAutocomplete: function (value) {
-            if (typeof value === 'undefined' || value === null) {
-                return;
-            }
-            this.control.set('autocomplete', !!value);
-        },
+NumericBoxBuilder.prototype.applyMetadata = function (params) {
+    TextEditorBaseBuilder.prototype.applyMetadata.call(this, params);
 
-        getAutocomplete: function () {
-            return this.control.get('autocomplete');
-        },
+    /** @type NumericBox **/
+    var element = params.element;
+    var metadata = params.metadata;
 
-        createControl: function () {
-            return new PasswordBoxControl();
-        },
+    element.setMinValue(metadata.MinValue);
+    element.setMaxValue(metadata.MaxValue);
+    element.setIncrement(metadata.Increment);
+    element.setStartValue(metadata.StartValue);
+};
 
-        getRawValue: function () {
-            return this.control.get('rawValue');
-        }
-
-    },
-    editorBaseMixin,
-    labelTextElementMixin
-);
-
-//####app\elements\passwordBox\passwordBoxBuilder.js
-/**
- * @constructor
- * @augments ElementBuilder
- * @mixes editorBaseBuilderMixin
- */
-function PasswordBoxBuilder() {
-    _.superClass(PasswordBoxBuilder, this);
-    this.initialize_editorBaseBuilder();
-}
-
-window.InfinniUI.PasswordBoxBuilder = PasswordBoxBuilder;
-
-_.inherit(PasswordBoxBuilder, ElementBuilder);
-
-_.extend(PasswordBoxBuilder.prototype, /** @lends PasswordBoxBuilder.prototype */ {
-
-        applyMetadata: function (params) {
-            ElementBuilder.prototype.applyMetadata.call(this, params);
-            this.applyMetadata_editorBaseBuilder(params);
-
-            var metadata = params.metadata,
-                element = params.element;
-
-            this.initBindingToProperty(params, 'LabelText');
-            element.setAutocomplete(metadata.Autocomplete);
-        },
-
-        createElement: function (params) {
-            var element = new PasswordBox(params.parent);
-            return element;
-        }
-
-    },
-    editorBaseBuilderMixin
-);
 
 //####app\elements\popupButton\popupButton.js
 /**
@@ -25268,6 +25172,86 @@ _.extend(RadioGroupBuilder.prototype, {
     }
 
 });
+
+//####app\elements\passwordBox\passwordBox.js
+/**
+ *
+ * @constructor
+ * @augments Element
+ * @mixes editorBaseMixin
+ * @mixes labelTextElementMixin
+ */
+function PasswordBox(parent) {
+    _.superClass(PasswordBox, this, parent);
+    this.initialize_editorBase();
+}
+
+window.InfinniUI.PasswordBox = PasswordBox;
+
+_.inherit(PasswordBox, Element);
+
+_.extend(PasswordBox.prototype, /* @lends PasswordBox.prototype */ {
+
+        setAutocomplete: function (value) {
+            if (typeof value === 'undefined' || value === null) {
+                return;
+            }
+            this.control.set('autocomplete', !!value);
+        },
+
+        getAutocomplete: function () {
+            return this.control.get('autocomplete');
+        },
+
+        createControl: function () {
+            return new PasswordBoxControl();
+        },
+
+        getRawValue: function () {
+            return this.control.get('rawValue');
+        }
+
+    },
+    editorBaseMixin,
+    labelTextElementMixin
+);
+
+//####app\elements\passwordBox\passwordBoxBuilder.js
+/**
+ * @constructor
+ * @augments ElementBuilder
+ * @mixes editorBaseBuilderMixin
+ */
+function PasswordBoxBuilder() {
+    _.superClass(PasswordBoxBuilder, this);
+    this.initialize_editorBaseBuilder();
+}
+
+window.InfinniUI.PasswordBoxBuilder = PasswordBoxBuilder;
+
+_.inherit(PasswordBoxBuilder, ElementBuilder);
+
+_.extend(PasswordBoxBuilder.prototype, /** @lends PasswordBoxBuilder.prototype */ {
+
+        applyMetadata: function (params) {
+            ElementBuilder.prototype.applyMetadata.call(this, params);
+            this.applyMetadata_editorBaseBuilder(params);
+
+            var metadata = params.metadata,
+                element = params.element;
+
+            this.initBindingToProperty(params, 'LabelText');
+            element.setAutocomplete(metadata.Autocomplete);
+        },
+
+        createElement: function (params) {
+            var element = new PasswordBox(params.parent);
+            return element;
+        }
+
+    },
+    editorBaseBuilderMixin
+);
 
 //####app\elements\scrollPanel\scrollPanel.js
 /**
@@ -25595,6 +25579,47 @@ _.extend(TabPanelBuilder.prototype, /** @lends TabPanelBuilder.prototype*/ {
 
 });
 
+//####app\elements\toolBar\toolBar.js
+/**
+ *
+ * @param parent
+ * @constructor
+ * @augments Container
+ */
+var ToolBar = function (parent) {
+    _.superClass(ToolBar, this, parent);
+};
+
+window.InfinniUI.ToolBar = ToolBar;
+
+_.inherit(ToolBar, Container);
+
+ToolBar.prototype.createControl = function () {
+    return new ToolBarControl();
+};
+
+//####app\elements\toolBar\toolBarBuilder.js
+/**
+ *
+ * @constructor
+ * @augments ContainerBuilder
+ */
+function ToolBarBuilder() {
+    _.superClass(ToolBarBuilder, this);
+}
+
+window.InfinniUI.ToolBarBuilder = ToolBarBuilder;
+
+_.inherit(ToolBarBuilder, ContainerBuilder);
+
+_.extend(ToolBarBuilder.prototype, /** @lends ToolBarBuilder.prototype */{
+
+    createElement: function (params) {
+        return new ToolBar(params.parent);
+    }
+
+});
+
 //####app\elements\toggleButton\toggleButton.js
 /**
  *
@@ -25675,47 +25700,6 @@ _.extend(ToggleButtonBuilder.prototype, {
  * @property {String} TextOn
  * @property {String} TextOff
  */
-
-//####app\elements\toolBar\toolBar.js
-/**
- *
- * @param parent
- * @constructor
- * @augments Container
- */
-var ToolBar = function (parent) {
-    _.superClass(ToolBar, this, parent);
-};
-
-window.InfinniUI.ToolBar = ToolBar;
-
-_.inherit(ToolBar, Container);
-
-ToolBar.prototype.createControl = function () {
-    return new ToolBarControl();
-};
-
-//####app\elements\toolBar\toolBarBuilder.js
-/**
- *
- * @constructor
- * @augments ContainerBuilder
- */
-function ToolBarBuilder() {
-    _.superClass(ToolBarBuilder, this);
-}
-
-window.InfinniUI.ToolBarBuilder = ToolBarBuilder;
-
-_.inherit(ToolBarBuilder, ContainerBuilder);
-
-_.extend(ToolBarBuilder.prototype, /** @lends ToolBarBuilder.prototype */{
-
-    createElement: function (params) {
-        return new ToolBar(params.parent);
-    }
-
-});
 
 //####app\elements\treeView\treeView.js
 /**
@@ -26527,8 +26511,8 @@ _.extend(DataGridRow.prototype, {
         return new DataGridRowControl()
     },
 
-    setCellTemplates: function (cellTemplates) {
-        this.control.set('cellTemplates', cellTemplates);
+    setCellElements: function (cellElements) {
+        this.control.set('cellElements', cellElements);
     },
 
     toggle: function (toggle) {
@@ -27390,6 +27374,59 @@ _.extend(DeleteActionBuilder.prototype,
 
 window.InfinniUI.DeleteActionBuilder = DeleteActionBuilder;
 
+//####app\actions\openAction\openAction.js
+function OpenAction(parentView){
+    _.superClass(OpenAction, this, parentView);
+}
+
+_.inherit(OpenAction, BaseAction);
+
+
+_.extend(OpenAction.prototype, {
+    execute: function(callback){
+        var linkView = this.getProperty('linkView'),
+            that = this;
+
+        linkView.createView(function (view) {
+
+            view.onLoaded(function () {
+                that.onExecutedHandler();
+
+                if (callback) {
+                    callback(view);
+                }
+            });
+
+            view.open();
+        });
+    }
+});
+
+window.InfinniUI.OpenAction = OpenAction;
+
+//####app\actions\openAction\openActionBuilder.js
+function OpenActionBuilder(){
+}
+
+
+_.extend(OpenActionBuilder.prototype,
+    BaseActionBuilderMixin,
+    {
+        build: function(context, args){
+            var action = new OpenAction(args.parentView);
+
+            this.applyBaseActionMetadata(action, args);
+
+            var linkView = args.builder.build(args.metadata.LinkView, {parent: args.parent, parentView: args.parentView, basePathOfProperty: args.basePathOfProperty});
+            action.setProperty('linkView', linkView);
+
+            return action;
+        }
+    }
+);
+
+window.InfinniUI.OpenActionBuilder = OpenActionBuilder;
+
 //####app\actions\editAction\editAction.js
 function EditAction(parentView){
     _.superClass(EditAction, this, parentView);
@@ -27518,58 +27555,78 @@ _.extend(EditActionBuilder.prototype,
 
 window.InfinniUI.EditActionBuilder = EditActionBuilder;
 
-//####app\actions\openAction\openAction.js
-function OpenAction(parentView){
-    _.superClass(OpenAction, this, parentView);
+//####app\actions\saveAction\saveAction.js
+function SaveAction(parentView){
+    _.superClass(SaveAction, this, parentView);
 }
 
-_.inherit(OpenAction, BaseAction);
+_.inherit(SaveAction, BaseAction);
 
 
-_.extend(OpenAction.prototype, {
-    execute: function(callback){
-        var linkView = this.getProperty('linkView'),
-            that = this;
-
-        linkView.createView(function (view) {
-
-            view.onLoaded(function () {
-                that.onExecutedHandler();
-
-                if (callback) {
-                    callback(view);
-                }
-            });
-
-            view.open();
-        });
-    }
-});
-
-window.InfinniUI.OpenAction = OpenAction;
-
-//####app\actions\openAction\openActionBuilder.js
-function OpenActionBuilder(){
-}
-
-
-_.extend(OpenActionBuilder.prototype,
-    BaseActionBuilderMixin,
+_.extend(SaveAction.prototype,
+    BaseFallibleActionMixin,
     {
-        build: function(context, args){
-            var action = new OpenAction(args.parentView);
+        execute: function(callback){
+            var parentView = this.parentView,
+                dataSource = this.getProperty('dataSource'),
+                canClose = this.getProperty('canClose'),
+                that = this;
+
+            var onSuccessSave = function(context, args){
+                    if(canClose !== false){
+                        parentView.setDialogResult(DialogResult.accepted);
+                        parentView.close();
+                    }
+
+                    that.onExecutedHandler(args);
+                    that.onSuccessHandler(args);
+
+                    if(_.isFunction(callback)){
+                        callback(context, args);
+                    }
+                },
+                onErrorSave = function(context, args){
+                    that.onExecutedHandler(args);
+                    that.onErrorHandler(args);
+
+                    if (_.isFunction(callback)) {
+                        callback(context, args);
+                    }
+                };
+
+            var selectedItem = dataSource.getSelectedItem();
+            dataSource.saveItem(selectedItem, onSuccessSave, onErrorSave);
+        }
+    }
+);
+
+window.InfinniUI.SaveAction = SaveAction;
+
+//####app\actions\saveAction\saveActionBuilder.js
+function SaveActionBuilder() {}
+
+_.extend(SaveActionBuilder.prototype,
+    BaseActionBuilderMixin,
+    BaseFallibleActionBuilderMixin,
+    {
+        build: function (context, args) {
+            var parentView = args.parentView;
+            var dataSource = parentView.getContext().dataSources[args.metadata.DestinationValue.Source];
+
+            var action = new SaveAction(parentView);
 
             this.applyBaseActionMetadata(action, args);
+            this.applyBaseFallibleActionMetadata(action, args);
 
-            var linkView = args.builder.build(args.metadata.LinkView, {parent: args.parent, parentView: args.parentView, basePathOfProperty: args.basePathOfProperty});
-            action.setProperty('linkView', linkView);
+            action.setProperty('dataSource', dataSource);
+            action.setProperty('canClose', args.metadata.CanClose);
 
             return action;
         }
     }
 );
 
-window.InfinniUI.OpenActionBuilder = OpenActionBuilder;
+window.InfinniUI.SaveActionBuilder = SaveActionBuilder;
 
 //####app\actions\routeToAction\routeToAction.js
 function RouteToAction(){
@@ -27648,79 +27705,6 @@ _.extend(RouteToActionBuilder.prototype, BaseActionBuilderMixin, routerServiceMi
 });
 
 window.InfinniUI.RouteToActionBuilder = RouteToActionBuilder;
-
-//####app\actions\saveAction\saveAction.js
-function SaveAction(parentView){
-    _.superClass(SaveAction, this, parentView);
-}
-
-_.inherit(SaveAction, BaseAction);
-
-
-_.extend(SaveAction.prototype,
-    BaseFallibleActionMixin,
-    {
-        execute: function(callback){
-            var parentView = this.parentView,
-                dataSource = this.getProperty('dataSource'),
-                canClose = this.getProperty('canClose'),
-                that = this;
-
-            var onSuccessSave = function(context, args){
-                    if(canClose !== false){
-                        parentView.setDialogResult(DialogResult.accepted);
-                        parentView.close();
-                    }
-
-                    that.onExecutedHandler(args);
-                    that.onSuccessHandler(args);
-
-                    if(_.isFunction(callback)){
-                        callback(context, args);
-                    }
-                },
-                onErrorSave = function(context, args){
-                    that.onExecutedHandler(args);
-                    that.onErrorHandler(args);
-
-                    if (_.isFunction(callback)) {
-                        callback(context, args);
-                    }
-                };
-
-            var selectedItem = dataSource.getSelectedItem();
-            dataSource.saveItem(selectedItem, onSuccessSave, onErrorSave);
-        }
-    }
-);
-
-window.InfinniUI.SaveAction = SaveAction;
-
-//####app\actions\saveAction\saveActionBuilder.js
-function SaveActionBuilder() {}
-
-_.extend(SaveActionBuilder.prototype,
-    BaseActionBuilderMixin,
-    BaseFallibleActionBuilderMixin,
-    {
-        build: function (context, args) {
-            var parentView = args.parentView;
-            var dataSource = parentView.getContext().dataSources[args.metadata.DestinationValue.Source];
-
-            var action = new SaveAction(parentView);
-
-            this.applyBaseActionMetadata(action, args);
-            this.applyBaseFallibleActionMetadata(action, args);
-
-            action.setProperty('dataSource', dataSource);
-            action.setProperty('canClose', args.metadata.CanClose);
-
-            return action;
-        }
-    }
-);
-
-window.InfinniUI.SaveActionBuilder = SaveActionBuilder;
 
 //####app\actions\selectAction\selectAction.js
 function SelectAction(parentView){
@@ -28108,7 +28092,13 @@ _.extend(ServerActionBuilder.prototype,
                             action.setParam(name, value);
                         }
                     } else {
-                        this._initBinding(name, value, action, parentView, builder);
+                        var buildParams = {
+                            parent: parentView,
+                            parentView: parentView,
+                            basePathOfProperty: args.basePathOfProperty
+                        };
+
+                        this._initBinding(name, value, action, buildParams, builder);
                     }
                 }
             }
@@ -28116,13 +28106,9 @@ _.extend(ServerActionBuilder.prototype,
             return action;
         },
 
-        _initBinding: function (paramName, paramValue, action, parentView, builder) {
-            var args = {
-                parent: parentView,
-                parentView: parentView
-            };
-
-            var dataBinding = builder.buildBinding(paramValue, args);
+        _initBinding: function (paramName, paramValue, action, buildParams, builder) {
+            
+            var dataBinding = builder.buildBinding(paramValue, buildParams);
 
             dataBinding.setMode(InfinniUI.BindingModes.toElement);
 
@@ -30229,6 +30215,125 @@ function DateTimeFormatBuilder () {
 
 window.InfinniUI.DateTimeFormatBuilder = DateTimeFormatBuilder;
 
+//####app\formats\displayFormat\object\objectFormat.js
+/**
+ * @description Формат отображения объекта
+ * @param {String} format Строка форматирования
+ * @class ObjectFormat
+ * @mixes formatMixin
+ */
+function ObjectFormat(format) {
+    this.setFormat(format);
+
+    this.formatters = [DateTimeFormat, NumberFormat];
+}
+
+window.InfinniUI.ObjectFormat = ObjectFormat;
+
+
+_.extend(ObjectFormat.prototype, {
+
+    /**
+     * @private
+     * @description Форматирует объект
+     * @memberOf ObjectFormat.prototype
+     * @param {*} originalValue Форматируемое значение
+     * @param {Culture} culture Культура
+     * @param {String} format Строка форматирования
+     * @returns {String}
+     */
+    formatValue: function (originalValue, culture, format) {
+
+        culture = culture || new Culture(InfinniUI.config.lang);
+        format = format || this.getFormat();
+
+        var regexp = /{[^}]*}/g;
+        var trim = /^{|}$/g;
+        var value = '';
+
+        value = format.replace(regexp, this.formatIterator.bind(this, originalValue, culture));
+        
+        return value;
+
+    },
+
+    /**
+     * @private
+     * @description Форматирование каждого простого вхождения формата в строку форматирования объекта
+     * @memberOf ObjectFormat.prototype
+     * @param {*} originalValue Форматируемое значение
+     * @param {Culture} culture
+     * @param {String} match строка форматирования
+     * @returns {String}
+     */
+    formatIterator: function (originalValue, culture, match) {
+        var regexp = /{[^}]*}/g;
+        var trim = /^{|}$/g;
+
+        var result, text, formatter, value, parts;
+
+        result = match;
+        text = match.replace(trim, '');
+        parts = text.split(':');
+
+        if (typeof originalValue === 'object') {
+            value = (parts[0] === '') ? originalValue : InfinniUI.ObjectUtils.getPropertyValue(originalValue, parts[0]);
+        } else {
+            value = originalValue;
+        }
+
+        if (parts.length === 2) {
+            // Найдено "[Property]:Format"
+            for (var i = 0, ln = this.formatters.length; i < ln; i = i + 1) {
+                //Пытаемся по очереди отформатировать значение разными форматами
+                formatter = new this.formatters[i](parts[1]);
+                formatter.setOptions(this.getOptions());
+
+                text = formatter.format(value, culture);
+                if (text !== parts[1]) {
+                    //Если формат отформатировал строку - оставляем ее
+                    result = text;
+                    break;
+                }
+            }
+        } else {
+            // Найдено "[Property]"
+            result = value;
+        }
+
+        return (typeof result === 'undefined' || result === null) ? '' : result;
+    }
+
+
+
+
+}, formatMixin);
+
+//####app\formats\displayFormat\object\objectFormatBuilder.js
+/**
+ * @description Билдер ObjectFormat
+ * @class ObjectFormatBuilder
+ */
+function ObjectFormatBuilder () {
+
+    /**
+     * @description Создает и инициализирует экземпляр {@link ObjectFormat}
+     * @memberOf ObjectFormatBuilder
+     * @param context
+     * @param args
+     * @returns {ObjectFormat}
+     */
+    this.build = function (context, args) {
+        var format = new ObjectFormat();
+
+        format.setFormat(args.metadata.Format);
+
+        return format;
+    }
+}
+
+window.InfinniUI.ObjectFormatBuilder = ObjectFormatBuilder;
+
 //####app\formats\displayFormat\number\numberFormat.js
 /**
  * @description Формат отображения числового значения.
@@ -30423,125 +30528,6 @@ function NumberFormatBuilder () {
 }
 
 window.InfinniUI.NumberFormatBuilder = NumberFormatBuilder;
-
-//####app\formats\displayFormat\object\objectFormat.js
-/**
- * @description Формат отображения объекта
- * @param {String} format Строка форматирования
- * @class ObjectFormat
- * @mixes formatMixin
- */
-function ObjectFormat(format) {
-    this.setFormat(format);
-
-    this.formatters = [DateTimeFormat, NumberFormat];
-}
-
-window.InfinniUI.ObjectFormat = ObjectFormat;
-
-
-_.extend(ObjectFormat.prototype, {
-
-    /**
-     * @private
-     * @description Форматирует объект
-     * @memberOf ObjectFormat.prototype
-     * @param {*} originalValue Форматируемое значение
-     * @param {Culture} culture Культура
-     * @param {String} format Строка форматирования
-     * @returns {String}
-     */
-    formatValue: function (originalValue, culture, format) {
-
-        culture = culture || new Culture(InfinniUI.config.lang);
-        format = format || this.getFormat();
-
-        var regexp = /{[^}]*}/g;
-        var trim = /^{|}$/g;
-        var value = '';
-
-        value = format.replace(regexp, this.formatIterator.bind(this, originalValue, culture));
-        
-        return value;
-
-    },
-
-    /**
-     * @private
-     * @description Форматирование каждого простого вхождения формата в строку форматирования объекта
-     * @memberOf ObjectFormat.prototype
-     * @param {*} originalValue Форматируемое значение
-     * @param {Culture} culture
-     * @param {String} match строка форматирования
-     * @returns {String}
-     */
-    formatIterator: function (originalValue, culture, match) {
-        var regexp = /{[^}]*}/g;
-        var trim = /^{|}$/g;
-
-        var result, text, formatter, value, parts;
-
-        result = match;
-        text = match.replace(trim, '');
-        parts = text.split(':');
-
-        if (typeof originalValue === 'object') {
-            value = (parts[0] === '') ? originalValue : InfinniUI.ObjectUtils.getPropertyValue(originalValue, parts[0]);
-        } else {
-            value = originalValue;
-        }
-
-        if (parts.length === 2) {
-            // Найдено "[Property]:Format"
-            for (var i = 0, ln = this.formatters.length; i < ln; i = i + 1) {
-                //Пытаемся по очереди отформатировать значение разными форматами
-                formatter = new this.formatters[i](parts[1]);
-                formatter.setOptions(this.getOptions());
-
-                text = formatter.format(value, culture);
-                if (text !== parts[1]) {
-                    //Если формат отформатировал строку - оставляем ее
-                    result = text;
-                    break;
-                }
-            }
-        } else {
-            // Найдено "[Property]"
-            result = value;
-        }
-
-        return (typeof result === 'undefined' || result === null) ? '' : result;
-    }
-
-
-
-
-}, formatMixin);
-
-//####app\formats\displayFormat\object\objectFormatBuilder.js
-/**
- * @description Билдер ObjectFormat
- * @class ObjectFormatBuilder
- */
-function ObjectFormatBuilder () {
-
-    /**
-     * @description Создает и инициализирует экземпляр {@link ObjectFormat}
-     * @memberOf ObjectFormatBuilder
-     * @param context
-     * @param args
-     * @returns {ObjectFormat}
-     */
-    this.build = function (context, args) {
-        var format = new ObjectFormat();
-
-        format.setFormat(args.metadata.Format);
-
-        return format;
-    }
-}
-
-window.InfinniUI.ObjectFormatBuilder = ObjectFormatBuilder;
 
 //####app\formats\editMask\_common\editMaskMixin.js
 var editMaskMixin = {
@@ -34855,29 +34841,6 @@ var AjaxLoaderIndicatorView = Backbone.View.extend({
     }
 
 });
-//####app\services\contextMenuService\contextMenuService.js
-InfinniUI.ContextMenuService = (function () {
-
-	var exchange = window.InfinniUI.global.messageBus;
-
-	exchange.subscribe(messageTypes.onContextMenu.name, function (context, args) {
-		var message = args.value;
-		initContextMenu(getSourceElement(message.source), message.content);
-	});
-
-	function getSourceElement(source) {
-		return source.control.controlView.$el
-	}
-
-	function initContextMenu($element, content) {
-		$element.on('contextmenu', function(event) {
-			event.preventDefault();
-
-			exchange.send(messageTypes.onOpenContextMenu.name, { x: event.pageX, y: event.pageY });
-		});
-	}
-})();
-
 //####app\services\messageBox\messageBox.js
 /**
  * @constructor
@@ -35027,6 +34990,29 @@ InfinniUI.MessageBox = MessageBox;
         }
     ]
 });*/
+//####app\services\contextMenuService\contextMenuService.js
+InfinniUI.ContextMenuService = (function () {
+
+	var exchange = window.InfinniUI.global.messageBus;
+
+	exchange.subscribe(messageTypes.onContextMenu.name, function (context, args) {
+		var message = args.value;
+		initContextMenu(getSourceElement(message.source), message.content);
+	});
+
+	function getSourceElement(source) {
+		return source.control.controlView.$el
+	}
+
+	function initContextMenu($element, content) {
+		$element.on('contextmenu', function(event) {
+			event.preventDefault();
+
+			exchange.send(messageTypes.onOpenContextMenu.name, { x: event.pageX, y: event.pageY });
+		});
+	}
+})();
+
 //####app\services\router\routerService.js
 var routerService = (function(myRoutes) {
 	if( !myRoutes ) {
