@@ -19,6 +19,7 @@ elements <ColorStyle>`__ as well as `typography inside elements <TextStyle>`__.
 
 .. code:: js
 
+    //infinni-ui-demo
     {
         "DataSources": [
         ],

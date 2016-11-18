@@ -45,7 +45,7 @@ Examples
 
     var value = {id: 3, title: "Three"};
 
-    var builder = new ApplicationBuilder();
+    var builder = new InfinniUI.ApplicationBuilder();
     var label = builder.build(metadata);
     label.setValue(value);
 

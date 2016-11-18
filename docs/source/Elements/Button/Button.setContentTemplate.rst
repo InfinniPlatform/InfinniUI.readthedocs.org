@@ -36,9 +36,9 @@ Examples
 .. code:: js
 
     //js-demo
-    var button = new Button();
+    var button = new InfinniUI.Button();
     var contentTemplate = function (context, args) {
-        var label = new Label();
+        var label = new InfinniUI.Label();
         label.setValue('Button 1');
         return label;
     }

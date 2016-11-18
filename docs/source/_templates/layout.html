@@ -1,0 +1,22 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %} 
+<script type="text/javascript" src="{{ pathto("liveInfinniExample.js", True) }}"> </script>
+<script type="text/javascript" src="{{ pathto("liveJsExample.js", True) }}"> </script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		var exampleWrapperUrl = "{{ pathto("liveExample.html", True) }}";
+		new LiveInfinniExample(exampleWrapperUrl);
+		new LiveJsExample(exampleWrapperUrl);
+	});
+</script>
+
+<style type="text/css">
+   .liveExampleFrame { 
+		width: 100%; 
+		min-height: 200px; 
+		max-height: 500px; 
+		border: none;
+   }
+</style>
+{% endblock %}

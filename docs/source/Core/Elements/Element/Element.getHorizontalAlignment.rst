@@ -20,8 +20,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Горизонтальное выравнивание <ElementHorizontalAlignment/>`__ в
-родительском элементе.
+`Горизонтальное выравнивание <ElementHorizontalAlignment/>`__ в родительском элементе.
 
 Examples
 --------
@@ -29,7 +28,7 @@ Examples
 .. code:: js
 
     //js-demo
-    var label = new Label();
+    var label = new InfinniUI.Label();
     var $label = label.render();
 
     var div = document.createElement("div");

@@ -73,13 +73,20 @@ Examples
 
 ::
 
-    {
-      "Link": {
-        "Text": "link",
-        "Href": "http://docs.infinnity.ru/",
-        "Target": "blank"
-      }
+  //infinni-ui-demo
+  {
+    "Items": [
+    //infinni-ui-display-begin
+  {
+    "Link": {
+      "Text": "link",
+      "Href": "http://infinnity.ru/",
+      "Target": "blank"
     }
+  }
+    //infinni-ui-display-end
+    ]
+  }
 
 Рассмотрим случай, когда ссылка должна изменяться в зависимости от неких
 параметров. Тогда в массив

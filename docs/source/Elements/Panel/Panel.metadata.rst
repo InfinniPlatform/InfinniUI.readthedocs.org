@@ -52,28 +52,35 @@ Examples
 
 ::
 
-    {
-      "Panel": {
-        "Collapsible": true,
-        "Header": "Numbers",
-        "OnExpanded": "{ alert('Panel is expanded!'); }",
-        "OnCollapsed": "{ alert('Panel is collapsed!'); }",
-        "Items": [
-          {
-            "Label": {
-              "Value": "One"
-            }
-          },
-          {
-            "Label": {
-              "Value": "Two"
-            }
-          },
-          {
-            "Label": {
-              "Value": "Three"
-            }
+  //infinni-ui-demo
+  {
+    "Items": [
+    //infinni-ui-display-begin
+  {
+    "Panel": {
+      "Collapsible": true,
+      "Header": "Numbers",
+      "OnExpanded": "{ alert('Panel is expanded!'); }",
+      "OnCollapsed": "{ alert('Panel is collapsed!'); }",
+      "Items": [
+        {
+          "Label": {
+            "Value": "One"
           }
-        ]
-      }
+        },
+        {
+          "Label": {
+            "Value": "Two"
+          }
+        },
+        {
+          "Label": {
+            "Value": "Three"
+          }
+        }
+      ]
     }
+  }
+      //infinni-ui-display-end
+    ]
+  }

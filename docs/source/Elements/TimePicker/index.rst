@@ -40,21 +40,21 @@ Examples
 
     //  Format
     var timeZone = 0;
-    var format = new DateTimeFormat("t");
+    var format = new InfinniUI.DateTimeFormat("t");
     format.setOptions({TimeZone: timeZone});
     var displayFormat = function (context, args) {
         return format.formatValue(args.value);
     }
 
     //  EditMask
-    var editMask = new DateTimeEditMask();
+    var editMask = new InfinniUI.DateTimeEditMask();
     editMask.mask = "t";
     editMask.format = format;
 
     //  DateTimePicker
     var minValue = InfinniUI.DateUtils.parseTimeISO8601toDate("09:00");
     var maxValue = InfinniUI.DateUtils.parseTimeISO8601toDate("18:00");
-    var timePicker = new TimePicker();
+    var timePicker = new InfinniUI.TimePicker();
     timePicker.setDisplayFormat(displayFormat);
     timePicker.setEditMask(editMask);
     timePicker.setMinValue(minValue);   // Set maximum value "09:00"

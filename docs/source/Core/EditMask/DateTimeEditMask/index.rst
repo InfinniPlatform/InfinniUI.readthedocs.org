@@ -75,7 +75,7 @@ Examples
         }
     };
 
-    var builder = new ApplicationBuilder();
+    var builder = new InfinniUI.ApplicationBuilder();
     var textbox = builder.build(metadata);
 
     //  Render

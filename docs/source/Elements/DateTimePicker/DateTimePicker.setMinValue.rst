@@ -32,19 +32,19 @@ Examples
     //js-demo
 
     //  Format
-    var format = new DateTimeFormat("G");
+    var format = new InfinniUI.DateTimeFormat("G");
     format.setOptions({TimeZone: -180});
     var displayFormat = function (context, args) {
         return format.formatValue(args.value);
     }
 
     //  EditMask
-    var editMask = new DateTimeEditMask();
+    var editMask = new InfinniUI.DateTimeEditMask();
     editMask.mask = "G";
     editMask.format = format;
 
     //  DateTimePicker
-    var dtPicker = new DateTimePicker();
+    var dtPicker = new InfinniUI.DateTimePicker();
     dtPicker.setMode("DateTime");
     dtPicker.setTimeZone(-180);
     dtPicker.setMinValue(new Date());   // Set minimum value

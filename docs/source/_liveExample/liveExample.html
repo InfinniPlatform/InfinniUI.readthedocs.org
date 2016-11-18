@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link type="text/css" href="infinni-ui/css/vendor.css" rel="stylesheet">
+		<link type="text/css" href="infinni-ui/css/main.css" rel="stylesheet">
+
+		<link type="text/css" href="iui-live-example.css" rel="stylesheet">
+		
+		<script type="text/javascript" src="infinni-ui/config.js"> </script>
+		<script type="text/javascript" src="infinni-ui/vendor.js"> </script>
+		<script type="text/javascript" src="infinni-ui/templates.js"> </script>
+		<script type="text/javascript" src="infinni-ui/platform.js"> </script>
+		
+		<script>
+			(function ($target/*, metadata*/, homePageMetadata) {			
+				moment.locale('ru');
+
+				var host = InfinniUI.config.serverUrl;
+
+				InfinniUI.providerRegister.register('ObjectDataSource', InfinniUI.Providers.ObjectDataProvider);
+
+				InfinniUI.providerRegister.register('MetadataDataSource', function (metadataValue) {
+					var $pageContent = $('body');
+					return new InfinniUI.Providers.MetadataProviderREST(new InfinniUI.Providers.QueryConstructorMetadata(host, metadataValue));
+				});
+
+				InfinniUI.providerRegister.register('DocumentDataSource', InfinniUI.Providers.RestDataProvider);
+
+			})();
+
+			function SpecialApplicationView() {
+				var $container;
+
+				this.getContainer = function () {
+					return this.$container;
+				};
+
+				this.open = function ($el) {
+					this.$container = $el;
+				};
+
+				this.getApplicationView = function () {
+					return this;
+				};
+
+				this.getContext = function(){
+					return null;
+				}
+			}
+			
+			function runPlatformWithMetadata(metadata){
+				var builder = new InfinniUI.ApplicationBuilder(),
+					rootView = new SpecialApplicationView(),
+					mainView;
+					
+				var $wrapper = $('.iui-live-example');
+
+				rootView.open($wrapper);
+				InfinniUI.config.$rootContainer = $wrapper;
+
+				var action = builder.buildType('OpenAction', metadata, {parentView: rootView});
+				action.execute();
+			}
+			
+			function runScript(scriptText){
+				var func = new Function('$elementForExample', scriptText);
+				var $wrapper = $('.iui-live-example');
+				
+				func($wrapper);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="iui-live-example"></div>
+	</body>
+</html>

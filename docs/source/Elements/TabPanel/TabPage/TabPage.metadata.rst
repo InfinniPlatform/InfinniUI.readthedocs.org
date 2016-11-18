@@ -32,49 +32,62 @@ Examples
 
 ::
 
-    {
-      "TabPage": {
-        "Text": "Page_1",
-        "OnClosed": "{ alert('Page_1 is closed!'); }",
-        "Items": [
-          {
-            "Label": {
-              "Value": "1"
-            }
-          },
-          {
-            "Label": {
-              "Value": "2"
-            }
-          },
-          {
-            "Label": {
-              "Value": "3"
-            }
+  //infinni-ui-demo
+  {
+    "Items": [
+      {
+        "TabPanel": {
+          "Items": [
+          //infinni-ui-display-begin
+  {
+    "TabPage": {
+      "Text": "Page_1",
+      "OnClosed": "{ alert('Page_1 is closed!'); }",
+      "Items": [
+        {
+          "Label": {
+            "Value": "1"
           }
-        ]
-      }
-    },
-    {
-      "TabPage": {
-        "Text": "Page_2",
-        "OnClosed": "{ alert('Closed: Page_2'); }",
-        "Items": [
-          {
-            "Label": {
-              "Value": "A"
-            }
-          },
-          {
-            "Label": {
-              "Value": "B"
-            }
-          },
-          {
-            "Label": {
-              "Value": "C"
-            }
+        },
+        {
+          "Label": {
+            "Value": "2"
           }
-        ]
-      }
+        },
+        {
+          "Label": {
+            "Value": "3"
+          }
+        }
+      ]
     }
+  },
+  {
+    "TabPage": {
+      "Text": "Page_2",
+      "OnClosed": "{ alert('Closed: Page_2'); }",
+      "Items": [
+        {
+          "Label": {
+            "Value": "A"
+          }
+        },
+        {
+          "Label": {
+            "Value": "B"
+          }
+        },
+        {
+          "Label": {
+            "Value": "C"
+          }
+        }
+      ]
+    }
+  }
+            //infinni-ui-display-end
+          ]
+        }
+      }    
+    ]
+  }

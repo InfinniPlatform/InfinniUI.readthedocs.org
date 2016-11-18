@@ -22,37 +22,45 @@ UI structure can be described as:
 
 .. code:: js
 
+    //infinni-ui-demo
     {
-        "GridPanel": {
-	        "Items": [
-	            {
-	                "Cell": {
-	                    "ColumnSpan": 4,
-	                    "Items": [
-	                        {
-	                            "Label": {
-	                                "Text": "Some label",
-	                                "HorizontalAlignment": "Right"
-	                            }
-	                        }
-	                    ]
-	                }
-	            },{
-	                  "Cell": {
-	                      "ColumnSpan": 4,
-	                      "Items": [
-	                          {
-	                              "TextBox": {
-	                                  "Name": "TB",
-	                                  "Value": "Some value"
-	                              }
-	                          }
-	                      ]
-	                  }
-	              }
-	        ]
-	    }
+    "DataSources": [],
 
+    "Items": [
+    {
+    //infinni-ui-display-begin
+    "GridPanel": {
+        "Items": [
+            {
+                "Cell": {
+                    "ColumnSpan": 4,
+                    "Items": [
+                        {
+                            "Label": {
+                                "Text": "Some label",
+                                "HorizontalAlignment": "Right"
+                            }
+                        }
+                    ]
+                }
+            },{
+                  "Cell": {
+                      "ColumnSpan": 4,
+                      "Items": [
+                          {
+                              "TextBox": {
+                                  "Name": "TB",
+                                  "Value": "Some value"
+                              }
+                          }
+                      ]
+                  }
+              }
+        ]
+    }
+    //infinni-ui-display-end
+    }
+    ]
     }
 
 Data source, in this case pre-defined local data set, can be defined as:
@@ -74,6 +82,7 @@ Data binding to a text field:
 
 .. code:: js
 
+    //infinni-ui-demo
     {
         "DataSources": [{
             "ObjectDataSource": {

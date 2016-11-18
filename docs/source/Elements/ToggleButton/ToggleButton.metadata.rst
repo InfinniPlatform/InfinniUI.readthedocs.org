@@ -50,7 +50,7 @@ Examples
         }
     };
 
-    var builder = new ApplicationBuilder();
+    var builder = new InfinniUI.ApplicationBuilder();
     var toggle = builder.build(metadata);
 
     //  Render

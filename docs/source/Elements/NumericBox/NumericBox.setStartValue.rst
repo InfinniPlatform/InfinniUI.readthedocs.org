@@ -39,7 +39,7 @@ Examples
     //js-demo
 
 
-    var numericBox = new NumericBox();
+    var numericBox = new InfinniUI.NumericBox();
     numericBox.setStartValue(1980);
     numericBox.setMinValue(1000);
     numericBox.setMaxValue(2000);

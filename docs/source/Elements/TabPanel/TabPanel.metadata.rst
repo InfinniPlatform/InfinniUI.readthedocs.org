@@ -28,34 +28,42 @@ Examples
 
 ::
 
-    {
-      "TabPanel": {
-        "HeaderLocation": "Left",
-        "Items": [
-          {
-            "TabPage": {
-              "Text": "Page1",
-              "Items": [
-                {
-                  "Label": {
-                    "Value": "Content of Page1"
-                  }
+  //infinni-ui-demo
+  {
+    "Items": [
+    //infinni-ui-display-begin
+  {
+    "TabPanel": {
+      "HeaderLocation": "Top",
+      "OnSelectedItemChanged": "{ console.log(args.getText()); }",
+      "Items": [
+        {
+          "TabPage": {
+            "Text": "Page1",
+            "Items": [
+              {
+                "Label": {
+                  "Value": "Content of Page1"
                 }
-              ]
-            }
-          },
-          {
-            "TabPage": {
-              "Text": "Page2",
-              "Items": [
-                {
-                  "Label": {
-                    "Value": "Content of Page2"
-                  }
-                }
-              ]
-            }
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "TabPage": {
+            "Text": "Page2",
+            "Items": [
+              {
+                "Label": {
+                  "Value": "Content of Page2"
+                }
+              }
+            ]
+          }
+        }
+      ]
     }
+  }
+      //infinni-ui-display-end
+    ]
+  }

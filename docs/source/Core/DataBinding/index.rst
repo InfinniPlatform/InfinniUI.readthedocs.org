@@ -44,15 +44,15 @@ Usage
 .. code:: js
 
     //js-demo
-    var element = new TextBox();
+    var element = new InfinniUI.TextBox();
     var $element = element.render();
     element.setLabelText("Element");
 
-    var source = new TextBox();
+    var source = new InfinniUI.TextBox();
     var $source = source.render();
     source.setLabelText("Source");
 
-    var binding = new DataBinding();
+    var binding = new InfinniUI.DataBinding();
     binding.setMode('ToSource');
     binding.bindSource(source, 'value');
     binding.bindElement(element, 'value');

@@ -28,26 +28,33 @@ Examples
 
 ::
 
-    {
-      "ScrollPanel": {
-        "HorizontalScroll": "Hidden",
-        "VerticalScroll": "Visible",
-        "Items": [
-          {
-            "Label": {
-              "Value": "One"
-            }
-          },
-          {
-            "Label": {
-              "Value": "Two"
-            }
-          },
-          {
-            "Label": {
-              "Value": "Three"
-            }
+  //infinni-ui-demo
+  {
+    "Items": [
+    //infinni-ui-display-begin
+  {
+    "ScrollPanel": {
+      "HorizontalScroll": "Hidden",
+      "VerticalScroll": "Visible",
+      "Items": [
+        {
+          "Label": {
+            "Value": "One"
           }
-        ]
-      }
+        },
+        {
+          "Label": {
+            "Value": "Two"
+          }
+        },
+        {
+          "Label": {
+            "Value": "Three"
+          }
+        }
+      ]
     }
+  }
+      //infinni-ui-display-end
+    ]
+  }
