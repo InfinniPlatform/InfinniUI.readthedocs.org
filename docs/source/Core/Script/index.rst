@@ -18,6 +18,7 @@ generally scripts are defined and used at the metadata level. They can be define
 
 .. code:: js
 
+    //infinni-ui-demo
     {
         "DataSources": [
         ],
@@ -29,7 +30,7 @@ generally scripts are defined and used at the metadata level. They can be define
                         "ColumnSpan": 4,
                         "Items": [{
                             "Button": {
-                                "Name": "button",
+                                "Name": "button_1",
                                 "Text": "Button",
                                 "OnClick": "alertAction"
                             }
@@ -51,6 +52,7 @@ without view registration:
 
 .. code:: js
 
+    //infinni-ui-demo
     {
         "DataSources": [
         ],
@@ -62,7 +64,7 @@ without view registration:
                         "ColumnSpan": 4,
                         "Items": [{
                             "Button": {
-                                "Name": "button",
+                                "Name": "button_2",
                                 "Text": "Button",
                                 "OnClick": "{ alert(args.source.getName()); }"
                             }

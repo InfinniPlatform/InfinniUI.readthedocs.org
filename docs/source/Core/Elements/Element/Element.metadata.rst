@@ -134,8 +134,31 @@ Exampes
 
 ::
 
-    "Button": {
-        "Name": "button",
-        "Text": "Button",
-        "OnClick": "{ alert(args.source.getName()); }"
-    }
+  //infinni-ui-demo
+  {
+      "DataSources": [
+      ],
+      "Items": [{
+              "GridPanel": {
+                  "Items": [
+                      {
+                          "Cell": {
+                              "ColumnSpan": 4,
+                              "Items": [
+                                  {
+                                      //infinni-ui-display-begin
+  "Button": {
+      "Name": "my_button",
+      "Text": "Button",
+      "OnClick": "{ alert(args.source.getName()); }"
+  }
+                                      //infinni-ui-display-end
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          }
+      ]
+  }
