@@ -44,13 +44,13 @@ Usage
 
     //js-demo
     var simpleItemTemplate = function (context, args) {
-        var label = new Label();
+        var label = new InfinniUI.Label();
         label.setValue(args.item);
         return label;
     };
 
     function createListBox (openMode, isMultiSelect){
-        listBox = new ListBox(null, openMode);
+        listBox = new InfinniUI.ListBox(null, openMode);
         listBox.getItems().reset(['1', '2', '3']);
         listBox.setItemTemplate(simpleItemTemplate);
         listBox.setMultiSelect(isMultiSelect);
@@ -60,7 +60,7 @@ Usage
     }
 
     // hiddenCodeStart
-    var viewModeListBox = new ListBox(null, 'checking'), 
+    var viewModeListBox = new InfinniUI.ListBox(null, 'checking'), 
         listBox, checkBox;
 
     viewModeListBox.getItems().reset([
@@ -82,7 +82,7 @@ Usage
     var $viewModeListBox = viewModeListBox.render(), $listBox;
     $elementForExample.append($viewModeListBox);
 
-    checkBox = new CheckBox();
+    checkBox = new InfinniUI.CheckBox();
     checkBox.setText('MultiSelect');
     checkBox.setValue(true);
     checkBox.onValueChanged(function (context, args){

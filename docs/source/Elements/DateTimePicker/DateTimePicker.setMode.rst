@@ -32,18 +32,18 @@ Examples
     //js-demo
 
     //  Format
-    var format = new DateTimeFormat("G");
+    var format = new InfinniUI.DateTimeFormat("G");
     var displayFormat = function (context, args) {
         return format.formatValue(args.value);
     }
 
     //  EditMask
-    var editMask = new DateTimeEditMask();
+    var editMask = new InfinniUI.DateTimeEditMask();
     editMask.mask = "G";
     editMask.format = format;
 
     //  DateTimePicker
-    var dtPicker = new DateTimePicker();
+    var dtPicker = new InfinniUI.DateTimePicker();
     dtPicker.setMode("DateTime");
     dtPicker.setValue("2016-07-04T17:00");
     dtPicker.setDisplayFormat(displayFormat);

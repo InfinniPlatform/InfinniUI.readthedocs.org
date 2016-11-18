@@ -36,7 +36,7 @@ Examples
 .. code:: js
 
     //js-demo
-    var label = new Label();
+    var label = new InfinniUI.Label();
     var formaToLowerCase = function (context, args) {
         return String(args.value).toLowerCase();
     }

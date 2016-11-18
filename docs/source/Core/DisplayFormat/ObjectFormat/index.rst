@@ -16,7 +16,7 @@ Example
 .. code:: js
 
     //js-demo
-    format = new ObjectFormat();
+    format = new InfinniUI.ObjectFormat();
     format.setFormat('{:n3}');
 
     $elementForExample.append(format.formatValue(1/3));

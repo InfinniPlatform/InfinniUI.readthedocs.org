@@ -44,7 +44,7 @@ Usage
 .. code:: js
 
     //js-demo
-    var button = new Button();
+    var button = new InfinniUI.Button();
     var $button = button.render();
 
     button.setText("ButtonText")

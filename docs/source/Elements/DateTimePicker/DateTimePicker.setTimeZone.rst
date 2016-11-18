@@ -33,7 +33,7 @@ Examples
     //js-demo
 
     //  Format
-    var format = new DateTimeFormat("G");
+    var format = new InfinniUI.DateTimeFormat("G");
     var timeZone = -180; // UTC+3
     format.setOptions({TimeZone: timeZone});    
     var displayFormat = function (context, args) {
@@ -41,12 +41,12 @@ Examples
     }
 
     //  EditMask
-    var editMask = new DateTimeEditMask();
+    var editMask = new InfinniUI.DateTimeEditMask();
     editMask.mask = "G";
     editMask.format = format;
 
     //  DateTimePicker
-    var dtPicker = new DateTimePicker();
+    var dtPicker = new InfinniUI.DateTimePicker();
     dtPicker.setMode("DateTime");
     dtPicker.setTimeZone(timeZone);
     dtPicker.setDisplayFormat(displayFormat);

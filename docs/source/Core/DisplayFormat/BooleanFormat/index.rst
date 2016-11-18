@@ -27,7 +27,7 @@ Example
 .. code:: js
 
     //js-demo
-    format = new BooleanFormat();
+    format = new InfinniUI.BooleanFormat();
     format.setTrueText('Y');
     format.setFalseText('N');
 

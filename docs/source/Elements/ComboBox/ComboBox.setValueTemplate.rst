@@ -9,10 +9,8 @@ Description
 
 Зачастую значения перед отображением необходимо преобразовывать.
 Чтобы изменить формат отображения значений ComboBox воспользуйтесь
-  методом
-  `setItemTemplate <../../Core/Elements/Container/Container.setItemTemplate.html>`__.
-Для изменения формата отображения выбранного значения используйте
-  метод ``setValueTemplate``.
+методом `setItemTemplate <../../Core/Elements/Container/Container.setItemTemplate.html>`__.
+Для изменения формата отображения выбранного значения используйте метод ``setValueTemplate``.
 
 Syntax
 ------
@@ -46,7 +44,7 @@ Examples
 .. code:: js
 
     //js-demo
-    var comboBox = new ComboBox();
+    var comboBox = new InfinniUI.ComboBox();
 
     comboBox.getItems().reset([
         '1',
@@ -55,14 +53,14 @@ Examples
     ]);
 
     var itemTemplate = function (context, args) {
-        var label = new Label();
+        var label = new InfinniUI.Label();
         label.setValue('№' + args.value);
         return label;
     }
     comboBox.setItemTemplate(itemTemplate);
 
     var valueTemplate = function (context, args) {
-        var label = new Label();
+        var label = new InfinniUI.Label();
         var value = args.value ? 'Выбран №' + args.value : '';
         label.setValue(value);
         return label;

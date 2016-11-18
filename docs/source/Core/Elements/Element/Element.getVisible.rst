@@ -28,11 +28,11 @@ Examples
 .. code:: js
 
     //js-demo
-    var textbox = new TextBox();
+    var textbox = new InfinniUI.TextBox();
     var $textbox = textbox.render();
     var visibleOfButton = textbox.getVisible();
 
-    var buttonForToggling = new Button();
+    var buttonForToggling = new InfinniUI.Button();
     var $buttonForToggling = buttonForToggling.render();
 
     buttonForToggling.setText('Hide textbox');

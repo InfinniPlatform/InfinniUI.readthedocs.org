@@ -36,19 +36,19 @@ Parameters
     //js-demo
 
     //  Format
-    var format = new DateTimeFormat("d");
+    var format = new InfinniUI.DateTimeFormat("d");
     format.setOptions({TimeZone: 0});
     var displayFormat = function (context, args) {
         return format.formatValue(args.value);
     }
 
     //  EditMask
-    var editMask = new DateTimeEditMask();
+    var editMask = new InfinniUI.DateTimeEditMask();
     editMask.mask = "d";
     editMask.format = format;
 
     //  DateTimePicker
-    var datePicker = new DatePicker();
+    var datePicker = new InfinniUI.DatePicker();
     datePicker.setDisplayFormat(displayFormat);
     datePicker.setEditMask(editMask);
     datePicker.setMinValue(new Date());   // Set minimum value

@@ -35,7 +35,7 @@ Examples
 .. code:: js
 
     //js-demo
-    var textarea = new TextBox();
+    var textarea = new InfinniUI.TextBox();
     textarea.setMultiline(true);
     textarea.setLineCount(4);
     textarea.setLabelText('textarea');

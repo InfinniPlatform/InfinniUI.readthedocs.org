@@ -35,7 +35,7 @@ Examples
 .. code:: js
 
     //js-demo
-    var button = new Button();
+    var button = new InfinniUI.Button();
     button.setContent('Click<br/>me');
     $elementForExample.append(button.render());
 

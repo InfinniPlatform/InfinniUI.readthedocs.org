@@ -16,7 +16,7 @@ Example
 .. code:: js
 
     //js-demo
-    format = new DateTimeFormat();
+    format = new InfinniUI.DateTimeFormat();
     format.setFormat('dd-MM-yyyy');
 
     $elementForExample.append(format.formatValue(new Date()));
