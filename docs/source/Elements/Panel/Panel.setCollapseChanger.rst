@@ -58,7 +58,6 @@ Examples
 	  });
 	  return header;
 	});
-	panel.setValue
 
 	panel.setCollapsible(true);
 	panel.setCollapseChanger('icon_1');
