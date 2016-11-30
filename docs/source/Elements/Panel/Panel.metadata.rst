@@ -29,6 +29,10 @@ Properties
      - ``String``/`BindingMetadata <../../Core/DataBinding/DataBinding.metadata.html>`__
      - –
      - Заголовок панели
+   * - CollapseChanger
+     - ``String``
+     - –
+     - `Имя элемента <../../Core/Elements/Element/Element.metadata.html>`_, при нажатии на который панель будет сворачиваться/разворачиваться.
    * - OnExpanding
      - `Script <../../Core/Script/>`__
      - –

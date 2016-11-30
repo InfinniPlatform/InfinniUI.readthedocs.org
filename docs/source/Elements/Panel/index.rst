@@ -61,6 +61,10 @@ Methods
      - Возвращает заголовок панели
    * - `setHeader <Panel.setHeader.html>`__
      - Устанавливает заголовок панели
+   * - `getCollapseChanger <Panel.getCollapseChanger.html>`__
+     - Возвращает имя элемента, при клике на который раскрывается панель
+   * - `setCollapseChanger <Panel.setCollapseChanger.html>`__
+     - Устанавливает имя элемента, при клике на который раскрывается панель
 
 
 Events
