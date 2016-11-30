@@ -10,7 +10,7 @@ Examples
 
     {
         "Icon": {
-            "Value": "fa-star"
+            "Value": "star"
         }
     }
 
