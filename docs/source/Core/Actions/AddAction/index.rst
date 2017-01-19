@@ -48,7 +48,7 @@ Properties
    * - sourceSource*
      - ``String``
      - Название редактируемого источника данных на представлении создания
-   * - destinationSource\*
+   * - destinationSource
      - ``String``
      - Название редактируемого источника данных, на представлении, откуда создание было вызвано
    * - destinationProperty

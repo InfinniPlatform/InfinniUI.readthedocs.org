@@ -18,7 +18,7 @@ Properties
    * - SourceValue.Source*
      - ``String``
      - Название редактируемого источника данных на представлении редактирования
-   * - DestinationValue.Source\*
+   * - DestinationValue.Source
      - ``String``
      - Название редактируемого источника данных, на представлении, откуда редактирование было вызвано
    * - DestinationValue.Property
