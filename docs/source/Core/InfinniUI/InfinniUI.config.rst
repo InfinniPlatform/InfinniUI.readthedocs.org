@@ -11,27 +11,35 @@ Properties
 
    * - Name
      - Type
+     - Default
      - Description
    * - ``serverUrl``
      - ``String``
+     - 
      - Адрес сервера.
    * - ``configName``
      - ``String``
+     - 
      - Название конфигурации.
    * - ``homePage``
      - ``String``
+     - 
      - Путь для получения домашней страницы.
    * - ``enableAutoHeightService``
      - ``Boolean``
-     - Флаг, определяющий запуск AutoHeightService (по умолчанию сервис не запущен).
+     - false
+     - Флаг, определяющий запуск сервиса, регулирующего высоту элементов. Если сервис не запущен, `ScrollPanel </Elements/ScrollPanel/>`_ не прокручивается.
    * - ``enableGetCurrentUser``
      - ``Boolean``
-     - Флаг, определяющий нужно ли при загрузке страницы определять текущего пользователя.
+     - false
+     - Флаг, определяющий, нужно ли при загрузке страницы определять текущего пользователя.
    * - ``HistoryAPI``
      - ``Object``
+     - 
      - Параметры History API для запуска роутинга. Принимает такие же параметры как и `Backbone.history.start() <http://backbonejs.org/#History-start>`_
    * - ``Routes``
      - ``Array``
+     - 
      - `Массив объектов конфигурации роутинга приложения. <InfinniUI.config.Routes.html>`__
 
 
