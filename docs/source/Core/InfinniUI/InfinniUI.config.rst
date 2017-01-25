@@ -21,13 +21,13 @@ Properties
    * - ``homePage``
      - ``String``
      - Путь для получения домашней страницы.
-   * - ``disableLayoutManager``
+   * - ``enableAutoHeightService``
      - ``Boolean``
-     - Отключение LayoutManager.
-   * - ``disableGetCurrentUser``
+     - Флаг, определяющий запуск AutoHeightService (по умолчанию сервис не запущен).
+   * - ``enableGetCurrentUser``
      - ``Boolean``
-     - Отключение отправки запроса на получение текущего пользователя.
-   * - ``disableSignInExternalForm``
+     - Флаг, определяющий нужно ли при загрузке страницы определять текущего пользователя.
+   * - ``enableSignInExternalForm``
      - ``Boolean``
      - Отключение отправки запроса на получение SignInExternalForm.
    * - ``HistoryAPI``
@@ -46,9 +46,9 @@ Example
     window.InfinniUI.config.serverUrl = 'http://localhost:9900';
     window.InfinniUI.config.configName = 'Хабинет';
     window.InfinniUI.config.homePage = 'content/metadata/Views/common/homePage.json';
-    window.InfinniUI.config.disableLayoutManager = true;
-    window.InfinniUI.config.disableGetCurrentUser = false;
-    window.InfinniUI.config.disableSignInExternalForm = false;
+    window.InfinniUI.config.enableAutoHeightService = true;
+    window.InfinniUI.config.enableGetCurrentUser = true;
+    window.InfinniUI.config.enableSignInExternalForm = false;
     window.InfinniUI.config.HistoryAPI = {
       pushState: true
     };
