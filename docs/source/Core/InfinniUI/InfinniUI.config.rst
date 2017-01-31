@@ -65,7 +65,7 @@ Example
       {
         Name: "UserPageRoute",
         Path: "/user/<% userId %>",
-        Action: "{ routeCallback3(context, args) }"
+        Action: "{ routeCallback2(context, args) }"
       }
     ];
 
