@@ -1,7 +1,7 @@
 BaseDataSource.getValidationResult()
 =================================
 
-Возвращает `результат <ValidationResult/>`__ проверки на ошибки.
+Возвращает `результат <ValidationResult.html>`__ проверки на ошибки.
 
 Syntax
 ------
@@ -27,7 +27,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Результат <ValidationResult/>`__ проверки на ошибки
+`Результат <ValidationResult.html>`__ проверки на ошибки
 
 Examples
 --------
@@ -44,4 +44,4 @@ See Also
 -  `onErrorValidator <BaseDataSource.onErrorValidator.html>`__
 -  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
 -  `setErrorValidator() <BaseDataSource.setErrorValidator.html>`__
--  `ValidationResult <ValidationResult/>`__
+-  `ValidationResult <ValidationResult.html>`__

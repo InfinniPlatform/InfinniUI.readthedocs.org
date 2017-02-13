@@ -9,7 +9,7 @@ Description
 `Функция <../../Script/>`__ проверки элемента на ошибки в параметре
 ``args`` принимает элемент источника данных, который необходимо
 проверить. Результатом работы функции является объект `предопределенного
-формата <ValidationResult/>`__.
+формата <ValidationResult.html>`__.
 
 Syntax
 ------
@@ -41,4 +41,4 @@ See Also
 -  `setErrorValidator() <BaseDataSource.setErrorValidator.html>`__
 -  `getValidationResult() <BaseDataSource.getValidationResult.html>`__
 -  `saveItem() <BaseDataSource.saveItem.html>`__
--  `ValidationResult <ValidationResult/>`__
+-  `ValidationResult <ValidationResult.html>`__
