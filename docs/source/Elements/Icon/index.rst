@@ -41,5 +41,18 @@ Parameters
      - Родительский элемент
 
 
+Methods
+-------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `getSize <Icon.getSize.html>`__
+     - Возвращает размер иконки
+   * - `setSize <Icon.setSize.html>`__
+     - Устанавливает размер иконки
+
 
 .. include:: Icon.metadata.rst
