@@ -9,8 +9,8 @@ Description
 Вызов метода `saveItem() <BaseDataSource.saveItem.html>`__ производит
 сохранение всех изменений указанного элемента в соответствующем
 источнику данных хранилище. Сохранение производится только в том случае,
-если указанный элемент `не содержит
-ошибок <BaseDataSource.validateOnErrors.html>`__. Успешное сохранение
+если указанный элемент не содержит
+ошибок, в противном случае возникает событие `onErrorValidator <BaseDataSource.onErrorValidator.html>`__. Успешное сохранение
 элемента приводит к возникновению события
 `onItemSaved <BaseDataSource.onItemSaved.html>`__.
 
@@ -56,6 +56,7 @@ See Also
 --------
 
 -  `onItemSaved <BaseDataSource.onItemSaved.html>`__
+-  `onErrorValidator <BaseDataSource.onErrorValidator.html>`__
 -  `createItem() <BaseDataSource.createItem.html>`__
 -  `deleteItem() <BaseDataSource.deleteItem.html>`__
--  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__
+-  `getValidationResult() <BaseDataSource.getValidationResult.html>`__

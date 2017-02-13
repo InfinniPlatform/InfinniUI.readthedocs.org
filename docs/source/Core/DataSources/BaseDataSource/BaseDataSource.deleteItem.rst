@@ -9,7 +9,8 @@ Description
 Вызов метода `deleteItem() <BaseDataSource.deleteItem.html>`__ производит
 удаление указанного элемента в соответствующем источнику данных
 хранилище. Успешное удаление элемента приводит к возникновению события
-`onItemDeleted <BaseDataSource.onItemDeleted.html>`__.
+`onItemDeleted <BaseDataSource.onItemDeleted.html>`__. 
+В случае, когда `сервер <http://infinniplatform.readthedocs.io/api/reference/InfinniPlatform.Sdk.Documents.Interceptors.IDocumentStorageInterceptor.html>`_ сообщает о невозможности удалить элемент, возникает событие `onErrorValidator <BaseDataSource.onErrorValidator.html>`__.
 
 Syntax
 ------

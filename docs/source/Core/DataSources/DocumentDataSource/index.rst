@@ -45,11 +45,11 @@ Properties
 Specific Properties
 -------------------
 
-Для работы с данными свойствами используйте методы
-  `getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и
-  `setProperty <../BaseDataSource/BaseDataSource.setProperty.html>`__.
+Для работы с данными свойствами используйте методы 
+`getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и 
+`setProperty <../BaseDataSource/BaseDataSource.setProperty.html>`__.
 Обратите внимание, что для работы с данными свойствами необходимо
-  `указывать точку в
+`указывать точку в
   названии <../BaseDataSource/BaseDataSource.getProperty/#path-rules>`__.
 
 .. list-table::

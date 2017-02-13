@@ -1,17 +1,7 @@
 BaseDataSource.onErrorValidator
 ===============================
 
-Устанавливает `обработчик события <../../Script/>`__ о том, что
-проверка на ошибки завершена.
-
-Description
------------
-
-Вызов метода
-`validateOnErrors() <BaseDataSource.validateOnErrors.html>`__ начинает
-проверку указанного элемента или всех элементов источника данных на
-наличие ошибок. Завершение проверки приводит к возникновению события
-`onErrorValidator <BaseDataSource.onErrorValidator.html>`__.
+Устанавливает `обработчик события <../../Script/>`__ о том, что произошла ошибка валидации.
 
 Syntax
 ------
@@ -48,4 +38,4 @@ Examples
 See Also
 --------
 
--  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__
+-  `getValidationResult() <BaseDataSource.getValidationResult.html>`__

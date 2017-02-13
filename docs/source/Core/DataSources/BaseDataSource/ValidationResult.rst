@@ -48,4 +48,4 @@ See Also
 
 -  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
 -  `setErrorValidator() <BaseDataSource.setErrorValidator.html>`__
--  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__
+-  `getValidationResult() <BaseDataSource.getValidationResult.html>`__

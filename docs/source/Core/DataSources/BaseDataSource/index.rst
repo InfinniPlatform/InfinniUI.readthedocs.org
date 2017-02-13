@@ -130,8 +130,8 @@ Methods
      - Пытается обновить список элементов источника. Делает это только в случае, если до этого источник не был прогружен данными
    * - `getItems <BaseDataSource.getItems.html>`__
      - Возвращает список элементов источника данных
-   * - `validateOnErrors <BaseDataSource.validateOnErrors.html>`__
-     - Осуществляет проверку на ошибки
+   * - `getValidationResult <BaseDataSource.getValidationResult.html>`__
+     - Возвращает результат проверки на ошибки
    * - `initDataProvider <BaseDataSource.initDataProvider.html>`__
      - Определяет обязательное свойство `dataProvider <../../DataProviders/>`__. Наследники BaseDataSource должны переопределять этот метод!
    * - `beforeDeleteItem <BaseDataSource.beforeDeleteItem.html>`__
@@ -159,7 +159,7 @@ Events
    * - `onItemsUpdated <BaseDataSource.onItemsUpdated.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что список элементов обновлен
    * - `onErrorValidator <BaseDataSource.onErrorValidator.html>`__
-     - Устанавливает `обработчик события <../../Script/>`__ о том, что проверка на ошибки завершена
+     - Устанавливает `обработчик события <../../Script/>`__ о том, что произошла ошибка валидации
    * - `onProviderError <BaseDataSource.onProviderError.html>`__
      - Устанавливает `обработчик события <../../Script/>`__ о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку
 
@@ -179,6 +179,7 @@ Events
    BaseDataSource.getName.rst
    BaseDataSource.getProperty.rst
    BaseDataSource.getSelectedItem.rst
+   BaseDataSource.getValidationResult.rst
    BaseDataSource.getView.rst
    BaseDataSource.idOfItem.rst
    BaseDataSource.initDataProvider.rst
@@ -208,7 +209,6 @@ Events
    BaseDataSource.suspendUpdate.rst
    BaseDataSource.tryInitData.rst
    BaseDataSource.updateItems.rst
-   BaseDataSource.validateOnErrors.rst
    ValidationResult.rst
 
 

@@ -68,6 +68,6 @@ See Also
 --------
 
 -  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
--  `validateOnErrors() <BaseDataSource.validateOnErrors.html>`__
+-  `getValidationResult() <BaseDataSource.getValidationResult.html>`__
 -  `saveItem() <BaseDataSource.saveItem.html>`__
 -  `ValidationResult <ValidationResult/>`__
