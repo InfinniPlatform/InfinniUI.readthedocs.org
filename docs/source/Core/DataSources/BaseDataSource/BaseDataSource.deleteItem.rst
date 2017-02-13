@@ -30,7 +30,7 @@ Parameters
    * - item\*
      - Элемент источника данных
    * - success
-     - `Обработчик события <../../Script/>`__ о том, что элемент удален. Параметр ``args`` данного обработчика содержит поля: source - ссылка на `источник данных <../>`__, value - удаленный элемент
+     - `Обработчик события <../../Script/>`__ о том, что элемент удален. Параметр ``args`` данного обработчика содержит поля: item - сохраненный элемент, validationResult - `результат валидации <ValidationResult.html>`_ (чтобы данное поле было заполнено, запрашиваемый сервис должен реализовать интерфейс `IDocumentStorageInterceptor <http://infinniplatform.readthedocs.io/api/reference/InfinniPlatform.Sdk.Documents.Interceptors.IDocumentStorageInterceptor.html>`_), originalResponse - ответ сервера
    * - error
      - `Обработчик события <../../Script/>`__ о том, что при удалении элемента произошла ошибка. Параметр ``args`` данного обработчика содержит поля: item - удаляемый элемент, validationResult - `результат валидации <ValidationResult.html>`_ (чтобы данное поле было заполнено, запрашиваемый сервис должен реализовать интерфейс `IDocumentStorageInterceptor <http://infinniplatform.readthedocs.io/api/reference/InfinniPlatform.Sdk.Documents.Interceptors.IDocumentStorageInterceptor.html>`_), originalResponse - ответ сервера
 
