@@ -32,9 +32,9 @@ Parameters
    * - item\*
      - Элемент источника данных
    * - success
-     - `Обработчик события <../../Script/>`__ о том, что элемент сохранен. Параметр ``args`` данного обработчика содержит поля: item - сохраненный элемент, validationResult - `результат валидации <ValidationResult.html>`_ (чтобы данное поле было заполнено, запрашиваемый сервис должен реализовать интерфейс IDocumentStorageInterceptor), originalResponse - ответ сервера
+     - `Обработчик события <../../Script/>`__ о том, что элемент сохранен. Параметр ``args`` данного обработчика содержит поля: item - сохраненный элемент, validationResult - `результат валидации <ValidationResult.html>`_ (чтобы данное поле было заполнено, запрашиваемый сервис должен реализовать интерфейс `IDocumentStorageInterceptor <http://infinniplatform.readthedocs.io/api/reference/InfinniPlatform.Sdk.Documents.Interceptors.IDocumentStorageInterceptor.html>`_), originalResponse - ответ сервера
    * - error
-     - `Обработчик события <../../Script/>`__ о том, что при сохранении элемента произошла ошибка. Параметр args данного обработчика содержит поля: item - сохраняемый элемент, validationResult - `результат валидации <ValidationResult.html>`_ (чтобы данное поле было заполнено, запрашиваемый сервис должен реализовать интерфейс IDocumentStorageInterceptor), originalResponse - ответ сервера
+     - `Обработчик события <../../Script/>`__ о том, что при сохранении элемента произошла ошибка. Параметр args данного обработчика содержит поля: item - сохраняемый элемент, validationResult - `результат валидации <ValidationResult.html>`_ (чтобы данное поле было заполнено, запрашиваемый сервис должен реализовать интерфейс `IDocumentStorageInterceptor <http://infinniplatform.readthedocs.io/api/reference/InfinniPlatform.Sdk.Documents.Interceptors.IDocumentStorageInterceptor.html>`_), originalResponse - ответ сервера
 
 
 \* Обязательный аргумент.
