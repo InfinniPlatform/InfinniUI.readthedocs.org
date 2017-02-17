@@ -31,7 +31,7 @@ Examples
 
     BaseDataSource.onErrorValidator(
       function(context, args) {
-        alert('Validation result does not have any errors: ' + args.value.isValid);
+        alert('Validation result does not have any errors: ' + args.value.IsValid);
       }
     );
 

@@ -47,16 +47,16 @@ Examples
       function(context, args) {
         if (/^[a-z]+$/i.test(args.FirstName)) {
           return {
-            isValid: true
+            IsValid: true
           };
         }
         else {
           return {
-            isValid: false,
-            items: [
+            IsValid: false,
+            Items: [
               {
-                property: 'FirstName',
-                message: 'First name should contains Latin symbols only'
+                Property: 'FirstName',
+                Message: 'First name should contains Latin symbols only'
               }
             ]
           };
