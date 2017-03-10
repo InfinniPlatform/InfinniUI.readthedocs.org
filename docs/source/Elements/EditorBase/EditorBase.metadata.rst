@@ -16,13 +16,13 @@ Properties
      - `BindingMetadata <../../Core/DataBinding/DataBinding.metadata.html>`__
      - Значение
    * - HintText
-     - ``String``
+     - ``String`` (ƒ)
      - Текст с подсказкой для ввода
    * - ErrorText
-     - ``String``
+     - ``String`` (ƒ)
      - Текст с информацией об ошибке
    * - WarningText
-     - ``String``
+     - ``String`` (ƒ)
      - Текст с информацией о предупреждении
    * - OnValueChanging
      - `Script <../../Core/Script/>`__
@@ -31,6 +31,7 @@ Properties
      - `Script <../../Core/Script/>`__
      - Обработчик события о том, что значение было изменено
 
+(ƒ) Свойство может быть задано, как `JSExpression </Core/JSExpression/>`_.
 
 Examples
 ~~~~~~~~

@@ -14,7 +14,7 @@ Properties
      - Default
      - Description
    * - ``LabelText``
-     - ``String``
+     - ``String`` (ƒ)
      - –
      - Текст метки
    * - ``LabelFloating``
@@ -30,6 +30,7 @@ Properties
      - –
      - Маска ввода значения
 
+(ƒ) Свойство может быть задано, как `JSExpression </Core/JSExpression/>`_.
 
 Examples
 ~~~~~~~~
