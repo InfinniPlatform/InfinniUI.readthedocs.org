@@ -23,17 +23,17 @@ Examples
 .. code:: json
 
     {
-      "Format": "{:n2}"
+      "Format": "${:n2}"
     }
 
 .. code:: json
 
     {
-      "Format": "Birth date: {BirthDate:d}"
+      "Format": "Birth date: ${BirthDate:d}"
     }
 
 .. code:: json
 
     {
-       "Format": "Weight: {Weight:n2} kg"
+       "Format": "Weight: ${Weight:n2} kg"
     }

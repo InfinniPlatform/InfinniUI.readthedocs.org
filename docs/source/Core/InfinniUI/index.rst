@@ -19,8 +19,8 @@ Properties
      - `GlobalContext <../GlobalContext>`__
      - Application global context.
    * - ``localizations``
-     - –
-     - –
+     - ``Object``
+     - Application localization parameters
 
 
 
@@ -29,3 +29,4 @@ Properties
 
    InfinniUI.config.Routes.rst
    InfinniUI.config.rst
+   InfinniUI.localizations.rst

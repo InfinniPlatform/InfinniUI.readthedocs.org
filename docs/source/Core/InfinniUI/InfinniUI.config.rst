@@ -21,6 +21,10 @@ Properties
      - ``String``
      - 
      - Название конфигурации.
+   * - ``lang``
+     - ``String``
+     - ``en-US``
+     - Текущая локаль.
    * - ``homePage``
      - ``String``
      - 
@@ -50,6 +54,7 @@ Example
 
     window.InfinniUI.config.serverUrl = 'http://localhost:9900';
     window.InfinniUI.config.configName = 'Хабинет';
+    window.InfinniUI.config.lang = 'en-US';
     window.InfinniUI.config.homePage = 'content/metadata/Views/common/homePage.json';
     window.InfinniUI.config.enableAutoHeightService = true;
     window.InfinniUI.config.enableGetCurrentUser = true;
@@ -73,3 +78,4 @@ See Also
 --------
 
 -  `InfinniUI.config.Routes <InfinniUI.config.Routes.html>`__
+-  `InfinniUI.localizations <InfinniUI.localizations.html>`__

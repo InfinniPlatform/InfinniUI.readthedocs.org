@@ -18,6 +18,7 @@ Core
 	Elements/index.rst
 	GlobalContext/index.rst
 	InfinniUI/index.rst
+	JSExpression/index.rst
 	Logger/index.rst
 	MessageBus/index.rst
 	NotificationSubscriptions/index.rst

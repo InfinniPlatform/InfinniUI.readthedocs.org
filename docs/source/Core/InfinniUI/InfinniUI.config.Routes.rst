@@ -71,3 +71,4 @@ See Also
 --------
 
 -  `InfinniUI.config <InfinniUI.config.html>`__
+-  `InfinniUI.localizations <InfinniUI.localizations.html>`__

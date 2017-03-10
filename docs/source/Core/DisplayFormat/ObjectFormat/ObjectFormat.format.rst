@@ -27,9 +27,9 @@ Schema
 .. raw:: html
 
    <pre>
-   <Строка форматирования> ::= { <Произвольный текст> | <Формат значения> }
+   <Строка форматирования> ::= ${ <Произвольный текст> | <Формат значения> }
         
-   <Формат значения> ::= "{" [ <Путь к свойству объекта> ] [ ":" <Настройки форматирования> ] "}"
+   <Формат значения> ::= ${ [ <Путь к свойству объекта> ] [ ":" <Настройки форматирования> ] }
       
    <Настройки форматирования> ::=
        <Форматирование даты и времени>
@@ -52,31 +52,31 @@ Examples
    * - *Простые типы данных*
      -  
      -  
-   * - "Hello, {}!"
+   * - "Hello, ${}!"
      - "Ivan"
      - "Hello, Ivan!"
-   * - "Birth date: {:d}"
+   * - "Birth date: ${:d}"
      - "2014-09-04T12:34:56"
      - "Birth date: 9/4/2014"
-   * - "Birth time: {:T}"
+   * - "Birth time: ${:T}"
      - "2014-09-04T12:34:56"
      - "Birth time: 12:34:56 AM"
-   * - "Weight: {:n2} kg"
+   * - "Weight: ${:n2} kg"
      - 123.456
      - "Weight: 123.46 kg"
    * - *Сложные типы данных*
      -  
      -  
-   * - "Hello, {FirstName} {MiddleName}!"
+   * - "Hello, ${FirstName} ${MiddleName}!"
      - { FirstName: "Ivan", MiddleName: "Ivanovich" }
      - "Hello, Ivan Ivanovich!"
-   * - "Birth date: {BirthDate:d}"
+   * - "Birth date: ${BirthDate:d}"
      - { BirthDate: "2014-09-04T12:34:56" }
      - "Birth date: 9/4/2014"
-   * - "Birth time: {BirthDate:T}"
+   * - "Birth time: ${BirthDate:T}"
      - { BirthDate: "2014-09-04T12:34:56" }
      - "Birth time: 12:34:56 AM"
-   * - "Weight: {Weight:n2} kg"
+   * - "Weight: ${Weight:n2} kg"
      - { Weight: 123.456 }
      - "Weight: 123.46 kg"
 
