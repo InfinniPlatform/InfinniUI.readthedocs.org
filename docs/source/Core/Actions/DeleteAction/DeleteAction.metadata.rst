@@ -25,6 +25,14 @@ Properties
      - ``Boolean``
      - true
      - Значение, определяющее, нужно ли перед удалением спросить согласие пользователя на удаление
+   * - AcceptMessage
+     - ``String``
+     - 
+     - Текст для сообщения во всплывающем окне
+   * - AcceptMessageType
+     - ``String``
+     - default
+     - Тип всплывающего окна. Доступные варианты: default, error, warning
    * - OnSuccess
      - `Script <../../Script/>`__
      - –
@@ -44,6 +52,8 @@ Examples
 
     {
         "DeleteAction": {
+            "AcceptMessage": "Do you really want to delete it?",
+            "AcceptMessageType": "error",
             "DestinationValue": {
               "Source": "DataSource1",
               "Property": "$"
@@ -58,6 +68,8 @@ Examples
 
     {
         "DeleteAction": {
+            "AcceptMessage": "Do you seriously want to delete it?",
+            "AcceptMessageType": "warning",
             "DestinationValue": {
               "Source": "DataSource1",
               "Property": "$.Hospitalizations.0"
