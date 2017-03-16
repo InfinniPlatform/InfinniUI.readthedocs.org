@@ -1,7 +1,9 @@
-InfinniUI.config
-================
+Config
+=======
 
-Параметры конфигурации приложения
+Параметры конфигурации приложения.
+
+Объект доступен через ``InfinniUI.config``.
 
 Properties
 ----------
@@ -44,7 +46,7 @@ Properties
    * - ``Routes``
      - ``Array``
      - 
-     - `Массив объектов конфигурации роутинга приложения. <InfinniUI.config.Routes.html>`__
+     - `Массив объектов конфигурации роутинга приложения. <../Routing/Routes/>`__
 
 
 Example
@@ -77,5 +79,5 @@ Example
 See Also
 --------
 
--  `InfinniUI.config.Routes <InfinniUI.config.Routes.html>`__
--  `InfinniUI.localizations <InfinniUI.localizations.html>`__
+-  `Routing <../Routing/>`__
+-  `InfinniUI.localizations <../Localizations/>`__

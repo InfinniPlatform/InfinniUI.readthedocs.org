@@ -1,8 +1,9 @@
 RouterService
 =============
 
-RouterService allows to set up routing for Single Page
-Application
+RouterService allows to set up routing for Single Page Application
+
+It is stored in ``InfinniUI.RouterService``.
 
 Description
 -----------
@@ -14,9 +15,9 @@ History API, RouterService does the same by implementing fragmentary URL.
 
 While the page is loading and after your application opens
 HomePage view, all routes will be created as defined in
-`InfinniUI.config.Routes <../InfinniUI/InfinniUI.config.html>`__,
+`InfinniUI.config.Routes <../../Config/>`__,
 router will be automatically fired up in accordance with History API settings from
-`InfinniUI.config.HistoryAPI <../InfinniUI/InfinniUI.config.html>`__.
+`InfinniUI.config.HistoryAPI <../../Config/>`__.
 RouterService is a harness for `Backbone.Router <http://backbonejs.org/#Router>`_.
 
 Parameters

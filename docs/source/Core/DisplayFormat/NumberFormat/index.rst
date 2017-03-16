@@ -3,7 +3,7 @@ NumberFormat
 
 Формат отображения числового значения. Строка форматирования должна
 записываться в формате, который описан в разделе
-`numberFormatting <../../Culture/Culture.numberFormatting.html>`__.
+`numberFormatting <../../Localizations/Localizations.numberFormatting.html>`__.
 
 Extends
 -------
@@ -25,7 +25,7 @@ See also
 --------
 
 `Настройки форматирования для числового
-значения <../../Culture/Culture.numberFormatting.html>`__
+значения <../../Localizations/Localizations.numberFormatting.html>`__
 
 
 .. toctree::

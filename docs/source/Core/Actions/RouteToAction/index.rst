@@ -3,7 +3,7 @@ RouteToAction
 
 Производит переход по указанному имени маршрута. Путь соотвествующий
 имени определен в
-`InfinniUI.config.Routes <../../InfinniUI/InfinniUI.config.Routes.html>`__.
+`InfinniUI.config.Routes <../../Routing/Routes/>`__.
 
 Extends
 -------
@@ -42,7 +42,7 @@ Examples
 See Also
 --------
 
--  `RouterService <../../RouterService/>`__
+-  `Routing <../../Routing/>`__
 
 
 .. toctree::

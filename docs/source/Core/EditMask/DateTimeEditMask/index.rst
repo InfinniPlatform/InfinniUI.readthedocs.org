@@ -9,7 +9,7 @@ DateTimeEditMask
 
 
 Маска должна записываться в формате, который описан в разделе
-`DateTimeFormatting <../../Culture/Culture.dateTimeFormatting.html>`__.
+`DateTimeFormatting <../../Localizations/Localizations.dateTimeFormatting.html>`__.
 
 Поведение маски ввода:
 

@@ -16,13 +16,13 @@ Example
 
 .. code:: js
 
-    InfinniUI.localizations['ru-RU'].strings.customMessages = {
+    InfinniUI.localizations['ru-RU'].strings.custom = {
       button: {
         name: "Текст для кнопки"
       }
     };
 
-    InfinniUI.localizations['en-US'].strings.customMessages = {
+    InfinniUI.localizations['en-US'].strings.custom = {
       button: {
         name: "Text for button"
       }
@@ -31,7 +31,7 @@ Example
     var metadata = [
       {
         "Button": {
-          "Text": "{= InfinniUI.localizations[InfinniUI.config.lang].strings.customMessages.button.name }" // Text for button
+          "Text": "{= InfinniUI.localized.strings.custom.button.name }" // Text for button
         }
       },
       {
@@ -44,5 +44,5 @@ Example
 See Also
 --------
 
--  `InfinniUI.config <../InfinniUI/InfinniUI.config.html>`__
--  `InfinniUI.localizations <../InfinniUI/InfinniUI.localizations.html>`__
+-  `InfinniUI.config <../Config/>`__
+-  `InfinniUI.localizations <../Localizations/>`__

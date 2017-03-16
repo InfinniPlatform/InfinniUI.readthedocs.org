@@ -1,14 +1,79 @@
-InfinniUI.localizations
-=======================
+Localizations.strings
+=====================
 
-Локализация приложения. Локаль задается в `InfinniUI.config <InfinniUI.config.html>`_. Для полноценной локализации приложения необходимо весь текст задавать через js-выражения ссылкой на локализированный текст. При необходимости добавить свой локализированный текст нужно текущий объект с локалями расширить объектом customMessages и в метаданных указать ссылки на значения.
+Объект, содержащий текст для различных локалей. 
 
-Syntax
-------
+Для полноценной локализации приложения необходимо весь текст задавать через js-выражения ссылкой на локализированный текст. 
+
+При необходимости добавить свой локализированный текст нужно текущий объект с локалями расширить объектом customMessages и в метаданных указать ссылки на значения. Так же есть возможность переопределить локлизированный текст по умолчанию для любого элемента.
+
+Для полноценной локализации приложения необходимо весь текст задавать через js-выражения ссылаясь на локализированный текст.
+
+Локализированный текст по умолчанию
+------------------------------------
 
 .. code:: js
 
-    InfinniUI.localizations['ru-RU'].strings.customMessages = {
+    InfinniUI.localizations['ru-RU'].strings = {
+        ImageBox: {
+            chooseImage: 'Выбрать изображение',
+            imageSizeTooBig: 'Размер выбранного файла {chosen-size}Мб больше допустимого размера {permitted-size}Мб',
+            incorrectFormat: 'Загрузка данного типа файла не разрешена'
+        },
+        FileBox: {
+            noFile: 'Файл не выбран...',
+            fileSizeTooBig: 'Размер выбранного файла {chosen-size}Мб больше допустимого размера {permitted-size}Мб',
+            incorrectFormat: 'Загрузка данного типа файла не разрешена'
+        },
+        DateTimePicker: {
+            time: 'Время',
+            clear: 'Очистить',
+            today: 'Сегодня',
+            date: 'Дата'
+        },
+        DeleteAction: {
+            "warnMessage": "Вы уверены, что хотите удалить?",
+            "warnMessageNoItem": "Вы не выбрали элемент который необходимо удалить",
+            "agree": "Да",
+            "disagree": "Нет",
+            "cancel": "Закрыть"
+        }
+    };
+
+    InfinniUI.localizations['en-US'].strings = {
+        ImageBox: {
+            chooseImage: 'Choose photo',
+            imageSizeTooBig: 'Size of the chosen file {chosen-size}MB is more than allowed {permitted-size}MB',
+            incorrectFormat: 'Uploading of this file type is forbidden'
+        },
+        FileBox: {
+            noFile: 'Choose file...',
+            fileSizeTooBig: 'Size of the chosen file {chosen-size}MB is more than allowed {permitted-size}MB',
+            incorrectFormat: 'Uploading of this file type is forbidden'
+        },
+        DateTimePicker: {
+            time: 'Time',
+            clear: 'Clear',
+            today: 'Today',
+            date: 'Date'
+        },
+        DeleteAction: {
+            "warnMessage": "Are you sure to remove item?",
+            "warnMessageNoItem": "Choose item that you want to remove",
+            "agree": "Yes",
+            "disagree": "No",
+            "cancel": "Close"
+        }
+    };
+
+
+Example
+-------
+
+.. code:: js
+
+    // Расширение текущих локалей кастомными значениями для элементов button и anotherButton
+    InfinniUI.localizations['ru-RU'].strings.custom = {
       button: {
         name: "Текст для кнопки",
         tooltip: "Тултип"
@@ -18,7 +83,7 @@ Syntax
       }
     };
 
-    InfinniUI.localizations['en-US'].strings.customMessages = {
+    InfinniUI.localizations['en-US'].strings.custom = {
       button: {
         name: "Text for button",
         tooltip: "Tooltip"
@@ -31,19 +96,28 @@ Syntax
     var metadata = [
       {
         "Button": {
-          "Text": "{= InfinniUI.localizations[InfinniUI.config.lang].strings.customMessages.button.name }" // Text for button
-          "Tooltip": "{= InfinniUI.localizations[InfinniUI.config.lang].strings.customMessages.button.tooltip }" // Tooltip
+          "Name": "button",
+          "Text": "{= InfinniUI.localized.strings.custom.button.name }" // Text for button
+          "Tooltip": "{= InfinniUI.localized.strings.custom.button.tooltip }" // Tooltip
         }
       },
       {
         "Button": {
-          "Text": "{= InfinniUI.localizations[InfinniUI.config.lang].strings.customMessages.anotherButton.name }" // Another text for button
+          "Name": "anotherButton",
+          "Text": "{= InfinniUI.localized.strings.custom.anotherButton.name }" // Another text for button
         }
       }
     ];
+
+    // Переопределение значений по умолчанию для ImageBox
+    InfinniUI.localizations['ru-RU'].strings.ImageBox = {
+      chooseImage: 'Выбрать новое изображение',
+      imageSizeTooBig: 'Размер выбранного Вами файла {chosen-size}Мб больше допустимого размера {permitted-size}Мб',
+      incorrectFormat: 'Загрузка данного типа файла в данный момент не возможна'
+    };
 
 
 See Also
 --------
 
--  `InfinniUI.config <InfinniUI.config.html>`__
+-  `InfinniUI.config <../Config/>`__

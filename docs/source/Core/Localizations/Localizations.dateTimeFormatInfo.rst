@@ -1,10 +1,10 @@
-Culture.dateTimeFormatInfo
+Localizations.dateTimeFormatInfo
 ==========================
 
 Сведения о формате представления даты и времени.
 
 Описание настроек форматирования для даты и времени приведено в разделе
-`DateTimeFormatting <Culture.dateTimeFormatting.html>`__.
+`DateTimeFormatting <Localizations.dateTimeFormatting.html>`__.
 
 Properties
 ----------

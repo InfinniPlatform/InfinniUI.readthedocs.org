@@ -1,8 +1,10 @@
-InfinniUI.config.Routes
-=======================
+Routes
+======
 
 Массив конфигураций маршрутов приложения. Каждый маршрут описывается
 объектом с обязательными параметрами Name, Path, Action.
+
+Массив конфигурации роутинга доступен через `InfinniUI.config <../../Config/>`__.
 
 Syntax
 ------
@@ -70,5 +72,5 @@ Example
 See Also
 --------
 
--  `InfinniUI.config <InfinniUI.config.html>`__
--  `InfinniUI.localizations <InfinniUI.localizations.html>`__
+-  `InfinniUI.config <../../Config/>`__
+-  `InfinniUI.localizations <../../Localizations/>`__

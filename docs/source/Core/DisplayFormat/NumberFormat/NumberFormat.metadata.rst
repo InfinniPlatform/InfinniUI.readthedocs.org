@@ -16,7 +16,7 @@ Properties
    * - Format
      - ``String``
      - ``"n"``
-     - `Строка форматирования числовых значений <../../Culture/Culture.numberFormatting.html>`__.
+     - `Строка форматирования числовых значений <../../Localizations/Localizations.numberFormatting.html>`__.
 
 
 Examples

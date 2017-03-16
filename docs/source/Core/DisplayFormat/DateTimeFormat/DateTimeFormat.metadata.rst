@@ -16,7 +16,7 @@ Properties
    * - Format
      - ``String``
      - ``"G"``
-     - `Строка форматирования даты/времени <../../Culture/Culture.dateTimeFormatting.html>`__.
+     - `Строка форматирования даты/времени <../../Localizations/Localizations.dateTimeFormatting.html>`__.
 
 
 Examples

@@ -1,15 +1,14 @@
-Culture.DateTimeFormatting
+Localizations.DateTimeFormatting
 ==========================
 
 Ниже приведены настройки форматирования для даты и времени.
-Интерпретация большинства перечисленных форматов зависит от текущей
-культуры
-(`GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo <../Culture/Culture.dateTimeFormatInfo.html>`__).
+Интерпретация большинства перечисленных форматов зависит от текущей локали
+(`GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo <Localizations.dateTimeFormatInfo.html>`__).
 
 Предопределенные форматы
 ------------------------
 
-Форматы для культуры "ru-RU"
+Форматы для локали "ru-RU"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -69,7 +68,7 @@ Culture.DateTimeFormatting
      - "2014-09-04 16:17:21Z"
 
 
-Форматы для культуры "en-US"
+Форматы для локали "en-US"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -155,9 +154,9 @@ Culture.DateTimeFormatting
    * - ``MM``
      - Порядковый номер месяца. Если порядковый номер месяца представлен одной цифрой (1-9), он будет отображен с ведущим нулем (01-09).
    * - ``MMM``
-     - Сокращенное наименование месяца с использованием `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.abbreviatedMonthNames <Culture.dateTimeFormatInfo.html#abbreviatedmonthnames>`__.
+     - Сокращенное наименование месяца с использованием `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.abbreviatedMonthNames <Localizations.dateTimeFormatInfo.html#abbreviatedmonthnames>`__.
    * - ``MMMM``
-     - Полное наименование месяца с использованием `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.monthNames <Culture.dateTimeFormatInfo.html#monthnames>`__. 
+     - Полное наименование месяца с использованием `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.monthNames <Localizations.dateTimeFormatInfo.html#monthnames>`__. 
    * - 
      - *День*
    * - ``d``
@@ -165,9 +164,9 @@ Culture.DateTimeFormatting
    * - ``dd``
      - Порядковый номер дня месяца. Если день месяца представлен одной цифрой (1-9), он будет отображен с ведущим нулем (01-09).
    * - ``ddd``
-     - Сокращенное наименование дня месяца с использованием `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.abbreviatedDayNames <Culture.dateTimeFormatInfo.html#abbreviateddaynames>`__.
+     - Сокращенное наименование дня месяца с использованием `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.abbreviatedDayNames <Localizations.dateTimeFormatInfo.html#abbreviateddaynames>`__.
    * - ``dddd``
-     - Полное наименование дня месяца с использованием `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.dayNames <Culture.dateTimeFormatInfo.html#daynames>`__.
+     - Полное наименование дня месяца с использованием `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.dayNames <Localizations.dateTimeFormatInfo.html#daynames>`__.
    * - 
      - *Часы*
    * - ``h``
@@ -193,9 +192,9 @@ Culture.DateTimeFormatting
    * - 
      - *Половина суток*
    * - ``t``
-     - Первый символ `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.amDesignator <Culture.dateTimeFormatInfo.html#amdesignator>`__ или `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.pmDesignator <Culture.dateTimeFormatInfo.html#pmdesignator>`__.
+     - Первый символ `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.amDesignator <Localizations.dateTimeFormatInfo.html#amdesignator>`__ или `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.pmDesignator <Localizations.dateTimeFormatInfo.html#pmdesignator>`__.
    * - ``tt``
-     - `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.amDesignator <Culture.dateTimeFormatInfo.html#amdesignator>`__ или `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.pmDesignator <Culture.dateTimeFormatInfo.html#pmdesignator>`__.
+     - `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.amDesignator <Localizations.dateTimeFormatInfo.html#amdesignator>`__ или `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.pmDesignator <Localizations.dateTimeFormatInfo.html#pmdesignator>`__.
    * - 
      - *Номер часового пояса*
    * - ``z``
@@ -207,9 +206,9 @@ Culture.DateTimeFormatting
    * - 
      - *Разделители даты и времени*
    * - ``/``
-     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.dateSeparator <Culture.dateTimeFormatInfo.html#dateseparator>`__.
+     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.dateSeparator <Localizations.dateTimeFormatInfo.html#dateseparator>`__.
    * - ``:``
-     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Culture.dateTimeFormatInfo.timeSeparator <Culture.dateTimeFormatInfo.html#timeseparator>`__.
+     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Localizations.dateTimeFormatInfo.timeSeparator <Localizations.dateTimeFormatInfo.html#timeseparator>`__.
    * - 
      - *Прочие элементы*
    * - ``'abc'`` or ``"abc"``

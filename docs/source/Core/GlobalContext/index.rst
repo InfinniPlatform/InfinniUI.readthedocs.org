@@ -3,6 +3,8 @@ GlobalContext
 
 Application global context. Context provides API to appication methods and properties that are used jointly.
 
+Variable ``InfinniUI.global`` contains global context. 
+
 Properties
 ----------
 
@@ -15,9 +17,12 @@ Properties
    * - ``containers``
      - ``Object``
      - List of containers to view in mode ``OpenMode="Container"``.
-   * - ``culture``
-     - `Culture <../Culture/>`__
-     - Language and regional settings.
+   * - ``localizations``
+     - ``Object``
+     - Map, where key is localization name and value is `localization <../Localizations/>`__.
+   * - ``localized``
+     - `Localization <../Localizations/>`__
+     - Current language and regional settings. It stores value from InfinniUI.global.localizations associated with InfinniUI.config.lang.
    * - ``factory``
      - `ApplicationBuilder <../Builders/>`__
      - Common application `builder <../Builders/>`__.

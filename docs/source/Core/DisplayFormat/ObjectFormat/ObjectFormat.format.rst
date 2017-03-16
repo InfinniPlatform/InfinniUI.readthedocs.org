@@ -12,7 +12,7 @@ Description
 
 Строка форматирования для даты и времени записываться в формате, который
 описан в разделе
-`dateTimeFormatFormatting <../../Culture/Culture.dateTimeFormatting.html>`__.
+`dateTimeFormatFormatting <../../Localizations/Localizations.dateTimeFormatting.html>`__.
 
 Строка форматирования для числовых значений записываться в формате,
 который описан в разделе

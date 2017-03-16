@@ -16,7 +16,7 @@ Properties
    * - Name\*
      - ``String``
      -   
-     - Имя маршрута. Имя должно быть однозначно определенно в `InfinniUI.config.Routes <../../InfinniUI/InfinniUI.config.Routes.html>`__
+     - Имя маршрута. Имя должно быть однозначно определенно в `InfinniUI.config.Routes <../../Routing/Routes/>`__
    * - Replace
      - ``Boolean``
      - false
@@ -68,8 +68,3 @@ Examples
         }
       ]
     }
-
-See Also
-~~~~~~~~
-
--  `RouterService <../../RouterService/>`__

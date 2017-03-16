@@ -9,7 +9,7 @@ NumberEditMask
 
 
 Маска должна записываться в формате, который описан в разделе
-`NumberFormatting <../../Culture/Culture.numberFormatting.html>`__.
+`NumberFormatting <../../Localizations/Localizations.numberFormatting.html>`__.
 
 Поведение маски ввода:
 

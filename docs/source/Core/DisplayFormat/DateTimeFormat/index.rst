@@ -3,7 +3,7 @@ DateTimeFormat
 
 Формат отображения даты/времени. Строка форматирования должна
 записываться в формате, который описан в разделе
-`dateTimeFormatting <../../Culture/Culture.dateTimeFormatting.html>`__.
+`dateTimeFormatting <../../Localizations/Localizations.dateTimeFormatting.html>`__.
 
 Extends
 -------
@@ -24,7 +24,7 @@ Example
 See also
 --------
 
-`dateTimeFormatting <../../Culture/Culture.dateTimeFormatting.html>`__
+`dateTimeFormatting <../../Localizations/Localizations.dateTimeFormatting.html>`__
 
 
 .. toctree::

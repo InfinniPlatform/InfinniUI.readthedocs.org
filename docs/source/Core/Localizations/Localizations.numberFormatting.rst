@@ -1,10 +1,10 @@
-Culture.numberFormatting
+Localizations.numberFormatting
 ========================
 
 Ниже приведены настройки форматирования для числовых значений.
 Интерпретация большинства перечисленных форматов зависит от текущей
-культуры
-(`GlobalContext <../GlobalContext/>`__. `Culture.numberFormatInfo <Culture.numberFormatInfo.html>`__).
+локали
+(`GlobalContext <../GlobalContext/>`__. `Localizations.numberFormatInfo <Localizations.numberFormatInfo.html>`__).
 
 Предопределенные форматы
 ------------------------
@@ -17,8 +17,8 @@ Culture.numberFormatting
 знаков в дробной части). Значение точности "xx" может находиться в
 диапазоне от 0 до 99. Если точность не определена, используются
 соответствующие настройки представления числовых значений текущей
-культуры -
-`GlobalContext <../GlobalContext/>`__. `Culture.numberFormatInfo <Culture.numberFormatInfo.html>`__.
+локали -
+`GlobalContext <../GlobalContext/>`__. `Localizations.numberFormatInfo <Localizations.numberFormatInfo.html>`__.
 
 .. list-table::
    :header-rows: 1
@@ -33,7 +33,7 @@ Culture.numberFormatting
      -  
    * - ``n`` or ``N``
      - Представления числового значения.
-     - Формат использует настройки представления числовых значений текущей культуры `GlobalContext <../GlobalContext/>`__. `Culture.NumberFormatInfo.Number <Culture.numberFormatInfo.html>`__.
+     - Формат использует настройки представления числовых значений текущей локали `GlobalContext <../GlobalContext/>`__. `Localizations.NumberFormatInfo.Number <Localizations.numberFormatInfo.html>`__.
      - ru-RU, "n", 123.4567: "123,46", ru-RU, "n3", 123.4567: "123,457", en-US, "n", 123.4567: "123.46", en-US, "n3", 123.4567: "123.457"
    * -  
      - *Значения процентов*
@@ -41,11 +41,11 @@ Culture.numberFormatting
      -  
    * - ``p``
      - Представление значения процентов с преобразованием.
-     - Перед представлением значение процентов умножается на 100. Например, значение "0.15" будет представлено, как "15 %". Формат использует настройки представления значений процентов текущей культуры `GlobalContext <../GlobalContext/>`__. `Culture.numberFormatInfo.Percent <Culture.numberFormatInfo.html>`__.
+     - Перед представлением значение процентов умножается на 100. Например, значение "0.15" будет представлено, как "15 %". Формат использует настройки представления значений процентов текущей локали `GlobalContext <../GlobalContext/>`__. `Localizations.numberFormatInfo.Percent <Localizations.numberFormatInfo.html>`__.
      - ru-RU, "p", 123.4567: "12 345,67%", ru-RU, "p3", 123.4567: "12 345,670%", en-US, "p", 123.4567: "12,345.67 %", en-US, "p3", 123.4567: "12,345.670 %"
    * - ``P``
      - Представление значения процентов без преобразования.
-     - Перед представлением значение процентов не умножается на 100. Например, значение "0.15" будет представлено, как есть - "0.15 %". Формат использует настройки представления значений процентов текущей культуры `GlobalContext <../GlobalContext/>`__. `Culture.numberFormatInfo.Percent <Culture.numberFormatInfo.html>`__.
+     - Перед представлением значение процентов не умножается на 100. Например, значение "0.15" будет представлено, как есть - "0.15 %". Формат использует настройки представления значений процентов текущей локали `GlobalContext <../GlobalContext/>`__. `Localizations.numberFormatInfo.Percent <Localizations.numberFormatInfo.html>`__.
      - ru-RU, "P", 123.4567: "123,46%", ru-RU, "P3", 123.4567: "123,457%", en-US, "P", 123.4567: "123.46 %", en-US, "P3", 123.4567: "123.457 %"
    * -  
      - *Значения денежных единиц*
@@ -53,7 +53,7 @@ Culture.numberFormatting
      - \_
    * - ``c`` or ``C``
      - Представление значения денежной единицы.
-     - Формат использует настройки представления представления денежных единиц текущей культуры `GlobalContext <../GlobalContext/>`__. `Culture.numberFormatInfo.Currency <Culture.numberFormatInfo.html>`__.
+     - Формат использует настройки представления представления денежных единиц текущей локали `GlobalContext <../GlobalContext/>`__. `Localizations.numberFormatInfo.Currency <Localizations.numberFormatInfo.html>`__.
      - ru-RU, "c", 123.4567: "123,46р.", ru-RU, "c3", 123.4567: "123,457р.", en-US, "c", 123.4567: "$123.46", en-US, "c3", 123.4567: "$123.457"
 
 
@@ -69,9 +69,9 @@ Culture.numberFormatting
    * - Элемент
      - Описание
    * - ``%``
-     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Culture.numberFormatInfo.percentSymbol <Culture.numberFormatInfo.html>`__.
+     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Localizations.numberFormatInfo.percentSymbol <Localizations.numberFormatInfo.html>`__.
    * - ``$``
-     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Culture.NumberFormatInfo.CurrencySymbol <Culture.numberFormatInfo.html>`__.
+     - Должен заменяться на `GlobalContext <../GlobalContext/>`__. `Localizations.NumberFormatInfo.CurrencySymbol <Localizations.numberFormatInfo.html>`__.
    * - Иные символы
      - Вставляются, как есть, без изменения, если не совпадают с предопределенными форматами (см. выше).
 

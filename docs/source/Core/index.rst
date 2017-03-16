@@ -8,8 +8,8 @@ Core
 	Actions/index.rst
 	Builders/index.rst
 	Collection/index.rst
+	Config/index.rst
 	Context/index.rst
-	Culture/index.rst
 	DataBinding/index.rst
 	DataProviders/index.rst
 	DataSources/index.rst
@@ -17,13 +17,13 @@ Core
 	EditMask/index.rst
 	Elements/index.rst
 	GlobalContext/index.rst
-	InfinniUI/index.rst
 	JSExpression/index.rst
+	Localizations/index.rst
 	Logger/index.rst
 	MessageBus/index.rst
 	NotificationSubscriptions/index.rst
 	Parameters/index.rst
-	routerService/index.rst
+	Routing/index.rst
 	Script/index.rst
 	Session/index.rst
 	Style/index.rst

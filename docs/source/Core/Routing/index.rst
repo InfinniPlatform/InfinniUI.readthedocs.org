@@ -8,3 +8,9 @@ See Also
 
 -  `Routes <Routes/>`__
 -  `RouterService <RouterService/>`__
+
+.. toctree::
+   :hidden:
+
+   Routes/index.rst
+   RouterService/index.rst
