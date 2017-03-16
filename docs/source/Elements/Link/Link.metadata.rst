@@ -37,10 +37,10 @@ Href.metadata
      - ``String``
      - Название маршрута из `InfinniUI.config.Routes </Core/Routing/Routes/>`__.
    * - Params
-     - ``Array``.<`Href.paramObject <#hrefparamobject>`__>
+     - ``Array``.<`Href.paramObject <#href-paramobject>`__>
      - Параметры запроса.
    * - Query
-     - ``Array``.<`Href.paramObject <#hrefparamobject>`__>
+     - ``Array``.<`Href.paramObject <#href-paramobject>`__>
      - Параметры поиска.
 
 

@@ -38,4 +38,4 @@ Examples
 See Also
 --------
 
--  `startRouter() <RouterService.startRouter/>`__
+-  `startRouter() <RouterService.startRouter.html>`__

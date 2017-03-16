@@ -52,6 +52,9 @@ Events
 Нет
 
 
+.. include:: LinkView.metadata/index.rst
+
+
 .. toctree::
    :hidden:
 

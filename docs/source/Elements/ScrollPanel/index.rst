@@ -47,13 +47,13 @@ Methods
    * - Name
      - Description
    * - `getHorizontalScroll <ScrollPanel.getHorizontalScroll.html>`__
-     - Возвращает `видимость полосы прокрутки <ScrollVisibility/>`__ по горизонтали
+     - Возвращает `видимость полосы прокрутки <ScrollVisibility.html>`__ по горизонтали
    * - `setHorizontalScroll <ScrollPanel.setHorizontalScroll.html>`__
-     - Устанавливает `видимость полосы прокрутки <ScrollVisibility/>`__ по горизонтали
+     - Устанавливает `видимость полосы прокрутки <ScrollVisibility.html>`__ по горизонтали
    * - `getVerticalScroll <ScrollPanel.getVerticalScroll.html>`__
-     - Возвращает `видимость полосы прокрутки <ScrollVisibility/>`__ по вертикали
+     - Возвращает `видимость полосы прокрутки <ScrollVisibility.html>`__ по вертикали
    * - `setVerticalScroll <ScrollPanel.setVerticalScroll.html>`__
-     - Устанавливает `видимость полосы прокрутки <ScrollVisibility/>`__ по вертикали
+     - Устанавливает `видимость полосы прокрутки <ScrollVisibility.html>`__ по вертикали
 
 
 Events
@@ -68,5 +68,5 @@ Events
 See Also
 --------
 
--  `ScrollVisibility <ScrollVisibility/>`__
+-  `ScrollVisibility <ScrollVisibility.html>`__
 -  `Container <../../Core/Elements/Container/>`__

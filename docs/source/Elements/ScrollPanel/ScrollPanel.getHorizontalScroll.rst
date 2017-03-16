@@ -1,7 +1,7 @@
 ScrollPanel.getHorizontalScroll()
 =================================
 
-Возвращает `видимость полосы прокрутки <ScrollVisibility/>`__ по
+Возвращает `видимость полосы прокрутки <ScrollVisibility.html>`__ по
 горизонтали.
 
 Syntax
@@ -19,7 +19,7 @@ Parameters
 Returns
 ~~~~~~~
 
-`Видимость полосы прокрутки <ScrollVisibility/>`__ по горизонтали.
+`Видимость полосы прокрутки <ScrollVisibility.html>`__ по горизонтали.
 
 Examples
 --------
@@ -34,4 +34,4 @@ See Also
 -  `setHorizontalScroll() <ScrollPanel.setHorizontalScroll.html>`__
 -  `getVerticalScroll() <ScrollPanel.getVerticalScroll.html>`__
 -  `setVerticalScroll() <ScrollPanel.setVerticalScroll.html>`__
--  `ScrollVisibility <ScrollVisibility/>`__
+-  `ScrollVisibility <ScrollVisibility.html>`__

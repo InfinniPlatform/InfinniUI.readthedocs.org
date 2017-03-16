@@ -1,10 +1,10 @@
 LinkView.metadata
 =================
 
-Метаданные `LinkView <../>`__ можно задать с помощью
+Метаданные LinkView можно задать с помощью
 
--  `InlineView <InlineView/>`__
--  `AutoView <AutoView/>`__
+-  `InlineView </Core/Elements/View/LinkView/LinkView.metadata/InlineView.html>`__
+-  `AutoView </Core/Elements/View/LinkView/LinkView.metadata/AutoView.html>`__
 
 
 .. toctree::

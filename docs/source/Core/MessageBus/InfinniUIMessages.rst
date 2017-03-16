@@ -18,7 +18,7 @@ MessageTypes
      - {error: ``string``, metadata: {`путь до метаданных <../Elements/View/LinkView/LinkView.metadata/AutoView/>`__}}
    * - onViewCreated
      - Создана `view <../Elements/View/>`__
-     - {openMode: `openMode <../Elements/View/LinkView/OpenMode/>`__, view: `view <../Elements/View/>`__}
+     - {openMode: `openMode <../Elements/View/LinkView/OpenMode.html>`__, view: `view <../Elements/View/>`__}
    * - onNotifyUser
      - Оповещение пользователя
      - {messageText: ``string``, messageType: ``string``}

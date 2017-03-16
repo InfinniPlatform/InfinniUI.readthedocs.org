@@ -19,7 +19,7 @@ Properties
    * - OpenMode
      - ``String``
      - 'Default'
-     - Название `стратегии отображения <../OpenMode>`__ представления
+     - Название `стратегии отображения <../OpenMode.html>`__ представления
    * - DialogWidth
      - ``String``
      - –

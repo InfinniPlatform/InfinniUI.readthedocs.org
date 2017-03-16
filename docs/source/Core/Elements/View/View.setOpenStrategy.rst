@@ -2,7 +2,7 @@ View.setOpenStrategy()
 ======================
 
 Устанавливает `стратегию отображения
-представления <LinkView/OpenMode/>`__.
+представления <LinkView/OpenMode.html>`__.
 
 Syntax
 ------
@@ -21,7 +21,7 @@ Parameters
      - Type
      - Description
    * - strategy
-     - `OpenMode <LinkView/OpenMode/>`__
+     - `OpenMode <LinkView/OpenMode.html>`__
      - Стратегия отображения представления
 
 
@@ -40,4 +40,4 @@ Examples
 See Also
 --------
 
--  `OpenMode <LinkView/OpenMode/>`__
+-  `OpenMode <LinkView/OpenMode.html>`__
