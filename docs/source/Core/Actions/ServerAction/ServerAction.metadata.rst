@@ -14,11 +14,11 @@ Properties
      - Default
      - Description
    * - Origin
-     - ``String``1
+     - ``String``:sup:`1`
      - –
      - Базовая часть url запроса
    * - Path\*
-     - ``String``1
+     - ``String``:sup:`1`
      - –
      - Уточняющая часть url запроса
    * - Method
@@ -30,7 +30,7 @@ Properties
      - 'application/x-www-form-urlencoded; charset=utf-8'
      - Тип данных
    * - Data
-     - ``Object``1
+     - ``Object``:sup:`1`
      - –
      - Данные запроса
    * - Params
@@ -48,7 +48,8 @@ Properties
 
 
 \* Обязательное свойство.
-1 `Шаблонизируемая величина <#parameters-templating>`__.
+
+:sup:`1` `Шаблонизируемая величина <#parameters-templating>`__.
 
 Examples
 ~~~~~~~~

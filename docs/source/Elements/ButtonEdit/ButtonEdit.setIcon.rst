@@ -20,11 +20,11 @@ Parameters
      - Type
      - Description
    * - ``value``
-     - ``String``1
+     - ``String``:sup:`1`
      - Название иконки
 
 
-1 Полный список доступных названий и соответсвующих отображений:
+:sup:`1` Полный список доступных названий и соответсвующих отображений:
 `Icons <http://fontawesome.io/icons/>`__.
 
 Returns

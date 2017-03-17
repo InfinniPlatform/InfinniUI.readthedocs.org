@@ -38,11 +38,11 @@ Specific Properties
 -------------------
 
 Для работы с данными свойствами используйте методы
-  `getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и
-  `setProperty <../BaseDataSource/BaseDataSource.setProperty.html>`__.
+`getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и
+`setProperty <../BaseDataSource/BaseDataSource.setProperty.html>`__.
+
 Обратите внимание, что для работы с данными свойствами необходимо
-  `указывать точку в
-  названии <../BaseDataSource/BaseDataSource.getProperty/#path-rules>`__.
+`указывать точку в названии <../BaseDataSource/BaseDataSource.getProperty/#path-rules>`__.
 
 .. list-table::
    :header-rows: 1
@@ -69,32 +69,32 @@ urlParams Format
      - Type
      - Description
    * - origin
-     - ``String``1
+     - ``String``:sup:`1`
      - Хост и порт
    * - path
-     - ``String``1
+     - ``String``:sup:`1`
      - Строка пути (относительно хоста)
    * - method
      - ``String``
      - Метод запроса
    * - data
-     - ``Object``1
+     - ``Object``:sup:`1`
      - Данные запроса
    * - params
      - ``Object``
      - Параметры запроса
 
 
-1 `Шаблонизируемая величина <#parameters-templating>`__.
+:sup:`1` `Шаблонизируемая величина <#parameters-templating>`__.
 
 Parameters Templating
 ---------------------
 
-Зачастую при описании запроса возникает необходимость использовать
-  изменяемые значения.
+Зачастую при описании запроса возникает необходимость использовать изменяемые значения.
+
 Для этого в RestDataSource введены параметры. Вы можете задать
-  значение параметра в свойстве params. А затем использовать его в
-  шаблонизируемых величинах, обозначив ``<%[paramName]%>``.
+значение параметра в свойстве params. А затем использовать его в
+шаблонизируемых величинах, обозначив ``<%[paramName]%>``.
 
 Например, задан параметр *userId*, тогда в свойстве **path** можно
 обратится к нему следующим образом:

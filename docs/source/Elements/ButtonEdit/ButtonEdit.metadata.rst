@@ -14,7 +14,7 @@ Properties
      - Default
      - Description
    * - Icon
-     - ``String``1
+     - ``String``:sup:`1`
      - –
      - Иконка, отображаемая на кнопке
    * - ReadOnly
@@ -37,7 +37,7 @@ Properties
 
 OnButtonClick сработает раньше, чем Action.
 
-1 Полный список доступных названий и соответсвующих отображений:
+:sup:`1` Полный список доступных названий и соответсвующих отображений:
 `Icons <http://fontawesome.io/icons/>`__.
 
 Examples
