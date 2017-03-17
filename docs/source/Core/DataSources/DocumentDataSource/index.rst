@@ -61,12 +61,6 @@ Specific Properties
    * - documentId
      - –
      - Идентификатор документа
-   * - filter
-     - –
-     - Правило фильтрации документов
-   * - filterParams
-     - –
-     - Параметры фильтра
    * - pageNumber
      - 0
      - Номер страницы
@@ -87,7 +81,7 @@ Specific Properties
      - Необходимость подсчета общего количества документов
 
 
-Изменение параметров ``filter``, ``filterParams``, ``pageSize``,
+Изменение параметров `filter <../BaseDataSource/#specific-properties>`_, `filterParams <../BaseDataSource/#specific-properties>`_, ``pageSize``,
 ``search``, ``order`` приводит к обнулению ``pageNumber``.
 
 Methods
@@ -102,16 +96,8 @@ Methods
      - Возвращает идентификатор документа
    * - `setDocumentId <DocumentDataSource.setDocumentId.html>`__
      - Устанавливает идентификатор документа
-   * - `getFilter <DocumentDataSource.getFilter.html>`__
-     - Возвращает правило фильтрации документов
-   * - `setFilter <DocumentDataSource.setFilter.html>`__
-     - Устанавливает правило фильтрации документов
    * - `setIdFilter <DocumentDataSource.setIdFilter.html>`__
      - Устанавливает фильтр элементов по идентификатору
-   * - `getFilterParams <DocumentDataSource.getFilterParams.html>`__
-     - Возвращает параметры фильтра
-   * - `setFilterParams <DocumentDataSource.setFilterParams.html>`__
-     - Устанавливает параметры фильтра
    * - `getPageNumber <DocumentDataSource.getPageNumber.html>`__
      - Возвращает номер страницы
    * - `setPageNumber <DocumentDataSource.setPageNumber.html>`__
@@ -150,8 +136,6 @@ Events
    :hidden:
 
    DocumentDataSource.getDocumentId.rst
-   DocumentDataSource.getFilter.rst
-   DocumentDataSource.getFilterParams.rst
    DocumentDataSource.getNeedTotalCount.rst
    DocumentDataSource.getOrder.rst
    DocumentDataSource.getPageNumber.rst
@@ -161,8 +145,6 @@ Events
    DocumentDataSource.getTotalCount.rst
    DocumentDataSource.metadata.rst
    DocumentDataSource.setDocumentId.rst
-   DocumentDataSource.setFilter.rst
-   DocumentDataSource.setFilterParams.rst
    DocumentDataSource.setIdFilter.rst
    DocumentDataSource.setNeedTotalCount.rst
    DocumentDataSource.setOrder.rst

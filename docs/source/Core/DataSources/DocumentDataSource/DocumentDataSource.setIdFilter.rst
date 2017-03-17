@@ -37,8 +37,8 @@ Examples
 See Also
 --------
 
--  `getFilter() <DocumentDataSource.getFilter.html>`__
--  `setFilter() <DocumentDataSource.setFilter.html>`__
+-  `getFilter() <../BaseDataSource/BaseDataSource.getFilter.html>`__
+-  `setFilter() <../BaseDataSource/BaseDataSource.setFilter.html>`__
 -  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__
 -  `suspendUpdate() <../BaseDataSource/BaseDataSource.suspendUpdate.html>`__
 -  `resumeUpdate() <../BaseDataSource/BaseDataSource.resumeUpdate.html>`__

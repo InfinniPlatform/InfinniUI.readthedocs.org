@@ -17,6 +17,14 @@ Properties
      - ``String``
      - –
      - Наименование источника данных
+   * - Filter
+     - ``String``:sup:`1`
+     - –
+     - Правило фильтрации документов
+   * - FilterParams
+     - ``Object``
+     - –
+     - Объект со значениями параметров. Параметр может быть задан как  [`DataBinding`](../../../DataBinding/DataBinding.metadata/).
    * - IdProperty
      - ``String``
      - '\_id'
@@ -61,6 +69,8 @@ Properties
      - `Script <../../Script/>`__
      - –
      - Обработчик события о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку
+
+:sup:`1` `Шаблонизируемая величина <../RestDataSource/#parameters-templating>`__. Заполняется значениями из FilterParams.
 
 
 Exampes
@@ -108,3 +118,48 @@ TerminologyDataSource выше, чем для MainDataSource.
         ]
     }
 
+Реализация фильтра.
+
+.. code:: json
+
+    {
+      "DataSources": [
+        {
+          "ObjectDataSource": {
+            "Name": "ObjectDataSource",
+            "Items": [
+              {"_id": 1, "Name": "Mobile small", "currency": 1100, "Display": "480x320"},
+              {"_id": 2, "Name": "Mobile middle", "currency": 1200, "Display": "640x320"},
+              {"_id": 3, "Name": "Mobile large", "currency": 1300, "Display": "771x375"},
+              {"_id": 4, "Name": "Tablet", "currency": 1400, "Display": "960x480"},
+              {"_id": 5, "Name": "Desktop small", "currency": 1500, "Display": "1024x768"},
+              {"_id": 6, "Name": "Desktop middle", "currency": 1600, "Display": "1600x900"},
+              {"_id": 7, "Name": "Desktop", "currency": 2000, "Display": "1920x1080"}
+            ],
+            "Filter": "and(contains(Name, <%filterName%>),contains(currency, <%filterPrice%>),contains(Display, <%filterDisplay%>))",
+            "FilterParams": {
+              "filterName": {
+                "Source": "ObjectDataSource2",
+                "Property": "$.FilterName"
+              },
+              "filterPrice": {
+                "Source": "ObjectDataSource2",
+                "Property": "$.FilterPrice"
+              },
+              "filterDisplay": {
+                "Source": "ObjectDataSource2",
+                "Property": "$.FilterDisplay"
+              }
+            }
+          }
+        },
+        {
+          "ObjectDataSource": {
+            "Name": "ObjectDataSource2",
+            "Items": [
+              {"_id": 1, "FilterName": "", "FilterPrice": "", "FilterDisplay": ""}
+            ]
+          }
+        }
+      ]
+    }

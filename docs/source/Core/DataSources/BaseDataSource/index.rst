@@ -62,6 +62,10 @@ Specific Properties
      - Список элементов источника данных
    * - selectedItem
      - Выделенный элемент
+   * - filter
+     - Правило фильтрации документов
+   * - filterParams
+     - Параметры фильтра
 
 
 Methods
@@ -132,6 +136,14 @@ Methods
      - Возвращает список элементов источника данных
    * - `getValidationResult <BaseDataSource.getValidationResult.html>`__
      - Возвращает результат проверки на ошибки
+   * - `getFilter <BaseDataSource.getFilter.html>`__
+     - Возвращает правило фильтрации документов
+   * - `setFilter <BaseDataSource.setFilter.html>`__
+     - Устанавливает правило фильтрации документов
+   * - `getFilterParams <BaseDataSource.getFilterParams.html>`__
+     - Возвращает параметры фильтра
+   * - `setFilterParams <BaseDataSource.setFilterParams.html>`__
+     - Устанавливает параметры фильтра
    * - `initDataProvider <BaseDataSource.initDataProvider.html>`__
      - Определяет обязательное свойство `dataProvider <../../DataProviders/>`__. Наследники BaseDataSource должны переопределять этот метод!
    * - `beforeDeleteItem <BaseDataSource.beforeDeleteItem.html>`__
@@ -174,6 +186,8 @@ Events
    BaseDataSource.getContext.rst
    BaseDataSource.getErrorValidator.rst
    BaseDataSource.getFillCreatedItem.rst
+   BaseDataSource.getFilter.rst
+   BaseDataSource.getFilterParams.rst
    BaseDataSource.getIdProperty.rst
    BaseDataSource.getItems.rst
    BaseDataSource.getName.rst
@@ -201,6 +215,8 @@ Events
    BaseDataSource.saveItem.rst
    BaseDataSource.setErrorValidator.rst
    BaseDataSource.setFillCreatedItem.rst
+   BaseDataSource.setFilter.rst
+   BaseDataSource.setFilterParams.rst
    BaseDataSource.setIdProperty.rst
    BaseDataSource.setIsLazy.rst
    BaseDataSource.setName.rst

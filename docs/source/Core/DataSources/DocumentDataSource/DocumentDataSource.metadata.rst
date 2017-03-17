@@ -18,14 +18,6 @@ Properties
      - ``String``
      - –
      - Идентификатор документа
-   * - Filter
-     - ``String``1
-     - –
-     - Правило фильтрации документов
-   * - FilterParams
-     - ``Object``
-     - –
-     - Параметры фильтра
    * - PageNumber
      - ``Integer``
      - 0
@@ -51,10 +43,6 @@ Properties
      - –
      - Необходимость подсчета количества
 
-
-1 `Шаблонизируемая
-величина <../RestDataSource/#parameters-templating>`__. Заполняется
-значениями из FilterParams.
 
 Examples
 ~~~~~~~~
