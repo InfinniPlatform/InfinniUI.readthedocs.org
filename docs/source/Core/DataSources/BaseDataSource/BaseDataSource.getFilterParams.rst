@@ -1,4 +1,4 @@
-DocumentDataSource.getFilterParams()
+BaseDataSource.getFilterParams()
 ====================================
 
 Возвращает значение параметра.
@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    DocumentDataSource.getFilterParams(value)
+    BaseDataSource.getFilterParams(value)
 
 Parameters
 ~~~~~~~~~~
@@ -33,12 +33,12 @@ Examples
 
 .. code:: js
 
-    var filterParams = DocumentDataSource.getFilterParams();
-    var documentName = DocumentDataSource.getFilterParams('documentName');
+    var filterParams = dataSource.getFilterParams();
+    var documentName = dataSource.getFilterParams('documentName');
 
 See Also
 --------
 
--  `setFilterParams <DocumentDataSource.setFilterParams.html>`__
--  `getFilter() <DocumentDataSource.getFilter.html>`__
--  `setFilter() <DocumentDataSource.setFilter.html>`__
+-  `setFilterParams <BaseDataSource.setFilterParams.html>`__
+-  `getFilter() <BaseDataSource.getFilter.html>`__
+-  `setFilter() <BaseDataSource.setFilter.html>`__

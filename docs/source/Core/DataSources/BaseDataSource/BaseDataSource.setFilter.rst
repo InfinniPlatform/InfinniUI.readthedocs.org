@@ -1,4 +1,4 @@
-DocumentDataSource.setFilter()
+BaseDataSource.setFilter()
 ==============================
 
 Устанавливает правило фильтрации документов.
@@ -18,7 +18,7 @@ Syntax
 
 .. code:: js
 
-    DocumentDataSource.setFilter(value)
+    BaseDataSource.setFilter(value)
 
 Parameters
 ~~~~~~~~~~
@@ -30,14 +30,12 @@ Parameters
      - Type
      - Description
    * - value
-     - ``String``1
+     - ``String``:sup:`1`
      - Правило фильтрации документов
 
 
-1 `Шаблонизируемая
-величина <../RestDataSource/#parameters-templating>`__. Для
-определения параметров используйте метод
-`setFilterParams() <DocumentDataSource.setFilterParams.html>`__.
+:sup:`1` `Шаблонизируемая величина <../RestDataSource/#parameters-templating>`__. 
+Для определения параметров используйте метод `setFilterParams() <BaseDataSource.setFilterParams.html>`__.
 
 Returns
 ~~~~~~~
@@ -139,61 +137,60 @@ Examples
 
 .. code:: js
 
-    BaseDataSource.setFilter("eq(_id,123)");
+    dataSource.setFilter("eq(_id,123)");
 
 Вернет элементы, в которых 'birthday' > '2012-01-26T13:51:50.417Z':
 
 .. code:: js
 
-    BaseDataSource.setFilter("gt(birthday,date('2012-01-26T13:51:50.417Z'))");
+    dataSource.setFilter("gt(birthday,date('2012-01-26T13:51:50.417Z'))");
 
 Вернет элементы, в которых 'FirstName' соответсвует маске
 '^И(ван|рина)$' (не зависит от регистра):
 
 .. code:: js
 
-    BaseDataSource.setFilter("regex(FirstName, '^И(ван|рина)$', IgnoreCase)");
+    dataSource.setFilter("regex(FirstName, '^И(ван|рина)$', IgnoreCase)");
 
 Вернет элементы, в которых 'FirstName' начинается с 'Але' (с учётом
 регистра):
 
 .. code:: js
 
-    BaseDataSource.setFilter("startsWith(FirstName, 'Але', false)");
+    dataSource.setFilter("startsWith(FirstName, 'Але', false)");
 
 Вернет элементы, в которых хотя бы один из элементов массива props
 содержит значение 'font' в поле name:
 
 .. code:: js
 
-    BaseDataSource.setFilter("match(props, eq(name,'font'))");
+    dataSource.setFilter("match(props, eq(name,'font'))");
 
 Вернет элементы, в которых хотя бы один из элементов массива items не
 входит в множество [true, 34535, 'hello']:
 
 .. code:: js
 
-    BaseDataSource.setFilter("anyNotIn(items, true, 34535, 'hello')");
+    dataSource.setFilter("anyNotIn(items, true, 34535, 'hello')");
 
 Вернет элементы, в которых либо id=423434, либо id=231 и isActive=true:
 
 .. code:: js
 
-    BaseDataSource.setFilter("or(and(eq(id,231),eq(isActive,true)),eq(id,423434))");
+    dataSource.setFilter("or(and(eq(id,231),eq(isActive,true)),eq(id,423434))");
 
 Сработает регистрозависимый полнотекстовый поиск:
 
 .. code:: js
 
-    BaseDataSource.setFilter("text('Иванов Иван Иванович', null, true)");
+    dataSource.setFilter("text('Иванов Иван Иванович', null, true)");
 
 See Also
 --------
 
--  `setFilterParams() <DocumentDataSource.setFilterParams.html>`__
--  `getFilterParams() <DocumentDataSource.getFilterParams.html>`__
--  `getFilter() <DocumentDataSource.getFilter.html>`__
--  `setIdFilter() <DocumentDataSource.setIdFilter.html>`__
--  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__
--  `suspendUpdate() <../BaseDataSource/BaseDataSource.suspendUpdate.html>`__
--  `resumeUpdate() <../BaseDataSource/BaseDataSource.resumeUpdate.html>`__
+-  `setFilterParams() <BaseDataSource.setFilterParams.html>`__
+-  `getFilterParams() <BaseDataSource.getFilterParams.html>`__
+-  `getFilter() <BaseDataSource.getFilter.html>`__
+-  `updateItems() <BaseDataSource.updateItems.html>`__
+-  `suspendUpdate() <BaseDataSource.suspendUpdate.html>`__
+-  `resumeUpdate() <BaseDataSource.resumeUpdate.html>`__

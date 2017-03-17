@@ -1,4 +1,4 @@
-DocumentDataSource.getFilter()
+BaseDataSource.getFilter()
 ==============================
 
 Возвращает правило фильтрации документов.
@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    DocumentDataSource.getFilter()
+    BaseDataSource.getFilter()
 
 Parameters
 ~~~~~~~~~~
@@ -19,20 +19,19 @@ Returns
 ~~~~~~~
 
 Правило фильтрации документов (см.
-`формат <DocumentDataSource.setFilter/#filter-format>`__)
+`формат <BaseDataSource.setFilter/#filter-format>`__)
 
 Examples
 --------
 
 .. code:: js
 
-    var filter = DocumentDataSource.getFilter();
+    var filter = dataSource.getFilter();
 
 See Also
 --------
 
--  `setFilter() <DocumentDataSource.setFilter.html>`__
--  `setIdFilter() <DocumentDataSource.setIdFilter.html>`__
--  `getFilterParams() <DocumentDataSource.getFilterParams.html>`__
--  `setFilterParams() <DocumentDataSource.setFilterParams.html>`__
--  `updateItems() <../BaseDataSource/BaseDataSource.updateItems.html>`__
+-  `setFilter() <BaseDataSource.setFilter.html>`__
+-  `getFilterParams() <BaseDataSource.getFilterParams.html>`__
+-  `setFilterParams() <BaseDataSource.setFilterParams.html>`__
+-  `updateItems() <BaseDataSource.updateItems.html>`__

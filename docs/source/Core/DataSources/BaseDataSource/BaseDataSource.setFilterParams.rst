@@ -1,4 +1,4 @@
-DocumentDataSource.setFilterParams()
+BaseDataSource.setFilterParams()
 ====================================
 
 Устанавливает значение параметра.
@@ -8,8 +8,7 @@ Syntax
 
 .. code:: js
 
-    serverAction.setFilterParams(name, value)
-    serverAction.setFilterParams(value)
+    BaseDataSource.setFilterParams(name, value)
 
 Parameters
 ~~~~~~~~~~
@@ -35,16 +34,15 @@ Examples
 
 .. code:: js
 
-    serverAction.setFilterParams('documentName', 'Patient');
+    var filter = 'and(contains(Name, <%filterName%>),contains(currency, <%filterPrice%>))';
+    dataSource.setFilter(filter);
 
-    serverAction.setFilterParams({
-        documentName: 'Patient',
-        userId: '12345'
-    });
+    dataSource.setFilterParams('filterName', 'name');
+    dataSource.setFilterParams('filterPrice', '999');
 
 See Also
 --------
 
--  `getFilterParams <DocumentDataSource.getFilterParams.html>`__
--  `getFilter() <DocumentDataSource.getFilter.html>`__
--  `setFilter() <DocumentDataSource.setFilter.html>`__
+-  `getFilterParams <BaseDataSource.getFilterParams.html>`__
+-  `getFilter() <BaseDataSource.getFilter.html>`__
+-  `setFilter() <BaseDataSource.setFilter.html>`__
