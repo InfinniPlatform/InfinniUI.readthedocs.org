@@ -25,6 +25,10 @@ Properties
      - ``Object``
      - –
      - Объект со значениями параметров. Параметр может быть задан как  [`DataBinding`](../../../DataBinding/DataBinding.metadata/).
+   * - Search
+     - ``String``
+     - –
+     - Строка полнотекстового поиска
    * - IdProperty
      - ``String``
      - '\_id'
@@ -104,7 +108,11 @@ TerminologyDataSource выше, чем для MainDataSource.
                 "DocumentDataSource": {
                     "Name": "MainDataSource",
                     "ConfigId": "configuration",
-                    "DocumentId": "patients"
+                    "DocumentId": "patients",
+                    "Filter": "gt(Birthday,<%startDate%>)",
+                    "FilterParams": {
+                        startDate: date('1985-01-01')
+                    },
                 }
             },
             {
@@ -112,6 +120,7 @@ TerminologyDataSource выше, чем для MainDataSource.
                     "Name": "TerminologyDataSource",
                     "ConfigId": "configuration",
                     "DocumentId": "diseases",
+                    "Search": "Иванов Иван Иванович",
                     "ResolvePriority": 1
                 }
             }

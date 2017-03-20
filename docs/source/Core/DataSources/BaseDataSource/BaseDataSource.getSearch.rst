@@ -1,4 +1,4 @@
-DocumentDataSource.getSearch()
+BaseDataSource.getSearch()
 ==============================
 
 Возвращает строку полнотекстового поиска.
@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    DocumentDataSource.getSearch()
+    BaseDataSource.getSearch()
 
 Parameters
 ~~~~~~~~~~
@@ -25,9 +25,9 @@ Examples
 
 .. code:: js
 
-    var searchStr = DocumentDataSource.getSearch();
+    var searchStr = BaseDataSource.getSearch();
 
 See Also
 --------
 
--  `setSearch() <DocumentDataSource.setSearch.html>`__
+-  `setSearch() <BaseDataSource.setSearch.html>`__

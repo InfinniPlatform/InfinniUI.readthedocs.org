@@ -43,7 +43,7 @@ Properties
      - ``String``
      - Содержит наименование источника данных
    * - `onProviderErrorHandler <BaseDataSource.onProviderErrorHandler.html>`__
-     - `Script <../../Script/>`_ 
+     - `Script <../../Script/>`_
      - Содержит `обработчик события <../../Script/>`_ о том, что `поставщик данных </Core/DataProviders/>`_ вернул ошибку
 
 
@@ -66,6 +66,9 @@ Specific Properties
      - Правило фильтрации документов
    * - filterParams
      - Параметры фильтра
+   * - search
+     - –
+     - Строка полнотекстового поиска
 
 
 Methods
@@ -128,6 +131,10 @@ Methods
      - Возвращает параметры фильтра
    * - `setFilterParams <BaseDataSource.setFilterParams.html>`__
      - Устанавливает параметры фильтра
+   * - `getSearch <BaseDataSource.getSearch.html>`__
+     - Возвращает строку полнотекстового поиска
+   * - `setSearch <BaseDataSource.setSearch.html>`__
+     - Устанавливает строку полнотекстового поиска
    * - `getIdProperty <BaseDataSource.getIdProperty.html>`__
      - Возвращает наименование свойства с идентификатором элемента (по умолчанию Id)
    * - `setIdProperty <BaseDataSource.setIdProperty.html>`__
@@ -188,6 +195,7 @@ Events
    BaseDataSource.getFillCreatedItem.rst
    BaseDataSource.getFilter.rst
    BaseDataSource.getFilterParams.rst
+   BaseDataSource.getSearch.rst
    BaseDataSource.getIdProperty.rst
    BaseDataSource.getItems.rst
    BaseDataSource.getName.rst
@@ -217,6 +225,7 @@ Events
    BaseDataSource.setFillCreatedItem.rst
    BaseDataSource.setFilter.rst
    BaseDataSource.setFilterParams.rst
+   BaseDataSource.setSearch.rst
    BaseDataSource.setIdProperty.rst
    BaseDataSource.setIsLazy.rst
    BaseDataSource.setName.rst

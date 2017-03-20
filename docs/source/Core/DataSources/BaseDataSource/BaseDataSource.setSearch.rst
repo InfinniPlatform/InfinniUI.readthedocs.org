@@ -1,4 +1,4 @@
-DocumentDataSource.setSearch()
+BaseDataSource.setSearch()
 ==============================
 
 Устанавливает строку полнотекстового поиска.
@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    DocumentDataSource.setSearch(value)
+    BaseDataSource.setSearch(value)
 
 Parameters
 ~~~~~~~~~~
@@ -39,4 +39,4 @@ Examples
 See Also
 --------
 
--  `getSearch() <DocumentDataSource.getSearch.html>`__
+-  `getSearch() <BaseDataSource.getSearch.html>`__

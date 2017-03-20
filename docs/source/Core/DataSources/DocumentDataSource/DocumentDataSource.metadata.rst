@@ -26,10 +26,6 @@ Properties
      - ``Integer``
      - 15
      - Размер страницы
-   * - Search
-     - ``String``
-     - –
-     - Строка полнотекстового поиска
    * - Select
      - ``String``
      - –
@@ -53,10 +49,6 @@ Examples
         "DocumentDataSource": {
             "Name": "documentDataSource1",
             "DocumentId": "MyDocument",
-            "Filter": "gt(Birthday,<%startDate%>)",
-            "FilterParams": {
-                startDate: date('1985-01-01')
-            },
             "PageNumber": 3,
             "PageSize": 50,
             "Select": "include(LastName, FirstName, Address, Birthday)",
@@ -70,7 +62,6 @@ Examples
         "DocumentDataSource": {
             "Name": "documentDataSource2",
             "DocumentId": "MyDocument",
-            "Search": "Иванов Иван Иванович",
             "NeedTotalCount": true
         }
     }

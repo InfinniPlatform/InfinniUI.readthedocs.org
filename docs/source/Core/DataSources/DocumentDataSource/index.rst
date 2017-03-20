@@ -45,8 +45,8 @@ Properties
 Specific Properties
 -------------------
 
-Для работы с данными свойствами используйте методы 
-`getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и 
+Для работы с данными свойствами используйте методы
+`getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и
 `setProperty <../BaseDataSource/BaseDataSource.setProperty.html>`__.
 Обратите внимание, что для работы с данными свойствами необходимо
 `указывать точку в
@@ -67,9 +67,6 @@ Specific Properties
    * - pageSize
      - 15
      - Размер страницы
-   * - search
-     - –
-     - Строка полнотекстового поиска
    * - select
      - –
      - Правило отображения документов
@@ -82,7 +79,7 @@ Specific Properties
 
 
 Изменение параметров `filter <../BaseDataSource/#specific-properties>`_, `filterParams <../BaseDataSource/#specific-properties>`_, ``pageSize``,
-``search``, ``order`` приводит к обнулению ``pageNumber``.
+`search <../BaseDataSource/#specific-properties>`_, ``order`` приводит к обнулению ``pageNumber``.
 
 Methods
 -------
@@ -106,10 +103,6 @@ Methods
      - Возвращает размер страницы
    * - `setPageSize <DocumentDataSource.setPageSize.html>`__
      - Устанавливает размер страницы
-   * - `getSearch <DocumentDataSource.getSearch.html>`__
-     - Возвращает строку полнотекстового поиска
-   * - `setSearch <DocumentDataSource.setSearch.html>`__
-     - Устанавливает строку полнотекстового поиска
    * - `getSelect <DocumentDataSource.getSelect.html>`__
      - Возвращает правило отображения документов
    * - `setSelect <DocumentDataSource.setSelect.html>`__
@@ -140,7 +133,6 @@ Events
    DocumentDataSource.getOrder.rst
    DocumentDataSource.getPageNumber.rst
    DocumentDataSource.getPageSize.rst
-   DocumentDataSource.getSearch.rst
    DocumentDataSource.getSelect.rst
    DocumentDataSource.getTotalCount.rst
    DocumentDataSource.metadata.rst
@@ -150,7 +142,6 @@ Events
    DocumentDataSource.setOrder.rst
    DocumentDataSource.setPageNumber.rst
    DocumentDataSource.setPageSize.rst
-   DocumentDataSource.setSearch.rst
    DocumentDataSource.setSelect.rst
 
 
