@@ -111,8 +111,8 @@ TerminologyDataSource выше, чем для MainDataSource.
                     "DocumentId": "patients",
                     "Filter": "gt(Birthday,<%startDate%>)",
                     "FilterParams": {
-                        startDate: date('1985-01-01')
-                    },
+                        "startDate": "date('1985-01-01')"
+                    }
                 }
             },
             {
