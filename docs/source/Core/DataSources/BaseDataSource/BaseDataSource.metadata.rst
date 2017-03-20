@@ -17,6 +17,10 @@ Properties
      - ``String``
      - –
      - Наименование источника данных
+   * - SuspendUpdate
+     - ``String``
+     - –
+     - Причина запрета на обновление списка элементов. Для снятия запрета необходимо воспользоваться методом `resumeUpdate() </Core/DataSources/BaseDataSource/BaseDataSource.resumeUpdate.html>`_.
    * - Filter
      - ``String``:sup:`1`
      - –
@@ -24,7 +28,7 @@ Properties
    * - FilterParams
      - ``Object``
      - –
-     - Объект со значениями параметров. Параметр может быть задан как  [`DataBinding`](../../../DataBinding/DataBinding.metadata/).
+     - Объект со значениями параметров. Параметр может быть задан как `DataBinding </Core/DataBinding/DataBinding.metadata.html>`_.
    * - Search
      - ``String``
      - –
@@ -109,6 +113,7 @@ TerminologyDataSource выше, чем для MainDataSource.
                     "Name": "MainDataSource",
                     "ConfigId": "configuration",
                     "DocumentId": "patients",
+                    "SuspendUpdate": "SomeReason",
                     "Filter": "gt(Birthday,<%startDate%>)",
                     "FilterParams": {
                         "startDate": "date('1985-01-01')"
@@ -165,6 +170,7 @@ TerminologyDataSource выше, чем для MainDataSource.
         {
           "ObjectDataSource": {
             "Name": "ObjectDataSource2",
+            "SuspendUpdate": "SomeReason",
             "Items": [
               {"_id": 1, "FilterName": "", "FilterPrice": "", "FilterDisplay": ""}
             ]
