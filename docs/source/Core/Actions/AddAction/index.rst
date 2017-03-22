@@ -1,7 +1,7 @@
 AddAction
 =========
 
-Создает новый элемент в `источнике данных <../../DataSources>`__.
+Добавляет новый элемент в `источнике данных <../../DataSources>`__.
 
 Extends
 -------
@@ -26,7 +26,7 @@ Parameters
      - Description
    * - parentView
      - `View <../../Elements/View/>`__
-     -  Родительское представление 
+     -  Родительское представление
 
 
 Properties
@@ -76,8 +76,8 @@ Patients):
 .. code:: js
 
     var linkView = (new InlineViewBuilder()).build(null, {
-                                                            builder: args.builder, 
-                                                            metadata: {View: editPatientView}, 
+                                                            builder: args.builder,
+                                                            metadata: {View: editPatientView},
                                                             parentView: parentView
                                                         });
 
@@ -87,7 +87,7 @@ Patients):
     addAction.setProperty('sourceSource', 'MainDataSource');
     addAction.setProperty('destinationSource', 'Patients');
 
-    addAction.execute(); 
+    addAction.execute();
 
 Теперь рассмотрим случай, когда текущему пациенту необходимо добавлять
 госпитализации (поле Hospitalizations):
@@ -95,8 +95,8 @@ Patients):
 .. code:: js
 
     var linkView = (new InlineViewBuilder()).build(null, {
-                                                            builder: args.builder, 
-                                                            metadata: {View: editHospitalizationView}, 
+                                                            builder: args.builder,
+                                                            metadata: {View: editHospitalizationView},
                                                             parentView: parentView
                                                         });
 
@@ -107,7 +107,7 @@ Patients):
     addAction.setProperty('destinationSource', 'Patients');
     addAction.setProperty('destinationProperty', '$.Hospitalizations');
 
-    addAction.execute(); 
+    addAction.execute();
 
 
 

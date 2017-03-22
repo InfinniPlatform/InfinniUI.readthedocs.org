@@ -17,7 +17,9 @@ At this moment Infinni UI has got the following actions:
    * - `CancelAction <CancelAction/>`__
      - Sets as a work result of `View <../Elements/View/>`__ value `DialogResult.canceled <../Elements/View/DialogResult/>`__
    * - `AddAction <AddAction/>`__
-     - Creates a new element in  `Data Source <../DataSources>`__
+     - Add a new element in  `Data Source <../DataSources>`__
+   * - `CreateItemAction <CreateItemAction/>`__
+     - Create a new element in  `Data Source <../DataSources>`__
    * - `EditAction <EditAction/>`__
      - Edits element from  `Data Source <../DataSources>`__
    * - `DeleteAction <DeleteAction/>`__
@@ -40,6 +42,7 @@ At this moment Infinni UI has got the following actions:
 
    AcceptAction/index.rst
    AddAction/index.rst
+   CreateItemAction/index.rst
    BaseAction/index.rst
    CancelAction/index.rst
    DeleteAction/index.rst
