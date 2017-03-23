@@ -28,10 +28,22 @@ Properties
      - Список результатов проверки свойств объекта
 
 
+Methods
+-------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - `error <ValidationResult.error.html>`__
+     - Добавлет элемент с информацией об ошибке в массив ``Items``  и устанавливает значение ``IsValid`` в false
+
+
 Examples
 --------
 
-.. code:: js
+.. code:: json
 
     {
       IsValid: false,
@@ -43,9 +55,18 @@ Examples
       ]
     }
 
+.. code:: js
+
+    var validationResult = new window.InfinniUI.ValidationResult();
+    if (!args.value.requiredProperty) {
+        validationResult.error('error message', 'path of required property');
+    }
+    return validationResult;
+
 See Also
 --------
 
+-  `error() <ValidationResult.error.html>`__
 -  `getErrorValidator() <BaseDataSource.getErrorValidator.html>`__
 -  `setErrorValidator() <BaseDataSource.setErrorValidator.html>`__
 -  `getValidationResult() <BaseDataSource.getValidationResult.html>`__

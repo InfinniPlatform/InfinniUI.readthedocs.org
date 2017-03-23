@@ -170,10 +170,25 @@ TerminologyDataSource выше, чем для MainDataSource.
         {
           "ObjectDataSource": {
             "Name": "ObjectDataSource2",
-            "SuspendUpdate": "SomeReason",
             "Items": [
               {"_id": 1, "FilterName": "", "FilterPrice": "", "FilterDisplay": ""}
             ]
+          }
+        }
+      ]
+    }
+
+Пример заморозки DataSource из метаданных
+
+.. code:: json
+
+    {
+      "DataSources": [
+        {
+          "ObjectDataSource": {
+            "Name": "ObjectDataSource",
+            "SuspendUpdate": "SomeReason",
+            "Items": []
           }
         }
       ]
