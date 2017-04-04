@@ -49,6 +49,10 @@ Methods
      - Устанавливает значение, определяющее виден ли элемент "Выбрать все" в шапке таблицы.
    * - `getCheckAll <DataGrid.getCheckAll.html>`__
      - Возвращает состояние элемента "Выбрать все" из шапки таблицы.
+   * - `getVerticalAlignment <DataGrid.getVerticalAlignment.html>`__
+     - Возвращает вертикальное выравнивание элемент.
+   * - `setVerticalAlignment <DataGrid.setVerticalAlignment.html>`__
+     - Устанавливает вертикальное выравнивание элемента.
 
 
 Events

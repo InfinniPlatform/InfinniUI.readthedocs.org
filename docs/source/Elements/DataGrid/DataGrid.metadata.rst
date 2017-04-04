@@ -29,20 +29,24 @@ Properties
      - `Script <../../Core/Script/>`__
      - –
      - Устанавливает обработчик изменения состоняие элемента "Выбрать все" в шапке таблицы.
+   * - VerticalAlignment
+     - ``String`` (⇔)
+     - –
+     - Вертикальное выравнивание таблицы.
    * - RowBackground
-     - `Color </Core/Style/ColorStyle/>`__(⇔)
+     - `Color </Core/Style/ColorStyle/>`__ (⇔)
      - –
      - Цвет фона строки
    * - RowForeground
-     - `Color </Core/Style/ColorStyle/>`__(⇔)
+     - `Color </Core/Style/ColorStyle/>`__ (⇔)
      - –
      - Цвет текста строки
    * - RowTextStyle
-     - `TextStyle <../../Style/TextStyle/>`__(⇔)
+     - `TextStyle <../../Style/TextStyle/>`__ (⇔)
      - –
      - Стиль текста строки
    * - RowStyle
-     - ``String``(⇔)
+     - ``String`` (⇔)
      - –
      - Имя кастомного стиля, применяемого к строке
    * - onRowClick
@@ -82,6 +86,7 @@ Examples
             "CellProperty": "Kingdom"
           }
         ],
+        "VerticalAlignment": "Stretch",
         "Items": {
           "Source": "peopleDataSource"
         },
