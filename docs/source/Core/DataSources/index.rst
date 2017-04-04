@@ -1,7 +1,7 @@
 DataSources
 ===========
 
-Web interface is always linked with certain type of data. To work with data InfinniUI uses Data Sources. 
+Web interface is always linked with certain type of data. To work with data InfinniUI uses Data Sources.
 Each Data Source implements `base API <BaseDataSource/>`_, but each type of Data Source also has particular functions.
 
 Data source provides the following closely related functionality:
@@ -17,6 +17,7 @@ At this moment a few data sources can be outlined that can work out the most of 
 
 -  `BaseDataSource <BaseDataSource/>`__ - base Data Source type.
 -  `ObjectDataSource <ObjectDataSource/>`__ - Data Source type for any type of data array.
+-  `LocalStorageDataSource <LocalStorageDataSource/>`__ - Тип источника данных, который хранит массив данных в локальном хранилище браузера.
 -  `RestDataSource <RestDataSource/>`__ - Data Source for any http-like data services.
 -  `DocumentDataSource <DocumentDataSource/>`__ -  InfinniPlatform document Data Source.
 
@@ -27,4 +28,5 @@ At this moment a few data sources can be outlined that can work out the most of 
    BaseDataSource/index.rst
    DocumentDataSource/index.rst
    ObjectDataSource/index.rst
+   LocalStorageDataSource/index.rst
    RestDataSource/index.rst
