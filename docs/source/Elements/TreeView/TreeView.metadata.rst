@@ -24,6 +24,12 @@ Properties
    * - ParentProperty
      - ``String``
      - Свойство элемента коллекции с идентификатором родителя.
+   * - OnExpand
+     - `Обработчик события <../Core/Script/>`__
+     - Устанавливает `обработчик события <../Core/Script/>`__ раскрытия элемента.
+   * - OnCollapse
+     - `Обработчик события <../Core/Script/>`__
+     - Устанавливает `обработчик события <../Core/Script/>`__ скрытия элемента.
 
 
 Examples
@@ -32,10 +38,31 @@ Examples
 .. code:: json
 
     {
-      "KeyProperty": "Id",
-      "ParentProperty": "ParentId",
-      "ItemProperty": "DisplayName",
-      "Items": {
-        "Source": "dataSource1"
+      "TreeView": {
+        {
+          "KeyProperty": "Id",
+          "ParentProperty": "ParentId",
+          "ItemProperty": "DisplayName",
+          "Items": {
+            "Source": "dataSource1"
+          }
+        }
+      }
+    }
+
+.. code:: json
+
+    {
+      "TreeView": {
+        {
+          "KeyProperty": "Id",
+          "ParentProperty": "ParentId",
+          "ItemProperty": "DisplayName",
+          "Items": {
+            "Source": "dataSource1"
+          },
+          "OnExpand": "{ console.log( 'This item is expanded: ', args.item ); }",
+          "OnCollapse": "{ console.log( 'This item is collapsed: ', args.item ); }"
+        }
       }
     }
