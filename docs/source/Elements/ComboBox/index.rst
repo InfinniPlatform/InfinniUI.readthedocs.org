@@ -61,6 +61,8 @@ Methods
      - Возвращает значение, для поиска в выпадающем списке значений
    * - `setAutocompleteValue <ComboBox.setAutocompleteValue.html>`__
      - Устанавливает значение, для поиска в выпадающем списке значений
+   * - `setNoItemsMessage <ComboBox.setNoItemsMessage.html>`__
+     - Устанавивает значение, которое будет использоваться для отображения когда не найден не один элемент.
 
 
 Events
