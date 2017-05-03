@@ -29,7 +29,7 @@ Examples
 .. code:: json
 
     {
-      "Label": "Description",
+      "LabelText": "Description",
       "LabelFloating": true,
       "Multiline": true,
       "LineCount": 5,

@@ -33,7 +33,7 @@ Examples
 .. code:: json
 
     {
-      "Label": "Password",
+      "LabelText": "Password",
       "LabelFloating": true,
       "Value": {
         "Source": "dataSource1",
