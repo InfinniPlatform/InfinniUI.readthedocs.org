@@ -7,7 +7,7 @@ Extends
 -------
 
 `Element <../../Core/Elements/Element>`__,
-`EditorBase <../../Core/Elements/EditorBase/>`__
+`EditorBase <../EditorBase/>`__
 
 Syntax
 ------
