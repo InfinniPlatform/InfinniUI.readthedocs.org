@@ -11,7 +11,7 @@ Syntax
 
 .. code:: js
 
-    window.InfinniUI.config.Routes = [
+    window.InfinniUI.config.routes = [
       {
         Name: routeName,
         Path: path,
@@ -44,7 +44,7 @@ Example
 
 .. code:: js
 
-    window.InfinniUI.config.Routes = [
+    window.InfinniUI.config.routes = [
       {
         Name: "HomePageRoute",
         Path: "/",

@@ -15,9 +15,9 @@ History API, RouterService does the same by implementing fragmentary URL.
 
 While the page is loading and after your application opens
 HomePage view, all routes will be created as defined in
-`InfinniUI.config.Routes <../../Config/>`__,
+`InfinniUI.config.routes <../../Config/>`__,
 router will be automatically fired up in accordance with History API settings from
-`InfinniUI.config.HistoryAPI <../../Config/>`__.
+`InfinniUI.config.historyAPI <../../Config/>`__.
 RouterService is a harness for `Backbone.Router <http://backbonejs.org/#Router>`_.
 
 Parameters

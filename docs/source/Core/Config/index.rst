@@ -43,11 +43,11 @@ Properties
      - ``Boolean``
      - false
      - Флаг, определяющий, нужно ли при загрузке страницы определять текущего пользователя.
-   * - ``HistoryAPI``
+   * - ``historyAPI``
      - ``Object``
      -
      - Параметры History API для запуска роутинга. Принимает такие же параметры как и `Backbone.history.start() <http://backbonejs.org/#History-start>`_
-   * - ``Routes``
+   * - ``routes``
      - ``Array``
      -
      - `Массив объектов конфигурации роутинга приложения. <../Routing/Routes/>`__
@@ -65,10 +65,10 @@ Example
     window.InfinniUI.config.cacheMetadata = true;
     window.InfinniUI.config.enableAutoHeightService = true;
     window.InfinniUI.config.enableGetCurrentUser = true;
-    window.InfinniUI.config.HistoryAPI = {
+    window.InfinniUI.config.historyAPI = {
       pushState: true
     };
-    window.InfinniUI.config.Routes = [
+    window.InfinniUI.config.routes = [
       {
         Name: "HomePageRoute",
         Path: "/",

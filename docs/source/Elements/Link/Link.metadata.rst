@@ -35,7 +35,7 @@ Href.metadata
      - Description
    * - Name\*
      - ``String``
-     - Название маршрута из `InfinniUI.config.Routes </Core/Routing/Routes/>`__.
+     - Название маршрута из `InfinniUI.config.routes </Core/Routing/Routes/>`__.
    * - Params
      - ``Array``.<`Href.paramObject <#href-paramobject>`__>
      - Параметры запроса.
@@ -90,12 +90,12 @@ Examples
 
 Рассмотрим случай, когда ссылка должна изменяться в зависимости от неких
 параметров. Тогда в массив
-`InfinniUI.config.Routes </Core/Routing/Routes/>`__
+`InfinniUI.config.routes </Core/Routing/Routes/>`__
 необходимо добавить соответсвующий путь. Пусть
 
 .. code:: js
 
-    window.InfinniUI.config.Routes = [
+    window.InfinniUI.config.routes = [
       {
         Name: "mainPageRouter",
         Path: "/publicPages/<% pageName %>/?userId=<% userId %>&date=<% date %>",
