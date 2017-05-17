@@ -39,10 +39,6 @@ Properties
      - ``Boolean``
      - false
      - Флаг, определяющий запуск сервиса, регулирующего высоту элементов. Если сервис не запущен, `ScrollPanel </Elements/ScrollPanel/>`_ не прокручивается.
-   * - ``enableGetCurrentUser``
-     - ``Boolean``
-     - false
-     - Флаг, определяющий, нужно ли при загрузке страницы определять текущего пользователя.
    * - ``historyAPI``
      - ``Object``
      -
@@ -64,7 +60,6 @@ Example
     window.InfinniUI.config.homePage = 'content/metadata/Views/common/homePage.json';
     window.InfinniUI.config.cacheMetadata = true;
     window.InfinniUI.config.enableAutoHeightService = true;
-    window.InfinniUI.config.enableGetCurrentUser = true;
     window.InfinniUI.config.historyAPI = {
       pushState: true
     };
