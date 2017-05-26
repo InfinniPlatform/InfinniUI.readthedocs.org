@@ -27,7 +27,7 @@ At this moment Infinni UI has got the following actions:
    * - `UpdateAction <UpdateAction/>`__
      - Updates list of elements `Data Sources <../DataSources>`__
    * - `SaveAction <SaveAction/>`__
-     - Saves changes fro each current element in `Data Source <../DataSources>`__
+     - Saves changes of selected element in `Data Source <../DataSources>`__
    * - `SelectAction <SelectAction/>`__
      - Fills a field of element in `Data Source <../DataSources>`__ by data from other `Data Source <../DataSources>`__ element
    * - `ServerAction <ServerAction/>`__
