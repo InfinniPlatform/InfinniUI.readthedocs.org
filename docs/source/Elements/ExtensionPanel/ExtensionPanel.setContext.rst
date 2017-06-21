@@ -1,4 +1,4 @@
-Element.setContext()
+ExtensionPanel.setContext()
 ====================
 
 Устанавливает `контекст представления </Core/Context/>`__.
@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    Element.setContext(value)
+    extensionPanel.setContext(value)
 
 Parameters
 ~~~~~~~~~~
@@ -34,4 +34,4 @@ Examples
 
 .. code:: js
 
-    Element.setContext(view.getContext());
+    extensionPanel.setContext( view.getContext() );

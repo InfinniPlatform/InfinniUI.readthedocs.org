@@ -11,7 +11,7 @@ Syntax
 
 .. code:: js
 
-    Element.setBuilder(value)
+    extensionPanel.setBuilder(value)
 
 Parameters
 ~~~~~~~~~~
@@ -37,4 +37,4 @@ Examples
 
 .. code:: js
 
-    Element.setBuilder(new ApplicationBuilder());
+    extensionPanel.setBuilder( new InfinniUI.ApplicationBuilder() );

@@ -1,4 +1,4 @@
-Element.setExtensionName()
+ExtensionPanel.setExtensionName()
 ==========================
 
 Устанавливает имя прикладному элементу. Одноименная функция-конструктор
@@ -9,7 +9,7 @@ Syntax
 
 .. code:: js
 
-    Element.setExtensionName(value)
+    extensionPanel.setExtensionName( value )
 
 Parameters
 ~~~~~~~~~~
@@ -35,4 +35,4 @@ Examples
 
 .. code:: js
 
-    Element.setExtensionName('YandexMapExtension');
+    extensionPanel.setExtensionName( 'YandexMapExtension' );

@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    serverAction.getParameters()
+    extensionPanel.getParameters()
 
 Parameters
 ~~~~~~~~~~
@@ -25,7 +25,7 @@ Examples
 
 .. code:: js
 
-    var documentName = serverAction.getParameters();
+    var params = extensionPanel.getParameters();
 
 See Also
 --------

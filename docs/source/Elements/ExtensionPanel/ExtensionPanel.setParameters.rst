@@ -8,7 +8,7 @@ Syntax
 
 .. code:: js
 
-    serverAction.setParameters(parameters)
+    extensionPanel.setParameters(parameters)
 
 Parameters
 ~~~~~~~~~~
@@ -31,13 +31,14 @@ Examples
 --------
 
 .. code:: js
+    var typeParameter = new Parameter( { view: parentView } );
+    typeParameter.setName( 'type' );
+    typeParameter.setValue( 'reCAPTCHA' );
 
-     var parameters = {};
-    _.each(parametersMetadata, function (parameterMetadata) {
-        var param = builder.buildType('Parameter', parameterMetadata, {parentView: parentView});
-        parameters[param.getName()] = param;
-    });
-    serverAction.setParameters(parameters);
+    var parameters = {
+      type: typeParameter
+    };
+    extensionPanel.setParameters( parameters );
 
 See Also
 --------
