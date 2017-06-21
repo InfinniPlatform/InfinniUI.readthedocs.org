@@ -67,7 +67,6 @@ Specific Properties
    * - filterParams
      - Параметры фильтра
    * - search
-     - –
      - Строка полнотекстового поиска
 
 

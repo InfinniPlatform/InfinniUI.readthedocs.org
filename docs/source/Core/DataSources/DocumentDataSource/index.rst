@@ -49,8 +49,7 @@ Specific Properties
 `getProperty <../BaseDataSource/BaseDataSource.getProperty.html>`__ и
 `setProperty <../BaseDataSource/BaseDataSource.setProperty.html>`__.
 Обратите внимание, что для работы с данными свойствами необходимо
-`указывать точку в
-  названии <../BaseDataSource/BaseDataSource.getProperty/#path-rules>`__.
+`указывать точку в названии <../BaseDataSource/BaseDataSource.getProperty.html/#path-rules>`__.
 
 .. list-table::
    :header-rows: 1
