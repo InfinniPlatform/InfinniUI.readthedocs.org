@@ -6,84 +6,11 @@ ExtensionPanel
 Description
 -----------
 
-Для реализации функционала, не предусмотренного платформой, можно
-добавить в глобальное пространство функцию-конструктор, экземпляры
-которой будут создавать нужный элемент. Для того, чтобы воспользоваться
-этой функцией в InfinniUI, необходимо указать имя функции-конструктора
-ExtensionPanel в поле
-`ExtensionName <ExtensionPanel.setExtensionName.html>`__.
-
-Схематически данную функцию можно описать так:
-
-.. code:: js
-
-    function MyExtensionPanel(context, args) {  
-        this.render = function() {
-            var myElement;
-            // тут определяется myElement
-            args.$el.append(myElement);
-        }
-    }
-
-Обратите внимание, что в методе render нужно самостоятельно делать
-вставку создаваемого элемента в требуемое место (выделенный под
-ExtensionPanel контейнер будет передан в функцию-конструктор в
-args.$el).
-
-Parameters
-~~~~~~~~~~
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Description
-   * - context
-     - `ViewContext </Core/Context>`__
-     - Контекст представления
-   * - args
-     - ``Object``
-     - Объект с полями: ● $el - элемент выделенный под ExtensionPanel, ● parameters - `параметры <ExtensionPanel.getParameters.html>`__, ● builder - `построитель элементов </Core/Builders/>`__, ● itemTemplate - `функция шаблонизации дочерних элементов </Core/Elements/Container/Container.getItemTemplate.html>`__, ● items - `коллекция дочерних элементов </Core/Elements/Container/Container.getItems.html>`__
-
-
-Examples
-~~~~~~~~
-
-.. code:: js
-
-    function SuperPanelExtension(context, args) {
-        this.render = function() {
-            if( args.items == null ) {
-                return;
-            }
-
-            args.items.forEach( function(item, index){
-                var item = args.itemTemplate(context, {index: index}),
-                    $item = item.render(),
-                    $div = $("<div>");
-
-                $div.addClass("my-super-class")
-                    .append($item);
-
-                args.$el.append($div);
-            });
-        };
-    }
-
-.. code:: js
-
-    function CaptchaExtension(context, args) {  
-        this.render = function() {
-            var $captcha = this.createCaptcha(args.parameters);
-
-            args.$el.append($captcha);
-        };
-
-        this.createCaptcha = function(params) {
-            // captcha creation
-        };
-    }
+Для реализации функционала, не предусмотренного платформой, нужно
+зарегистрировать с помощью `InfinniUI.extensionPanels.register <ExtensionPanelsRegister/InfinniUI.extensionPanels.register.html>`__
+функцию-конструктор, экземпляры которой будут добавлять 
+нужный элемент, а затем указать имя функции-конструктора
+ExtensionPanel в поле `ExtensionName <ExtensionPanel.setExtensionName.html>`__.
 
 Extends
 -------
@@ -138,3 +65,15 @@ Events
 
 
 .. include:: ExtensionPanel.metadata.rst
+
+See Also
+--------
+
+-  `InfinniUI.extensionPanels <ExtensionPanelsRegister/>`__
+
+.. toctree::
+   :hidden:
+
+   ExtensionPanelsRegister/index.rst
+   ExtensionPanelsRegister/InfinniUI.extensionPanels.register.rst
+   ExtensionPanelsRegister/InfinniUI.extensionPanels.getByName.rst
