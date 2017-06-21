@@ -75,7 +75,14 @@ Specific Properties
    * - needTotalCount
      - false
      - Необходимость подсчета общего количества документов
+   * - totalCount :sup:`1` 
+     - –
+     - Общее число документов ( заполняется, когда needTotalCount == true )
+   * - additionalResult :sup:`1` 
+     - –
+     - Дополнительные результаты запроса на получение данных
 
+:sup:`1` поле только для чтения
 
 Изменение параметров `filter <../BaseDataSource/#specific-properties>`_, `filterParams <../BaseDataSource/#specific-properties>`_, ``pageSize``,
 `search <../BaseDataSource/#specific-properties>`_, ``order`` приводит к обнулению ``pageNumber``.
