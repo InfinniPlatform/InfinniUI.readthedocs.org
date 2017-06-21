@@ -1,7 +1,7 @@
 ComboBox.setNoItemsMessage
 =============================
 
-Устанавливает значение, для поиска в выпадающем списке значений
+Устанавивает значение, которое будет использоваться для отображения, когда не найден не один элемент.
 
 Description
 -----------
@@ -24,7 +24,7 @@ Parameters
    * - Name
      - Description
    * - message
-     - Сообщение, которое отображается когда не найдено ни одного элемента
+     - Сообщение, которое отображается, когда не найдено ни одного элемента
 
 
 Returns
@@ -37,4 +37,4 @@ Examples
 
 .. code:: js
 
-    text = comboBox.setNoItemsMessage( "Вы ничего не нашли по запросу \"<span class=\"search-message\""></span>\"" );
+    text = comboBox.setNoItemsMessage( 'Вы ничего не нашли по запросу \"<span class=\"search-message\""></span>\"' );

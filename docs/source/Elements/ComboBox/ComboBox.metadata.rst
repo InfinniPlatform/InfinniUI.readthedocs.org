@@ -17,6 +17,10 @@ Properties
      - ``String``
      - –
      - Текст метки
+   * - NoItemsMessage
+     - ``String``
+     - '\\"<span class=\\"search-message\\"></span>\" not found'
+     - Текст сообщения, которое будет отображаться, когда не найдено ни одного элемента
    * - LabelFloating
      - ``Boolean``
      - false
