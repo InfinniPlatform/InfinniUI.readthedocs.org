@@ -53,6 +53,10 @@ Properties
      - `Script <../../Script/>`__
      - –
      - Функция проверки элемента на ошибки
+   * - CustomProperties
+     - ``Object``
+     - –
+     - Вспомогательные параметры. Могут пригодиться, например, для настройки взаимодействия `DataNavigation </Elements/DataNavigation/>`_ и `RestDataSource <../RestDataSource/>`__. Объект является ассоциативным массивом, в котором key - это название свойства, а value - значение.
    * - OnErrorValidator
      - `Script <../../Script/>`__
      - –
@@ -192,4 +196,40 @@ TerminologyDataSource выше, чем для MainDataSource.
           }
         }
       ]
+    }
+
+Пример настройки RestDataSource для работы с DataNavigation
+
+.. code:: json
+
+    {
+      "RestDataSource": {
+        "Name": "MainDataSource",
+        "CustomProperties": {
+          "pageNumber": 0,
+          "pageSize": 20
+        },
+        "GettingParams": {
+          "Origin": "http://localhost:9900",
+          "Method": "post",
+          "Params": {
+            "skip": {
+              "Source": "MainDataSource",
+              "Property": ".pageNumber",
+              "Converter": {
+                "ToElement": "{return args.source.getProperty('.pageSize') * args.value;}"
+              },
+              "DefaultValue": 0
+            },
+            "take": {
+              "Source": "MainDataSource",
+              "Property": ".pageSize",
+              "DefaultValue": 20
+            }
+          },
+          "Path": "/documents/PublicationInfo?skip=<%skip%>&take=<%take%>&count=true",
+          "Data": {}
+        },
+        "UpdatingItemsConverter": "{args.source.setProperty('.totalCount', args.value.Result.Count); return args.value.Result.Items;}"
+      }
     }
