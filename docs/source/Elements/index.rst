@@ -11,6 +11,7 @@ Elements
 	DataNavigation/index.rst
 	DatePicker/index.rst
 	DateTimePicker/index.rst
+	Divider/index.rst
 	EditorBase/index.rst
 	ExtensionPanel/index.rst
 	FileBox/index.rst
