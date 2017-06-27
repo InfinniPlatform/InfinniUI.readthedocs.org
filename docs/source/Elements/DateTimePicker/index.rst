@@ -59,3 +59,16 @@ Methods
 
 
 .. include:: DateTimePicker.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   DateTimePicker.getMaxValue.rst
+   DateTimePicker.getMinValue.rst
+   DateTimePicker.getMode.rst
+   DateTimePicker.getTimeZone.rst
+   DateTimePicker.metadata.rst
+   DateTimePicker.setMaxValue.rst
+   DateTimePicker.setMinValue.rst
+   DateTimePicker.setMode.rst
+   DateTimePicker.setTimeZone.rst

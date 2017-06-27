@@ -61,3 +61,27 @@ See Also
 --------
 
 -  `DataGrid <../../DataGrid/>`__
+
+.. toctree::
+   :hidden:
+
+   DataGridColumn.getCellSelector.rst
+   DataGridColumn.getCellTemplate.rst
+   DataGridColumn.getHeader.rst
+   DataGridColumn.getHeaderTemplate.rst
+   DataGridColumn.getIsHeaderTemplateEmpty.rst
+   DataGridColumn.getSortDirection.rst
+   DataGridColumn.getSortable.rst
+   DataGridColumn.getWidth.rst
+   DataGridColumn.isSortable.rst
+   DataGridColumn.metadata.rst
+   DataGridColumn.onSort.rst
+   DataGridColumn.setCellSelector.rst
+   DataGridColumn.setCellTemplate.rst
+   DataGridColumn.setHeader.rst
+   DataGridColumn.setHeaderTemplate.rst
+   DataGridColumn.setIsHeaderTemplateEmpty.rst
+   DataGridColumn.setSortDirection.rst
+   DataGridColumn.setSortable.rst
+   DataGridColumn.setWidth.rst
+   

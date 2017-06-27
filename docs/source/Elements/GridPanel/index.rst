@@ -67,3 +67,9 @@ See Also
 -  `TablePanel <../TablePanel/>`__
 -  `Cell <../TablePanel/Cell/>`__
 -  `Container <../../Core/Elements/Container/>`__
+
+.. toctree::
+   :hidden:
+
+   GridPanel.metadata.rst
+   

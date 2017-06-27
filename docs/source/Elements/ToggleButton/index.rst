@@ -52,3 +52,12 @@ Methods
 
 
 .. include:: ToggleButton.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ToggleButton.getTextOff.rst
+   ToggleButton.getTextOn.rst
+   ToggleButton.metadata.rst
+   ToggleButton.setTextOff.rst
+   ToggleButton.setTextOn.rst

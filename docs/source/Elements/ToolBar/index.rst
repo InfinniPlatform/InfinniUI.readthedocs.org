@@ -31,3 +31,8 @@ Parameters
 
 
 .. include:: ToolBar.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ToolBar.metadata.rst

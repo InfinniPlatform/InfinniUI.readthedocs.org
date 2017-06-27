@@ -50,3 +50,12 @@ Methods
 
 
 .. include:: FileBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   FileBox.getAcceptTypes.rst
+   FileBox.getMaxSize.rst
+   FileBox.metadata.rst
+   FileBox.setAcceptTypes.rst
+   FileBox.setMaxSize.rst

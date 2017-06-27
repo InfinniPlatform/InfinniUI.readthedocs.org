@@ -50,3 +50,12 @@ Methods
 
 
 .. include:: ImageBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ImageBox.getAcceptTypes.rst
+   ImageBox.getMaxSize.rst
+   ImageBox.metadata.rst
+   ImageBox.setAcceptTypes.rst
+   ImageBox.setMaxSize.rst

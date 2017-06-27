@@ -288,3 +288,6 @@ if "%1" == "livehtml" (
 )
 
 :end
+
+REM Для просмотра предупреждений и ошибок, удобно запускать команду
+REM sphinx-autobuild -B -d build/doctrees source build/html -w logs.txt

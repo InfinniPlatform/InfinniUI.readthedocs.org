@@ -58,3 +58,16 @@ Methods
 
 
 .. include:: TextEditorBase.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   TextEditorBase.getDisplayFormat.rst
+   TextEditorBase.getEditMask.rst
+   TextEditorBase.getLabelFloating.rst
+   TextEditorBase.getLabelText.rst
+   TextEditorBase.metadata.rst
+   TextEditorBase.setDisplayFormat.rst
+   TextEditorBase.setEditMask.rst
+   TextEditorBase.setLabelFloating.rst
+   TextEditorBase.setLabelText.rst

@@ -77,3 +77,13 @@ See Also
 
 -  `TabPanel <../>`__
 -  `Container <../../../Core/Elements/Container/>`__
+
+.. toctree::
+   :hidden:
+
+   TabPage.close.rst
+   TabPage.getCanClose.rst
+   TabPage.metadata.rst
+   TabPage.onClosed.rst
+   TabPage.onClosing.rst
+   TabPage.setCanClose.rst

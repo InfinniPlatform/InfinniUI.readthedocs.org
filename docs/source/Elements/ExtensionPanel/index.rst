@@ -77,3 +77,9 @@ See Also
    ExtensionPanelsRegister/index.rst
    ExtensionPanelsRegister/InfinniUI.extensionPanels.register.rst
    ExtensionPanelsRegister/InfinniUI.extensionPanels.getByName.rst
+   ExtensionPanel.getParameters.rst
+   ExtensionPanel.metadata.rst
+   ExtensionPanel.setBuilder.rst
+   ExtensionPanel.setContext.rst
+   ExtensionPanel.setExtensionName.rst
+   ExtensionPanel.setParameters.rst

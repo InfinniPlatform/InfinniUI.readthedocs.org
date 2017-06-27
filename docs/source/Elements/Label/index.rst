@@ -61,3 +61,16 @@ Methods
 
 
 .. include:: Label.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   Label.getDisplayFormat.rst
+   Label.getEscapeHtml.rst
+   Label.getTextTrimming.rst
+   Label.getTextWrapping.rst
+   Label.metadata.rst
+   Label.setDisplayFormat.rst
+   Label.setEscapeHtml.rst
+   Label.setTextTrimming.rst
+   Label.setTextWrapping.rst

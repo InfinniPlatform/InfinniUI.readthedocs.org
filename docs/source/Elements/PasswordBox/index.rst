@@ -54,3 +54,15 @@ Methods
 
 
 .. include:: PasswordBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   PasswordBox.getAutocomplete.rst
+   PasswordBox.getLabelFloating.rst
+   PasswordBox.getLabelText.rst
+   PasswordBox.metadata.rst
+   PasswordBox.setAutocomplete.rst
+   PasswordBox.setLabelFloating.rst
+   PasswordBox.setLabelText.rst
+   

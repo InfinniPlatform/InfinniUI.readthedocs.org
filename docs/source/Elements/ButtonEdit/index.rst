@@ -70,3 +70,15 @@ Events
 
 
 .. include:: ButtonEdit.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ButtonEdit.getIcon.rst
+   ButtonEdit.getReadOnly.rst
+   ButtonEdit.getShowClear.rst
+   ButtonEdit.metadata.rst
+   ButtonEdit.onButtonClick.rst
+   ButtonEdit.setIcon.rst
+   ButtonEdit.setReadOnly.rst
+   ButtonEdit.setShowClear.rst

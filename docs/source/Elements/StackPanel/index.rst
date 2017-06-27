@@ -102,3 +102,11 @@ See Also
 
 -  `StackPanelOrientation <StackPanelOrientation/>`__
 -  `Container <../../Core/Elements/Container/>`__
+
+.. toctree::
+   :hidden:
+
+   StackPanel.getOrientation.rst
+   StackPanel.metadata.rst
+   StackPanel.setOrientation.rst
+   StackPanelOrientation.rst

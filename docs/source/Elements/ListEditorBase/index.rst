@@ -72,3 +72,17 @@ Events
 
 
 .. include:: ListEditorBase.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ListEditorBase.getDisabledItemCondition.rst
+   ListEditorBase.getMultiSelect.rst
+   ListEditorBase.getSelectedItem.rst
+   ListEditorBase.getValueSelector.rst
+   ListEditorBase.metadata.rst
+   ListEditorBase.setDisabledItemCondition.rst
+   ListEditorBase.setMultiSelect.rst
+   ListEditorBase.setSelectedItem.rst
+   ListEditorBase.setValueItem.rst
+   ListEditorBase.setValueSelector.rst

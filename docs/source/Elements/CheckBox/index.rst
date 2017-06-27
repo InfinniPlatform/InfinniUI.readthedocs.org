@@ -44,3 +44,9 @@ Parameters
 
 
 .. include:: CheckBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   CheckBox.metadata.rst
+   

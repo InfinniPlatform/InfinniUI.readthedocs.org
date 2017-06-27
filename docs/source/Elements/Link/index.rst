@@ -49,3 +49,12 @@ Methods
 
 
 .. include:: Link.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   Link.getHref.rst
+   Link.getTarget.rst
+   Link.metadata.rst
+   Link.setHref.rst
+   Link.setTarget.rst

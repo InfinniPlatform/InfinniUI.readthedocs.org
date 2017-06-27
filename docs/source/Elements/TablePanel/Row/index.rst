@@ -48,3 +48,9 @@ See Also
 
 -  `TablePanel <../>`__
 -  `Container <../../../Core/Elements/Container/>`__
+
+
+.. toctree::
+   :hidden:
+
+   Row.metadata.rst

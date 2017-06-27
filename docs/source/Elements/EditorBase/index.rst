@@ -71,3 +71,19 @@ Events
 
 
 .. include:: EditorBase.metadata.rst
+
+
+.. toctree::
+   :hidden:
+
+   EditorBase.getErrorText.rst
+   EditorBase.getHintText.rst
+   EditorBase.getValue.rst
+   EditorBase.getWarningText.rst
+   EditorBase.metadata.rst
+   EditorBase.onValueChanged.rst
+   EditorBase.onValueChanging.rst
+   EditorBase.setErrorText.rst
+   EditorBase.setHintText.rst
+   EditorBase.setValue.rst
+   EditorBase.setWarningText.rst

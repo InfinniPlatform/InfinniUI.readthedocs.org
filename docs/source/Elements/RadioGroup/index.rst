@@ -37,3 +37,9 @@ Events
 
 
 .. include:: RadioGroup.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   RadioGroup.metadata.rst
+   

@@ -93,3 +93,22 @@ See Also
 --------
 
 -  `Container <../../Core/Elements/Container/>`__
+
+.. toctree::
+   :hidden:
+
+   Panel.getCollapseChanger.rst
+   Panel.getCollapsed.rst
+   Panel.getCollapsible.rst
+   Panel.getHeader.rst
+   Panel.getHeaderTemplate.rst
+   Panel.metadata.rst
+   Panel.onCollapsed.rst
+   Panel.onCollapsing.rst
+   Panel.onExpanded.rst
+   Panel.onExpanding.rst
+   Panel.setCollapseChanger.rst
+   Panel.setCollapsed.rst
+   Panel.setCollapsible.rst
+   Panel.setHeader.rst
+   Panel.setHeaderTemplate.rst

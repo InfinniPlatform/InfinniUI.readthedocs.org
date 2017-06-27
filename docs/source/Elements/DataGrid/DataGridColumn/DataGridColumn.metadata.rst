@@ -25,8 +25,7 @@ Properties
      - ``String``
      - Свойство элемента коллекции со значением для ячейки.
    * - CellFormat
-     - ``String``
-     - `Format <../../../Core/DisplayFormat/>`__
+     - ``String`` | `Format <../../../Core/DisplayFormat/>`__
      - Правила форматирования элемента коллекции для ячейки.
    * - CellTemplate
      - `Element <../../../Core/Elements/Element/>`__

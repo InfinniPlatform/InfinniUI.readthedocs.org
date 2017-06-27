@@ -66,3 +66,11 @@ See Also
 -  `TablePanel <../>`__
 -  `GridPanel <../../GridPanel/>`__
 -  `Container <../../../Core/Elements/Container/>`__
+
+
+.. toctree::
+   :hidden:
+
+   Cell.getColumnSpan.rst
+   Cell.metadata.rst
+   Cell.setColumnSpan.rst

@@ -83,3 +83,18 @@ See Also
 -  `TabPage <TabPage/>`__
 -  `TabHeaderLocation <TabHeaderLocation/>`__
 -  `Container <../../Core/Elements/Container/>`__
+
+
+.. toctree::
+   :hidden:
+
+   TabHeaderLocation.rst
+   TabPage/index.rst
+   TabPanel.getHeaderLocation.rst
+   TabPanel.getHeaderTemplate.rst
+   TabPanel.getSelectedItem.rst
+   TabPanel.metadata.rst
+   TabPanel.onSelectedItemChanged.rst
+   TabPanel.setHeaderLocation.rst
+   TabPanel.setHeaderTemplate.rst
+   TabPanel.setSelectedItem.rst

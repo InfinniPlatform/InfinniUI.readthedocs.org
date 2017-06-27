@@ -56,3 +56,10 @@ Methods
 
 
 .. include:: Icon.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   Icon.getSize.rst
+   Icon.metadata.rst
+   Icon.setSize.rst

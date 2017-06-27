@@ -43,3 +43,9 @@ Methods
 
 
 .. include:: MenuBar.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   MenuBar.metadata.rst
+   MenuBar.highlightItem.rst

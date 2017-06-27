@@ -115,6 +115,7 @@ See Also
 -  `Localizations.dateTimeFormatting <Localizations.dateTimeFormatting.html>`__
 -  `Localizations.numberFormatInfo <Localizations.numberFormatInfo.html>`__
 -  `Localizations.numberFormatting <Localizations.numberFormatting.html>`__
+-  `Localizations.strings <Localizations.strings.html>`__
 
 .. toctree::
    :hidden:
@@ -123,3 +124,4 @@ See Also
    Localizations.dateTimeFormatting.rst
    Localizations.numberFormatInfo.rst
    Localizations.numberFormatting.rst
+   Localizations.strings.rst

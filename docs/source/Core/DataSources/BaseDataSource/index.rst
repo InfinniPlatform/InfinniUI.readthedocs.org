@@ -217,6 +217,8 @@ Events
    BaseDataSource.onItemSaved.rst
    BaseDataSource.onItemsUpdated.rst
    BaseDataSource.onPropertyChanged.rst
+   BaseDataSource.onProviderError.rst
+   BaseDataSource.onProviderErrorHandler.rst
    BaseDataSource.onSelectedItemChanged.rst
    BaseDataSource.resumeUpdate.rst
    BaseDataSource.saveItem.rst
@@ -234,6 +236,7 @@ Events
    BaseDataSource.tryInitData.rst
    BaseDataSource.updateItems.rst
    ValidationResult.rst
+   ValidationResult.error.rst
 
 
 .. include:: BaseDataSource.metadata.rst

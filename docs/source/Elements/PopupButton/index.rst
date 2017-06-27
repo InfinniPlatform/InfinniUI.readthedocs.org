@@ -37,3 +37,9 @@ Parameters
 
 
 .. include:: PopupButton.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   PopupButton.metadata.rst
+   

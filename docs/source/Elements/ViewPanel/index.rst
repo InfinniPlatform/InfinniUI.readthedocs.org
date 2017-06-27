@@ -50,3 +50,12 @@ Events
 
 
 .. include:: ViewPanel.metadata.rst
+
+
+.. toctree::
+   :hidden:
+
+   ViewPanel.getLayout.rst
+   ViewPanel.metadata.rst
+   ViewPanel.setLayout.rst
+   

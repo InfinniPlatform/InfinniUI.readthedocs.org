@@ -112,3 +112,9 @@ Events
 
 
 .. include:: ListBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ListBox.metadata.rst
+   

@@ -41,3 +41,8 @@ Events
 Нет
 
 .. include:: Divider.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   Divider.metadata.rst

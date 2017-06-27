@@ -49,3 +49,12 @@ Methods
 
 
 .. include:: TextBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   TextBox.getLineCount.rst
+   TextBox.getMultiline.rst
+   TextBox.metadata.rst
+   TextBox.setLineCount.rst
+   TextBox.setMultiline.rst

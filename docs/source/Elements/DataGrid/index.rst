@@ -73,3 +73,20 @@ Events
 
 
 .. include:: DataGrid.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   DataGrid.getCheckAll.rst
+   DataGrid.getCheckAllVisible.rst
+   DataGrid.getColumns.rst
+   DataGrid.getShowSelectors.rst
+   DataGrid.getVerticalAlignment.rst
+   DataGrid.metadata.rst
+   DataGrid.onCheckAllChanged.rst
+   DataGrid.onRowClick.rst
+   DataGrid.onRowDoubleClick.rst
+   DataGrid.setCheckAllVisible.rst
+   DataGrid.setShowSelectors.rst
+   DataGrid.setVerticalAlignment.rst
+   DataGridColumn/index.rst

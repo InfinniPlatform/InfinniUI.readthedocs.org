@@ -49,3 +49,12 @@ Methods
 
 
 .. include:: TreeView.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   TreeView.getKeySelector.rst
+   TreeView.getParentSelector.rst
+   TreeView.metadata.rst
+   TreeView.setKeySelector.rst
+   TreeView.setParentSelector.rst

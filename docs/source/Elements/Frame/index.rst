@@ -38,3 +38,9 @@ Events
 
 
 .. include:: Frame.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   Frame.metadata.rst
+   

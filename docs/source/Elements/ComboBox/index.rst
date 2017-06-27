@@ -72,3 +72,21 @@ Events
 
 
 .. include:: ComboBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   ComboBox.getAutocomplete.rst
+   ComboBox.getAutocompleteValue.rst
+   ComboBox.getLabelFloating.rst
+   ComboBox.getLabelText.rst
+   ComboBox.getShowClear.rst
+   ComboBox.getValueTemplate.rst
+   ComboBox.metadata.rst
+   ComboBox.setAutocomplete.rst
+   ComboBox.setAutocompleteValue.rst
+   ComboBox.setLabelFloating.rst
+   ComboBox.setLabelText.rst
+   ComboBox.setNoItemsMessage.rst
+   ComboBox.setShowClear.rst
+   ComboBox.setValueTemplate.rst

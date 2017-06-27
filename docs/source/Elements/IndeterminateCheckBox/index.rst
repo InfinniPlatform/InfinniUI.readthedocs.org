@@ -41,3 +41,8 @@ Parameters
 
 
 .. include:: IndeterminateCheckBox.metadata.rst
+
+.. toctree::
+   :hidden:
+
+   IndeterminateCheckBox.metadata.rst
