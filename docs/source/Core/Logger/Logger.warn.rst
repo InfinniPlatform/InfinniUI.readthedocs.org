@@ -20,8 +20,7 @@ Parameters
      - Type
      - Description
    * - ``message``
-     - ``String``
-     - ``Object``
+     - ``String`` | ``Object``
      - Сообщение. В качестве сообщения может выступать строка или объект.
 
 

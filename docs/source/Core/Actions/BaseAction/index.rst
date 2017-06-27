@@ -6,7 +6,7 @@ Description
 
 Действия, представленные в InfinniUI, являются потомками BaseAction.
 В BaseAction реализованы базовые API, которые предоставлят все
-  действия InfinniUI.
+действия InfinniUI.
 
 Syntax
 ------

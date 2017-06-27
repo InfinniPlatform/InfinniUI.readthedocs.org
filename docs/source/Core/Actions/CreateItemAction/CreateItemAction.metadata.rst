@@ -1,5 +1,5 @@
 CreateItemAction.metadata
-------------------
+-------------------------
 
 Метаданные типа `CreateItemAction <./>`__.
 

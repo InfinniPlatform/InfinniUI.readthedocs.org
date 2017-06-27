@@ -12,15 +12,14 @@ Properties
    * - Name
      - Type
      - Description
-   * - ``Name``*
+   * - ``Name`` *
      - ``String``
      - Наименование параметра
-   * - ``Value``*
-     - ``String``
-     - `DataBinding <../../Core/DataBinding/DataBinding.metadata.html>`__
+   * - ``Value`` *
+     - ``String`` | `DataBinding <../../Core/DataBinding/DataBinding.metadata.html>`__
      - Значение параметра
    * - ``DefaultValue``
-     - \*
+     - ``String``
      - Значение по умолчанию
    * - ``OnPropertyChanged``
      - `Script <../../Core/Script/>`__

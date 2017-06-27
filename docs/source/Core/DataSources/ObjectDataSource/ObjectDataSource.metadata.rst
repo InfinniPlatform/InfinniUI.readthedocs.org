@@ -13,7 +13,7 @@ Properties
      - Type
      - Description
    * - Items
-     - ``Array``(⇔)
+     - ``Array`` (⇔)
      - Массив элементов источника данных
 
 

@@ -41,15 +41,15 @@ Path rules
 ----------
 
 По умолчанию методы `getProperty <BaseDataSource.getProperty.html>`__,
-  `setProperty <BaseDataSource.setProperty.html>`__ и
-  `onPropertyChanged <BaseDataSource.onPropertyChanged.html>`__
-  обращаются к свойствам элементов источников данных. Например,
-  dataSource.getProperty('0.Name') вернёт свойство Name первого
-  элемента.
+`setProperty <BaseDataSource.setProperty.html>`__ и
+`onPropertyChanged <BaseDataSource.onPropertyChanged.html>`__
+обращаются к свойствам элементов источников данных. Например,
+dataSource.getProperty('0.Name') вернёт свойство Name первого
+элемента.
 Однако, иногда необходимо обращаться к `собственным свойствам
-  источника данных <#specific-properties>`__, тогда передназванием
-  свойства укажите точку. Например,
-  dataSource.getProperty('.selectedItem') вернёт текущий элемент.
+источника данных <#specific-properties>`__, тогда передназванием
+свойства укажите точку. Например,
+dataSource.getProperty('.selectedItem') вернёт текущий элемент.
 
 Examples
 --------

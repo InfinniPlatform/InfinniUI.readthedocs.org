@@ -6,14 +6,14 @@ CheckBox
 Description
 -----------
 
-Для отображения переключателя в виде флажка можно использовать
-  CheckBox и `IndeterminateCheckBox <../IndeterminateCheckBox/>`__.
-Отличие в том, что
-  `IndeterminateCheckBox <../IndeterminateCheckBox/>`__ поддерживает ещё
-  и неопределенное состояние.
-CheckBox может принимать значение ``false``/``true``,
-`IndeterminateCheckBox <../IndeterminateCheckBox/>`__ -
-  ``"unchecked"``/``"checked"``/``"indeterminate"``.
+Для отображения переключателя в виде флажка можно использовать 
+CheckBox и `IndeterminateCheckBox <../IndeterminateCheckBox/>`__.
+Отличие в том, что 
+`IndeterminateCheckBox <../IndeterminateCheckBox/>`__ поддерживает ещё 
+и неопределенное состояние.
+CheckBox может принимать значение ``false``/``true``, 
+`IndeterminateCheckBox <../IndeterminateCheckBox/>`__ - 
+``"unchecked"``/``"checked"``/``"indeterminate"``.
 
 Extends
 -------

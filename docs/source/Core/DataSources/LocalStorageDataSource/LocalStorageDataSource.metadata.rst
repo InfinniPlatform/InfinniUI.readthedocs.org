@@ -1,5 +1,5 @@
 LocalStorageDataSource.metadata
--------------------------
+--------------------------------
 
 В метаданных `LocalStorageDataSource <./>`__ может задаваться в качестве источника для `DataBinding <../../DataBinding/DataBinding.metadata.html>`__. При этом имя источника необходимо указывать как ``LocalStorageDS``.
 

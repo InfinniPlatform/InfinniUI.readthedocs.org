@@ -20,7 +20,7 @@ Returns
 
 Название иконки.
 Полный список доступных названий и соответсвующих отображений:
-  `Icons <http://fontawesome.io/icons/>`__.
+`Icons <http://fontawesome.io/icons/>`__.
 
 Examples
 --------

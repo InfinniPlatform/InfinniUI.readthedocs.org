@@ -10,5 +10,5 @@ LinkView.metadata
 .. toctree::
    :hidden:
 
-   AutoView.rst
-   InlineView.rst
+   /Core/Elements/View/LinkView/LinkView.metadata/AutoView.rst
+   /Core/Elements/View/LinkView/LinkView.metadata/InlineView.rst

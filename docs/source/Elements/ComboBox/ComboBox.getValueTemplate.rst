@@ -8,11 +8,10 @@ Description
 -----------
 
 Зачастую значения перед отображением необходимо преобразовывать.
-Чтобы изменить формат отображения значений ComboBox воспользуйтесь
-  методом
-  `setItemTemplate <../../Core/Elements/Container/Container.setItemTemplate.html>`__.
-Для изменения формата отображения выбранного значения используйте
-  метод `setValueTemplate <ComboBox.setValueTemplate.html>`__.
+Чтобы изменить формат отображения значений ComboBox воспользуйтесь 
+методом `setItemTemplate <../../Core/Elements/Container/Container.setItemTemplate.html>`__.
+Для изменения формата отображения выбранного значения используйте 
+метод `setValueTemplate <ComboBox.setValueTemplate.html>`__.
 
 Syntax
 ------

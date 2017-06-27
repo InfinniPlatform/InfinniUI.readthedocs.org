@@ -8,9 +8,9 @@ Description
 -----------
 
 Если источник ленивый, то данные не будут загружаться автоматически.
-  Инициировать запрос за данными можно либо создав соответсвующий
-  `DataBinding <../../DataBinding>`__, либо с помощью вызова
-  `updateItems <BaseDataSource.updateItems.html>`__.
+Инициировать запрос за данными можно либо создав соответсвующий
+`DataBinding <../../DataBinding>`__, либо с помощью вызова
+`updateItems <BaseDataSource.updateItems.html>`__.
 По умолчанию источник данных является ленивым.
 
 Syntax
