@@ -559,4 +559,4866 @@ h(this);if(!b.hasClass(a.disabledClass)&&!b.hasClass(a.activeClass)){var c=parse
  * Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
  *
  */
-(function(n,t,i){function w(t,i){var u,f;if(n.isArray(t)){for(u=t.length-1;u>=0;u--)f=t[u],n.type(f)==="string"&&r.transports[f]||(i.log("Invalid transport: "+f+", removing it from the transports list."),t.splice(u,1));t.length===0&&(i.log("No transports remain within the specified transport array."),t=null)}else if(r.transports[t]||t==="auto"){if(t==="auto"&&r._.ieVersion<=8)return["longPolling"]}else i.log("Invalid transport: "+t.toString()+"."),t=null;return t}function b(n){return n==="http:"?80:n==="https:"?443:void 0}function a(n,t){return t.match(/:\d+$/)?t:t+":"+b(n)}function k(t,i){var u=this,r=[];u.tryBuffer=function(i){return t.state===n.signalR.connectionState.connecting?(r.push(i),!0):!1};u.drain=function(){if(t.state===n.signalR.connectionState.connected)while(r.length>0)i(r.shift())};u.clear=function(){r=[]}}var f={nojQuery:"jQuery was not found. Please ensure jQuery is referenced before the SignalR client JavaScript file.",noTransportOnInit:"No transport could be initialized successfully. Try specifying a different transport or none at all for auto initialization.",errorOnNegotiate:"Error during negotiation request.",stoppedWhileLoading:"The connection was stopped during page load.",stoppedWhileNegotiating:"The connection was stopped during the negotiate request.",errorParsingNegotiateResponse:"Error parsing negotiate response.",errorDuringStartRequest:"Error during start request. Stopping the connection.",stoppedDuringStartRequest:"The connection was stopped during the start request.",errorParsingStartResponse:"Error parsing start response: '{0}'. Stopping the connection.",invalidStartResponse:"Invalid start response: '{0}'. Stopping the connection.",protocolIncompatible:"You are using a version of the client that isn't compatible with the server. Client version {0}, server version {1}.",sendFailed:"Send failed.",parseFailed:"Failed at parsing response: {0}",longPollFailed:"Long polling request failed.",eventSourceFailedToConnect:"EventSource failed to connect.",eventSourceError:"Error raised by EventSource",webSocketClosed:"WebSocket closed.",pingServerFailedInvalidResponse:"Invalid ping response when pinging server: '{0}'.",pingServerFailed:"Failed to ping server.",pingServerFailedStatusCode:"Failed to ping server.  Server responded with status code {0}, stopping the connection.",pingServerFailedParse:"Failed to parse ping server response, stopping the connection.",noConnectionTransport:"Connection is in an invalid state, there is no transport active.",webSocketsInvalidState:"The Web Socket transport is in an invalid state, transitioning into reconnecting.",reconnectTimeout:"Couldn't reconnect within the configured timeout of {0} ms, disconnecting.",reconnectWindowTimeout:"The client has been inactive since {0} and it has exceeded the inactivity timeout of {1} ms. Stopping the connection."};if(typeof n!="function")throw new Error(f.nojQuery);var r,h,o=t.document.readyState==="complete",e=n(t),c="__Negotiate Aborted__",u={onStart:"onStart",onStarting:"onStarting",onReceived:"onReceived",onError:"onError",onConnectionSlow:"onConnectionSlow",onReconnecting:"onReconnecting",onReconnect:"onReconnect",onStateChanged:"onStateChanged",onDisconnect:"onDisconnect"},v=function(n,i){if(i!==!1){var r;typeof t.console!="undefined"&&(r="["+(new Date).toTimeString()+"] SignalR: "+n,t.console.debug?t.console.debug(r):t.console.log&&t.console.log(r))}},s=function(t,i,r){return i===t.state?(t.state=r,n(t).triggerHandler(u.onStateChanged,[{oldState:i,newState:r}]),!0):!1},y=function(n){return n.state===r.connectionState.disconnected},l=function(n){return n._.keepAliveData.activated&&n.transport.supportsKeepAlive(n)},p=function(i){var f,e;i._.configuredStopReconnectingTimeout||(e=function(t){var i=r._.format(r.resources.reconnectTimeout,t.disconnectTimeout);t.log(i);n(t).triggerHandler(u.onError,[r._.error(i,"TimeoutException")]);t.stop(!1,!1)},i.reconnecting(function(){var n=this;n.state===r.connectionState.reconnecting&&(f=t.setTimeout(function(){e(n)},n.disconnectTimeout))}),i.stateChanged(function(n){n.oldState===r.connectionState.reconnecting&&t.clearTimeout(f)}),i._.configuredStopReconnectingTimeout=!0)};if(r=function(n,t,i){return new r.fn.init(n,t,i)},r._={defaultContentType:"application/x-www-form-urlencoded; charset=UTF-8",ieVersion:function(){var i,n;return t.navigator.appName==="Microsoft Internet Explorer"&&(n=/MSIE ([0-9]+\.[0-9]+)/.exec(t.navigator.userAgent),n&&(i=t.parseFloat(n[1]))),i}(),error:function(n,t,i){var r=new Error(n);return r.source=t,typeof i!="undefined"&&(r.context=i),r},transportError:function(n,t,r,u){var f=this.error(n,r,u);return f.transport=t?t.name:i,f},format:function(){for(var t=arguments[0],n=0;n<arguments.length-1;n++)t=t.replace("{"+n+"}",arguments[n+1]);return t},firefoxMajorVersion:function(n){var t=n.match(/Firefox\/(\d+)/);return!t||!t.length||t.length<2?0:parseInt(t[1],10)},configurePingInterval:function(i){var f=i._.config,e=function(t){n(i).triggerHandler(u.onError,[t])};f&&!i._.pingIntervalId&&f.pingInterval&&(i._.pingIntervalId=t.setInterval(function(){r.transports._logic.pingServer(i).fail(e)},f.pingInterval))}},r.events=u,r.resources=f,r.ajaxDefaults={processData:!0,timeout:null,async:!0,global:!1,cache:!1},r.changeState=s,r.isDisconnecting=y,r.connectionState={connecting:0,connected:1,reconnecting:2,disconnected:4},r.hub={start:function(){throw new Error("SignalR: Error loading hubs. Ensure your hubs reference is correct, e.g. <script src='/signalr/js'><\/script>.");}},typeof e.on=="function")e.on("load",function(){o=!0});else e.load(function(){o=!0});r.fn=r.prototype={init:function(t,i,r){var f=n(this);this.url=t;this.qs=i;this.lastError=null;this._={keepAliveData:{},connectingMessageBuffer:new k(this,function(n){f.triggerHandler(u.onReceived,[n])}),lastMessageAt:(new Date).getTime(),lastActiveAt:(new Date).getTime(),beatInterval:5e3,beatHandle:null,totalTransportConnectTimeout:0};typeof r=="boolean"&&(this.logging=r)},_parseResponse:function(n){var t=this;return n?typeof n=="string"?t.json.parse(n):n:n},_originalJson:t.JSON,json:t.JSON,isCrossDomain:function(i,r){var u;return(i=n.trim(i),r=r||t.location,i.indexOf("http")!==0)?!1:(u=t.document.createElement("a"),u.href=i,u.protocol+a(u.protocol,u.host)!==r.protocol+a(r.protocol,r.host))},ajaxDataType:"text",contentType:"application/json; charset=UTF-8",logging:!1,state:r.connectionState.disconnected,clientProtocol:"1.5",reconnectDelay:2e3,transportConnectTimeout:0,disconnectTimeout:3e4,reconnectWindow:3e4,keepAliveWarnAt:2/3,start:function(i,h){var a=this,v={pingInterval:3e5,waitForPageLoad:!0,transport:"auto",jsonp:!1},d,y=a._deferral||n.Deferred(),b=t.document.createElement("a"),k,g;if(a.lastError=null,a._deferral=y,!a.json)throw new Error("SignalR: No JSON parser found. Please ensure json2.js is referenced before the SignalR.js file if you need to support clients without native JSON parsing support, e.g. IE<8.");if(n.type(i)==="function"?h=i:n.type(i)==="object"&&(n.extend(v,i),n.type(v.callback)==="function"&&(h=v.callback)),v.transport=w(v.transport,a),!v.transport)throw new Error("SignalR: Invalid transport(s) specified, aborting start.");return(a._.config=v,!o&&v.waitForPageLoad===!0)?(a._.deferredStartHandler=function(){a.start(i,h)},e.bind("load",a._.deferredStartHandler),y.promise()):a.state===r.connectionState.connecting?y.promise():s(a,r.connectionState.disconnected,r.connectionState.connecting)===!1?(y.resolve(a),y.promise()):(p(a),b.href=a.url,b.protocol&&b.protocol!==":"?(a.protocol=b.protocol,a.host=b.host):(a.protocol=t.document.location.protocol,a.host=b.host||t.document.location.host),a.baseUrl=a.protocol+"//"+a.host,a.wsProtocol=a.protocol==="https:"?"wss://":"ws://",v.transport==="auto"&&v.jsonp===!0&&(v.transport="longPolling"),a.url.indexOf("//")===0&&(a.url=t.location.protocol+a.url,a.log("Protocol relative URL detected, normalizing it to '"+a.url+"'.")),this.isCrossDomain(a.url)&&(a.log("Auto detected cross domain url."),v.transport==="auto"&&(v.transport=["webSockets","serverSentEvents","longPolling"]),typeof v.withCredentials=="undefined"&&(v.withCredentials=!0),v.jsonp||(v.jsonp=!n.support.cors,v.jsonp&&a.log("Using jsonp because this browser doesn't support CORS.")),a.contentType=r._.defaultContentType),a.withCredentials=v.withCredentials,a.ajaxDataType=v.jsonp?"jsonp":"text",n(a).bind(u.onStart,function(){n.type(h)==="function"&&h.call(a);y.resolve(a)}),a._.initHandler=r.transports._logic.initHandler(a),d=function(i,o){var c=r._.error(f.noTransportOnInit);if(o=o||0,o>=i.length){o===0?a.log("No transports supported by the server were selected."):o===1?a.log("No fallback transports were selected."):a.log("Fallback transports exhausted.");n(a).triggerHandler(u.onError,[c]);y.reject(c);a.stop();return}if(a.state!==r.connectionState.disconnected){var p=i[o],h=r.transports[p],v=function(){d(i,o+1)};a.transport=h;try{a._.initHandler.start(h,function(){var i=r._.firefoxMajorVersion(t.navigator.userAgent)>=11,f=!!a.withCredentials&&i;a.log("The start request succeeded. Transitioning to the connected state.");l(a)&&r.transports._logic.monitorKeepAlive(a);r.transports._logic.startHeartbeat(a);r._.configurePingInterval(a);s(a,r.connectionState.connecting,r.connectionState.connected)||a.log("WARNING! The connection was not in the connecting state.");a._.connectingMessageBuffer.drain();n(a).triggerHandler(u.onStart);e.bind("unload",function(){a.log("Window unloading, stopping the connection.");a.stop(f)});i&&e.bind("beforeunload",function(){t.setTimeout(function(){a.stop(f)},0)})},v)}catch(w){a.log(h.name+" transport threw '"+w.message+"' when attempting to start.");v()}}},k=a.url+"/negotiate",g=function(t,i){var e=r._.error(f.errorOnNegotiate,t,i._.negotiateRequest);n(i).triggerHandler(u.onError,e);y.reject(e);i.stop()},n(a).triggerHandler(u.onStarting),k=r.transports._logic.prepareQueryString(a,k),a.log("Negotiating with '"+k+"'."),a._.negotiateRequest=r.transports._logic.ajax(a,{url:k,error:function(n,t){t!==c?g(n,a):y.reject(r._.error(f.stoppedWhileNegotiating,null,a._.negotiateRequest))},success:function(t){var i,e,h,o=[],s=[];try{i=a._parseResponse(t)}catch(c){g(r._.error(f.errorParsingNegotiateResponse,c),a);return}if(e=a._.keepAliveData,a.appRelativeUrl=i.Url,a.id=i.ConnectionId,a.token=i.ConnectionToken,a.webSocketServerUrl=i.WebSocketServerUrl,a._.pollTimeout=i.ConnectionTimeout*1e3+1e4,a.disconnectTimeout=i.DisconnectTimeout*1e3,a._.totalTransportConnectTimeout=a.transportConnectTimeout+i.TransportConnectTimeout*1e3,i.KeepAliveTimeout?(e.activated=!0,e.timeout=i.KeepAliveTimeout*1e3,e.timeoutWarning=e.timeout*a.keepAliveWarnAt,a._.beatInterval=(e.timeout-e.timeoutWarning)/3):e.activated=!1,a.reconnectWindow=a.disconnectTimeout+(e.timeout||0),!i.ProtocolVersion||i.ProtocolVersion!==a.clientProtocol){h=r._.error(r._.format(f.protocolIncompatible,a.clientProtocol,i.ProtocolVersion));n(a).triggerHandler(u.onError,[h]);y.reject(h);return}n.each(r.transports,function(n){if(n.indexOf("_")===0||n==="webSockets"&&!i.TryWebSockets)return!0;s.push(n)});n.isArray(v.transport)?n.each(v.transport,function(t,i){n.inArray(i,s)>=0&&o.push(i)}):v.transport==="auto"?o=s:n.inArray(v.transport,s)>=0&&o.push(v.transport);d(o)}}),y.promise())},starting:function(t){var i=this;return n(i).bind(u.onStarting,function(){t.call(i)}),i},send:function(n){var t=this;if(t.state===r.connectionState.disconnected)throw new Error("SignalR: Connection must be started before data can be sent. Call .start() before .send()");if(t.state===r.connectionState.connecting)throw new Error("SignalR: Connection has not been fully initialized. Use .start().done() or .start().fail() to run logic after the connection has started.");return t.transport.send(t,n),t},received:function(t){var i=this;return n(i).bind(u.onReceived,function(n,r){t.call(i,r)}),i},stateChanged:function(t){var i=this;return n(i).bind(u.onStateChanged,function(n,r){t.call(i,r)}),i},error:function(t){var i=this;return n(i).bind(u.onError,function(n,r,u){i.lastError=r;t.call(i,r,u)}),i},disconnected:function(t){var i=this;return n(i).bind(u.onDisconnect,function(){t.call(i)}),i},connectionSlow:function(t){var i=this;return n(i).bind(u.onConnectionSlow,function(){t.call(i)}),i},reconnecting:function(t){var i=this;return n(i).bind(u.onReconnecting,function(){t.call(i)}),i},reconnected:function(t){var i=this;return n(i).bind(u.onReconnect,function(){t.call(i)}),i},stop:function(i,h){var a=this,v=a._deferral;if(a._.deferredStartHandler&&e.unbind("load",a._.deferredStartHandler),delete a._.config,delete a._.deferredStartHandler,!o&&(!a._.config||a._.config.waitForPageLoad===!0)){a.log("Stopping connection prior to negotiate.");v&&v.reject(r._.error(f.stoppedWhileLoading));return}if(a.state!==r.connectionState.disconnected)return a.log("Stopping connection."),t.clearTimeout(a._.beatHandle),t.clearInterval(a._.pingIntervalId),a.transport&&(a.transport.stop(a),h!==!1&&a.transport.abort(a,i),l(a)&&r.transports._logic.stopMonitoringKeepAlive(a),a.transport=null),a._.negotiateRequest&&(a._.negotiateRequest.abort(c),delete a._.negotiateRequest),a._.initHandler&&a._.initHandler.stop(),delete a._deferral,delete a.messageId,delete a.groupsToken,delete a.id,delete a._.pingIntervalId,delete a._.lastMessageAt,delete a._.lastActiveAt,a._.connectingMessageBuffer.clear(),s(a,a.state,r.connectionState.disconnected),n(a).triggerHandler(u.onDisconnect),a},log:function(n){v(n,this.logging)}};r.fn.init.prototype=r.fn;r.noConflict=function(){return n.connection===r&&(n.connection=h),r};n.connection&&(h=n.connection);n.connection=n.signalR=r})(window.jQuery,window),function(n,t,i){function s(n){n._.keepAliveData.monitoring&&l(n);u.markActive(n)&&(n._.beatHandle=t.setTimeout(function(){s(n)},n._.beatInterval))}function l(t){var i=t._.keepAliveData,u;t.state===r.connectionState.connected&&(u=(new Date).getTime()-t._.lastMessageAt,u>=i.timeout?(t.log("Keep alive timed out.  Notifying transport that connection has been lost."),t.transport.lostConnection(t)):u>=i.timeoutWarning?i.userNotified||(t.log("Keep alive has been missed, connection may be dead/slow."),n(t).triggerHandler(f.onConnectionSlow),i.userNotified=!0):i.userNotified=!1)}function e(n,t){var i=n.url+t;return n.transport&&(i+="?transport="+n.transport.name),u.prepareQueryString(n,i)}function h(n){this.connection=n;this.startRequested=!1;this.startCompleted=!1;this.connectionStopped=!1}var r=n.signalR,f=n.signalR.events,c=n.signalR.changeState,o="__Start Aborted__",u;r.transports={};h.prototype={start:function(n,r,u){var f=this,e=f.connection,o=!1;if(f.startRequested||f.connectionStopped){e.log("WARNING! "+n.name+" transport cannot be started. Initialization ongoing or completed.");return}e.log(n.name+" transport starting.");n.start(e,function(){o||f.initReceived(n,r)},function(t){return o||(o=!0,f.transportFailed(n,t,u)),!f.startCompleted||f.connectionStopped});f.transportTimeoutHandle=t.setTimeout(function(){o||(o=!0,e.log(n.name+" transport timed out when trying to connect."),f.transportFailed(n,i,u))},e._.totalTransportConnectTimeout)},stop:function(){this.connectionStopped=!0;t.clearTimeout(this.transportTimeoutHandle);r.transports._logic.tryAbortStartRequest(this.connection)},initReceived:function(n,i){var u=this,f=u.connection;if(u.startRequested){f.log("WARNING! The client received multiple init messages.");return}u.connectionStopped||(u.startRequested=!0,t.clearTimeout(u.transportTimeoutHandle),f.log(n.name+" transport connected. Initiating start request."),r.transports._logic.ajaxStart(f,function(){u.startCompleted=!0;i()}))},transportFailed:function(i,u,e){var o=this.connection,h=o._deferral,s;this.connectionStopped||(t.clearTimeout(this.transportTimeoutHandle),this.startRequested?this.startCompleted||(s=r._.error(r.resources.errorDuringStartRequest,u),o.log(i.name+" transport failed during the start request. Stopping the connection."),n(o).triggerHandler(f.onError,[s]),h&&h.reject(s),o.stop()):(i.stop(o),o.log(i.name+" transport failed to connect. Attempting to fall back."),e()))}};u=r.transports._logic={ajax:function(t,i){return n.ajax(n.extend(!0,{},n.signalR.ajaxDefaults,{type:"GET",data:{},xhrFields:{withCredentials:t.withCredentials},contentType:t.contentType,dataType:t.ajaxDataType},i))},pingServer:function(t){var e,f,i=n.Deferred();return t.transport?(e=t.url+"/ping",e=u.addQs(e,t.qs),f=u.ajax(t,{url:e,success:function(n){var u;try{u=t._parseResponse(n)}catch(e){i.reject(r._.transportError(r.resources.pingServerFailedParse,t.transport,e,f));t.stop();return}u.Response==="pong"?i.resolve():i.reject(r._.transportError(r._.format(r.resources.pingServerFailedInvalidResponse,n),t.transport,null,f))},error:function(n){n.status===401||n.status===403?(i.reject(r._.transportError(r._.format(r.resources.pingServerFailedStatusCode,n.status),t.transport,n,f)),t.stop()):i.reject(r._.transportError(r.resources.pingServerFailed,t.transport,n,f))}})):i.reject(r._.transportError(r.resources.noConnectionTransport,t.transport)),i.promise()},prepareQueryString:function(n,i){var r;return r=u.addQs(i,"clientProtocol="+n.clientProtocol),r=u.addQs(r,n.qs),n.token&&(r+="&connectionToken="+t.encodeURIComponent(n.token)),n.data&&(r+="&connectionData="+t.encodeURIComponent(n.data)),r},addQs:function(t,i){var r=t.indexOf("?")!==-1?"&":"?",u;if(!i)return t;if(typeof i=="object")return t+r+n.param(i);if(typeof i=="string")return u=i.charAt(0),(u==="?"||u==="&")&&(r=""),t+r+i;throw new Error("Query string property must be either a string or object.");},getUrl:function(n,i,r,f,e){var h=i==="webSockets"?"":n.baseUrl,o=h+n.appRelativeUrl,s="transport="+i;return!e&&n.groupsToken&&(s+="&groupsToken="+t.encodeURIComponent(n.groupsToken)),r?(o+=f?"/poll":"/reconnect",!e&&n.messageId&&(s+="&messageId="+t.encodeURIComponent(n.messageId))):o+="/connect",o+="?"+s,o=u.prepareQueryString(n,o),e||(o+="&tid="+Math.floor(Math.random()*11)),o},maximizePersistentResponse:function(n){return{MessageId:n.C,Messages:n.M,Initialized:typeof n.S!="undefined"?!0:!1,ShouldReconnect:typeof n.T!="undefined"?!0:!1,LongPollDelay:n.L,GroupsToken:n.G}},updateGroups:function(n,t){t&&(n.groupsToken=t)},stringifySend:function(n,t){return typeof t=="string"||typeof t=="undefined"||t===null?t:n.json.stringify(t)},ajaxSend:function(t,i){var h=u.stringifySend(t,i),c=e(t,"/send"),o,s=function(t,u){n(u).triggerHandler(f.onError,[r._.transportError(r.resources.sendFailed,u.transport,t,o),i])};return o=u.ajax(t,{url:c,type:t.ajaxDataType==="jsonp"?"GET":"POST",contentType:r._.defaultContentType,data:{data:h},success:function(n){var i;if(n){try{i=t._parseResponse(n)}catch(r){s(r,t);t.stop();return}u.triggerReceived(t,i)}},error:function(n,i){i!=="abort"&&i!=="parsererror"&&s(n,t)}})},ajaxAbort:function(n,t){if(typeof n.transport!="undefined"){t=typeof t=="undefined"?!0:t;var i=e(n,"/abort");u.ajax(n,{url:i,async:t,timeout:1e3,type:"POST"});n.log("Fired ajax abort async = "+t+".")}},ajaxStart:function(t,i){var h=function(n){var i=t._deferral;i&&i.reject(n)},s=function(i){t.log("The start request failed. Stopping the connection.");n(t).triggerHandler(f.onError,[i]);h(i);t.stop()};t._.startRequest=u.ajax(t,{url:e(t,"/start"),success:function(n,u,f){var e;try{e=t._parseResponse(n)}catch(o){s(r._.error(r._.format(r.resources.errorParsingStartResponse,n),o,f));return}e.Response==="started"?i():s(r._.error(r._.format(r.resources.invalidStartResponse,n),null,f))},error:function(n,i,u){i!==o?s(r._.error(r.resources.errorDuringStartRequest,u,n)):(t.log("The start request aborted because connection.stop() was called."),h(r._.error(r.resources.stoppedDuringStartRequest,null,n)))}})},tryAbortStartRequest:function(n){n._.startRequest&&(n._.startRequest.abort(o),delete n._.startRequest)},tryInitialize:function(n,t,i){t.Initialized&&i?i():t.Initialized&&n.log("WARNING! The client received an init message after reconnecting.")},triggerReceived:function(t,i){t._.connectingMessageBuffer.tryBuffer(i)||n(t).triggerHandler(f.onReceived,[i])},processMessages:function(t,i,r){var f;u.markLastMessage(t);i&&(f=u.maximizePersistentResponse(i),u.updateGroups(t,f.GroupsToken),f.MessageId&&(t.messageId=f.MessageId),f.Messages&&(n.each(f.Messages,function(n,i){u.triggerReceived(t,i)}),u.tryInitialize(t,f,r)))},monitorKeepAlive:function(t){var i=t._.keepAliveData;i.monitoring?t.log("Tried to monitor keep alive but it's already being monitored."):(i.monitoring=!0,u.markLastMessage(t),t._.keepAliveData.reconnectKeepAliveUpdate=function(){u.markLastMessage(t)},n(t).bind(f.onReconnect,t._.keepAliveData.reconnectKeepAliveUpdate),t.log("Now monitoring keep alive with a warning timeout of "+i.timeoutWarning+", keep alive timeout of "+i.timeout+" and disconnecting timeout of "+t.disconnectTimeout))},stopMonitoringKeepAlive:function(t){var i=t._.keepAliveData;i.monitoring&&(i.monitoring=!1,n(t).unbind(f.onReconnect,t._.keepAliveData.reconnectKeepAliveUpdate),t._.keepAliveData={},t.log("Stopping the monitoring of the keep alive."))},startHeartbeat:function(n){n._.lastActiveAt=(new Date).getTime();s(n)},markLastMessage:function(n){n._.lastMessageAt=(new Date).getTime()},markActive:function(n){return u.verifyLastActive(n)?(n._.lastActiveAt=(new Date).getTime(),!0):!1},isConnectedOrReconnecting:function(n){return n.state===r.connectionState.connected||n.state===r.connectionState.reconnecting},ensureReconnectingState:function(t){return c(t,r.connectionState.connected,r.connectionState.reconnecting)===!0&&n(t).triggerHandler(f.onReconnecting),t.state===r.connectionState.reconnecting},clearReconnectTimeout:function(n){n&&n._.reconnectTimeout&&(t.clearTimeout(n._.reconnectTimeout),delete n._.reconnectTimeout)},verifyLastActive:function(t){if((new Date).getTime()-t._.lastActiveAt>=t.reconnectWindow){var i=r._.format(r.resources.reconnectWindowTimeout,new Date(t._.lastActiveAt),t.reconnectWindow);return t.log(i),n(t).triggerHandler(f.onError,[r._.error(i,"TimeoutException")]),t.stop(!1,!1),!1}return!0},reconnect:function(n,i){var f=r.transports[i];if(u.isConnectedOrReconnecting(n)&&!n._.reconnectTimeout){if(!u.verifyLastActive(n))return;n._.reconnectTimeout=t.setTimeout(function(){u.verifyLastActive(n)&&(f.stop(n),u.ensureReconnectingState(n)&&(n.log(i+" reconnecting."),f.start(n)))},n.reconnectDelay)}},handleParseFailure:function(t,i,u,e,o){var s=r._.transportError(r._.format(r.resources.parseFailed,i),t.transport,u,o);e&&e(s)?t.log("Failed to parse server response while attempting to connect."):(n(t).triggerHandler(f.onError,[s]),t.stop())},initHandler:function(n){return new h(n)},foreverFrame:{count:0,connections:{}}}}(window.jQuery,window),function(n,t){var r=n.signalR,u=n.signalR.events,f=n.signalR.changeState,i=r.transports._logic;r.transports.webSockets={name:"webSockets",supportsKeepAlive:function(){return!0},send:function(t,f){var e=i.stringifySend(t,f);try{t.socket.send(e)}catch(o){n(t).triggerHandler(u.onError,[r._.transportError(r.resources.webSocketsInvalidState,t.transport,o,t.socket),f])}},start:function(e,o,s){var h,c=!1,l=this,a=!o,v=n(e);if(!t.WebSocket){s();return}e.socket||(h=e.webSocketServerUrl?e.webSocketServerUrl:e.wsProtocol+e.host,h+=i.getUrl(e,this.name,a),e.log("Connecting to websocket endpoint '"+h+"'."),e.socket=new t.WebSocket(h),e.socket.onopen=function(){c=!0;e.log("Websocket opened.");i.clearReconnectTimeout(e);f(e,r.connectionState.reconnecting,r.connectionState.connected)===!0&&v.triggerHandler(u.onReconnect)},e.socket.onclose=function(t){var i;this===e.socket&&(c&&typeof t.wasClean!="undefined"&&t.wasClean===!1?(i=r._.transportError(r.resources.webSocketClosed,e.transport,t),e.log("Unclean disconnect from websocket: "+(t.reason||"[no reason given]."))):e.log("Websocket closed."),s&&s(i)||(i&&n(e).triggerHandler(u.onError,[i]),l.reconnect(e)))},e.socket.onmessage=function(t){var r;try{r=e._parseResponse(t.data)}catch(u){i.handleParseFailure(e,t.data,u,s,t);return}r&&(n.isEmptyObject(r)||r.M?i.processMessages(e,r,o):i.triggerReceived(e,r))})},reconnect:function(n){i.reconnect(n,this.name)},lostConnection:function(n){this.reconnect(n)},stop:function(n){i.clearReconnectTimeout(n);n.socket&&(n.log("Closing the Websocket."),n.socket.close(),n.socket=null)},abort:function(n,t){i.ajaxAbort(n,t)}}}(window.jQuery,window),function(n,t){var i=n.signalR,u=n.signalR.events,e=n.signalR.changeState,r=i.transports._logic,f=function(n){t.clearTimeout(n._.reconnectAttemptTimeoutHandle);delete n._.reconnectAttemptTimeoutHandle};i.transports.serverSentEvents={name:"serverSentEvents",supportsKeepAlive:function(){return!0},timeOut:3e3,start:function(o,s,h){var c=this,l=!1,a=n(o),v=!s,y;if(o.eventSource&&(o.log("The connection already has an event source. Stopping it."),o.stop()),!t.EventSource){h&&(o.log("This browser doesn't support SSE."),h());return}y=r.getUrl(o,this.name,v);try{o.log("Attempting to connect to SSE endpoint '"+y+"'.");o.eventSource=new t.EventSource(y,{withCredentials:o.withCredentials})}catch(p){o.log("EventSource failed trying to connect with error "+p.Message+".");h?h():(a.triggerHandler(u.onError,[i._.transportError(i.resources.eventSourceFailedToConnect,o.transport,p)]),v&&c.reconnect(o));return}v&&(o._.reconnectAttemptTimeoutHandle=t.setTimeout(function(){l===!1&&o.eventSource.readyState!==t.EventSource.OPEN&&c.reconnect(o)},c.timeOut));o.eventSource.addEventListener("open",function(){o.log("EventSource connected.");f(o);r.clearReconnectTimeout(o);l===!1&&(l=!0,e(o,i.connectionState.reconnecting,i.connectionState.connected)===!0&&a.triggerHandler(u.onReconnect))},!1);o.eventSource.addEventListener("message",function(n){var t;if(n.data!=="initialized"){try{t=o._parseResponse(n.data)}catch(i){r.handleParseFailure(o,n.data,i,h,n);return}r.processMessages(o,t,s)}},!1);o.eventSource.addEventListener("error",function(n){var r=i._.transportError(i.resources.eventSourceError,o.transport,n);this===o.eventSource&&(h&&h(r)||(o.log("EventSource readyState: "+o.eventSource.readyState+"."),n.eventPhase===t.EventSource.CLOSED?(o.log("EventSource reconnecting due to the server connection ending."),c.reconnect(o)):(o.log("EventSource error."),a.triggerHandler(u.onError,[r]))))},!1)},reconnect:function(n){r.reconnect(n,this.name)},lostConnection:function(n){this.reconnect(n)},send:function(n,t){r.ajaxSend(n,t)},stop:function(n){f(n);r.clearReconnectTimeout(n);n&&n.eventSource&&(n.log("EventSource calling close()."),n.eventSource.close(),n.eventSource=null,delete n.eventSource)},abort:function(n,t){r.ajaxAbort(n,t)}}}(window.jQuery,window),function(n,t){var r=n.signalR,e=n.signalR.events,o=n.signalR.changeState,i=r.transports._logic,u=function(){var n=t.document.createElement("iframe");return n.setAttribute("style","position:absolute;top:0;left:0;width:0;height:0;visibility:hidden;"),n},f=function(){var i=null,f=1e3,n=0;return{prevent:function(){r._.ieVersion<=8&&(n===0&&(i=t.setInterval(function(){var n=u();t.document.body.appendChild(n);t.document.body.removeChild(n);n=null},f)),n++)},cancel:function(){n===1&&t.clearInterval(i);n>0&&n--}}}();r.transports.foreverFrame={name:"foreverFrame",supportsKeepAlive:function(){return!0},iframeClearThreshold:50,start:function(n,r,e){var l=this,s=i.foreverFrame.count+=1,h,o=u(),c=function(){n.log("Forever frame iframe finished loading and is no longer receiving messages.");e&&e()||l.reconnect(n)};if(t.EventSource){e&&(n.log("Forever Frame is not supported by SignalR on browsers with SSE support."),e());return}o.setAttribute("data-signalr-connection-id",n.id);f.prevent();h=i.getUrl(n,this.name);h+="&frameId="+s;t.document.documentElement.appendChild(o);n.log("Binding to iframe's load event.");o.addEventListener?o.addEventListener("load",c,!1):o.attachEvent&&o.attachEvent("onload",c);o.src=h;i.foreverFrame.connections[s]=n;n.frame=o;n.frameId=s;r&&(n.onSuccess=function(){n.log("Iframe transport started.");r()})},reconnect:function(n){var r=this;i.isConnectedOrReconnecting(n)&&i.verifyLastActive(n)&&t.setTimeout(function(){if(i.verifyLastActive(n)&&n.frame&&i.ensureReconnectingState(n)){var u=n.frame,t=i.getUrl(n,r.name,!0)+"&frameId="+n.frameId;n.log("Updating iframe src to '"+t+"'.");u.src=t}},n.reconnectDelay)},lostConnection:function(n){this.reconnect(n)},send:function(n,t){i.ajaxSend(n,t)},receive:function(t,u){var f,e,o;if(t.json!==t._originalJson&&(u=t._originalJson.stringify(u)),o=t._parseResponse(u),i.processMessages(t,o,t.onSuccess),t.state===n.signalR.connectionState.connected&&(t.frameMessageCount=(t.frameMessageCount||0)+1,t.frameMessageCount>r.transports.foreverFrame.iframeClearThreshold&&(t.frameMessageCount=0,f=t.frame.contentWindow||t.frame.contentDocument,f&&f.document&&f.document.body)))for(e=f.document.body;e.firstChild;)e.removeChild(e.firstChild)},stop:function(n){var r=null;if(f.cancel(),n.frame){if(n.frame.stop)n.frame.stop();else try{r=n.frame.contentWindow||n.frame.contentDocument;r.document&&r.document.execCommand&&r.document.execCommand("Stop")}catch(u){n.log("Error occurred when stopping foreverFrame transport. Message = "+u.message+".")}n.frame.parentNode===t.document.body&&t.document.body.removeChild(n.frame);delete i.foreverFrame.connections[n.frameId];n.frame=null;n.frameId=null;delete n.frame;delete n.frameId;delete n.onSuccess;delete n.frameMessageCount;n.log("Stopping forever frame.")}},abort:function(n,t){i.ajaxAbort(n,t)},getConnection:function(n){return i.foreverFrame.connections[n]},started:function(t){o(t,r.connectionState.reconnecting,r.connectionState.connected)===!0&&n(t).triggerHandler(e.onReconnect)}}}(window.jQuery,window),function(n,t){var r=n.signalR,u=n.signalR.events,e=n.signalR.changeState,f=n.signalR.isDisconnecting,i=r.transports._logic;r.transports.longPolling={name:"longPolling",supportsKeepAlive:function(){return!1},reconnectDelay:3e3,start:function(o,s,h){var a=this,v=function(){v=n.noop;o.log("LongPolling connected.");s?s():o.log("WARNING! The client received an init message after reconnecting.")},y=function(n){return h(n)?(o.log("LongPolling failed to connect."),!0):!1},c=o._,l=0,p=function(i){t.clearTimeout(c.reconnectTimeoutId);c.reconnectTimeoutId=null;e(i,r.connectionState.reconnecting,r.connectionState.connected)===!0&&(i.log("Raising the reconnect event"),n(i).triggerHandler(u.onReconnect))},w=36e5;o.pollXhr&&(o.log("Polling xhr requests already exists, aborting."),o.stop());o.messageId=null;c.reconnectTimeoutId=null;c.pollTimeoutId=t.setTimeout(function(){(function e(s,h){var g=s.messageId,nt=g===null,k=!nt,tt=!h,d=i.getUrl(s,a.name,k,tt,!0),b={};(s.messageId&&(b.messageId=s.messageId),s.groupsToken&&(b.groupsToken=s.groupsToken),f(s)!==!0)&&(o.log("Opening long polling request to '"+d+"'."),s.pollXhr=i.ajax(o,{xhrFields:{onprogress:function(){i.markLastMessage(o)}},url:d,type:"POST",contentType:r._.defaultContentType,data:b,timeout:o._.pollTimeout,success:function(r){var h,w=0,u,a;o.log("Long poll complete.");l=0;try{h=o._parseResponse(r)}catch(b){i.handleParseFailure(s,r,b,y,s.pollXhr);return}(c.reconnectTimeoutId!==null&&p(s),h&&(u=i.maximizePersistentResponse(h)),i.processMessages(s,h,v),u&&n.type(u.LongPollDelay)==="number"&&(w=u.LongPollDelay),f(s)!==!0)&&(a=u&&u.ShouldReconnect,!a||i.ensureReconnectingState(s))&&(w>0?c.pollTimeoutId=t.setTimeout(function(){e(s,a)},w):e(s,a))},error:function(f,h){var v=r._.transportError(r.resources.longPollFailed,o.transport,f,s.pollXhr);if(t.clearTimeout(c.reconnectTimeoutId),c.reconnectTimeoutId=null,h==="abort"){o.log("Aborted xhr request.");return}if(!y(v)){if(l++,o.state!==r.connectionState.reconnecting&&(o.log("An error occurred using longPolling. Status = "+h+".  Response = "+f.responseText+"."),n(s).triggerHandler(u.onError,[v])),(o.state===r.connectionState.connected||o.state===r.connectionState.reconnecting)&&!i.verifyLastActive(o))return;if(!i.ensureReconnectingState(s))return;c.pollTimeoutId=t.setTimeout(function(){e(s,!0)},a.reconnectDelay)}}}),k&&h===!0&&(c.reconnectTimeoutId=t.setTimeout(function(){p(s)},Math.min(1e3*(Math.pow(2,l)-1),w))))})(o)},250)},lostConnection:function(n){n.pollXhr&&n.pollXhr.abort("lostConnection")},send:function(n,t){i.ajaxSend(n,t)},stop:function(n){t.clearTimeout(n._.pollTimeoutId);t.clearTimeout(n._.reconnectTimeoutId);delete n._.pollTimeoutId;delete n._.reconnectTimeoutId;n.pollXhr&&(n.pollXhr.abort(),n.pollXhr=null,delete n.pollXhr)},abort:function(n,t){i.ajaxAbort(n,t)}}}(window.jQuery,window),function(n){function r(n){return n+e}function s(n,t,i){for(var f=n.length,u=[],r=0;r<f;r+=1)n.hasOwnProperty(r)&&(u[r]=t.call(i,n[r],r,n));return u}function h(t){return n.isFunction(t)?null:n.type(t)==="undefined"?null:t}function u(n){for(var t in n)if(n.hasOwnProperty(t))return!0;return!1}function f(n,t){var i=n._.invocationCallbacks,r,f;u(i)&&n.log("Clearing hub invocation callbacks with error: "+t+".");n._.invocationCallbackId=0;delete n._.invocationCallbacks;n._.invocationCallbacks={};for(f in i)r=i[f],r.method.call(r.scope,{E:t})}function i(n,t){return new i.fn.init(n,t)}function t(i,r){var u={qs:null,logging:!1,useDefaultPath:!0};return n.extend(u,r),(!i||u.useDefaultPath)&&(i=(i||"")+"/signalr"),new t.fn.init(i,u)}var e=".hubProxy",o=n.signalR;i.fn=i.prototype={init:function(n,t){this.state={};this.connection=n;this.hubName=t;this._={callbackMap:{}}},constructor:i,hasSubscriptions:function(){return u(this._.callbackMap)},on:function(t,i){var u=this,f=u._.callbackMap;return t=t.toLowerCase(),f[t]||(f[t]={}),f[t][i]=function(n,t){i.apply(u,t)},n(u).bind(r(t),f[t][i]),u},off:function(t,i){var e=this,o=e._.callbackMap,f;return t=t.toLowerCase(),f=o[t],f&&(f[i]?(n(e).unbind(r(t),f[i]),delete f[i],u(f)||delete o[t]):i||(n(e).unbind(r(t)),delete o[t])),e},invoke:function(t){var i=this,r=i.connection,e=n.makeArray(arguments).slice(1),c=s(e,h),f={H:i.hubName,M:t,A:c,I:r._.invocationCallbackId},u=n.Deferred(),l=function(f){var e=i._maximizeHubResponse(f),h,s;n.extend(i.state,e.State);e.Progress?u.notifyWith?u.notifyWith(i,[e.Progress.Data]):r._.progressjQueryVersionLogged||(r.log("A hub method invocation progress update was received but the version of jQuery in use ("+n.prototype.jquery+") does not support progress updates. Upgrade to jQuery 1.7+ to receive progress notifications."),r._.progressjQueryVersionLogged=!0):e.Error?(e.StackTrace&&r.log(e.Error+"\n"+e.StackTrace+"."),h=e.IsHubException?"HubException":"Exception",s=o._.error(e.Error,h),s.data=e.ErrorData,r.log(i.hubName+"."+t+" failed to execute. Error: "+s.message),u.rejectWith(i,[s])):(r.log("Invoked "+i.hubName+"."+t),u.resolveWith(i,[e.Result]))};return r._.invocationCallbacks[r._.invocationCallbackId.toString()]={scope:i,method:l},r._.invocationCallbackId+=1,n.isEmptyObject(i.state)||(f.S=i.state),r.log("Invoking "+i.hubName+"."+t),r.send(f),u.promise()},_maximizeHubResponse:function(n){return{State:n.S,Result:n.R,Progress:n.P?{Id:n.P.I,Data:n.P.D}:null,Id:n.I,IsHubException:n.H,Error:n.E,StackTrace:n.T,ErrorData:n.D}}};i.fn.init.prototype=i.fn;t.fn=t.prototype=n.connection();t.fn.init=function(t,i){var e={qs:null,logging:!1,useDefaultPath:!0},u=this;n.extend(e,i);n.signalR.fn.init.call(u,t,e.qs,e.logging);u.proxies={};u._.invocationCallbackId=0;u._.invocationCallbacks={};u.received(function(t){var f,o,e,i,s,h;t&&(typeof t.P!="undefined"?(e=t.P.I.toString(),i=u._.invocationCallbacks[e],i&&i.method.call(i.scope,t)):typeof t.I!="undefined"?(e=t.I.toString(),i=u._.invocationCallbacks[e],i&&(u._.invocationCallbacks[e]=null,delete u._.invocationCallbacks[e],i.method.call(i.scope,t))):(f=this._maximizeClientHubInvocation(t),u.log("Triggering client hub event '"+f.Method+"' on hub '"+f.Hub+"'."),s=f.Hub.toLowerCase(),h=f.Method.toLowerCase(),o=this.proxies[s],n.extend(o.state,f.State),n(o).triggerHandler(r(h),[f.Args])))});u.error(function(n,t){var i,r;t&&(i=t.I,r=u._.invocationCallbacks[i],r&&(u._.invocationCallbacks[i]=null,delete u._.invocationCallbacks[i],r.method.call(r.scope,{E:n})))});u.reconnecting(function(){u.transport&&u.transport.name==="webSockets"&&f(u,"Connection started reconnecting before invocation result was received.")});u.disconnected(function(){f(u,"Connection was disconnected before invocation result was received.")})};t.fn._maximizeClientHubInvocation=function(n){return{Hub:n.H,Method:n.M,Args:n.A,State:n.S}};t.fn._registerSubscribedHubs=function(){var t=this;t._subscribedToHubs||(t._subscribedToHubs=!0,t.starting(function(){var i=[];n.each(t.proxies,function(n){this.hasSubscriptions()&&(i.push({name:n}),t.log("Client subscribed to hub '"+n+"'."))});i.length===0&&t.log("No hubs have been subscribed to.  The client will not receive data from hubs.  To fix, declare at least one client side function prior to connection start for each hub you wish to subscribe to.");t.data=t.json.stringify(i)}))};t.fn.createHubProxy=function(n){n=n.toLowerCase();var t=this.proxies[n];return t||(t=i(this,n),this.proxies[n]=t),this._registerSubscribedHubs(),t};t.fn.init.prototype=t.fn;n.hubConnection=t}(window.jQuery,window),function(n){n.signalR.version="2.2.1"}(window.jQuery)
+(function(n,t,i){function w(t,i){var u,f;if(n.isArray(t)){for(u=t.length-1;u>=0;u--)f=t[u],n.type(f)==="string"&&r.transports[f]||(i.log("Invalid transport: "+f+", removing it from the transports list."),t.splice(u,1));t.length===0&&(i.log("No transports remain within the specified transport array."),t=null)}else if(r.transports[t]||t==="auto"){if(t==="auto"&&r._.ieVersion<=8)return["longPolling"]}else i.log("Invalid transport: "+t.toString()+"."),t=null;return t}function b(n){return n==="http:"?80:n==="https:"?443:void 0}function a(n,t){return t.match(/:\d+$/)?t:t+":"+b(n)}function k(t,i){var u=this,r=[];u.tryBuffer=function(i){return t.state===n.signalR.connectionState.connecting?(r.push(i),!0):!1};u.drain=function(){if(t.state===n.signalR.connectionState.connected)while(r.length>0)i(r.shift())};u.clear=function(){r=[]}}var f={nojQuery:"jQuery was not found. Please ensure jQuery is referenced before the SignalR client JavaScript file.",noTransportOnInit:"No transport could be initialized successfully. Try specifying a different transport or none at all for auto initialization.",errorOnNegotiate:"Error during negotiation request.",stoppedWhileLoading:"The connection was stopped during page load.",stoppedWhileNegotiating:"The connection was stopped during the negotiate request.",errorParsingNegotiateResponse:"Error parsing negotiate response.",errorDuringStartRequest:"Error during start request. Stopping the connection.",stoppedDuringStartRequest:"The connection was stopped during the start request.",errorParsingStartResponse:"Error parsing start response: '{0}'. Stopping the connection.",invalidStartResponse:"Invalid start response: '{0}'. Stopping the connection.",protocolIncompatible:"You are using a version of the client that isn't compatible with the server. Client version {0}, server version {1}.",sendFailed:"Send failed.",parseFailed:"Failed at parsing response: {0}",longPollFailed:"Long polling request failed.",eventSourceFailedToConnect:"EventSource failed to connect.",eventSourceError:"Error raised by EventSource",webSocketClosed:"WebSocket closed.",pingServerFailedInvalidResponse:"Invalid ping response when pinging server: '{0}'.",pingServerFailed:"Failed to ping server.",pingServerFailedStatusCode:"Failed to ping server.  Server responded with status code {0}, stopping the connection.",pingServerFailedParse:"Failed to parse ping server response, stopping the connection.",noConnectionTransport:"Connection is in an invalid state, there is no transport active.",webSocketsInvalidState:"The Web Socket transport is in an invalid state, transitioning into reconnecting.",reconnectTimeout:"Couldn't reconnect within the configured timeout of {0} ms, disconnecting.",reconnectWindowTimeout:"The client has been inactive since {0} and it has exceeded the inactivity timeout of {1} ms. Stopping the connection."};if(typeof n!="function")throw new Error(f.nojQuery);var r,h,o=t.document.readyState==="complete",e=n(t),c="__Negotiate Aborted__",u={onStart:"onStart",onStarting:"onStarting",onReceived:"onReceived",onError:"onError",onConnectionSlow:"onConnectionSlow",onReconnecting:"onReconnecting",onReconnect:"onReconnect",onStateChanged:"onStateChanged",onDisconnect:"onDisconnect"},v=function(n,i){if(i!==!1){var r;typeof t.console!="undefined"&&(r="["+(new Date).toTimeString()+"] SignalR: "+n,t.console.debug?t.console.debug(r):t.console.log&&t.console.log(r))}},s=function(t,i,r){return i===t.state?(t.state=r,n(t).triggerHandler(u.onStateChanged,[{oldState:i,newState:r}]),!0):!1},y=function(n){return n.state===r.connectionState.disconnected},l=function(n){return n._.keepAliveData.activated&&n.transport.supportsKeepAlive(n)},p=function(i){var f,e;i._.configuredStopReconnectingTimeout||(e=function(t){var i=r._.format(r.resources.reconnectTimeout,t.disconnectTimeout);t.log(i);n(t).triggerHandler(u.onError,[r._.error(i,"TimeoutException")]);t.stop(!1,!1)},i.reconnecting(function(){var n=this;n.state===r.connectionState.reconnecting&&(f=t.setTimeout(function(){e(n)},n.disconnectTimeout))}),i.stateChanged(function(n){n.oldState===r.connectionState.reconnecting&&t.clearTimeout(f)}),i._.configuredStopReconnectingTimeout=!0)};if(r=function(n,t,i){return new r.fn.init(n,t,i)},r._={defaultContentType:"application/x-www-form-urlencoded; charset=UTF-8",ieVersion:function(){var i,n;return t.navigator.appName==="Microsoft Internet Explorer"&&(n=/MSIE ([0-9]+\.[0-9]+)/.exec(t.navigator.userAgent),n&&(i=t.parseFloat(n[1]))),i}(),error:function(n,t,i){var r=new Error(n);return r.source=t,typeof i!="undefined"&&(r.context=i),r},transportError:function(n,t,r,u){var f=this.error(n,r,u);return f.transport=t?t.name:i,f},format:function(){for(var t=arguments[0],n=0;n<arguments.length-1;n++)t=t.replace("{"+n+"}",arguments[n+1]);return t},firefoxMajorVersion:function(n){var t=n.match(/Firefox\/(\d+)/);return!t||!t.length||t.length<2?0:parseInt(t[1],10)},configurePingInterval:function(i){var f=i._.config,e=function(t){n(i).triggerHandler(u.onError,[t])};f&&!i._.pingIntervalId&&f.pingInterval&&(i._.pingIntervalId=t.setInterval(function(){r.transports._logic.pingServer(i).fail(e)},f.pingInterval))}},r.events=u,r.resources=f,r.ajaxDefaults={processData:!0,timeout:null,async:!0,global:!1,cache:!1},r.changeState=s,r.isDisconnecting=y,r.connectionState={connecting:0,connected:1,reconnecting:2,disconnected:4},r.hub={start:function(){throw new Error("SignalR: Error loading hubs. Ensure your hubs reference is correct, e.g. <script src='/signalr/js'><\/script>.");}},typeof e.on=="function")e.on("load",function(){o=!0});else e.load(function(){o=!0});r.fn=r.prototype={init:function(t,i,r){var f=n(this);this.url=t;this.qs=i;this.lastError=null;this._={keepAliveData:{},connectingMessageBuffer:new k(this,function(n){f.triggerHandler(u.onReceived,[n])}),lastMessageAt:(new Date).getTime(),lastActiveAt:(new Date).getTime(),beatInterval:5e3,beatHandle:null,totalTransportConnectTimeout:0};typeof r=="boolean"&&(this.logging=r)},_parseResponse:function(n){var t=this;return n?typeof n=="string"?t.json.parse(n):n:n},_originalJson:t.JSON,json:t.JSON,isCrossDomain:function(i,r){var u;return(i=n.trim(i),r=r||t.location,i.indexOf("http")!==0)?!1:(u=t.document.createElement("a"),u.href=i,u.protocol+a(u.protocol,u.host)!==r.protocol+a(r.protocol,r.host))},ajaxDataType:"text",contentType:"application/json; charset=UTF-8",logging:!1,state:r.connectionState.disconnected,clientProtocol:"1.5",reconnectDelay:2e3,transportConnectTimeout:0,disconnectTimeout:3e4,reconnectWindow:3e4,keepAliveWarnAt:2/3,start:function(i,h){var a=this,v={pingInterval:3e5,waitForPageLoad:!0,transport:"auto",jsonp:!1},d,y=a._deferral||n.Deferred(),b=t.document.createElement("a"),k,g;if(a.lastError=null,a._deferral=y,!a.json)throw new Error("SignalR: No JSON parser found. Please ensure json2.js is referenced before the SignalR.js file if you need to support clients without native JSON parsing support, e.g. IE<8.");if(n.type(i)==="function"?h=i:n.type(i)==="object"&&(n.extend(v,i),n.type(v.callback)==="function"&&(h=v.callback)),v.transport=w(v.transport,a),!v.transport)throw new Error("SignalR: Invalid transport(s) specified, aborting start.");return(a._.config=v,!o&&v.waitForPageLoad===!0)?(a._.deferredStartHandler=function(){a.start(i,h)},e.bind("load",a._.deferredStartHandler),y.promise()):a.state===r.connectionState.connecting?y.promise():s(a,r.connectionState.disconnected,r.connectionState.connecting)===!1?(y.resolve(a),y.promise()):(p(a),b.href=a.url,b.protocol&&b.protocol!==":"?(a.protocol=b.protocol,a.host=b.host):(a.protocol=t.document.location.protocol,a.host=b.host||t.document.location.host),a.baseUrl=a.protocol+"//"+a.host,a.wsProtocol=a.protocol==="https:"?"wss://":"ws://",v.transport==="auto"&&v.jsonp===!0&&(v.transport="longPolling"),a.url.indexOf("//")===0&&(a.url=t.location.protocol+a.url,a.log("Protocol relative URL detected, normalizing it to '"+a.url+"'.")),this.isCrossDomain(a.url)&&(a.log("Auto detected cross domain url."),v.transport==="auto"&&(v.transport=["webSockets","serverSentEvents","longPolling"]),typeof v.withCredentials=="undefined"&&(v.withCredentials=!0),v.jsonp||(v.jsonp=!n.support.cors,v.jsonp&&a.log("Using jsonp because this browser doesn't support CORS.")),a.contentType=r._.defaultContentType),a.withCredentials=v.withCredentials,a.ajaxDataType=v.jsonp?"jsonp":"text",n(a).bind(u.onStart,function(){n.type(h)==="function"&&h.call(a);y.resolve(a)}),a._.initHandler=r.transports._logic.initHandler(a),d=function(i,o){var c=r._.error(f.noTransportOnInit);if(o=o||0,o>=i.length){o===0?a.log("No transports supported by the server were selected."):o===1?a.log("No fallback transports were selected."):a.log("Fallback transports exhausted.");n(a).triggerHandler(u.onError,[c]);y.reject(c);a.stop();return}if(a.state!==r.connectionState.disconnected){var p=i[o],h=r.transports[p],v=function(){d(i,o+1)};a.transport=h;try{a._.initHandler.start(h,function(){var i=r._.firefoxMajorVersion(t.navigator.userAgent)>=11,f=!!a.withCredentials&&i;a.log("The start request succeeded. Transitioning to the connected state.");l(a)&&r.transports._logic.monitorKeepAlive(a);r.transports._logic.startHeartbeat(a);r._.configurePingInterval(a);s(a,r.connectionState.connecting,r.connectionState.connected)||a.log("WARNING! The connection was not in the connecting state.");a._.connectingMessageBuffer.drain();n(a).triggerHandler(u.onStart);e.bind("unload",function(){a.log("Window unloading, stopping the connection.");a.stop(f)});i&&e.bind("beforeunload",function(){t.setTimeout(function(){a.stop(f)},0)})},v)}catch(w){a.log(h.name+" transport threw '"+w.message+"' when attempting to start.");v()}}},k=a.url+"/negotiate",g=function(t,i){var e=r._.error(f.errorOnNegotiate,t,i._.negotiateRequest);n(i).triggerHandler(u.onError,e);y.reject(e);i.stop()},n(a).triggerHandler(u.onStarting),k=r.transports._logic.prepareQueryString(a,k),a.log("Negotiating with '"+k+"'."),a._.negotiateRequest=r.transports._logic.ajax(a,{url:k,error:function(n,t){t!==c?g(n,a):y.reject(r._.error(f.stoppedWhileNegotiating,null,a._.negotiateRequest))},success:function(t){var i,e,h,o=[],s=[];try{i=a._parseResponse(t)}catch(c){g(r._.error(f.errorParsingNegotiateResponse,c),a);return}if(e=a._.keepAliveData,a.appRelativeUrl=i.Url,a.id=i.ConnectionId,a.token=i.ConnectionToken,a.webSocketServerUrl=i.WebSocketServerUrl,a._.pollTimeout=i.ConnectionTimeout*1e3+1e4,a.disconnectTimeout=i.DisconnectTimeout*1e3,a._.totalTransportConnectTimeout=a.transportConnectTimeout+i.TransportConnectTimeout*1e3,i.KeepAliveTimeout?(e.activated=!0,e.timeout=i.KeepAliveTimeout*1e3,e.timeoutWarning=e.timeout*a.keepAliveWarnAt,a._.beatInterval=(e.timeout-e.timeoutWarning)/3):e.activated=!1,a.reconnectWindow=a.disconnectTimeout+(e.timeout||0),!i.ProtocolVersion||i.ProtocolVersion!==a.clientProtocol){h=r._.error(r._.format(f.protocolIncompatible,a.clientProtocol,i.ProtocolVersion));n(a).triggerHandler(u.onError,[h]);y.reject(h);return}n.each(r.transports,function(n){if(n.indexOf("_")===0||n==="webSockets"&&!i.TryWebSockets)return!0;s.push(n)});n.isArray(v.transport)?n.each(v.transport,function(t,i){n.inArray(i,s)>=0&&o.push(i)}):v.transport==="auto"?o=s:n.inArray(v.transport,s)>=0&&o.push(v.transport);d(o)}}),y.promise())},starting:function(t){var i=this;return n(i).bind(u.onStarting,function(){t.call(i)}),i},send:function(n){var t=this;if(t.state===r.connectionState.disconnected)throw new Error("SignalR: Connection must be started before data can be sent. Call .start() before .send()");if(t.state===r.connectionState.connecting)throw new Error("SignalR: Connection has not been fully initialized. Use .start().done() or .start().fail() to run logic after the connection has started.");return t.transport.send(t,n),t},received:function(t){var i=this;return n(i).bind(u.onReceived,function(n,r){t.call(i,r)}),i},stateChanged:function(t){var i=this;return n(i).bind(u.onStateChanged,function(n,r){t.call(i,r)}),i},error:function(t){var i=this;return n(i).bind(u.onError,function(n,r,u){i.lastError=r;t.call(i,r,u)}),i},disconnected:function(t){var i=this;return n(i).bind(u.onDisconnect,function(){t.call(i)}),i},connectionSlow:function(t){var i=this;return n(i).bind(u.onConnectionSlow,function(){t.call(i)}),i},reconnecting:function(t){var i=this;return n(i).bind(u.onReconnecting,function(){t.call(i)}),i},reconnected:function(t){var i=this;return n(i).bind(u.onReconnect,function(){t.call(i)}),i},stop:function(i,h){var a=this,v=a._deferral;if(a._.deferredStartHandler&&e.unbind("load",a._.deferredStartHandler),delete a._.config,delete a._.deferredStartHandler,!o&&(!a._.config||a._.config.waitForPageLoad===!0)){a.log("Stopping connection prior to negotiate.");v&&v.reject(r._.error(f.stoppedWhileLoading));return}if(a.state!==r.connectionState.disconnected)return a.log("Stopping connection."),t.clearTimeout(a._.beatHandle),t.clearInterval(a._.pingIntervalId),a.transport&&(a.transport.stop(a),h!==!1&&a.transport.abort(a,i),l(a)&&r.transports._logic.stopMonitoringKeepAlive(a),a.transport=null),a._.negotiateRequest&&(a._.negotiateRequest.abort(c),delete a._.negotiateRequest),a._.initHandler&&a._.initHandler.stop(),delete a._deferral,delete a.messageId,delete a.groupsToken,delete a.id,delete a._.pingIntervalId,delete a._.lastMessageAt,delete a._.lastActiveAt,a._.connectingMessageBuffer.clear(),s(a,a.state,r.connectionState.disconnected),n(a).triggerHandler(u.onDisconnect),a},log:function(n){v(n,this.logging)}};r.fn.init.prototype=r.fn;r.noConflict=function(){return n.connection===r&&(n.connection=h),r};n.connection&&(h=n.connection);n.connection=n.signalR=r})(window.jQuery,window),function(n,t,i){function s(n){n._.keepAliveData.monitoring&&l(n);u.markActive(n)&&(n._.beatHandle=t.setTimeout(function(){s(n)},n._.beatInterval))}function l(t){var i=t._.keepAliveData,u;t.state===r.connectionState.connected&&(u=(new Date).getTime()-t._.lastMessageAt,u>=i.timeout?(t.log("Keep alive timed out.  Notifying transport that connection has been lost."),t.transport.lostConnection(t)):u>=i.timeoutWarning?i.userNotified||(t.log("Keep alive has been missed, connection may be dead/slow."),n(t).triggerHandler(f.onConnectionSlow),i.userNotified=!0):i.userNotified=!1)}function e(n,t){var i=n.url+t;return n.transport&&(i+="?transport="+n.transport.name),u.prepareQueryString(n,i)}function h(n){this.connection=n;this.startRequested=!1;this.startCompleted=!1;this.connectionStopped=!1}var r=n.signalR,f=n.signalR.events,c=n.signalR.changeState,o="__Start Aborted__",u;r.transports={};h.prototype={start:function(n,r,u){var f=this,e=f.connection,o=!1;if(f.startRequested||f.connectionStopped){e.log("WARNING! "+n.name+" transport cannot be started. Initialization ongoing or completed.");return}e.log(n.name+" transport starting.");n.start(e,function(){o||f.initReceived(n,r)},function(t){return o||(o=!0,f.transportFailed(n,t,u)),!f.startCompleted||f.connectionStopped});f.transportTimeoutHandle=t.setTimeout(function(){o||(o=!0,e.log(n.name+" transport timed out when trying to connect."),f.transportFailed(n,i,u))},e._.totalTransportConnectTimeout)},stop:function(){this.connectionStopped=!0;t.clearTimeout(this.transportTimeoutHandle);r.transports._logic.tryAbortStartRequest(this.connection)},initReceived:function(n,i){var u=this,f=u.connection;if(u.startRequested){f.log("WARNING! The client received multiple init messages.");return}u.connectionStopped||(u.startRequested=!0,t.clearTimeout(u.transportTimeoutHandle),f.log(n.name+" transport connected. Initiating start request."),r.transports._logic.ajaxStart(f,function(){u.startCompleted=!0;i()}))},transportFailed:function(i,u,e){var o=this.connection,h=o._deferral,s;this.connectionStopped||(t.clearTimeout(this.transportTimeoutHandle),this.startRequested?this.startCompleted||(s=r._.error(r.resources.errorDuringStartRequest,u),o.log(i.name+" transport failed during the start request. Stopping the connection."),n(o).triggerHandler(f.onError,[s]),h&&h.reject(s),o.stop()):(i.stop(o),o.log(i.name+" transport failed to connect. Attempting to fall back."),e()))}};u=r.transports._logic={ajax:function(t,i){return n.ajax(n.extend(!0,{},n.signalR.ajaxDefaults,{type:"GET",data:{},xhrFields:{withCredentials:t.withCredentials},contentType:t.contentType,dataType:t.ajaxDataType},i))},pingServer:function(t){var e,f,i=n.Deferred();return t.transport?(e=t.url+"/ping",e=u.addQs(e,t.qs),f=u.ajax(t,{url:e,success:function(n){var u;try{u=t._parseResponse(n)}catch(e){i.reject(r._.transportError(r.resources.pingServerFailedParse,t.transport,e,f));t.stop();return}u.Response==="pong"?i.resolve():i.reject(r._.transportError(r._.format(r.resources.pingServerFailedInvalidResponse,n),t.transport,null,f))},error:function(n){n.status===401||n.status===403?(i.reject(r._.transportError(r._.format(r.resources.pingServerFailedStatusCode,n.status),t.transport,n,f)),t.stop()):i.reject(r._.transportError(r.resources.pingServerFailed,t.transport,n,f))}})):i.reject(r._.transportError(r.resources.noConnectionTransport,t.transport)),i.promise()},prepareQueryString:function(n,i){var r;return r=u.addQs(i,"clientProtocol="+n.clientProtocol),r=u.addQs(r,n.qs),n.token&&(r+="&connectionToken="+t.encodeURIComponent(n.token)),n.data&&(r+="&connectionData="+t.encodeURIComponent(n.data)),r},addQs:function(t,i){var r=t.indexOf("?")!==-1?"&":"?",u;if(!i)return t;if(typeof i=="object")return t+r+n.param(i);if(typeof i=="string")return u=i.charAt(0),(u==="?"||u==="&")&&(r=""),t+r+i;throw new Error("Query string property must be either a string or object.");},getUrl:function(n,i,r,f,e){var h=i==="webSockets"?"":n.baseUrl,o=h+n.appRelativeUrl,s="transport="+i;return!e&&n.groupsToken&&(s+="&groupsToken="+t.encodeURIComponent(n.groupsToken)),r?(o+=f?"/poll":"/reconnect",!e&&n.messageId&&(s+="&messageId="+t.encodeURIComponent(n.messageId))):o+="/connect",o+="?"+s,o=u.prepareQueryString(n,o),e||(o+="&tid="+Math.floor(Math.random()*11)),o},maximizePersistentResponse:function(n){return{MessageId:n.C,Messages:n.M,Initialized:typeof n.S!="undefined"?!0:!1,ShouldReconnect:typeof n.T!="undefined"?!0:!1,LongPollDelay:n.L,GroupsToken:n.G}},updateGroups:function(n,t){t&&(n.groupsToken=t)},stringifySend:function(n,t){return typeof t=="string"||typeof t=="undefined"||t===null?t:n.json.stringify(t)},ajaxSend:function(t,i){var h=u.stringifySend(t,i),c=e(t,"/send"),o,s=function(t,u){n(u).triggerHandler(f.onError,[r._.transportError(r.resources.sendFailed,u.transport,t,o),i])};return o=u.ajax(t,{url:c,type:t.ajaxDataType==="jsonp"?"GET":"POST",contentType:r._.defaultContentType,data:{data:h},success:function(n){var i;if(n){try{i=t._parseResponse(n)}catch(r){s(r,t);t.stop();return}u.triggerReceived(t,i)}},error:function(n,i){i!=="abort"&&i!=="parsererror"&&s(n,t)}})},ajaxAbort:function(n,t){if(typeof n.transport!="undefined"){t=typeof t=="undefined"?!0:t;var i=e(n,"/abort");u.ajax(n,{url:i,async:t,timeout:1e3,type:"POST"});n.log("Fired ajax abort async = "+t+".")}},ajaxStart:function(t,i){var h=function(n){var i=t._deferral;i&&i.reject(n)},s=function(i){t.log("The start request failed. Stopping the connection.");n(t).triggerHandler(f.onError,[i]);h(i);t.stop()};t._.startRequest=u.ajax(t,{url:e(t,"/start"),success:function(n,u,f){var e;try{e=t._parseResponse(n)}catch(o){s(r._.error(r._.format(r.resources.errorParsingStartResponse,n),o,f));return}e.Response==="started"?i():s(r._.error(r._.format(r.resources.invalidStartResponse,n),null,f))},error:function(n,i,u){i!==o?s(r._.error(r.resources.errorDuringStartRequest,u,n)):(t.log("The start request aborted because connection.stop() was called."),h(r._.error(r.resources.stoppedDuringStartRequest,null,n)))}})},tryAbortStartRequest:function(n){n._.startRequest&&(n._.startRequest.abort(o),delete n._.startRequest)},tryInitialize:function(n,t,i){t.Initialized&&i?i():t.Initialized&&n.log("WARNING! The client received an init message after reconnecting.")},triggerReceived:function(t,i){t._.connectingMessageBuffer.tryBuffer(i)||n(t).triggerHandler(f.onReceived,[i])},processMessages:function(t,i,r){var f;u.markLastMessage(t);i&&(f=u.maximizePersistentResponse(i),u.updateGroups(t,f.GroupsToken),f.MessageId&&(t.messageId=f.MessageId),f.Messages&&(n.each(f.Messages,function(n,i){u.triggerReceived(t,i)}),u.tryInitialize(t,f,r)))},monitorKeepAlive:function(t){var i=t._.keepAliveData;i.monitoring?t.log("Tried to monitor keep alive but it's already being monitored."):(i.monitoring=!0,u.markLastMessage(t),t._.keepAliveData.reconnectKeepAliveUpdate=function(){u.markLastMessage(t)},n(t).bind(f.onReconnect,t._.keepAliveData.reconnectKeepAliveUpdate),t.log("Now monitoring keep alive with a warning timeout of "+i.timeoutWarning+", keep alive timeout of "+i.timeout+" and disconnecting timeout of "+t.disconnectTimeout))},stopMonitoringKeepAlive:function(t){var i=t._.keepAliveData;i.monitoring&&(i.monitoring=!1,n(t).unbind(f.onReconnect,t._.keepAliveData.reconnectKeepAliveUpdate),t._.keepAliveData={},t.log("Stopping the monitoring of the keep alive."))},startHeartbeat:function(n){n._.lastActiveAt=(new Date).getTime();s(n)},markLastMessage:function(n){n._.lastMessageAt=(new Date).getTime()},markActive:function(n){return u.verifyLastActive(n)?(n._.lastActiveAt=(new Date).getTime(),!0):!1},isConnectedOrReconnecting:function(n){return n.state===r.connectionState.connected||n.state===r.connectionState.reconnecting},ensureReconnectingState:function(t){return c(t,r.connectionState.connected,r.connectionState.reconnecting)===!0&&n(t).triggerHandler(f.onReconnecting),t.state===r.connectionState.reconnecting},clearReconnectTimeout:function(n){n&&n._.reconnectTimeout&&(t.clearTimeout(n._.reconnectTimeout),delete n._.reconnectTimeout)},verifyLastActive:function(t){if((new Date).getTime()-t._.lastActiveAt>=t.reconnectWindow){var i=r._.format(r.resources.reconnectWindowTimeout,new Date(t._.lastActiveAt),t.reconnectWindow);return t.log(i),n(t).triggerHandler(f.onError,[r._.error(i,"TimeoutException")]),t.stop(!1,!1),!1}return!0},reconnect:function(n,i){var f=r.transports[i];if(u.isConnectedOrReconnecting(n)&&!n._.reconnectTimeout){if(!u.verifyLastActive(n))return;n._.reconnectTimeout=t.setTimeout(function(){u.verifyLastActive(n)&&(f.stop(n),u.ensureReconnectingState(n)&&(n.log(i+" reconnecting."),f.start(n)))},n.reconnectDelay)}},handleParseFailure:function(t,i,u,e,o){var s=r._.transportError(r._.format(r.resources.parseFailed,i),t.transport,u,o);e&&e(s)?t.log("Failed to parse server response while attempting to connect."):(n(t).triggerHandler(f.onError,[s]),t.stop())},initHandler:function(n){return new h(n)},foreverFrame:{count:0,connections:{}}}}(window.jQuery,window),function(n,t){var r=n.signalR,u=n.signalR.events,f=n.signalR.changeState,i=r.transports._logic;r.transports.webSockets={name:"webSockets",supportsKeepAlive:function(){return!0},send:function(t,f){var e=i.stringifySend(t,f);try{t.socket.send(e)}catch(o){n(t).triggerHandler(u.onError,[r._.transportError(r.resources.webSocketsInvalidState,t.transport,o,t.socket),f])}},start:function(e,o,s){var h,c=!1,l=this,a=!o,v=n(e);if(!t.WebSocket){s();return}e.socket||(h=e.webSocketServerUrl?e.webSocketServerUrl:e.wsProtocol+e.host,h+=i.getUrl(e,this.name,a),e.log("Connecting to websocket endpoint '"+h+"'."),e.socket=new t.WebSocket(h),e.socket.onopen=function(){c=!0;e.log("Websocket opened.");i.clearReconnectTimeout(e);f(e,r.connectionState.reconnecting,r.connectionState.connected)===!0&&v.triggerHandler(u.onReconnect)},e.socket.onclose=function(t){var i;this===e.socket&&(c&&typeof t.wasClean!="undefined"&&t.wasClean===!1?(i=r._.transportError(r.resources.webSocketClosed,e.transport,t),e.log("Unclean disconnect from websocket: "+(t.reason||"[no reason given]."))):e.log("Websocket closed."),s&&s(i)||(i&&n(e).triggerHandler(u.onError,[i]),l.reconnect(e)))},e.socket.onmessage=function(t){var r;try{r=e._parseResponse(t.data)}catch(u){i.handleParseFailure(e,t.data,u,s,t);return}r&&(n.isEmptyObject(r)||r.M?i.processMessages(e,r,o):i.triggerReceived(e,r))})},reconnect:function(n){i.reconnect(n,this.name)},lostConnection:function(n){this.reconnect(n)},stop:function(n){i.clearReconnectTimeout(n);n.socket&&(n.log("Closing the Websocket."),n.socket.close(),n.socket=null)},abort:function(n,t){i.ajaxAbort(n,t)}}}(window.jQuery,window),function(n,t){var i=n.signalR,u=n.signalR.events,e=n.signalR.changeState,r=i.transports._logic,f=function(n){t.clearTimeout(n._.reconnectAttemptTimeoutHandle);delete n._.reconnectAttemptTimeoutHandle};i.transports.serverSentEvents={name:"serverSentEvents",supportsKeepAlive:function(){return!0},timeOut:3e3,start:function(o,s,h){var c=this,l=!1,a=n(o),v=!s,y;if(o.eventSource&&(o.log("The connection already has an event source. Stopping it."),o.stop()),!t.EventSource){h&&(o.log("This browser doesn't support SSE."),h());return}y=r.getUrl(o,this.name,v);try{o.log("Attempting to connect to SSE endpoint '"+y+"'.");o.eventSource=new t.EventSource(y,{withCredentials:o.withCredentials})}catch(p){o.log("EventSource failed trying to connect with error "+p.Message+".");h?h():(a.triggerHandler(u.onError,[i._.transportError(i.resources.eventSourceFailedToConnect,o.transport,p)]),v&&c.reconnect(o));return}v&&(o._.reconnectAttemptTimeoutHandle=t.setTimeout(function(){l===!1&&o.eventSource.readyState!==t.EventSource.OPEN&&c.reconnect(o)},c.timeOut));o.eventSource.addEventListener("open",function(){o.log("EventSource connected.");f(o);r.clearReconnectTimeout(o);l===!1&&(l=!0,e(o,i.connectionState.reconnecting,i.connectionState.connected)===!0&&a.triggerHandler(u.onReconnect))},!1);o.eventSource.addEventListener("message",function(n){var t;if(n.data!=="initialized"){try{t=o._parseResponse(n.data)}catch(i){r.handleParseFailure(o,n.data,i,h,n);return}r.processMessages(o,t,s)}},!1);o.eventSource.addEventListener("error",function(n){var r=i._.transportError(i.resources.eventSourceError,o.transport,n);this===o.eventSource&&(h&&h(r)||(o.log("EventSource readyState: "+o.eventSource.readyState+"."),n.eventPhase===t.EventSource.CLOSED?(o.log("EventSource reconnecting due to the server connection ending."),c.reconnect(o)):(o.log("EventSource error."),a.triggerHandler(u.onError,[r]))))},!1)},reconnect:function(n){r.reconnect(n,this.name)},lostConnection:function(n){this.reconnect(n)},send:function(n,t){r.ajaxSend(n,t)},stop:function(n){f(n);r.clearReconnectTimeout(n);n&&n.eventSource&&(n.log("EventSource calling close()."),n.eventSource.close(),n.eventSource=null,delete n.eventSource)},abort:function(n,t){r.ajaxAbort(n,t)}}}(window.jQuery,window),function(n,t){var r=n.signalR,e=n.signalR.events,o=n.signalR.changeState,i=r.transports._logic,u=function(){var n=t.document.createElement("iframe");return n.setAttribute("style","position:absolute;top:0;left:0;width:0;height:0;visibility:hidden;"),n},f=function(){var i=null,f=1e3,n=0;return{prevent:function(){r._.ieVersion<=8&&(n===0&&(i=t.setInterval(function(){var n=u();t.document.body.appendChild(n);t.document.body.removeChild(n);n=null},f)),n++)},cancel:function(){n===1&&t.clearInterval(i);n>0&&n--}}}();r.transports.foreverFrame={name:"foreverFrame",supportsKeepAlive:function(){return!0},iframeClearThreshold:50,start:function(n,r,e){var l=this,s=i.foreverFrame.count+=1,h,o=u(),c=function(){n.log("Forever frame iframe finished loading and is no longer receiving messages.");e&&e()||l.reconnect(n)};if(t.EventSource){e&&(n.log("Forever Frame is not supported by SignalR on browsers with SSE support."),e());return}o.setAttribute("data-signalr-connection-id",n.id);f.prevent();h=i.getUrl(n,this.name);h+="&frameId="+s;t.document.documentElement.appendChild(o);n.log("Binding to iframe's load event.");o.addEventListener?o.addEventListener("load",c,!1):o.attachEvent&&o.attachEvent("onload",c);o.src=h;i.foreverFrame.connections[s]=n;n.frame=o;n.frameId=s;r&&(n.onSuccess=function(){n.log("Iframe transport started.");r()})},reconnect:function(n){var r=this;i.isConnectedOrReconnecting(n)&&i.verifyLastActive(n)&&t.setTimeout(function(){if(i.verifyLastActive(n)&&n.frame&&i.ensureReconnectingState(n)){var u=n.frame,t=i.getUrl(n,r.name,!0)+"&frameId="+n.frameId;n.log("Updating iframe src to '"+t+"'.");u.src=t}},n.reconnectDelay)},lostConnection:function(n){this.reconnect(n)},send:function(n,t){i.ajaxSend(n,t)},receive:function(t,u){var f,e,o;if(t.json!==t._originalJson&&(u=t._originalJson.stringify(u)),o=t._parseResponse(u),i.processMessages(t,o,t.onSuccess),t.state===n.signalR.connectionState.connected&&(t.frameMessageCount=(t.frameMessageCount||0)+1,t.frameMessageCount>r.transports.foreverFrame.iframeClearThreshold&&(t.frameMessageCount=0,f=t.frame.contentWindow||t.frame.contentDocument,f&&f.document&&f.document.body)))for(e=f.document.body;e.firstChild;)e.removeChild(e.firstChild)},stop:function(n){var r=null;if(f.cancel(),n.frame){if(n.frame.stop)n.frame.stop();else try{r=n.frame.contentWindow||n.frame.contentDocument;r.document&&r.document.execCommand&&r.document.execCommand("Stop")}catch(u){n.log("Error occurred when stopping foreverFrame transport. Message = "+u.message+".")}n.frame.parentNode===t.document.body&&t.document.body.removeChild(n.frame);delete i.foreverFrame.connections[n.frameId];n.frame=null;n.frameId=null;delete n.frame;delete n.frameId;delete n.onSuccess;delete n.frameMessageCount;n.log("Stopping forever frame.")}},abort:function(n,t){i.ajaxAbort(n,t)},getConnection:function(n){return i.foreverFrame.connections[n]},started:function(t){o(t,r.connectionState.reconnecting,r.connectionState.connected)===!0&&n(t).triggerHandler(e.onReconnect)}}}(window.jQuery,window),function(n,t){var r=n.signalR,u=n.signalR.events,e=n.signalR.changeState,f=n.signalR.isDisconnecting,i=r.transports._logic;r.transports.longPolling={name:"longPolling",supportsKeepAlive:function(){return!1},reconnectDelay:3e3,start:function(o,s,h){var a=this,v=function(){v=n.noop;o.log("LongPolling connected.");s?s():o.log("WARNING! The client received an init message after reconnecting.")},y=function(n){return h(n)?(o.log("LongPolling failed to connect."),!0):!1},c=o._,l=0,p=function(i){t.clearTimeout(c.reconnectTimeoutId);c.reconnectTimeoutId=null;e(i,r.connectionState.reconnecting,r.connectionState.connected)===!0&&(i.log("Raising the reconnect event"),n(i).triggerHandler(u.onReconnect))},w=36e5;o.pollXhr&&(o.log("Polling xhr requests already exists, aborting."),o.stop());o.messageId=null;c.reconnectTimeoutId=null;c.pollTimeoutId=t.setTimeout(function(){(function e(s,h){var g=s.messageId,nt=g===null,k=!nt,tt=!h,d=i.getUrl(s,a.name,k,tt,!0),b={};(s.messageId&&(b.messageId=s.messageId),s.groupsToken&&(b.groupsToken=s.groupsToken),f(s)!==!0)&&(o.log("Opening long polling request to '"+d+"'."),s.pollXhr=i.ajax(o,{xhrFields:{onprogress:function(){i.markLastMessage(o)}},url:d,type:"POST",contentType:r._.defaultContentType,data:b,timeout:o._.pollTimeout,success:function(r){var h,w=0,u,a;o.log("Long poll complete.");l=0;try{h=o._parseResponse(r)}catch(b){i.handleParseFailure(s,r,b,y,s.pollXhr);return}(c.reconnectTimeoutId!==null&&p(s),h&&(u=i.maximizePersistentResponse(h)),i.processMessages(s,h,v),u&&n.type(u.LongPollDelay)==="number"&&(w=u.LongPollDelay),f(s)!==!0)&&(a=u&&u.ShouldReconnect,!a||i.ensureReconnectingState(s))&&(w>0?c.pollTimeoutId=t.setTimeout(function(){e(s,a)},w):e(s,a))},error:function(f,h){var v=r._.transportError(r.resources.longPollFailed,o.transport,f,s.pollXhr);if(t.clearTimeout(c.reconnectTimeoutId),c.reconnectTimeoutId=null,h==="abort"){o.log("Aborted xhr request.");return}if(!y(v)){if(l++,o.state!==r.connectionState.reconnecting&&(o.log("An error occurred using longPolling. Status = "+h+".  Response = "+f.responseText+"."),n(s).triggerHandler(u.onError,[v])),(o.state===r.connectionState.connected||o.state===r.connectionState.reconnecting)&&!i.verifyLastActive(o))return;if(!i.ensureReconnectingState(s))return;c.pollTimeoutId=t.setTimeout(function(){e(s,!0)},a.reconnectDelay)}}}),k&&h===!0&&(c.reconnectTimeoutId=t.setTimeout(function(){p(s)},Math.min(1e3*(Math.pow(2,l)-1),w))))})(o)},250)},lostConnection:function(n){n.pollXhr&&n.pollXhr.abort("lostConnection")},send:function(n,t){i.ajaxSend(n,t)},stop:function(n){t.clearTimeout(n._.pollTimeoutId);t.clearTimeout(n._.reconnectTimeoutId);delete n._.pollTimeoutId;delete n._.reconnectTimeoutId;n.pollXhr&&(n.pollXhr.abort(),n.pollXhr=null,delete n.pollXhr)},abort:function(n,t){i.ajaxAbort(n,t)}}}(window.jQuery,window),function(n){function r(n){return n+e}function s(n,t,i){for(var f=n.length,u=[],r=0;r<f;r+=1)n.hasOwnProperty(r)&&(u[r]=t.call(i,n[r],r,n));return u}function h(t){return n.isFunction(t)?null:n.type(t)==="undefined"?null:t}function u(n){for(var t in n)if(n.hasOwnProperty(t))return!0;return!1}function f(n,t){var i=n._.invocationCallbacks,r,f;u(i)&&n.log("Clearing hub invocation callbacks with error: "+t+".");n._.invocationCallbackId=0;delete n._.invocationCallbacks;n._.invocationCallbacks={};for(f in i)r=i[f],r.method.call(r.scope,{E:t})}function i(n,t){return new i.fn.init(n,t)}function t(i,r){var u={qs:null,logging:!1,useDefaultPath:!0};return n.extend(u,r),(!i||u.useDefaultPath)&&(i=(i||"")+"/signalr"),new t.fn.init(i,u)}var e=".hubProxy",o=n.signalR;i.fn=i.prototype={init:function(n,t){this.state={};this.connection=n;this.hubName=t;this._={callbackMap:{}}},constructor:i,hasSubscriptions:function(){return u(this._.callbackMap)},on:function(t,i){var u=this,f=u._.callbackMap;return t=t.toLowerCase(),f[t]||(f[t]={}),f[t][i]=function(n,t){i.apply(u,t)},n(u).bind(r(t),f[t][i]),u},off:function(t,i){var e=this,o=e._.callbackMap,f;return t=t.toLowerCase(),f=o[t],f&&(f[i]?(n(e).unbind(r(t),f[i]),delete f[i],u(f)||delete o[t]):i||(n(e).unbind(r(t)),delete o[t])),e},invoke:function(t){var i=this,r=i.connection,e=n.makeArray(arguments).slice(1),c=s(e,h),f={H:i.hubName,M:t,A:c,I:r._.invocationCallbackId},u=n.Deferred(),l=function(f){var e=i._maximizeHubResponse(f),h,s;n.extend(i.state,e.State);e.Progress?u.notifyWith?u.notifyWith(i,[e.Progress.Data]):r._.progressjQueryVersionLogged||(r.log("A hub method invocation progress update was received but the version of jQuery in use ("+n.prototype.jquery+") does not support progress updates. Upgrade to jQuery 1.7+ to receive progress notifications."),r._.progressjQueryVersionLogged=!0):e.Error?(e.StackTrace&&r.log(e.Error+"\n"+e.StackTrace+"."),h=e.IsHubException?"HubException":"Exception",s=o._.error(e.Error,h),s.data=e.ErrorData,r.log(i.hubName+"."+t+" failed to execute. Error: "+s.message),u.rejectWith(i,[s])):(r.log("Invoked "+i.hubName+"."+t),u.resolveWith(i,[e.Result]))};return r._.invocationCallbacks[r._.invocationCallbackId.toString()]={scope:i,method:l},r._.invocationCallbackId+=1,n.isEmptyObject(i.state)||(f.S=i.state),r.log("Invoking "+i.hubName+"."+t),r.send(f),u.promise()},_maximizeHubResponse:function(n){return{State:n.S,Result:n.R,Progress:n.P?{Id:n.P.I,Data:n.P.D}:null,Id:n.I,IsHubException:n.H,Error:n.E,StackTrace:n.T,ErrorData:n.D}}};i.fn.init.prototype=i.fn;t.fn=t.prototype=n.connection();t.fn.init=function(t,i){var e={qs:null,logging:!1,useDefaultPath:!0},u=this;n.extend(e,i);n.signalR.fn.init.call(u,t,e.qs,e.logging);u.proxies={};u._.invocationCallbackId=0;u._.invocationCallbacks={};u.received(function(t){var f,o,e,i,s,h;t&&(typeof t.P!="undefined"?(e=t.P.I.toString(),i=u._.invocationCallbacks[e],i&&i.method.call(i.scope,t)):typeof t.I!="undefined"?(e=t.I.toString(),i=u._.invocationCallbacks[e],i&&(u._.invocationCallbacks[e]=null,delete u._.invocationCallbacks[e],i.method.call(i.scope,t))):(f=this._maximizeClientHubInvocation(t),u.log("Triggering client hub event '"+f.Method+"' on hub '"+f.Hub+"'."),s=f.Hub.toLowerCase(),h=f.Method.toLowerCase(),o=this.proxies[s],n.extend(o.state,f.State),n(o).triggerHandler(r(h),[f.Args])))});u.error(function(n,t){var i,r;t&&(i=t.I,r=u._.invocationCallbacks[i],r&&(u._.invocationCallbacks[i]=null,delete u._.invocationCallbacks[i],r.method.call(r.scope,{E:n})))});u.reconnecting(function(){u.transport&&u.transport.name==="webSockets"&&f(u,"Connection started reconnecting before invocation result was received.")});u.disconnected(function(){f(u,"Connection was disconnected before invocation result was received.")})};t.fn._maximizeClientHubInvocation=function(n){return{Hub:n.H,Method:n.M,Args:n.A,State:n.S}};t.fn._registerSubscribedHubs=function(){var t=this;t._subscribedToHubs||(t._subscribedToHubs=!0,t.starting(function(){var i=[];n.each(t.proxies,function(n){this.hasSubscriptions()&&(i.push({name:n}),t.log("Client subscribed to hub '"+n+"'."))});i.length===0&&t.log("No hubs have been subscribed to.  The client will not receive data from hubs.  To fix, declare at least one client side function prior to connection start for each hub you wish to subscribe to.");t.data=t.json.stringify(i)}))};t.fn.createHubProxy=function(n){n=n.toLowerCase();var t=this.proxies[n];return t||(t=i(this,n),this.proxies[n]=t),this._registerSubscribedHubs(),t};t.fn.init.prototype=t.fn;n.hubConnection=t}(window.jQuery,window),function(n){n.signalR.version="2.2.1"}(window.jQuery);
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["editMask"] = factory();
+	else
+		root["editMask"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 77);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var padEnd_1 = __webpack_require__(6);
+var padStart_1 = __webpack_require__(34);
+var DecimalPattern_1 = __webpack_require__(27);
+var FixedWidthPattern = function (_super) {
+    __extends(FixedWidthPattern, _super);
+    function FixedWidthPattern(locale, template, name, options) {
+        var _this = _super.call(this, locale, template, name, options) || this;
+        _this.width = options.width;
+        return _this;
+    }
+    FixedWidthPattern.prototype.getIsComplete = function () {
+        return this.getIsValid();
+    };
+    FixedWidthPattern.prototype.getIsValid = function () {
+        var text = this.getText();
+        var digits = text.replace(/[^\d]/g, '');
+        var value = parseInt(digits, 10);
+        return value >= this.min && digits.length === this.width;
+    };
+    FixedWidthPattern.prototype.updateText = function () {
+        var text = this.text || '';
+        var digits = text.replace(/[^\d]/g, '');
+        if (this.getIsEmpty()) {
+            text = padEnd_1.padEnd(digits, this.width, this.getBlank());
+        } else {
+            text = this.isActive ? padEnd_1.padEnd(digits, this.width, this.getBlank()) : this.formatDecimal(digits);
+        }
+        this.setText(text);
+    };
+    FixedWidthPattern.prototype.getInputRegexp = function () {
+        return new RegExp('^[\\d]{1,' + this.width + '}');
+    };
+    FixedWidthPattern.prototype.finalizeInput = function () {
+        var finalize = false;
+        if (this.getIsComplete()) {
+            var text = this.getText();
+            var digits = text.replace(/[^\d]/g, '');
+            if (digits.length < this.width) {
+                this.setText(this.formatDecimal(digits));
+                finalize = true;
+            }
+        }
+        return finalize;
+    };
+    FixedWidthPattern.prototype.formatDecimal = function (value) {
+        return padStart_1.padStart(value, this.width, '0');
+    };
+    return FixedWidthPattern;
+}(DecimalPattern_1.DecimalPattern);
+exports.FixedWidthPattern = FixedWidthPattern;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pattern_1 = __webpack_require__(3);
+var TemplatePattern = function (_super) {
+    __extends(TemplatePattern, _super);
+    function TemplatePattern(locale, template, isRequired) {
+        var _this = _super.call(this, locale, template) || this;
+        _this.isRequired = false;
+        _this.isRequired = isRequired;
+        return _this;
+    }
+    TemplatePattern.prototype.getIsRequired = function () {
+        return this.isRequired;
+    };
+    TemplatePattern.prototype.getIsComplete = function () {
+        return !this.getIsEmpty();
+    };
+    TemplatePattern.prototype.getIsEmpty = function () {
+        var isEmpty;
+        var text = this.text;
+        if (text === null || typeof text === 'undefined' || text === '' || text.length === 0) {
+            isEmpty = true;
+        } else {
+            isEmpty = this.cleanBlank(text).length === 0;
+        }
+        return isEmpty;
+    };
+    TemplatePattern.prototype.cleanBlank = function (text) {
+        return _super.prototype.cleanBlank.call(this, text).replace(/\s/g, '');
+    };
+    TemplatePattern.prototype.updateText = function () {
+        var text;
+        if (this.getIsEmpty()) {
+            text = this.getBlank();
+        } else {
+            text = this.cleanBlank(this.text).substr(0, 1);
+        }
+        this.setText(text);
+    };
+    TemplatePattern.prototype.setInput = function (input, cb) {
+        var applyText = null;
+        input = this.trimBlank(input);
+        var test = input.substr(0, 1);
+        if (this.validateInput(test)) {
+            this.setText(test);
+            applyText = test;
+            input = input.substr(test.length);
+        } else if (!this.getIsRequired() || test.length === 0) {
+            applyText = '';
+            this.setText(applyText);
+        } else {}
+        if (cb) {
+            cb(input, applyText);
+        }
+        return input;
+    };
+    TemplatePattern.prototype.applyValue = function (value) {
+        var char = value;
+        var blank = this.getBlank();
+        if (char === blank) {
+            this.setText('');
+        } else if (this.validateInput(char)) {
+            this.setText(char);
+        } else {}
+    };
+    TemplatePattern.prototype.getIsValid = function () {
+        return !this.getIsRequired() || !this.getIsEmpty();
+    };
+    return TemplatePattern;
+}(Pattern_1.Pattern);
+exports.TemplatePattern = TemplatePattern;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var DecimalPattern_1 = __webpack_require__(27);
+var padEnd_1 = __webpack_require__(6);
+var FloatWidthPattern = function (_super) {
+    __extends(FloatWidthPattern, _super);
+    function FloatWidthPattern(locale, template, name, options) {
+        var _this = _super.call(this, locale, template, name, options) || this;
+        _this.minWidth = options.minWidth;
+        _this.maxWidth = options.maxWidth;
+        return _this;
+    }
+    FloatWidthPattern.prototype.updateText = function () {
+        var text = this.text || '';
+        var digits = text.replace(/[^\d]/g, '');
+        if (this.getIsEmpty()) {
+            text = padEnd_1.padEnd('', this.minWidth, this.getBlank());
+        } else if (this.isActive) {
+            text = padEnd_1.padEnd(digits, this.minWidth, this.getBlank());
+        } else {
+            text = padEnd_1.padEnd(digits.replace(/^0+/, '0'), this.minWidth, this.getBlank());
+        }
+        this.setText(text);
+    };
+    FloatWidthPattern.prototype.getInputRegexp = function () {
+        return (/^\d+/
+        );
+    };
+    return FloatWidthPattern;
+}(DecimalPattern_1.DecimalPattern);
+exports.FloatWidthPattern = FloatWidthPattern;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var BLANK_CHAR = '_';
+var Pattern = function () {
+    function Pattern(locale, template, name) {
+        this.locale = locale;
+        this.template = template;
+        this.name = name;
+        this.isActive = false;
+        this.isEditable = true;
+        this.blank = BLANK_CHAR;
+    }
+    Pattern.prototype.setBlank = function (blank) {
+        this.blank = blank || BLANK_CHAR;
+    };
+    Pattern.prototype.getBlank = function () {
+        return this.blank;
+    };
+    Pattern.prototype.getName = function () {
+        return this.name;
+    };
+    Pattern.prototype.canActivate = function () {
+        return true;
+    };
+    Pattern.prototype.setIsActive = function (isActive) {
+        if (!this.canActivate()) {
+            isActive = false;
+        }
+        this.isActive = isActive;
+    };
+    Pattern.prototype.getNextInput = function () {
+        return this.getText();
+    };
+    Pattern.prototype.getPrevInput = function () {
+        return this.getText();
+    };
+    Pattern.prototype.getText = function () {
+        if (this.text === null || typeof this.text === 'undefined') {
+            this.updateText();
+        }
+        return this.text;
+    };
+    Pattern.prototype.canInputChar = function (char) {
+        return true;
+    };
+    Pattern.prototype.setText = function (text) {
+        var changed = this.isEqualText(text, this.text);
+        this.text = text;
+        return changed;
+    };
+    Pattern.prototype.isEqualText = function (text1, text2) {
+        return text1 === text2;
+    };
+    Pattern.prototype.trimBlankLeft = function (text) {
+        var blank = this.getBlank();
+        while (text.indexOf(blank) === 0) {
+            text = text.substring(blank.length);
+        }
+        return text;
+    };
+    Pattern.prototype.trimBlankRight = function (text) {
+        var blank = this.getBlank();
+        while (text.lastIndexOf(blank) === text.length - 1) {
+            text = text.substring(0, blank.length - 1);
+        }
+        return text;
+    };
+    Pattern.prototype.cleanBlank = function (text) {
+        var blank = this.getBlank();
+        while (text.indexOf(blank) !== -1) {
+            text = text.replace(blank, '');
+        }
+        return text;
+    };
+    Pattern.prototype.trimBlank = function (text) {
+        var blank = this.getBlank();
+        while (text.substr(0, 1) === blank) {
+            text = text.substr(1);
+        }
+        while (text.substr(text.length - 1) === blank) {
+            text = text.substr(0, text.length - 1);
+        }
+        return text;
+    };
+    Pattern.prototype.finalizeInput = function () {
+        return false;
+    };
+    Pattern.prototype.getValue = function () {
+        return void 0;
+    };
+    return Pattern;
+}();
+exports.Pattern = Pattern;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function isCompleteHours(text) {
+    var digits = text.replace(/[^\d]/g, '');
+    var hours = parseInt(digits, 10);
+    return hours > 2;
+}
+exports.isCompleteHours = isCompleteHours;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var padStart_1 = __webpack_require__(34);
+var padEnd_1 = __webpack_require__(6);
+var isEmpty_1 = __webpack_require__(17);
+var NumberFormatter = function () {
+    function NumberFormatter(locale) {
+        this.locale = locale;
+    }
+    NumberFormatter.prototype.getDecimalSeparator = function () {
+        return this.locale.numberDecimalSeparator;
+    };
+    NumberFormatter.prototype.getNegativePattern = function () {
+        return this.locale.numberNegativePattern;
+    };
+    NumberFormatter.prototype.getPositivePattern = function () {
+        return this.locale.numberPositivePattern;
+    };
+    NumberFormatter.prototype.getGroupSeparator = function () {
+        return this.locale.numberGroupSeparator;
+    };
+    NumberFormatter.prototype.getGroupSize = function () {
+        return this.locale.numberGroupSize;
+    };
+    NumberFormatter.prototype.formatEmpty = function (options) {
+        var blank = options.blank;
+        var formattedParts = [padStart_1.padStart('', 1, blank)];
+        if (options.decimalDigits > 0) {
+            formattedParts.push(padStart_1.padStart('', options.decimalDigits, blank));
+        }
+        var formattedText = formattedParts.join(this.getDecimalSeparator());
+        return this.wrapSignPattern(formattedText, options);
+    };
+    NumberFormatter.prototype.format = function (text, options) {
+        var formattedParts = [];
+        var _a = this.splitNumberByParts(text),
+            integral = _a.integral,
+            fractional = _a.fractional;
+        formattedParts.push(this.formatGroup(integral));
+        if (options.decimalDigits > 0) {
+            fractional = padEnd_1.padEnd(fractional || '', options.decimalDigits, '0');
+            formattedParts.push(fractional.substr(0, options.decimalDigits));
+        }
+        var formattedText = formattedParts.join(this.getDecimalSeparator());
+        return this.wrapSignPattern(formattedText, options);
+    };
+    NumberFormatter.prototype.formatValue = function (value, options) {
+        if (isEmpty_1.isEmpty(value)) {
+            return this.formatEmpty(options);
+        } else {
+            var text = value.toString(10).split('.').join(this.getDecimalSeparator());
+            return this.format(text, options);
+        }
+    };
+    NumberFormatter.prototype.formatInput = function (input, options) {
+        var formattedParts = [];
+        var _a = this.splitNumberByParts(input),
+            integral = _a.integral,
+            fractional = _a.fractional;
+        var decimalDigits = options.decimalDigits;
+        if (integral.length > 0) {
+            formattedParts.push(this.formatGroup(integral));
+        } else {
+            formattedParts.push(padStart_1.padStart('', 1, options.blank));
+        }
+        if (options.decimalDigits > 0) {
+            fractional = fractional || '';
+            formattedParts.push(padEnd_1.padEnd(fractional.substr(0, decimalDigits), decimalDigits, options.blank));
+        }
+        var formattedText = formattedParts.join(this.getDecimalSeparator());
+        return this.wrapSignPattern(formattedText, options);
+    };
+    NumberFormatter.prototype.getPattern = function (isNegative) {
+        return isNegative ? this.getNegativePattern() : this.getPositivePattern();
+    };
+    NumberFormatter.prototype.getWrapper = function (options) {
+        var pattern = this.getPattern(options.isNegative);
+        return pattern.split(/n/i);
+    };
+    NumberFormatter.prototype.wrapSignPattern = function (text, options) {
+        var wrapper = this.getWrapper(options);
+        return wrapper.join(text);
+    };
+    NumberFormatter.prototype.splitNumberByParts = function (text) {
+        var _a = text.split(this.getDecimalSeparator()).map(function (t) {
+            return t.replace(/[^\d]/g, '');
+        }),
+            integral = _a[0],
+            fractional = _a[1];
+        return { integral: integral, fractional: fractional };
+    };
+    NumberFormatter.prototype.formatGroup = function (text) {
+        var groups = [];
+        var groupSize = this.getGroupSize();
+        var groupSeparator = this.getGroupSeparator();
+        for (var t = text; t.length > 0; t = t.substr(0, t.length - groupSize)) {
+            groups.push(t.substr(-groupSize));
+        }
+        return groups.reverse().join(groupSeparator);
+    };
+    return NumberFormatter;
+}();
+exports.NumberFormatter = NumberFormatter;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function padEnd(text, length, pad) {
+    pad = pad || ' ';
+    if (text.length > length) {
+        return text;
+    } else {
+        length = length - text.length;
+        if (length > pad.length) {
+            pad += pad.repeat(length / pad.length);
+        }
+        return text + pad.slice(0, length);
+    }
+}
+exports.padEnd = padEnd;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Editor = function () {
+    function Editor(el, mask) {
+        this.el = el;
+        this.mask = mask;
+        this.subscribeToElementEvents();
+        this.updateInputElement();
+    }
+    Editor.prototype.getValue = function () {
+        return this.mask.getValue();
+    };
+    Editor.prototype.setValue = function (value) {
+        this.mask.setValue(value);
+        this.updateInputElement();
+    };
+    Editor.prototype.onChangeValue = function (handler) {
+        this.mask.onChangeValue(handler);
+    };
+    Editor.prototype.onInvalidValue = function (handler) {
+        this.mask.onInvalidValue(handler);
+    };
+    Editor.prototype.setCursorPosition = function (start, end) {
+        var _this = this;
+        end = end || start;
+        this.el.setSelectionRange(start, end);
+        setTimeout(function () {
+            if (_this.el) {
+                _this.el.setSelectionRange(start, end);
+            }
+        }, 4);
+    };
+    Editor.prototype.selectAll = function () {
+        this.el.setSelectionRange(0, this.el.value.length);
+    };
+    Editor.prototype.subscribeToElementEvents = function () {
+        this.el.addEventListener('keydown', this);
+        this.el.addEventListener('input', this);
+        this.el.addEventListener('focus', this);
+        this.el.addEventListener('blur', this);
+    };
+    Editor.prototype.unsubscribeToElementEvents = function () {
+        this.el.removeEventListener('keydown', this);
+        this.el.removeEventListener('input', this);
+        this.el.removeEventListener('focus', this);
+        this.el.removeEventListener('blur', this);
+    };
+    Editor.prototype.destroy = function () {
+        this.unsubscribeToElementEvents();
+        this.mask.dispose();
+        this.mask = null;
+        this.el = null;
+    };
+    Editor.prototype.handleEvent = function (event) {
+        switch (event.type) {
+            case 'keydown':
+                this.onKeydownHandler(event);
+                break;
+            case 'input':
+                this.onInputHandler();
+                break;
+            case 'focus':
+                this.onFocusHandler();
+                break;
+            case 'blur':
+                this.onBlurHandler();
+                break;
+        }
+    };
+    Editor.prototype.onBlurHandler = function () {
+        this.mask.updateDisplay();
+        this.updateInputElement();
+    };
+    Editor.prototype.onFocusHandler = function () {
+        if (this.mask.getIsEmpty()) {
+            var position = this.el.selectionStart;
+            var pos = this.mask.getInputPosition(position);
+            this.updateInputElement(pos);
+        }
+    };
+    Editor.prototype.onInputHandler = function () {
+        var position = this.el.selectionStart;
+        var text = this.el.value;
+        var newPosition = this.mask.setInput(text, position);
+        this.updateInputElement(newPosition);
+    };
+    Editor.prototype.onKeydownHandler = function (event) {
+        if (event.altKey || event.ctrlKey || event.shiftKey) {
+            return;
+        }
+        var position = this.el.selectionStart;
+        var selection;
+        switch (event.key) {
+            case 'ArrowUp':
+                event.preventDefault();
+                selection = this.mask.setNextPatternValue(position);
+                if (selection) {
+                    this.updateInputElement(selection.start, selection.end);
+                }
+                break;
+            case 'ArrowDown':
+                event.preventDefault();
+                selection = this.mask.setPrevPatternValue(position);
+                if (selection) {
+                    this.updateInputElement(selection.start, selection.end);
+                }
+                break;
+        }
+    };
+    Editor.prototype.updateInputElement = function (start, end) {
+        this.el.value = this.mask.getText();
+        if (typeof start !== 'undefined' && start !== null) {
+            end = end || start;
+            if (this.mask.getInvalid()) {
+                this.selectAll();
+            } else {
+                this.setCursorPosition(start, end);
+            }
+        } else if (this.mask.getInvalid()) {
+            this.selectAll();
+        }
+    };
+    return Editor;
+}();
+exports.Editor = Editor;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pattern_1 = __webpack_require__(3);
+var BaseNumberPattern = function (_super) {
+    __extends(BaseNumberPattern, _super);
+    function BaseNumberPattern(locale, template, decimalDigits) {
+        var _this = _super.call(this, locale, template, 'number') || this;
+        _this.isNegative = false;
+        _this.decimalDigits = decimalDigits;
+        return _this;
+    }
+    BaseNumberPattern.prototype.setIsNegative = function (isNegative) {
+        this.isNegative = isNegative;
+    };
+    BaseNumberPattern.prototype.getIsNegative = function () {
+        return this.isNegative;
+    };
+    BaseNumberPattern.prototype.toggleSign = function () {
+        this.isNegative = !this.isNegative;
+    };
+    BaseNumberPattern.prototype.getIsEmpty = function () {
+        var isEmpty;
+        if (this.text === null || typeof this.text === 'undefined') {
+            isEmpty = true;
+        } else {
+            var digits = this.text.replace(/[^\d]/g, '');
+            isEmpty = digits.length === 0;
+        }
+        return isEmpty;
+    };
+    BaseNumberPattern.prototype.getIsComplete = function () {
+        return this.parser.isComplete(this.getText(), this.decimalDigits);
+    };
+    BaseNumberPattern.prototype.getIsValid = function () {
+        return this.parser.isComplete(this.getText(), this.decimalDigits);
+    };
+    BaseNumberPattern.prototype.applyValue = function (value) {
+        this.setIsNegative(value < 0);
+        var text = '';
+        if (value !== null && typeof value !== 'undefined') {
+            if (isFinite(value) && !isNaN(value)) {
+                value = Math.abs(value);
+                text = this.formatter.formatValue(value, {
+                    decimalDigits: this.decimalDigits,
+                    isNegative: this.getIsNegative(),
+                    blank: this.getBlank()
+                });
+            }
+        }
+        this.setText(text);
+    };
+    BaseNumberPattern.prototype.getNextInput = function () {
+        var text = this.getText();
+        var next;
+        var result = this.parser.parse(text, {
+            decimalDigits: this.decimalDigits,
+            isNegative: this.getIsNegative()
+        }, 0);
+        var value = parseInt(result.integralPart.replace(/[^\d]/g, ''), 10);
+        if (isFinite(value) && !isNaN(value)) {
+            value++;
+            next = value.toString(10) + result.separatorPart + result.fractionalPart;
+        } else {
+            next = '0' + result.separatorPart + result.fractionalPart;
+        }
+        return next;
+    };
+    BaseNumberPattern.prototype.getPrevInput = function () {
+        var text = this.getText();
+        var prev;
+        var result = this.parser.parse(text, {
+            decimalDigits: this.decimalDigits,
+            isNegative: this.getIsNegative()
+        }, 0);
+        var value = parseInt(result.integralPart.replace(/[^\d]/g, ''), 10);
+        if (isFinite(value) && !isNaN(value)) {
+            value--;
+            prev = value.toString(10) + result.separatorPart + result.fractionalPart;
+        } else {
+            prev = '0' + result.separatorPart + result.fractionalPart;
+        }
+        return prev;
+    };
+    BaseNumberPattern.prototype.updateText = function () {
+        var text = this.text || '';
+        var formattedText;
+        var formatterOptions = {
+            decimalDigits: this.decimalDigits,
+            blank: this.getBlank(),
+            isNegative: this.getIsNegative()
+        };
+        if (this.getIsEmpty()) {
+            formattedText = this.formatter.formatEmpty(formatterOptions);
+        } else if (this.isActive) {
+            formattedText = this.formatter.formatInput(text, formatterOptions);
+        } else {
+            formattedText = this.formatter.format(text, formatterOptions);
+        }
+        this.setText(formattedText);
+    };
+    BaseNumberPattern.prototype.setInput = function (input, cb) {
+        var applyText = null;
+        var blank = this.getBlank();
+        while (input.indexOf(blank) === 0) {
+            input = input.substring(blank.length);
+        }
+        var result = this.parser.parse(input, {
+            isNegative: this.getIsNegative(),
+            decimalDigits: this.decimalDigits
+        }, 0);
+        if (result.input.length === 0) {
+            applyText = '';
+        } else {
+            applyText = result.integralPart + result.separatorPart + result.fractionalPart;
+        }
+        if (applyText !== null) {
+            this.setText(applyText);
+        }
+        if (cb) {
+            cb(input, applyText);
+        }
+        return input;
+    };
+    BaseNumberPattern.prototype.getValue = function () {
+        var text = this.getText();
+        var result = this.parser.parse(text, {
+            decimalDigits: this.decimalDigits,
+            isNegative: this.getIsNegative()
+        }, 0);
+        var integralPart = result.integralPart.replace(/[^\d]/g, '');
+        var fractionalPart = result.fractionalPart.replace(/[^\d]/g, '');
+        var textValue = [integralPart, fractionalPart || '0'].join('.');
+        var value = +textValue;
+        if (isFinite(value) && !isNaN(value)) {
+            if (this.getIsNegative()) {
+                value = -value;
+            }
+        }
+        return value;
+    };
+    return BaseNumberPattern;
+}(Pattern_1.Pattern);
+exports.BaseNumberPattern = BaseNumberPattern;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var StaticPattern_1 = __webpack_require__(29);
+function buildStaticPattern(template, locale) {
+    return new StaticPattern_1.StaticPattern(locale, template);
+}
+exports.buildStaticPattern = buildStaticPattern;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var PatternsList_1 = __webpack_require__(73);
+var ValueModel_1 = __webpack_require__(76);
+var restorePosition_1 = __webpack_require__(35);
+var EventEmitter_1 = __webpack_require__(32);
+var OutOfRangeEvent_1 = __webpack_require__(30);
+var Mask = function () {
+    function Mask(locale) {
+        var _this = this;
+        this.locale = locale;
+        this.patterns = new PatternsList_1.PatternsList();
+        this.invalid = false;
+        this.value = new ValueModel_1.ValueModel();
+        this.eventEmitter = new EventEmitter_1.EventEmitter();
+        this.value.onChange(function (eventName, eventData) {
+            return _this.onChangeValueHandler(eventData);
+        });
+    }
+    Mask.prototype.setPatterns = function (list) {
+        this.patterns.setList(list);
+    };
+    Mask.prototype.getInvalid = function () {
+        return this.invalid;
+    };
+    Mask.prototype.getIsEmpty = function () {
+        return this.patterns.getIsEmpty();
+    };
+    Mask.prototype.onChangeValue = function (handler) {
+        return this.value.onChange(function (eventName, eventData) {
+            return handler.call(null, eventData);
+        });
+    };
+    Mask.prototype.onInvalidValue = function (cb) {
+        return this.eventEmitter.on(OutOfRangeEvent_1.OutOfRangeEvent.eventName, cb);
+    };
+    Mask.prototype.onChangeValueHandler = function (eventData) {
+        this.updateInvalid();
+        if (typeof eventData.newValue === 'undefined') {
+            return;
+        }
+        this.lastValue = eventData.newValue;
+        if (eventData.params.update) {
+            this.applyValue(eventData.newValue);
+        }
+    };
+    Mask.prototype.applyValue = function (value) {
+        this.patterns.getList().map(function (pattern, index) {
+            return pattern.applyValue(value);
+        });
+        this.patterns.updateText();
+    };
+    Mask.prototype.getText = function () {
+        return this.getInvalid() ? this.getInvalidText() : this.patterns.getText();
+    };
+    Mask.prototype.setNextPatternValue = function (position) {
+        var res = this.patterns.setNextPatternValue(position);
+        this.updateValue();
+        return res;
+    };
+    Mask.prototype.setPrevPatternValue = function (position) {
+        var res = this.patterns.setPrevPatternValue(position);
+        this.updateValue();
+        return res;
+    };
+    Mask.prototype.setInput = function (input, position) {
+        var newPosition = this.patterns.setInput(input, position);
+        var currentText = this.getText();
+        this.patterns.updateText();
+        var res = this.restorePosition(currentText, newPosition);
+        this.updateValue();
+        return res;
+    };
+    Mask.prototype.setValue = function (value) {
+        this.value.setValue(value, { update: true });
+    };
+    Mask.prototype.getValue = function () {
+        return this.value.getValue();
+    };
+    Mask.prototype.getInputPosition = function (position) {
+        return this.patterns.getInputPosition(position);
+    };
+    Mask.prototype.handleKey = function (key, position) {
+        return null;
+    };
+    Mask.prototype.restorePosition = function (text, position) {
+        return restorePosition_1.restorePosition(text, this.getText(), position);
+    };
+    Mask.prototype.updateDisplay = function () {
+        this.patterns.updateDisplay();
+        return this;
+    };
+    Mask.prototype.updateValue = function () {
+        var isValid = this.patterns.getIsValid();
+        if (isValid) {
+            var value = this.buildValue();
+            if (this.validate(value)) {
+                this.value.setValue(this.buildValue());
+            }
+        } else {
+            this.value.setValue(void 0);
+        }
+    };
+    Mask.prototype.updateInvalid = function () {};
+    Mask.prototype.getInvalidText = function () {
+        return 'Error';
+    };
+    Mask.prototype.setInvalid = function (invalid) {
+        this.invalid = invalid;
+    };
+    Mask.prototype.validate = function (value) {
+        return true;
+    };
+    Mask.prototype.dispose = function () {
+        this.patterns.dispose();
+        this.lastValue = null;
+        this.value.dispose();
+        this.eventEmitter.dispose();
+    };
+    return Mask;
+}();
+exports.Mask = Mask;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var MaskBuilder = function () {
+    function MaskBuilder() {
+        this.patternsBuilder = this.initPatternsBuilder();
+    }
+    MaskBuilder.prototype.build = function (template, locale) {
+        var mask = this.createMask(locale);
+        var patterns = this.patternsBuilder.build(template, locale);
+        mask.setPatterns(patterns);
+        return mask;
+    };
+    return MaskBuilder;
+}();
+exports.MaskBuilder = MaskBuilder;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var PatternsBuilder = function () {
+    function PatternsBuilder(defaultPatternBuilder) {
+        this.defaultPatternBuilder = defaultPatternBuilder;
+        this.registeredPatterns = [];
+    }
+    PatternsBuilder.prototype.registerPattern = function (patternSelector, patternBuilder) {
+        this.registeredPatterns.push({ patternSelector: patternSelector, patternBuilder: patternBuilder });
+        return this;
+    };
+    PatternsBuilder.prototype.build = function (template, locale) {
+        var _this = this;
+        var patterns = [template];
+        this.registeredPatterns.forEach(function (registered) {
+            var i = 0;
+            do {
+                var test_1 = patterns[i];
+                if (typeof test_1 === 'string' && test_1.length > 0) {
+                    var info = registered.patternSelector.match(test_1);
+                    if (info !== null) {
+                        var parts = [test_1.substring(0, info.start), registered.patternBuilder(info.text, locale), test_1.substr(info.end)];
+                        patterns.splice.apply(patterns, [i, 1].concat(parts));
+                        i++;
+                    }
+                }
+                i++;
+            } while (i < patterns.length);
+        });
+        if (this.defaultPatternBuilder) {
+            patterns.forEach(function (test, i) {
+                if (typeof test === 'string' && test.length > 0) {
+                    patterns[i] = _this.defaultPatternBuilder(test, locale);
+                }
+            });
+        }
+        patterns = patterns.filter(function (data) {
+            return typeof data !== 'string';
+        });
+        return patterns;
+    };
+    return PatternsBuilder;
+}();
+exports.PatternsBuilder = PatternsBuilder;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberParser = function () {
+    function BaseNumberParser(locale) {
+        this.locale = locale;
+    }
+    BaseNumberParser.prototype.parse = function (text, options, start) {
+        if (start === void 0) {
+            start = 0;
+        }
+        var input = text.substr(start);
+        return options.decimalDigits > 0 ? this.parseFloatNumber(input, options) : this.parseIntegerNumber(input, options);
+    };
+    BaseNumberParser.prototype.isComplete = function (text, decimalDigits) {
+        var isComplete;
+        var decimalSeparator = this.getDecimalSeparator();
+        if (decimalDigits === 0) {
+            var digits = text.replace(/[^\d]/g, '');
+            isComplete = digits.length > 0;
+        } else {
+            var _a = text.split(decimalSeparator).map(function (t) {
+                return t.replace(/[^\d]/g, '');
+            }),
+                int = _a[0],
+                fract = _a[1];
+            isComplete = int.length > 0 && fract.length > 0;
+        }
+        return isComplete;
+    };
+    BaseNumberParser.prototype.parseFloatNumber = function (text, options) {
+        var result = {
+            separatorPart: '',
+            integralPart: '',
+            fractionalPart: '',
+            input: text
+        };
+        var parts = this.run(text, [this.integralPartParser, this.decimalSeparatorParser, this.fractionalPartParser], options);
+        result.integralPart = parts[0];
+        result.separatorPart = parts[1];
+        result.fractionalPart = parts[2];
+        result.input = parts.join('');
+        return result;
+    };
+    BaseNumberParser.prototype.parseIntegerNumber = function (text, options) {
+        var result = {
+            integralPart: '',
+            fractionalPart: '',
+            input: text
+        };
+        var parts = this.run(text, [this.integralPartParser], options);
+        result.integralPart = parts[0];
+        result.input = parts.join('');
+        return result;
+    };
+    BaseNumberParser.prototype.run = function (text, parsers, options) {
+        var data = parsers.map(function (p) {
+            return '';
+        });
+        for (var i = 0, index = 0; i < parsers.length; i = i + 1) {
+            var result = parsers[i].parse(text, index, options);
+            if (result === null) {
+                break;
+            }
+            index = result.end;
+            data[i] = result.text || '';
+        }
+        return data;
+    };
+    return BaseNumberParser;
+}();
+exports.BaseNumberParser = BaseNumberParser;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var DecimalSeparatorParser = function () {
+    function DecimalSeparatorParser(decimalSeparator) {
+        this.decimalSeparator = decimalSeparator;
+    }
+    DecimalSeparatorParser.prototype.parse = function (text, start, options) {
+        var decimalSeparator = this.decimalSeparator;
+        var result = null;
+        if (text.indexOf(decimalSeparator, start) === start) {
+            result = {
+                text: decimalSeparator,
+                start: start,
+                end: start + decimalSeparator.length
+            };
+        }
+        return result;
+    };
+    return DecimalSeparatorParser;
+}();
+exports.DecimalSeparatorParser = DecimalSeparatorParser;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var FractionalPartParser = function () {
+    function FractionalPartParser() {}
+    FractionalPartParser.prototype.parse = function (text, start, options) {
+        var regexp = new RegExp('[\\d]{1,' + options.decimalDigits + '}');
+        var result = null;
+        var matches = text.substr(start).match(regexp);
+        if (matches) {
+            result = {
+                text: matches[0],
+                start: start + matches.index,
+                end: start + matches.index + matches[0].length
+            };
+        }
+        return result;
+    };
+    return FractionalPartParser;
+}();
+exports.FractionalPartParser = FractionalPartParser;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var IntegralPartParser = function () {
+    function IntegralPartParser(groupSeparator, decimalSeparator) {
+        this.groupSeparator = groupSeparator;
+        this.decimalSeparator = decimalSeparator;
+    }
+    IntegralPartParser.prototype.parse = function (text, start, options) {
+        var i = start;
+        var rDigit = /\d/;
+        var found = '';
+        var groupSeparator = this.groupSeparator;
+        while (i < text.length) {
+            if (text.indexOf(groupSeparator, i) === i) {
+                found += groupSeparator;
+                i += groupSeparator.length;
+            } else if (text[i].match(rDigit)) {
+                found += text[i];
+                i += 1;
+            } else if (text.indexOf(this.decimalSeparator, i) === i) {
+                break;
+            } else {
+                i++;
+            }
+        }
+        return {
+            text: found,
+            start: i - found.length,
+            end: i
+        };
+    };
+    return IntegralPartParser;
+}();
+exports.IntegralPartParser = IntegralPartParser;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function isEmpty(value) {
+    return typeof value === 'undefined' || value === null;
+}
+exports.isEmpty = isEmpty;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function getDay(value) {
+    var text;
+    if (value === null || typeof value === 'undefined') {
+        text = '';
+    } else {
+        var day = new Date(value).getUTCDate();
+        text = day.toString();
+    }
+    return text;
+}
+exports.getDay = getDay;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function getHours(value) {
+    var text;
+    if (value === null || typeof value === 'undefined') {
+        text = '';
+    } else {
+        var hours = new Date(value).getUTCHours();
+        text = hours.toString();
+    }
+    return text;
+}
+exports.getHours = getHours;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function getHours12(value) {
+    var text;
+    if (value === null || typeof value === 'undefined') {
+        text = '';
+    } else {
+        var hours = new Date(value).getUTCHours();
+        if (hours === 0) {
+            text = '12';
+        } else if (hours < 13) {
+            text = hours.toString();
+        } else {
+            text = (hours - 12).toString();
+        }
+    }
+    return text;
+}
+exports.getHours12 = getHours12;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function getMonth(value) {
+    var text;
+    if (value === null || typeof value === 'undefined') {
+        text = '';
+    } else {
+        var month = new Date(value).getUTCMonth() + 1;
+        text = month.toString();
+    }
+    return text;
+}
+exports.getMonth = getMonth;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function isCompleteDay(text) {
+    var digits = text.replace(/[^\d]/g, '');
+    var day = parseInt(digits, 10);
+    return day > 3;
+}
+exports.isCompleteDay = isCompleteDay;
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function isCompleteMinutes(text) {
+    var digits = text.replace(/[^\d]/g, '');
+    var minutes = parseInt(digits, 10);
+    return minutes >= 6;
+}
+exports.isCompleteMinutes = isCompleteMinutes;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function isCompleteMonth(text) {
+    var digits = text.replace(/[^\d]/g, '');
+    var month = parseInt(digits, 10);
+    return month >= 2;
+}
+exports.isCompleteMonth = isCompleteMonth;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function isCompleteSeconds(text) {
+    var digits = text.replace(/[^\d]/g, '');
+    var seconds = parseInt(digits, 10);
+    return seconds >= 6;
+}
+exports.isCompleteSeconds = isCompleteSeconds;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberPattern_1 = __webpack_require__(8);
+var PercentParser_1 = __webpack_require__(85);
+var PercentFormatter_1 = __webpack_require__(81);
+var PercentPattern = function (_super) {
+    __extends(PercentPattern, _super);
+    function PercentPattern(locale, template, decimalDigits) {
+        var _this = _super.call(this, locale, template, decimalDigits) || this;
+        _this.parser = new PercentParser_1.PercentParser(locale);
+        _this.formatter = new PercentFormatter_1.PercentFormatter(locale);
+        return _this;
+    }
+    return PercentPattern;
+}(BaseNumberPattern_1.BaseNumberPattern);
+exports.PercentPattern = PercentPattern;
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pattern_1 = __webpack_require__(3);
+var DecimalPattern = function (_super) {
+    __extends(DecimalPattern, _super);
+    function DecimalPattern(locale, template, name, options) {
+        var _this = _super.call(this, locale, template, name) || this;
+        _this.min = options.min;
+        _this.max = options.max;
+        return _this;
+    }
+    DecimalPattern.prototype.getIsEmpty = function () {
+        var isEmpty;
+        if (this.text === null || typeof this.text === 'undefined') {
+            isEmpty = true;
+        } else {
+            var digits = this.text.replace(/[^\d]/g, '');
+            isEmpty = digits.length === 0;
+        }
+        return isEmpty;
+    };
+    DecimalPattern.prototype.getIsValid = function () {
+        var text = this.getText();
+        var digits = text.replace(/[^\d]/g, '');
+        var month = parseInt(digits, 10);
+        return month >= this.min && month <= this.max;
+    };
+    DecimalPattern.prototype.getNextInput = function () {
+        var next;
+        if (this.getIsEmpty()) {
+            next = this.min.toString(10);
+        } else {
+            var text = this.getText();
+            var data = parseInt(text.replace(/[^\d]/g, ''), 10);
+            if (data < this.max) {
+                next = '' + ++data;
+            } else {
+                next = text;
+            }
+        }
+        return next;
+    };
+    DecimalPattern.prototype.getPrevInput = function () {
+        var next;
+        if (this.getIsEmpty()) {
+            next = this.min.toString(10);
+        } else {
+            var text = this.getText();
+            var data = parseInt(text.replace(/[^\d]/g, ''), 10);
+            if (data > this.min) {
+                next = '' + --data;
+            } else {
+                next = text;
+            }
+        }
+        return next;
+    };
+    DecimalPattern.prototype.canInputChar = function (char) {
+        return (/\d/.test(char)
+        );
+    };
+    DecimalPattern.prototype.setInput = function (input, cb) {
+        var _this = this;
+        var applyText = null;
+        input = this.trimBlankLeft(input);
+        var matches = input.match(this.getInputRegexp());
+        if (input.length === 0) {
+            applyText = '';
+        } else if (matches) {
+            var digits = matches[0];
+            var data = digits.split('').map(function (digit, i, digits) {
+                return digits.slice(0, i + 1).join('');
+            }).filter(function (month) {
+                return parseInt(month, 10) <= _this.max;
+            }).pop();
+            if (data.length) {
+                applyText = data;
+                input = input.substring(matches.index + data.length);
+            }
+        }
+        if (applyText !== null) {
+            this.setText(applyText);
+        }
+        if (cb) {
+            cb(input, applyText);
+        }
+        return input;
+    };
+    DecimalPattern.prototype.getValue = function () {
+        var text = this.text || '';
+        var digits = text.replace(/[^\d]/g, '');
+        return digits.length === 0 ? null : parseInt(digits, 10);
+    };
+    return DecimalPattern;
+}(Pattern_1.Pattern);
+exports.DecimalPattern = DecimalPattern;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pattern_1 = __webpack_require__(3);
+var padEnd_1 = __webpack_require__(6);
+var ListPattern = function (_super) {
+    __extends(ListPattern, _super);
+    function ListPattern(locale, template, name, list) {
+        var _this = _super.call(this, locale, template, name) || this;
+        _this.list = list;
+        _this.minWidth = list.map(function (t) {
+            return t.length;
+        }).sort()[0];
+        return _this;
+    }
+    ListPattern.prototype.getIsEmpty = function () {
+        var isEmpty;
+        var text = this.text;
+        if (text === null || typeof text === 'undefined') {
+            isEmpty = true;
+        } else {
+            var blank = this.getBlank();
+            while (text.indexOf(blank) !== -1) {
+                text = text.replace(blank, '');
+            }
+            isEmpty = text.length === 0;
+        }
+        return isEmpty;
+    };
+    ListPattern.prototype.getNextInput = function () {
+        var text = this.getText();
+        var next = text;
+        var i = this.list.map(function (t) {
+            return t.toUpperCase();
+        }).indexOf(text.toUpperCase());
+        if (i === -1) {
+            next = this.list[0];
+        } else if (i + 1 < this.list.length) {
+            next = this.list[i + 1];
+        }
+        return next;
+    };
+    ListPattern.prototype.getPrevInput = function () {
+        var text = this.getText();
+        var prev = text;
+        var i = this.list.map(function (t) {
+            return t.toUpperCase();
+        }).indexOf(text.toUpperCase());
+        if (i === -1) {
+            prev = this.list[0];
+        } else if (i - 1 >= 0) {
+            prev = this.list[i - 1];
+        }
+        return prev;
+    };
+    ListPattern.prototype.getIsValid = function () {
+        var text = this.getText().toUpperCase();
+        return this.list.map(function (t) {
+            return t.toUpperCase();
+        }).some(function (t) {
+            return t === text;
+        });
+    };
+    ListPattern.prototype.getIsComplete = function () {
+        return this.getIsValid();
+    };
+    ListPattern.prototype.updateText = function () {
+        var text = this.text || '';
+        var width = this.minWidth;
+        if (!this.getIsEmpty()) {
+            var txt_1 = text.toUpperCase();
+            var longestText = this.list.map(function (t) {
+                return t.toUpperCase();
+            }).filter(function (t) {
+                return t.indexOf(txt_1) !== -1;
+            }).sort(function (a, b) {
+                return a.length - b.length;
+            }).pop();
+            if (typeof longestText !== 'undefined') {
+                width = longestText.length;
+            }
+        }
+        text = padEnd_1.padEnd(text, width, this.getBlank());
+        this.setText(text);
+    };
+    ListPattern.prototype.setInput = function (input, cb) {
+        var applyText = null;
+        if (input.length === 0) {
+            applyText = '';
+        } else {
+            var list = this.list.map(function (t) {
+                return t.toUpperCase();
+            }).sort(function (a, b) {
+                return a.length - b.length;
+            });
+            var width = Math.max.apply(Math, list.map(function (t) {
+                return t.length;
+            }));
+            var inputs = [];
+            var _loop_1 = function _loop_1(i) {
+                var test_1 = input.substr(0, i);
+                if (list.some(function (value) {
+                    return value.substr(0, i) === test_1.toUpperCase();
+                })) {
+                    inputs.push(test_1);
+                }
+            };
+            for (var i = 1; i <= Math.min(width, input.length); i = i + 1) {
+                _loop_1(i);
+            }
+            var len = inputs.sort(function (a, b) {
+                return a.length - b.length;
+            }).map(function (a) {
+                return a.length;
+            }).pop();
+            if (typeof len === 'undefined') {
+                applyText = '';
+            } else {
+                applyText = input.substr(0, len);
+                input = input.substr(len + 1);
+            }
+        }
+        if (applyText !== null) {
+            this.setText(applyText);
+        }
+        if (cb) {
+            cb(input, applyText);
+        }
+        return input;
+    };
+    ListPattern.prototype.getValue = function () {
+        var index = this.list.map(function (text) {
+            return text.toUpperCase();
+        }).indexOf(this.getText().toUpperCase());
+        return index === -1 ? null : index;
+    };
+    ListPattern.prototype.finalizeInput = function () {
+        var finalized = false;
+        var text = this.getText().toUpperCase();
+        var matched = this.list.filter(function (t) {
+            return t.toUpperCase().indexOf(text) === 0;
+        });
+        if (matched.length === 1) {
+            this.setText(matched[0]);
+            finalized = true;
+        }
+        return finalized;
+    };
+    return ListPattern;
+}(Pattern_1.Pattern);
+exports.ListPattern = ListPattern;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pattern_1 = __webpack_require__(3);
+var StaticPattern = function (_super) {
+    __extends(StaticPattern, _super);
+    function StaticPattern() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    StaticPattern.prototype.getIsComplete = function () {
+        return true;
+    };
+    StaticPattern.prototype.getIsValid = function () {
+        return true;
+    };
+    StaticPattern.prototype.applyValue = function (value) {};
+    StaticPattern.prototype.getIsEmpty = function () {
+        return true;
+    };
+    StaticPattern.prototype.setInput = function (input, cb) {
+        var text = this.getText();
+        var applyText = '';
+        var index = input.indexOf(text);
+        if (index !== -1) {
+            applyText = text;
+            input = input.substring(0, index) + input.substring(index + text.length);
+        }
+        if (cb) {
+            cb(input, applyText);
+        }
+        return input;
+    };
+    StaticPattern.prototype.updateText = function () {
+        this.text = this.template;
+    };
+    StaticPattern.prototype.canActivate = function () {
+        return false;
+    };
+    return StaticPattern;
+}(Pattern_1.Pattern);
+exports.StaticPattern = StaticPattern;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var OUT_OF_RANGE_EVENT = 'OutOfRangeEvent';
+var OutOfRangeEvent = function () {
+    function OutOfRangeEvent(value) {
+        this.value = value;
+    }
+    return OutOfRangeEvent;
+}();
+OutOfRangeEvent.eventName = OUT_OF_RANGE_EVENT;
+exports.OutOfRangeEvent = OutOfRangeEvent;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var StringSelector = function () {
+    function StringSelector(text) {
+        this.text = text;
+    }
+    StringSelector.prototype.match = function (text) {
+        var match = null,
+            start = text.indexOf(this.text);
+        if (start !== -1) {
+            match = {
+                text: this.text,
+                start: start,
+                end: start + this.text.length
+            };
+        }
+        return match;
+    };
+    return StringSelector;
+}();
+exports.StringSelector = StringSelector;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventEmitter = function () {
+    function EventEmitter() {
+        this.handlers = {};
+    }
+    EventEmitter.prototype.on = function (eventName, eventHandler) {
+        var handlers = this.handlers[eventName];
+        if (!handlers) {
+            this.handlers[eventName] = handlers = [];
+        }
+        if (handlers.indexOf(eventHandler) === -1) {
+            handlers.push(eventHandler);
+        }
+        return function () {
+            var index = handlers.indexOf(eventHandler);
+            if (index !== -1) {
+                handlers.splice(index, 1);
+            }
+        };
+    };
+    EventEmitter.prototype.dispose = function () {
+        var _this = this;
+        Object.keys(this.handlers).forEach(function (name) {
+            return delete _this.handlers[name];
+        });
+    };
+    EventEmitter.prototype.emit = function (eventName, data) {
+        var handlers = this.handlers[eventName];
+        if (Array.isArray(handlers)) {
+            handlers.forEach(function (handler) {
+                return handler.call(null, eventName, data);
+            });
+        }
+    };
+    return EventEmitter;
+}();
+exports.EventEmitter = EventEmitter;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberParser_1 = __webpack_require__(13);
+var IntegralPartParser_1 = __webpack_require__(16);
+var DecimalSeparatorParser_1 = __webpack_require__(14);
+var FractionalPartParser_1 = __webpack_require__(15);
+var NumberParser = function (_super) {
+    __extends(NumberParser, _super);
+    function NumberParser(locale) {
+        var _this = _super.call(this, locale) || this;
+        _this.locale = locale;
+        _this.integralPartParser = new IntegralPartParser_1.IntegralPartParser(locale.numberGroupSeparator, locale.numberDecimalSeparator);
+        _this.decimalSeparatorParser = new DecimalSeparatorParser_1.DecimalSeparatorParser(locale.numberDecimalSeparator);
+        _this.fractionalPartParser = new FractionalPartParser_1.FractionalPartParser();
+        return _this;
+    }
+    NumberParser.prototype.getDecimalSeparator = function () {
+        return this.locale.numberDecimalSeparator;
+    };
+    return NumberParser;
+}(BaseNumberParser_1.BaseNumberParser);
+exports.NumberParser = NumberParser;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function padStart(text, length, pad) {
+    pad = pad || ' ';
+    if (text.length > length) {
+        return text;
+    } else {
+        length = length - text.length;
+        if (length > pad.length) {
+            pad += pad.repeat(length / pad.length);
+        }
+        return pad.slice(0, length) + text;
+    }
+}
+exports.padStart = padStart;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function restorePosition(before, after, position) {
+    return before.substr(0, position).split('').reduce(function (offset, char) {
+        var i = after.indexOf(char, offset);
+        return i !== -1 ? i + 1 : offset;
+    }, 0);
+}
+exports.restorePosition = restorePosition;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Builder_1 = __webpack_require__(74);
+var Locale_1 = __webpack_require__(78);
+var DateTimeMaskBuilder_1 = __webpack_require__(41);
+var NumberMaskBuilder_1 = __webpack_require__(58);
+var TemplateMaskBuilder_1 = __webpack_require__(67);
+var DEFAULT_LOCALE_NAME = 'en';
+var DATETIME_MASK = 'DateTime';
+var NUMBER_MASK = 'Number';
+var TEMPLATE_MASK = 'Template';
+var API = function () {
+    function API() {
+        this.builder = new Builder_1.Builder();
+        this.options = {
+            locale: DEFAULT_LOCALE_NAME
+        };
+        this.initialized = false;
+        this.builder.register('DateTime', new DateTimeMaskBuilder_1.DateTimeMaskBuilder());
+        this.builder.register('Number', new NumberMaskBuilder_1.NumberMaskBuilder());
+        this.builder.register('Template', new TemplateMaskBuilder_1.TemplateMaskBuilder());
+    }
+    API.prototype.init = function (options) {
+        var _this = this;
+        if (this.initialized) {
+            return;
+        }
+        if (options) {
+            Object.keys(options).forEach(function (key) {
+                return _this.options[key] = options[key];
+            });
+        }
+        this.locale = new Locale_1.Locale(this.options.locale);
+        this.initialized = true;
+    };
+    API.prototype.getLocale = function () {
+        this.initialize();
+        return this.locale;
+    };
+    API.prototype.createDateTimeMask = function (template, options) {
+        this.initialize();
+        var mask = this.createMask(DATETIME_MASK, template);
+        options = options || {};
+        if (typeof options.timezoneOffset !== 'undefined') {
+            mask.setTimezoneOffset(options.timezoneOffset);
+        }
+        return mask;
+    };
+    API.prototype.createNumberMask = function (template) {
+        this.initialize();
+        return this.createMask(NUMBER_MASK, template);
+    };
+    API.prototype.createTemplateMask = function (template, options) {
+        this.initialize();
+        options = options || {};
+        var mask = this.createMask(TEMPLATE_MASK, template, options);
+        if (typeof options.maskSaveLiteral !== 'undefined') {
+            mask.setMaskSaveLiteral(options.maskSaveLiteral);
+        }
+        return mask;
+    };
+    API.prototype.createMask = function (name, template, options) {
+        return this.builder.build(name, template, this.locale);
+    };
+    API.prototype.initialize = function () {
+        this.init();
+    };
+    return API;
+}();
+exports.API = API;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Editor_1 = __webpack_require__(7);
+var DateTimeEditor = function (_super) {
+    __extends(DateTimeEditor, _super);
+    function DateTimeEditor() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DateTimeEditor.prototype.setTimezoneOffset = function (offset) {
+        return this.getMask().setTimezoneOffset(offset);
+    };
+    DateTimeEditor.prototype.getTimezoneOffset = function () {
+        return this.getMask().getTimezoneOffset();
+    };
+    DateTimeEditor.prototype.setMinValue = function (minValue) {
+        this.getMask().setMinValue(minValue);
+    };
+    DateTimeEditor.prototype.getMinValue = function () {
+        return this.getMask().getMinValue();
+    };
+    DateTimeEditor.prototype.setMaxValue = function (maxValue) {
+        this.getMask().setMaxValue(maxValue);
+    };
+    DateTimeEditor.prototype.getMaxValue = function () {
+        return this.getMask().getMaxValue();
+    };
+    DateTimeEditor.prototype.getMask = function () {
+        return this.mask;
+    };
+    return DateTimeEditor;
+}(Editor_1.Editor);
+exports.DateTimeEditor = DateTimeEditor;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Editor_1 = __webpack_require__(7);
+var NumberEditor = function (_super) {
+    __extends(NumberEditor, _super);
+    function NumberEditor() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    NumberEditor.prototype.onKeydownHandler = function (event) {
+        _super.prototype.onKeydownHandler.call(this, event);
+        if (event.altKey || event.ctrlKey || event.shiftKey) {
+            return;
+        }
+        var position = this.el.selectionStart;
+        switch (event.key) {
+            case '-':
+                position = this.mask.handleKey(event.key, position);
+                if (position !== null) {
+                    event.preventDefault();
+                    this.updateInputElement(position);
+                }
+                break;
+        }
+    };
+    return NumberEditor;
+}(Editor_1.Editor);
+exports.NumberEditor = NumberEditor;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Editor_1 = __webpack_require__(7);
+var TemplateEditor = function (_super) {
+    __extends(TemplateEditor, _super);
+    function TemplateEditor() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TemplateEditor.prototype.setMaskSaveLiteral = function (maskSaveLiteral) {
+        this.getMask().setMaskSaveLiteral(maskSaveLiteral);
+    };
+    TemplateEditor.prototype.getMaskSaveLiteral = function () {
+        return this.getMask().getMaskSaveLiteral();
+    };
+    TemplateEditor.prototype.getMask = function () {
+        return this.mask;
+    };
+    return TemplateEditor;
+}(Editor_1.Editor);
+exports.TemplateEditor = TemplateEditor;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Mask_1 = __webpack_require__(10);
+var isEmpty_1 = __webpack_require__(17);
+var OutOfRangeEvent_1 = __webpack_require__(30);
+var DateTimeMask = function (_super) {
+    __extends(DateTimeMask, _super);
+    function DateTimeMask() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.timezoneOffset = 0;
+        return _this;
+    }
+    DateTimeMask.prototype.setTimezoneOffset = function (offset) {
+        this.timezoneOffset = offset;
+    };
+    DateTimeMask.prototype.getTimezoneOffset = function () {
+        return this.timezoneOffset;
+    };
+    DateTimeMask.prototype.setMinValue = function (minValue) {
+        this.minValue = minValue;
+    };
+    DateTimeMask.prototype.getMinValue = function () {
+        return this.minValue;
+    };
+    DateTimeMask.prototype.setMaxValue = function (maxValue) {
+        this.maxValue = maxValue;
+    };
+    DateTimeMask.prototype.getMaxValue = function () {
+        return this.maxValue;
+    };
+    DateTimeMask.prototype.buildValue = function () {
+        var lastValue = this.lastValue || 0;
+        var defaultDate = new Date(lastValue - this.getTimezoneOffset() * 60 * 1000);
+        var data = this.patterns.getPatternsValue();
+        var year = isEmpty_1.isEmpty(data.year) ? defaultDate.getUTCFullYear() : data.year;
+        var month = isEmpty_1.isEmpty(data.month) ? defaultDate.getUTCMonth() : data.month;
+        var day = isEmpty_1.isEmpty(data.day) ? defaultDate.getUTCDate() : data.day;
+        var hours;
+        var minutes = isEmpty_1.isEmpty(data.minutes) ? defaultDate.getUTCMinutes() : data.minutes;
+        var seconds = isEmpty_1.isEmpty(data.seconds) ? defaultDate.getUTCSeconds() : data.seconds;
+        var milliseconds = isEmpty_1.isEmpty(data.milliseconds) ? defaultDate.getUTCMilliseconds() : data.milliseconds;
+        if (isEmpty_1.isEmpty(data.hours)) {
+            hours = defaultDate.getUTCHours();
+        } else if (!isEmpty_1.isEmpty(data.meridiem)) {
+            if (data.meridiem === 0 && data.hours === 12) {
+                hours = 0;
+            } else if (data.meridiem === 1 && data.hours === 12) {
+                hours = 12;
+            } else if (data.meridiem === 1) {
+                hours = data.hours + 12;
+            } else {
+                hours = data.hours;
+            }
+        } else {
+            hours = data.hours;
+        }
+        var value = Date.UTC(year, month, day, hours, minutes, seconds, milliseconds);
+        return value + this.getTimezoneOffset() * 60 * 1000;
+    };
+    DateTimeMask.prototype.applyValue = function (value) {
+        if (value !== null && typeof value !== 'undefined') {
+            value = value - this.getTimezoneOffset() * 60 * 1000;
+        }
+        _super.prototype.applyValue.call(this, value);
+    };
+    DateTimeMask.prototype.validate = function (value) {
+        var min = this.getMinValue();
+        var max = this.getMaxValue();
+        var valid;
+        if (isEmpty_1.isEmpty(value)) {
+            valid = true;
+        } else if (!isEmpty_1.isEmpty(min) && !isEmpty_1.isEmpty(max)) {
+            valid = value >= min && value <= max;
+        } else if (!isEmpty_1.isEmpty(min)) {
+            valid = value >= min;
+        } else if (!isEmpty_1.isEmpty(max)) {
+            valid = value <= max;
+        } else {
+            valid = true;
+        }
+        if (!valid) {
+            var event_1 = new OutOfRangeEvent_1.OutOfRangeEvent(value);
+            this.eventEmitter.emit(OutOfRangeEvent_1.OutOfRangeEvent.eventName, event_1);
+        }
+        return valid;
+    };
+    return DateTimeMask;
+}(Mask_1.Mask);
+exports.DateTimeMask = DateTimeMask;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var MaskBuilder_1 = __webpack_require__(11);
+var DateTimeMask_1 = __webpack_require__(40);
+var PatternsBuilder_1 = __webpack_require__(12);
+var StaticPatternBuilder_1 = __webpack_require__(9);
+var StringSelector_1 = __webpack_require__(31);
+var YearPattern_1 = __webpack_require__(56);
+var DayPattern_1 = __webpack_require__(42);
+var MonthPattern_1 = __webpack_require__(48);
+var HoursPattern_1 = __webpack_require__(45);
+var MinutesPattern_1 = __webpack_require__(47);
+var SecondsPattern_1 = __webpack_require__(49);
+var ShortDayPattern_1 = __webpack_require__(50);
+var ShortMonthPattern_1 = __webpack_require__(54);
+var FullMonthPattern_1 = __webpack_require__(43);
+var MeridiemPattern_1 = __webpack_require__(46);
+var Hours12Pattern_1 = __webpack_require__(44);
+var ShortMinutesPattern_1 = __webpack_require__(53);
+var ShortHours12Pattern_1 = __webpack_require__(51);
+var ShortHoursPatterm_1 = __webpack_require__(52);
+var ShortSecondsPattern_1 = __webpack_require__(55);
+var DateTimeMaskBuilder = function (_super) {
+    __extends(DateTimeMaskBuilder, _super);
+    function DateTimeMaskBuilder() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DateTimeMaskBuilder.prototype.initPatternsBuilder = function () {
+        var patternsBuilder = new PatternsBuilder_1.PatternsBuilder(StaticPatternBuilder_1.buildStaticPattern);
+        return patternsBuilder.registerPattern(new StringSelector_1.StringSelector('dd'), function (template, locale) {
+            return new DayPattern_1.DayPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('d'), function (template, locale) {
+            return new ShortDayPattern_1.ShortDayPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('MMMM'), function (template, locale) {
+            return new FullMonthPattern_1.FullMonthPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('MM'), function (template, locale) {
+            return new MonthPattern_1.MonthPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('M'), function (template, locale) {
+            return new ShortMonthPattern_1.ShortMonthPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('yyyy'), function (template, locale) {
+            return new YearPattern_1.YearPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('HH'), function (template, locale) {
+            return new HoursPattern_1.HoursPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('H'), function (template, locale) {
+            return new ShortHoursPatterm_1.ShortHoursPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('hh'), function (template, locale) {
+            return new Hours12Pattern_1.Hours12Pattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('h'), function (template, locale) {
+            return new ShortHours12Pattern_1.ShortHours12Pattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('mm'), function (template, locale) {
+            return new MinutesPattern_1.MinutesPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('m'), function (template, locale) {
+            return new ShortMinutesPattern_1.ShortMinutesPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('ss'), function (template, locale) {
+            return new SecondsPattern_1.SecondsPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('s'), function (template, locale) {
+            return new ShortSecondsPattern_1.ShortSecondsPattern(locale, template);
+        }).registerPattern(new StringSelector_1.StringSelector('tt'), function (template, locale) {
+            return new MeridiemPattern_1.MeridiemPattern(locale, template);
+        });
+    };
+    DateTimeMaskBuilder.prototype.createMask = function (locale) {
+        return new DateTimeMask_1.DateTimeMask(locale);
+    };
+    return DateTimeMaskBuilder;
+}(MaskBuilder_1.MaskBuilder);
+exports.DateTimeMaskBuilder = DateTimeMaskBuilder;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var isCompleteDay_1 = __webpack_require__(22);
+var getDay_1 = __webpack_require__(18);
+var DayPattern = function (_super) {
+    __extends(DayPattern, _super);
+    function DayPattern(locale, template) {
+        return _super.call(this, locale, template, 'day', { min: 1, max: 31, width: 2 }) || this;
+    }
+    DayPattern.prototype.getIsComplete = function () {
+        return isCompleteDay_1.isCompleteDay(this.getText());
+    };
+    DayPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var text = getDay_1.getDay(value);
+            this.setText(this.formatDecimal(text));
+        }
+    };
+    return DayPattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.DayPattern = DayPattern;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var ListPattern_1 = __webpack_require__(28);
+var MONTHS = 'январь,февраль,март,апрель,май,июнь,июль,август,сентябрь,октябрь,ноябрь,декабрь'.split(',');
+var FullMonthPattern = function (_super) {
+    __extends(FullMonthPattern, _super);
+    function FullMonthPattern(locale, template) {
+        return _super.call(this, locale, template, 'month', locale.months.full) || this;
+    }
+    FullMonthPattern.prototype.applyValue = function (value) {
+        var text;
+        if (value === null || typeof value === 'undefined') {
+            text = '';
+        } else {
+            var date = new Date(value);
+            var month = date.getUTCMonth();
+            var months = this.locale.months.full;
+            text = months[month];
+        }
+        this.setText(text);
+    };
+    return FullMonthPattern;
+}(ListPattern_1.ListPattern);
+exports.FullMonthPattern = FullMonthPattern;
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var isCompleteHours_1 = __webpack_require__(4);
+var getHours12_1 = __webpack_require__(20);
+var Hours12Pattern = function (_super) {
+    __extends(Hours12Pattern, _super);
+    function Hours12Pattern(locale, template) {
+        return _super.call(this, locale, template, 'hours', { min: 1, max: 12, width: 2 }) || this;
+    }
+    Hours12Pattern.prototype.getIsComplete = function () {
+        return isCompleteHours_1.isCompleteHours(this.getText());
+    };
+    Hours12Pattern.prototype.applyValue = function (value) {
+        var text = getHours12_1.getHours12(value);
+        this.setText(this.formatDecimal(text));
+    };
+    return Hours12Pattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.Hours12Pattern = Hours12Pattern;
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var isCompleteHours_1 = __webpack_require__(4);
+var getHours_1 = __webpack_require__(19);
+var HoursPattern = function (_super) {
+    __extends(HoursPattern, _super);
+    function HoursPattern(locale, template) {
+        return _super.call(this, locale, template, 'hours', { min: 0, max: 23, width: 2 }) || this;
+    }
+    HoursPattern.prototype.getIsComplete = function () {
+        return isCompleteHours_1.isCompleteHours(this.getText());
+    };
+    HoursPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var text = getHours_1.getHours(value);
+            this.setText(this.formatDecimal(text));
+        }
+    };
+    return HoursPattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.HoursPattern = HoursPattern;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var ListPattern_1 = __webpack_require__(28);
+var AM_DESIGNATOR = 'AM';
+var PM_DESIGNATOR = 'PM';
+var MeridiemPattern = function (_super) {
+    __extends(MeridiemPattern, _super);
+    function MeridiemPattern(locale, template) {
+        return _super.call(this, locale, template, 'meridiem', [AM_DESIGNATOR, PM_DESIGNATOR]) || this;
+    }
+    MeridiemPattern.prototype.applyValue = function (value) {
+        var text;
+        if (value === null || typeof value === 'undefined') {
+            text = '';
+        } else {
+            var date = new Date(value);
+            var hours = date.getUTCHours();
+            text = hours >= 12 ? PM_DESIGNATOR : AM_DESIGNATOR;
+        }
+        this.setText(text);
+    };
+    return MeridiemPattern;
+}(ListPattern_1.ListPattern);
+exports.MeridiemPattern = MeridiemPattern;
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var isCompleteMinutes_1 = __webpack_require__(23);
+var MinutesPattern = function (_super) {
+    __extends(MinutesPattern, _super);
+    function MinutesPattern(locale, template) {
+        return _super.call(this, locale, template, 'minutes', { min: 0, max: 59, width: 2 }) || this;
+    }
+    MinutesPattern.prototype.getIsComplete = function () {
+        return isCompleteMinutes_1.isCompleteMinutes(this.getText());
+    };
+    MinutesPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var minutes = new Date(value).getUTCMinutes();
+            this.setText(this.formatDecimal(minutes.toString()));
+        }
+    };
+    return MinutesPattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.MinutesPattern = MinutesPattern;
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var isCompleteMonth_1 = __webpack_require__(24);
+var getMonth_1 = __webpack_require__(21);
+var MonthPattern = function (_super) {
+    __extends(MonthPattern, _super);
+    function MonthPattern(locale, template) {
+        return _super.call(this, locale, template, 'month', { min: 1, max: 12, width: 2 }) || this;
+    }
+    MonthPattern.prototype.getIsComplete = function () {
+        return isCompleteMonth_1.isCompleteMonth(this.getText());
+    };
+    MonthPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var text = getMonth_1.getMonth(value - 1);
+            this.setText(this.formatDecimal(text));
+        }
+    };
+    MonthPattern.prototype.getValue = function () {
+        var value = _super.prototype.getValue.call(this);
+        return value === null ? value : value - 1;
+    };
+    return MonthPattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.MonthPattern = MonthPattern;
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var isCompleteSeconds_1 = __webpack_require__(25);
+var SecondsPattern = function (_super) {
+    __extends(SecondsPattern, _super);
+    function SecondsPattern(locale, template) {
+        return _super.call(this, locale, template, 'seconds', { min: 0, max: 59, width: 2 }) || this;
+    }
+    SecondsPattern.prototype.getIsComplete = function () {
+        return isCompleteSeconds_1.isCompleteSeconds(this.getText());
+    };
+    SecondsPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var seconds = new Date(value).getUTCSeconds();
+            this.setText(this.formatDecimal(seconds.toString()));
+        }
+    };
+    return SecondsPattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.SecondsPattern = SecondsPattern;
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FloatWidthPattern_1 = __webpack_require__(2);
+var isCompleteDay_1 = __webpack_require__(22);
+var getDay_1 = __webpack_require__(18);
+var ShortDayPattern = function (_super) {
+    __extends(ShortDayPattern, _super);
+    function ShortDayPattern(locale, template) {
+        return _super.call(this, locale, template, 'day', { min: 1, max: 31, minWidth: 1, maxWidth: 2 }) || this;
+    }
+    ShortDayPattern.prototype.getIsComplete = function () {
+        return isCompleteDay_1.isCompleteDay(this.getText());
+    };
+    ShortDayPattern.prototype.applyValue = function (value) {
+        this.setText(getDay_1.getDay(value));
+    };
+    return ShortDayPattern;
+}(FloatWidthPattern_1.FloatWidthPattern);
+exports.ShortDayPattern = ShortDayPattern;
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var isCompleteHours_1 = __webpack_require__(4);
+var FloatWidthPattern_1 = __webpack_require__(2);
+var getHours12_1 = __webpack_require__(20);
+var ShortHours12Pattern = function (_super) {
+    __extends(ShortHours12Pattern, _super);
+    function ShortHours12Pattern(locale, template) {
+        return _super.call(this, locale, template, 'hours', { min: 1, max: 12, minWidth: 1, maxWidth: 2 }) || this;
+    }
+    ShortHours12Pattern.prototype.getIsComplete = function () {
+        return isCompleteHours_1.isCompleteHours(this.getText());
+    };
+    ShortHours12Pattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var text = getHours12_1.getHours12(value);
+            this.setText(text);
+        }
+    };
+    return ShortHours12Pattern;
+}(FloatWidthPattern_1.FloatWidthPattern);
+exports.ShortHours12Pattern = ShortHours12Pattern;
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var isCompleteHours_1 = __webpack_require__(4);
+var FloatWidthPattern_1 = __webpack_require__(2);
+var getHours_1 = __webpack_require__(19);
+var ShortHoursPattern = function (_super) {
+    __extends(ShortHoursPattern, _super);
+    function ShortHoursPattern(locale, template) {
+        return _super.call(this, locale, template, 'hours', { min: 0, max: 23, minWidth: 1, maxWidth: 2 }) || this;
+    }
+    ShortHoursPattern.prototype.getIsComplete = function () {
+        return isCompleteHours_1.isCompleteHours(this.getText());
+    };
+    ShortHoursPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var text = getHours_1.getHours(value);
+            this.setText(text);
+        }
+    };
+    return ShortHoursPattern;
+}(FloatWidthPattern_1.FloatWidthPattern);
+exports.ShortHoursPattern = ShortHoursPattern;
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FloatWidthPattern_1 = __webpack_require__(2);
+var isCompleteMinutes_1 = __webpack_require__(23);
+var ShortMinutesPattern = function (_super) {
+    __extends(ShortMinutesPattern, _super);
+    function ShortMinutesPattern(locale, template) {
+        return _super.call(this, locale, template, 'minutes', { min: 0, max: 59, minWidth: 1, maxWidth: 2 }) || this;
+    }
+    ShortMinutesPattern.prototype.getIsComplete = function () {
+        return isCompleteMinutes_1.isCompleteMinutes(this.getText());
+    };
+    ShortMinutesPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var minutes = new Date(value).getUTCMinutes();
+            this.setText(minutes.toString());
+        }
+    };
+    return ShortMinutesPattern;
+}(FloatWidthPattern_1.FloatWidthPattern);
+exports.ShortMinutesPattern = ShortMinutesPattern;
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FloatWidthPattern_1 = __webpack_require__(2);
+var isCompleteMonth_1 = __webpack_require__(24);
+var getMonth_1 = __webpack_require__(21);
+var ShortMonthPattern = function (_super) {
+    __extends(ShortMonthPattern, _super);
+    function ShortMonthPattern(locale, template) {
+        return _super.call(this, locale, template, 'month', { min: 1, max: 12, minWidth: 1, maxWidth: 2 }) || this;
+    }
+    ShortMonthPattern.prototype.getIsComplete = function () {
+        return isCompleteMonth_1.isCompleteMonth(this.getText());
+    };
+    ShortMonthPattern.prototype.applyValue = function (value) {
+        this.setText(getMonth_1.getMonth(value));
+    };
+    ShortMonthPattern.prototype.getValue = function () {
+        var value = _super.prototype.getValue.call(this);
+        return value === null ? value : value - 1;
+    };
+    return ShortMonthPattern;
+}(FloatWidthPattern_1.FloatWidthPattern);
+exports.ShortMonthPattern = ShortMonthPattern;
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FloatWidthPattern_1 = __webpack_require__(2);
+var isCompleteSeconds_1 = __webpack_require__(25);
+var ShortSecondsPattern = function (_super) {
+    __extends(ShortSecondsPattern, _super);
+    function ShortSecondsPattern(locale, template) {
+        return _super.call(this, locale, template, 'seconds', { min: 0, max: 59, minWidth: 1, maxWidth: 2 }) || this;
+    }
+    ShortSecondsPattern.prototype.getIsComplete = function () {
+        return isCompleteSeconds_1.isCompleteSeconds(this.getText());
+    };
+    ShortSecondsPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var seconds = new Date(value).getUTCSeconds();
+            this.setText(seconds.toString());
+        }
+    };
+    return ShortSecondsPattern;
+}(FloatWidthPattern_1.FloatWidthPattern);
+exports.ShortSecondsPattern = ShortSecondsPattern;
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var FixedWidthPattern_1 = __webpack_require__(0);
+var YearPattern = function (_super) {
+    __extends(YearPattern, _super);
+    function YearPattern(locale, template) {
+        return _super.call(this, locale, template, 'year', { min: 1, max: 9999, width: 4 }) || this;
+    }
+    YearPattern.prototype.applyValue = function (value) {
+        if (value === null || typeof value === 'undefined') {
+            this.setText('');
+        } else {
+            var year = new Date(value).getUTCFullYear();
+            this.setText(this.formatDecimal(year.toString()));
+        }
+    };
+    return YearPattern;
+}(FixedWidthPattern_1.FixedWidthPattern);
+exports.YearPattern = YearPattern;
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Mask_1 = __webpack_require__(10);
+var restoreNumberPrecision_1 = __webpack_require__(86);
+var NumberMask = function (_super) {
+    __extends(NumberMask, _super);
+    function NumberMask() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    NumberMask.prototype.buildValue = function () {
+        var pattern = this.patterns.getInputPattern();
+        return pattern.getValue();
+    };
+    NumberMask.prototype.handleKey = function (key, position) {
+        var newPosition = null;
+        switch (key) {
+            case '-':
+                var pattern = this.patterns.getInputPattern();
+                if (pattern) {
+                    var text = this.getText();
+                    pattern.toggleSign();
+                    this.patterns.updateText();
+                    newPosition = this.restorePosition(text, position);
+                    this.updateValue();
+                }
+                break;
+        }
+        return newPosition;
+    };
+    NumberMask.prototype.restorePosition = function (text, position) {
+        var groupSeparator = this.locale.numberGroupSeparator;
+        var left = text.substring(0, position);
+        var right = text.substr(position);
+        var pos = position;
+        while (left.indexOf(groupSeparator) !== -1) {
+            left = left.replace(groupSeparator, '');
+            pos -= groupSeparator.length;
+        }
+        while (right.indexOf(groupSeparator) !== -1) {
+            right = right.replace(groupSeparator, '');
+        }
+        return _super.prototype.restorePosition.call(this, left + right, pos);
+    };
+    NumberMask.prototype.setNextPatternValue = function (position) {
+        if (this.patterns.getIsValid()) {
+            var value = this.value.getValue();
+            var nextValue = restoreNumberPrecision_1.restoreNumberPrecision(value, value + 1);
+            this.value.setValue(nextValue, { update: true });
+        }
+        return this.patterns.getInputPatternSelection();
+    };
+    NumberMask.prototype.setPrevPatternValue = function (position) {
+        if (this.patterns.getIsValid()) {
+            var value = this.value.getValue();
+            var prevValue = restoreNumberPrecision_1.restoreNumberPrecision(value, value - 1);
+            this.value.setValue(prevValue, { update: true });
+        }
+        return this.patterns.getInputPatternSelection();
+    };
+    NumberMask.prototype.getInvalidText = function () {
+        var value = this.value.getValue();
+        var notEmpty = typeof value !== 'undefined' && value !== null;
+        var text = null;
+        var locale = this.locale;
+        if (notEmpty && isNaN(value)) {
+            text = locale.NaNSymbol;
+        } else if (notEmpty && !isFinite(value)) {
+            text = value === Number.POSITIVE_INFINITY ? locale.positiveInfinitySymbol : locale.negativeInfinitySymbol;
+        } else {}
+        return text;
+    };
+    NumberMask.prototype.updateInvalid = function () {
+        var value = this.value.getValue();
+        var notEmpty = typeof value !== 'undefined' && value !== null;
+        if (notEmpty && isNaN(value)) {
+            this.setInvalid(true);
+        } else if (notEmpty && !isFinite(value)) {
+            this.setInvalid(true);
+        } else {
+            this.setInvalid(false);
+        }
+    };
+    return NumberMask;
+}(Mask_1.Mask);
+exports.NumberMask = NumberMask;
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberMask_1 = __webpack_require__(57);
+var MaskBuilder_1 = __webpack_require__(11);
+var PatternsBuilder_1 = __webpack_require__(12);
+var StaticPatternBuilder_1 = __webpack_require__(9);
+var RegExpSelector_1 = __webpack_require__(75);
+var NumberPatternsBuilder_1 = __webpack_require__(60);
+var CurrencyPatternBuilder_1 = __webpack_require__(59);
+var PercentPatternBuilder_1 = __webpack_require__(61);
+var PercentTransformedPatternBuilder_1 = __webpack_require__(62);
+var NumberMaskBuilder = function (_super) {
+    __extends(NumberMaskBuilder, _super);
+    function NumberMaskBuilder() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    NumberMaskBuilder.prototype.createMask = function (locale) {
+        return new NumberMask_1.NumberMask(locale);
+    };
+    NumberMaskBuilder.prototype.initPatternsBuilder = function () {
+        var patternsBuilder = new PatternsBuilder_1.PatternsBuilder(StaticPatternBuilder_1.buildStaticPattern);
+        return patternsBuilder.registerPattern(new RegExpSelector_1.RegExpSelector(/n\d*/i), NumberPatternsBuilder_1.buildNumberPattern).registerPattern(new RegExpSelector_1.RegExpSelector(/c\d*/i), CurrencyPatternBuilder_1.buildCurrencyPattern).registerPattern(new RegExpSelector_1.RegExpSelector(/p\d*/), PercentPatternBuilder_1.buildPercentPattern).registerPattern(new RegExpSelector_1.RegExpSelector(/P\d*/), PercentTransformedPatternBuilder_1.buildPercentTransformedPattern);
+    };
+    return NumberMaskBuilder;
+}(MaskBuilder_1.MaskBuilder);
+exports.NumberMaskBuilder = NumberMaskBuilder;
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var CurrencyPattern_1 = __webpack_require__(63);
+function buildCurrencyPattern(template, locale) {
+    var regexp = /c(\d*)/i;
+    var matches = template.match(regexp);
+    var decimalDigits = matches[1];
+    return new CurrencyPattern_1.CurrencyPattern(locale, template, decimalDigits.length === 0 ? locale.currencyDecimalDigits : parseInt(decimalDigits, 10));
+}
+exports.buildCurrencyPattern = buildCurrencyPattern;
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberPattern_1 = __webpack_require__(64);
+function buildNumberPattern(template, locale) {
+    var regexp = /n(\d*)/i;
+    var matches = template.match(regexp);
+    var decimalDigits = matches[1];
+    return new NumberPattern_1.NumberPattern(locale, template, decimalDigits.length === 0 ? locale.numberDecimalDigits : parseInt(decimalDigits, 10));
+}
+exports.buildNumberPattern = buildNumberPattern;
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var PercentPattern_1 = __webpack_require__(26);
+function buildPercentPattern(template, locale) {
+    var regexp = /p(\d*)/;
+    var matches = template.match(regexp);
+    var decimalDigits = matches[1];
+    return new PercentPattern_1.PercentPattern(locale, template, decimalDigits.length === 0 ? locale.percentDecimalDigits : parseInt(decimalDigits, 10));
+}
+exports.buildPercentPattern = buildPercentPattern;
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var PercentTransformedPattern_1 = __webpack_require__(65);
+function buildPercentTransformedPattern(template, locale) {
+    var regexp = /P(\d*)/;
+    var matches = template.match(regexp);
+    var decimalDigits = matches[1];
+    return new PercentTransformedPattern_1.PercentTransformedPattern(locale, template, decimalDigits.length === 0 ? locale.percentDecimalDigits : parseInt(decimalDigits, 10));
+}
+exports.buildPercentTransformedPattern = buildPercentTransformedPattern;
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberPattern_1 = __webpack_require__(8);
+var CurrencyParser_1 = __webpack_require__(84);
+var CurrencyFormatter_1 = __webpack_require__(80);
+var CurrencyPattern = function (_super) {
+    __extends(CurrencyPattern, _super);
+    function CurrencyPattern(locale, template, decimalDigits) {
+        var _this = _super.call(this, locale, template, decimalDigits) || this;
+        _this.parser = new CurrencyParser_1.CurrencyParser(locale);
+        _this.formatter = new CurrencyFormatter_1.CurrencyFormatter(locale);
+        return _this;
+    }
+    return CurrencyPattern;
+}(BaseNumberPattern_1.BaseNumberPattern);
+exports.CurrencyPattern = CurrencyPattern;
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberPattern_1 = __webpack_require__(8);
+var NumberParser_1 = __webpack_require__(33);
+var NumberFormatter_1 = __webpack_require__(5);
+var NumberPattern = function (_super) {
+    __extends(NumberPattern, _super);
+    function NumberPattern(locale, template, decimalDigits) {
+        var _this = _super.call(this, locale, template, decimalDigits) || this;
+        _this.parser = new NumberParser_1.NumberParser(locale);
+        _this.formatter = new NumberFormatter_1.NumberFormatter(locale);
+        return _this;
+    }
+    return NumberPattern;
+}(BaseNumberPattern_1.BaseNumberPattern);
+exports.NumberPattern = NumberPattern;
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var PercentPattern_1 = __webpack_require__(26);
+var isEmpty_1 = __webpack_require__(17);
+var PercentTransformedPattern = function (_super) {
+    __extends(PercentTransformedPattern, _super);
+    function PercentTransformedPattern() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    PercentTransformedPattern.prototype.applyValue = function (value) {
+        if (!isEmpty_1.isEmpty(value) && isFinite(value) && !isNaN(value)) {
+            value = value * 100;
+        }
+        _super.prototype.applyValue.call(this, value);
+    };
+    PercentTransformedPattern.prototype.getValue = function () {
+        var value = _super.prototype.getValue.call(this);
+        if (!isEmpty_1.isEmpty(value) && isFinite(value) && !isNaN(value)) {
+            value = value / 100;
+        }
+        return value;
+    };
+    return PercentTransformedPattern;
+}(PercentPattern_1.PercentPattern);
+exports.PercentTransformedPattern = PercentTransformedPattern;
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var Mask_1 = __webpack_require__(10);
+var StaticPattern_1 = __webpack_require__(29);
+var TemplatePattern_1 = __webpack_require__(1);
+var TemplateMask = function (_super) {
+    __extends(TemplateMask, _super);
+    function TemplateMask() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.maskSaveLiteral = true;
+        return _this;
+    }
+    TemplateMask.prototype.setMaskSaveLiteral = function (maskSaveLiteral) {
+        this.maskSaveLiteral = maskSaveLiteral;
+    };
+    TemplateMask.prototype.applyValue = function (value) {
+        value = value || '';
+        var patterns = this.patterns;
+        var list = patterns.getList();
+        if (this.getMaskSaveLiteral()) {
+            list.forEach(function (pattern, i) {
+                return pattern.applyValue(value.substr(i, 1));
+            });
+        } else {
+            var i_1 = 0;
+            list.filter(function (pattern) {
+                return !(pattern instanceof StaticPattern_1.StaticPattern);
+            }).forEach(function (pattern) {
+                return pattern.applyValue(value.substr(i_1++, 1));
+            });
+        }
+        this.patterns.updateText();
+    };
+    TemplateMask.prototype.getMaskSaveLiteral = function () {
+        return this.maskSaveLiteral;
+    };
+    TemplateMask.prototype.buildValue = function () {
+        var _this = this;
+        return this.patterns.getList().filter(function (pattern) {
+            return _this.getMaskSaveLiteral() ? true : pattern instanceof TemplatePattern_1.TemplatePattern;
+        }).map(function (pattern) {
+            return pattern.getText();
+        }).join('');
+    };
+    return TemplateMask;
+}(Mask_1.Mask);
+exports.TemplateMask = TemplateMask;
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var MaskBuilder_1 = __webpack_require__(11);
+var PatternsBuilder_1 = __webpack_require__(12);
+var TemplateMask_1 = __webpack_require__(66);
+var StaticPatternBuilder_1 = __webpack_require__(9);
+var StringSelector_1 = __webpack_require__(31);
+var DigitTemplatePattern_1 = __webpack_require__(70);
+var SignTemplatePattern_1 = __webpack_require__(72);
+var CharTemplatePattern_1 = __webpack_require__(69);
+var LetterTemplatePattern_1 = __webpack_require__(71);
+var AlphanumericTemplatePattern_1 = __webpack_require__(68);
+var TemplateMaskBuilder = function (_super) {
+    __extends(TemplateMaskBuilder, _super);
+    function TemplateMaskBuilder() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TemplateMaskBuilder.prototype.initPatternsBuilder = function () {
+        var patternsBuilder = new PatternsBuilder_1.PatternsBuilder(StaticPatternBuilder_1.buildStaticPattern);
+        return patternsBuilder.registerPattern(new StringSelector_1.StringSelector('#'), function (template, locale) {
+            return new SignTemplatePattern_1.SignTemplatePattern(locale, template, false);
+        }).registerPattern(new StringSelector_1.StringSelector('9'), function (template, locale) {
+            return new DigitTemplatePattern_1.DigitTemplatePattern(locale, template, false);
+        }).registerPattern(new StringSelector_1.StringSelector('0'), function (template, locale) {
+            return new DigitTemplatePattern_1.DigitTemplatePattern(locale, template, true);
+        }).registerPattern(new StringSelector_1.StringSelector('c'), function (template, locale) {
+            return new CharTemplatePattern_1.CharTemplatePattern(locale, template, false);
+        }).registerPattern(new StringSelector_1.StringSelector('C'), function (template, locale) {
+            return new CharTemplatePattern_1.CharTemplatePattern(locale, template, true);
+        }).registerPattern(new StringSelector_1.StringSelector('l'), function (template, locale) {
+            return new LetterTemplatePattern_1.LetterTemplatePattern(locale, template, false);
+        }).registerPattern(new StringSelector_1.StringSelector('L'), function (template, locale) {
+            return new LetterTemplatePattern_1.LetterTemplatePattern(locale, template, true);
+        }).registerPattern(new StringSelector_1.StringSelector('a'), function (template, locale) {
+            return new AlphanumericTemplatePattern_1.AlphanumericTemplatePattern(locale, template, false);
+        }).registerPattern(new StringSelector_1.StringSelector('A'), function (template, locale) {
+            return new AlphanumericTemplatePattern_1.AlphanumericTemplatePattern(locale, template, true);
+        });
+    };
+    TemplateMaskBuilder.prototype.createMask = function (locale) {
+        return new TemplateMask_1.TemplateMask(locale);
+    };
+    return TemplateMaskBuilder;
+}(MaskBuilder_1.MaskBuilder);
+exports.TemplateMaskBuilder = TemplateMaskBuilder;
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var TemplatePattern_1 = __webpack_require__(1);
+var AlphanumericTemplatePattern = function (_super) {
+    __extends(AlphanumericTemplatePattern, _super);
+    function AlphanumericTemplatePattern(locale, template, isRequired) {
+        var _this = _super.call(this, locale, template, isRequired) || this;
+        _this.regexpLetter = new RegExp('[0-9' + locale.letter + ']');
+        return _this;
+    }
+    AlphanumericTemplatePattern.prototype.validateInput = function (input) {
+        return this.regexpLetter.test(input);
+    };
+    return AlphanumericTemplatePattern;
+}(TemplatePattern_1.TemplatePattern);
+exports.AlphanumericTemplatePattern = AlphanumericTemplatePattern;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var TemplatePattern_1 = __webpack_require__(1);
+var CharTemplatePattern = function (_super) {
+    __extends(CharTemplatePattern, _super);
+    function CharTemplatePattern() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    CharTemplatePattern.prototype.validateInput = function (input) {
+        return (/^.*$/.test(input)
+        );
+    };
+    return CharTemplatePattern;
+}(TemplatePattern_1.TemplatePattern);
+exports.CharTemplatePattern = CharTemplatePattern;
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var TemplatePattern_1 = __webpack_require__(1);
+var DigitTemplatePattern = function (_super) {
+    __extends(DigitTemplatePattern, _super);
+    function DigitTemplatePattern() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DigitTemplatePattern.prototype.validateInput = function (input) {
+        return (/\d/.test(input)
+        );
+    };
+    return DigitTemplatePattern;
+}(TemplatePattern_1.TemplatePattern);
+exports.DigitTemplatePattern = DigitTemplatePattern;
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var TemplatePattern_1 = __webpack_require__(1);
+var LetterTemplatePattern = function (_super) {
+    __extends(LetterTemplatePattern, _super);
+    function LetterTemplatePattern(locale, template, isRequired) {
+        var _this = _super.call(this, locale, template, isRequired) || this;
+        _this.regexpLetter = new RegExp('[' + locale.letter + ']');
+        return _this;
+    }
+    LetterTemplatePattern.prototype.validateInput = function (input) {
+        return this.regexpLetter.test(input);
+    };
+    return LetterTemplatePattern;
+}(TemplatePattern_1.TemplatePattern);
+exports.LetterTemplatePattern = LetterTemplatePattern;
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var TemplatePattern_1 = __webpack_require__(1);
+var SignTemplatePattern = function (_super) {
+    __extends(SignTemplatePattern, _super);
+    function SignTemplatePattern() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    SignTemplatePattern.prototype.validateInput = function (input) {
+        return (/^[\d+-]$/.test(input)
+        );
+    };
+    return SignTemplatePattern;
+}(TemplatePattern_1.TemplatePattern);
+exports.SignTemplatePattern = SignTemplatePattern;
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var strDiff_1 = __webpack_require__(87);
+var restorePosition_1 = __webpack_require__(35);
+var PatternsList = function () {
+    function PatternsList() {
+        this.list = [];
+    }
+    PatternsList.prototype.setList = function (list) {
+        this.list = list.slice();
+    };
+    PatternsList.prototype.getList = function () {
+        return this.list;
+    };
+    PatternsList.prototype.getIsComplete = function () {
+        return this.list.every(function (pattern) {
+            return pattern.getIsComplete();
+        });
+    };
+    PatternsList.prototype.getIsValid = function () {
+        return this.list.every(function (pattern) {
+            return pattern.getIsValid();
+        });
+    };
+    PatternsList.prototype.getIsEmpty = function () {
+        return this.list.every(function (pattern) {
+            return pattern.getIsEmpty();
+        });
+    };
+    PatternsList.prototype.setInput = function (input, position) {
+        var text = this.getText();
+        var textDiff = strDiff_1.strDiff(text, input, position);
+        var newPosition = position || 0;
+        var updatePosition = true;
+        switch (textDiff.operation) {
+            case strDiff_1.DiffOperation.Insert:
+                if (textDiff.dst.length === 1 && this.isSeparator(textDiff.dst, textDiff.position)) {
+                    newPosition = this.getNextPatternOffset(position);
+                    updatePosition = false;
+                } else {
+                    newPosition = this.inputInsert(textDiff.position, textDiff.dst);
+                }
+                break;
+            case strDiff_1.DiffOperation.Change:
+                newPosition = this.inputChange(textDiff.position, textDiff.src, textDiff.dst);
+                break;
+            case strDiff_1.DiffOperation.Delete:
+                newPosition = this.inputDelete(textDiff.position, textDiff.src);
+                break;
+        }
+        return newPosition;
+    };
+    PatternsList.prototype.isSeparator = function (text, position) {
+        var isSeparator = false;
+        var pattern = this.getPatternByPositionLeft(position);
+        var index = this.list.indexOf(pattern);
+        var nextPattern = this.list[index + 1];
+        if (nextPattern && nextPattern.canActivate() === false) {
+            isSeparator = text === nextPattern.getText();
+        }
+        return isSeparator;
+    };
+    PatternsList.prototype.getNextPatternOffset = function (position) {
+        var newPosition = position;
+        var pattern = this.getPatternByPositionLeft(position);
+        var nextPattern = this.getNextPattern(pattern);
+        if (nextPattern) {
+            newPosition = this.getPatternOffset(nextPattern);
+        }
+        return newPosition;
+    };
+    PatternsList.prototype.getNextPattern = function (pattern) {
+        var index = this.list.indexOf(pattern);
+        return this.list.slice(index + 1).filter(function (pattern) {
+            return pattern.canActivate();
+        })[0];
+    };
+    PatternsList.prototype.inputInsert = function (position, insert) {
+        var pattern = this.getInputPatternByPosition(position);
+        if (!pattern) {
+            return position;
+        }
+        var patternText = pattern.getText();
+        var patternOffset = this.getPatternOffset(pattern);
+        var before = patternText.substring(0, position - patternOffset);
+        var after = patternText.substring(position - patternOffset);
+        var newPatternText = before + insert + after;
+        if (insert.length === 1 && position >= patternOffset && position < patternOffset + patternText.length) {
+            if (!pattern.canInputChar(insert)) {
+                return position;
+            }
+        }
+        var text = newPatternText;
+        var usedText = '';
+        var lastUsedPattern;
+        var _loop_1 = function _loop_1(i) {
+            var currentPattern = this_1.list[i];
+            if (currentPattern !== pattern && !currentPattern.getIsEmpty()) {
+                return "break";
+            }
+            currentPattern.setInput(text, function (restText, applyText) {
+                text = restText;
+                if (applyText && applyText.length) {
+                    usedText += applyText;
+                    lastUsedPattern = currentPattern;
+                }
+            });
+            if (text.length === 0) {
+                return "break";
+            }
+        };
+        var this_1 = this;
+        for (var i = this.list.indexOf(pattern); i < this.list.length; i++) {
+            var state_1 = _loop_1(i);
+            if (state_1 === "break") break;
+        }
+        if (lastUsedPattern) {
+            this.setActive(lastUsedPattern);
+            var usedLeft = '';
+            var left = before + insert;
+            if (lastUsedPattern.finalizeInput()) {
+                if (pattern === lastUsedPattern) {
+                    usedText = left = lastUsedPattern.getText();
+                }
+            }
+            var displayText_1 = this.list.slice(this.list.indexOf(pattern), this.list.indexOf(lastUsedPattern) + 1).map(function (pattern) {
+                return pattern.getText();
+            }).join('');
+            for (var i = 0, start = 0; i < left.length; i++) {
+                var char = left.substr(i, 1);
+                var index = usedText.indexOf(char, start);
+                if (index !== -1) {
+                    usedLeft += char;
+                    start = index + 1;
+                }
+            }
+            position = patternOffset + usedLeft.split('').reduce(function (offset, char) {
+                var i = displayText_1.indexOf(char, offset);
+                return i !== -1 ? i + 1 : offset;
+            }, 0);
+            if (lastUsedPattern.getIsComplete()) {
+                var offset = this.getPatternOffset(lastUsedPattern);
+                var text_1 = lastUsedPattern.getText();
+                if (offset + text_1.length === position) {
+                    position = this.forwardPosition(position);
+                }
+            }
+        }
+        return position;
+    };
+    PatternsList.prototype.forwardPosition = function (position) {
+        var patternLeft = this.getPatternByPositionLeft(position);
+        var patternRight = this.getPatternByPositionRight(position);
+        var forwardPosition = position;
+        if (patternLeft !== patternRight && !patternRight.canActivate()) {
+            var index = this.list.indexOf(patternRight);
+            var pattern = void 0;
+            for (var i = index + 1; i < this.list.length; i++) {
+                if (this.list[i].canActivate()) {
+                    pattern = this.list[i];
+                    break;
+                }
+            }
+            if (pattern) {
+                forwardPosition = this.getPatternOffset(pattern);
+            }
+        }
+        return forwardPosition;
+    };
+    PatternsList.prototype.inputChange = function (position, from, to) {
+        var pattern1 = this.getPatternByPositionRight(position);
+        var pattern2 = this.getPatternByPositionLeft(position + from.length);
+        var patternText = pattern1.getText();
+        var patternOffset = this.getPatternOffset(pattern1);
+        var before = patternText.substring(0, position - patternOffset);
+        var after = patternText.substring(position - patternOffset + from.length);
+        var newPatternText = before + to + after;
+        var lastUsedPattern;
+        var usedText = '';
+        if (pattern1 === pattern2) {
+            lastUsedPattern = pattern1;
+            pattern1.setInput(newPatternText, function (restText, applyText) {
+                if (applyText && applyText.length) {
+                    usedText = applyText;
+                }
+            });
+            if (pattern1.getIsEmpty()) {
+                position = patternOffset;
+            }
+        } else {
+            var index1 = this.list.indexOf(pattern1);
+            var index2 = this.list.indexOf(pattern2);
+            var text_2 = newPatternText;
+            var _loop_2 = function _loop_2(i) {
+                var currentPattern = this_2.list[i];
+                currentPattern.setInput(text_2, function (restText, applyText) {
+                    text_2 = restText;
+                    if (applyText && applyText.length) {
+                        usedText += applyText;
+                        lastUsedPattern = currentPattern;
+                    }
+                });
+            };
+            var this_2 = this;
+            for (var i = index1; i <= index2; i++) {
+                _loop_2(i);
+            }
+        }
+        if (lastUsedPattern) {
+            this.setActive(lastUsedPattern);
+            var displayText_2 = this.list.slice(this.list.indexOf(pattern1), this.list.indexOf(lastUsedPattern) + 1).map(function (pattern) {
+                return pattern.getText();
+            }).join('');
+            var usedLeft = '';
+            var left = before + to;
+            for (var i = 0, start = 0; i < left.length; i++) {
+                var char = left.substr(i, 1);
+                var index = usedText.indexOf(char, start);
+                if (index !== -1) {
+                    usedLeft += char;
+                    start = index + 1;
+                }
+            }
+            position = patternOffset + usedLeft.split('').reduce(function (offset, char) {
+                var i = displayText_2.indexOf(char, offset);
+                return i !== -1 ? i + 1 : offset;
+            }, 0);
+        }
+        return position;
+    };
+    PatternsList.prototype.inputDelete = function (position, deleted) {
+        var pattern1 = this.getPatternByPositionRight(position);
+        var pattern2 = this.getPatternByPositionLeft(position + deleted.length);
+        var index1 = this.list.indexOf(pattern1);
+        var index2 = this.list.indexOf(pattern2);
+        if (pattern1 === pattern2) {
+            var patternText = pattern1.getText();
+            var patternOffset = this.getPatternOffset(pattern1);
+            var before_1 = patternText.substring(0, position - patternOffset);
+            var after_1 = patternText.substring(position - patternOffset + deleted.length);
+            this.setActive(pattern1);
+            var usedText_1 = '';
+            pattern1.setInput(before_1 + after_1, function (restText, applyText) {
+                usedText_1 = applyText;
+            });
+            if (pattern1.canActivate() && pattern1.getIsEmpty()) {
+                position = patternOffset;
+            } else {
+                position = patternOffset + restorePosition_1.restorePosition(patternText, usedText_1, position - patternOffset);
+            }
+        } else {
+            var patternText = pattern2.getText();
+            var patternOffset = this.getPatternOffset(pattern2);
+            var newText = patternText.substring(position - patternOffset + deleted.length);
+            pattern2.setInput(newText);
+            patternText = pattern1.getText();
+            patternOffset = this.getPatternOffset(pattern1);
+            newText = patternText.substring(0, position - patternOffset);
+            pattern1.setInput(newText);
+            this.list.slice(index1 + 1, index2).forEach(function (pattern) {
+                return pattern.setInput('');
+            });
+            if (pattern1.canActivate() && pattern1.getIsEmpty()) {
+                position = patternOffset;
+            }
+            this.setActive(pattern1);
+        }
+        return position;
+    };
+    PatternsList.prototype.setNextPatternValue = function (position) {
+        var selection = null;
+        var pattern = this.getPatternByPositionRight(position);
+        if (pattern.canActivate()) {
+            var input = pattern.getNextInput();
+            pattern.setInput(input);
+            this.clearActive();
+            this.updateText();
+            var patternOffset = this.getPatternOffset(pattern);
+            selection = {
+                start: patternOffset,
+                end: patternOffset + pattern.getText().length
+            };
+        }
+        return selection;
+    };
+    PatternsList.prototype.setPrevPatternValue = function (position) {
+        var selection = null;
+        var pattern = this.getPatternByPositionRight(position);
+        if (pattern.canActivate()) {
+            var input = pattern.getPrevInput();
+            pattern.setInput(input);
+            this.clearActive();
+            this.updateText();
+            var patternOffset = this.getPatternOffset(pattern);
+            selection = {
+                start: patternOffset,
+                end: patternOffset + pattern.getText().length
+            };
+        }
+        return selection;
+    };
+    PatternsList.prototype.getInputPosition = function (position) {
+        var pattern = this.getInputPatternByPosition(position);
+        var inputPosition;
+        var index = this.list.indexOf(pattern);
+        var patterns = this.list.slice(0, index + 1).filter(function (pattern) {
+            return pattern.canActivate();
+        }).reverse();
+        var input;
+        for (var i = 0; i < patterns.length; i = i + 1) {
+            if (!patterns[i].getIsEmpty()) {
+                input = patterns[i];
+                break;
+            }
+        }
+        if (input) {
+            var patternOffset = this.getPatternOffset(input);
+            var patternText = input.getText();
+            if (position > patternOffset + patternText.length) {
+                inputPosition = patternOffset + patternText.length;
+            } else if (position < patternOffset) {
+                inputPosition = patternOffset;
+            } else {
+                inputPosition = position;
+            }
+        } else {
+            input = patterns.pop();
+            inputPosition = this.getPatternOffset(input);
+        }
+        return inputPosition;
+    };
+    PatternsList.prototype.clearActive = function () {
+        this.list.forEach(function (p) {
+            return p.setIsActive(false);
+        });
+    };
+    PatternsList.prototype.setActive = function (pattern) {
+        this.list.forEach(function (p) {
+            return p.setIsActive(p === pattern);
+        });
+    };
+    PatternsList.prototype.getText = function () {
+        return this.list.map(function (pattern) {
+            return pattern.getText();
+        }).join('');
+    };
+    PatternsList.prototype.getPatternByPosition = function (position) {
+        var map = [];
+        this.list.forEach(function (pattern) {
+            var text = pattern.getText();
+            text.split('').forEach(function (char) {
+                return map.push(pattern);
+            });
+        });
+        return map[position];
+    };
+    PatternsList.prototype.getPatternsByPosition = function (position) {
+        var map = [];
+        this.list.forEach(function (pattern) {
+            var text = pattern.getText();
+            text.split('').forEach(function (char) {
+                return map.push(pattern);
+            });
+        });
+        var leftPattern = map.slice(0, position).filter(function (pattern) {
+            return pattern !== null;
+        }).pop();
+        var rightPattern = map.slice(position).filter(function (pattern) {
+            return pattern !== null;
+        }).reverse().pop();
+        return [leftPattern, rightPattern];
+    };
+    PatternsList.prototype.getInputPatternByPosition = function (position) {
+        var map = [];
+        var inputPattern;
+        this.list.forEach(function (pattern) {
+            var text = pattern.getText();
+            text.split('').forEach(function (char) {
+                return map.push(pattern);
+            });
+        });
+        var leftPatterns = map.slice(0, position).filter(function (pattern) {
+            return pattern !== null;
+        }).reverse();
+        var rightPatterns = map.slice(position).filter(function (pattern) {
+            return pattern !== null;
+        });
+        var pattern = rightPatterns[0];
+        if (pattern && pattern.canActivate()) {
+            inputPattern = pattern;
+        } else if (leftPatterns[0] && leftPatterns[0].canActivate()) {
+            pattern = leftPatterns[0];
+            inputPattern = pattern.canActivate() ? pattern : rightPatterns[0];
+        } else {
+            for (var i = 0; i < rightPatterns.length; i++) {
+                if (rightPatterns[i].canActivate()) {
+                    inputPattern = rightPatterns[i];
+                    break;
+                }
+            }
+        }
+        return inputPattern;
+    };
+    PatternsList.prototype.getPatternByPositionRight = function (position) {
+        var patterns = this.getPatternsByPosition(position);
+        return patterns[1] || patterns[0];
+    };
+    PatternsList.prototype.getPatternByPositionLeft = function (position) {
+        var patterns = this.getPatternsByPosition(position);
+        return patterns[0] || patterns[1];
+    };
+    PatternsList.prototype.getPatternOffset = function (pattern) {
+        var offset = 0;
+        for (var i = 0; i < this.list.length; i++) {
+            if (this.list[i] === pattern) {
+                break;
+            }
+            offset += this.list[i].getText().length;
+        }
+        return offset;
+    };
+    PatternsList.prototype.getInputPatternSelection = function () {
+        var pattern = this.getInputPattern();
+        var offset = this.getPatternOffset(pattern);
+        return {
+            start: offset,
+            end: offset + pattern.getText().length
+        };
+    };
+    PatternsList.prototype.getInputPattern = function () {
+        var inputPattern = null;
+        for (var i = 0; i < this.list.length; i = i + 1) {
+            var pattern = this.list[i];
+            if (pattern.canActivate()) {
+                inputPattern = pattern;
+                break;
+            }
+        }
+        return inputPattern;
+    };
+    PatternsList.prototype.getPatternsValue = function () {
+        var map = {};
+        this.list.forEach(function (pattern) {
+            var name = pattern.getName();
+            if (name) {
+                map[name] = pattern.getValue();
+            }
+        });
+        return map;
+    };
+    PatternsList.prototype.updateText = function () {
+        this.list.forEach(function (pattern) {
+            return pattern.updateText();
+        });
+    };
+    PatternsList.prototype.updateDisplay = function () {
+        this.setActive(null);
+        this.updateText();
+    };
+    PatternsList.prototype.dispose = function () {
+        this.list.length = 0;
+    };
+    return PatternsList;
+}();
+exports.PatternsList = PatternsList;
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Builder = function () {
+    function Builder() {
+        this.builders = {};
+    }
+    Builder.prototype.build = function (name, template, locale) {
+        var maskBuilder = this.builders[name];
+        return maskBuilder.build(template, locale);
+    };
+    Builder.prototype.register = function (name, builder) {
+        this.builders[name] = builder;
+    };
+    return Builder;
+}();
+exports.Builder = Builder;
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var RegExpSelector = function () {
+    function RegExpSelector(regexp) {
+        this.regexp = regexp;
+    }
+    RegExpSelector.prototype.match = function (text) {
+        var data = null,
+            patternText,
+            patternStart,
+            match = text.match(this.regexp);
+        if (match) {
+            patternText = match[0];
+            patternStart = text.indexOf(patternText);
+            data = {
+                text: patternText,
+                start: patternStart,
+                end: patternStart + patternText.length
+            };
+        }
+        return data;
+    };
+    return RegExpSelector;
+}();
+exports.RegExpSelector = RegExpSelector;
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventEmitter_1 = __webpack_require__(32);
+var CHANGE_EVENT = 'change';
+var ValueModel = function () {
+    function ValueModel() {
+        this.eventEmitter = new EventEmitter_1.EventEmitter();
+    }
+    ValueModel.prototype.setValue = function (value, params) {
+        var changed = this.value !== value;
+        if (typeof value === 'number' && typeof this.value === 'number') {
+            if (isNaN(value) && isNaN(this.value)) {
+                changed = false;
+            }
+        }
+        var oldValue = this.value;
+        this.value = value;
+        if (changed) {
+            var data = {
+                oldValue: oldValue,
+                newValue: value,
+                params: params || {}
+            };
+            this.eventEmitter.emit(CHANGE_EVENT, data);
+        }
+    };
+    ValueModel.prototype.getValue = function () {
+        return this.value;
+    };
+    ValueModel.prototype.onChange = function (handler) {
+        return this.eventEmitter.on(CHANGE_EVENT, handler);
+    };
+    ValueModel.prototype.dispose = function () {
+        this.eventEmitter.dispose();
+        this.value = null;
+    };
+    return ValueModel;
+}();
+exports.ValueModel = ValueModel;
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var API_1 = __webpack_require__(36);
+var DateTimeEditor_1 = __webpack_require__(37);
+var TemplateEditor_1 = __webpack_require__(39);
+var NumberEditor_1 = __webpack_require__(38);
+var Mask = function () {
+    function Mask() {}
+    Mask.dateTime = function (el, template, options) {
+        var mask = Mask.api.createDateTimeMask(template, options);
+        return new DateTimeEditor_1.DateTimeEditor(el, mask);
+    };
+    Mask.template = function (el, template, options) {
+        var mask = Mask.api.createTemplateMask(template, options);
+        return new TemplateEditor_1.TemplateEditor(el, mask);
+    };
+    Mask.number = function (el, template) {
+        var mask = Mask.api.createNumberMask(template);
+        return new NumberEditor_1.NumberEditor(el, mask);
+    };
+    return Mask;
+}();
+Mask.api = new API_1.API();
+exports.Mask = Mask;
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberParser_1 = __webpack_require__(33);
+var NumberFormatter_1 = __webpack_require__(5);
+var Localization_1 = __webpack_require__(79);
+var Locale = function () {
+    function Locale(lang) {
+        var _this = this;
+        this.numberParser = new NumberParser_1.NumberParser(this);
+        this.numberFormatter = new NumberFormatter_1.NumberFormatter(this);
+        var localization = new Localization_1.Localization();
+        var current = localization.getLocalization(lang);
+        Object.keys(current).forEach(function (name) {
+            return _this[name] = current[name];
+        });
+    }
+    return Locale;
+}();
+exports.Locale = Locale;
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ru_1 = __webpack_require__(83);
+var en_1 = __webpack_require__(82);
+var Localization = function () {
+    function Localization() {}
+    Localization.prototype.getLocalization = function (lang) {
+        lang = lang.toUpperCase();
+        var localization;
+        switch (lang) {
+            case 'RU':
+                localization = new ru_1.Ru();
+                break;
+            case 'EN':
+                localization = new en_1.En();
+                break;
+            default:
+                localization = this.getDefaultLocalization();
+        }
+        return localization;
+    };
+    Localization.prototype.getDefaultLocalization = function () {
+        return new ru_1.Ru();
+    };
+    return Localization;
+}();
+exports.Localization = Localization;
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberFormatter_1 = __webpack_require__(5);
+var CurrencyFormatter = function (_super) {
+    __extends(CurrencyFormatter, _super);
+    function CurrencyFormatter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    CurrencyFormatter.prototype.getDecimalSeparator = function () {
+        return this.locale.currencyDecimalSeparator;
+    };
+    CurrencyFormatter.prototype.getNegativePattern = function () {
+        return this.locale.currencyNegativePattern;
+    };
+    CurrencyFormatter.prototype.getPositivePattern = function () {
+        return this.locale.currencyPositivePattern;
+    };
+    CurrencyFormatter.prototype.getGroupSeparator = function () {
+        return this.locale.currencyGroupSeparator;
+    };
+    CurrencyFormatter.prototype.getCurrencySymbol = function () {
+        return this.locale.currencySymbol;
+    };
+    CurrencyFormatter.prototype.getWrapper = function (options) {
+        var _this = this;
+        var pattern = this.getPattern(options.isNegative);
+        return pattern.split(/c/i).map(function (t) {
+            return t.replace('$', _this.getCurrencySymbol());
+        });
+    };
+    return CurrencyFormatter;
+}(NumberFormatter_1.NumberFormatter);
+exports.CurrencyFormatter = CurrencyFormatter;
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberFormatter_1 = __webpack_require__(5);
+var PercentFormatter = function (_super) {
+    __extends(PercentFormatter, _super);
+    function PercentFormatter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    PercentFormatter.prototype.getDecimalSeparator = function () {
+        return this.locale.percentDecimalSeparator;
+    };
+    PercentFormatter.prototype.getNegativePattern = function () {
+        return this.locale.percentNegativePattern;
+    };
+    PercentFormatter.prototype.getPositivePattern = function () {
+        return this.locale.percentPositivePattern;
+    };
+    PercentFormatter.prototype.getGroupSeparator = function () {
+        return this.locale.percentGroupSeparator;
+    };
+    PercentFormatter.prototype.getPercentSymbol = function () {
+        return this.locale.percentSymbol;
+    };
+    PercentFormatter.prototype.getWrapper = function (options) {
+        var _this = this;
+        var pattern = this.getPattern(options.isNegative);
+        return pattern.split(/p/i).map(function (t) {
+            return t.replace('%', _this.getPercentSymbol());
+        });
+    };
+    return PercentFormatter;
+}(NumberFormatter_1.NumberFormatter);
+exports.PercentFormatter = PercentFormatter;
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var En = function () {
+    function En() {
+        this.letter = 'a-zA-Z';
+        this.numberDecimalDigits = 2;
+        this.numberDecimalSeparator = '.';
+        this.numberGroupSeparator = ',';
+        this.numberGroupSize = 3;
+        this.numberNegativePattern = '-n';
+        this.numberPositivePattern = 'n';
+        this.percentDecimalDigits = 2;
+        this.percentDecimalSeparator = '.';
+        this.percentGroupSeparator = ',';
+        this.percentSymbol = '%';
+        this.percentNegativePattern = '-p %';
+        this.percentPositivePattern = 'p %';
+        this.currencyDecimalDigits = 2;
+        this.currencyDecimalSeparator = '.';
+        this.currencyGroupSeparator = ',';
+        this.currencySymbol = '$';
+        this.currencyNegativePattern = '($c)';
+        this.currencyPositivePattern = '$c';
+        this.negativeInfinitySymbol = '-Infinity';
+        this.positiveInfinitySymbol = 'Infinity';
+        this.NaNSymbol = 'NaN';
+        this.months = {
+            full: 'January,February,March,April,May,June,July,August,September,October,November,December'.split(',')
+        };
+    }
+    return En;
+}();
+exports.En = En;
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Ru = function () {
+    function Ru() {
+        this.letter = 'а-яА-Яa-zA-Z';
+        this.numberDecimalDigits = 2;
+        this.numberDecimalSeparator = ',';
+        this.numberGroupSeparator = ' ';
+        this.numberGroupSize = 3;
+        this.numberNegativePattern = '-n';
+        this.numberPositivePattern = 'n';
+        this.percentDecimalDigits = 2;
+        this.percentDecimalSeparator = ',';
+        this.percentGroupSeparator = ' ';
+        this.percentSymbol = '%';
+        this.percentNegativePattern = '-p %';
+        this.percentPositivePattern = 'p %';
+        this.currencyDecimalDigits = 2;
+        this.currencyDecimalSeparator = ',';
+        this.currencyGroupSeparator = ' ';
+        this.currencySymbol = 'р.';
+        this.currencyNegativePattern = '-c$';
+        this.currencyPositivePattern = 'c$';
+        this.negativeInfinitySymbol = '-бесконечность';
+        this.positiveInfinitySymbol = 'бесконечность';
+        this.NaNSymbol = 'NaN';
+        this.months = {
+            full: 'январь,февраль,март,апрель,май,июнь,июль,август,сентябрь,октябрь,ноябрь,декабрь'.split(',')
+        };
+    }
+    return Ru;
+}();
+exports.Ru = Ru;
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberParser_1 = __webpack_require__(13);
+var IntegralPartParser_1 = __webpack_require__(16);
+var DecimalSeparatorParser_1 = __webpack_require__(14);
+var FractionalPartParser_1 = __webpack_require__(15);
+var CurrencyParser = function (_super) {
+    __extends(CurrencyParser, _super);
+    function CurrencyParser(locale) {
+        var _this = _super.call(this, locale) || this;
+        _this.locale = locale;
+        _this.integralPartParser = new IntegralPartParser_1.IntegralPartParser(locale.currencyGroupSeparator, locale.currencyDecimalSeparator);
+        _this.decimalSeparatorParser = new DecimalSeparatorParser_1.DecimalSeparatorParser(locale.currencyDecimalSeparator);
+        _this.fractionalPartParser = new FractionalPartParser_1.FractionalPartParser();
+        return _this;
+    }
+    CurrencyParser.prototype.getDecimalSeparator = function () {
+        return this.locale.currencyDecimalSeparator;
+    };
+    return CurrencyParser;
+}(BaseNumberParser_1.BaseNumberParser);
+exports.CurrencyParser = CurrencyParser;
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __extends = this && this.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) {
+            if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseNumberParser_1 = __webpack_require__(13);
+var IntegralPartParser_1 = __webpack_require__(16);
+var DecimalSeparatorParser_1 = __webpack_require__(14);
+var FractionalPartParser_1 = __webpack_require__(15);
+var PercentParser = function (_super) {
+    __extends(PercentParser, _super);
+    function PercentParser(locale) {
+        var _this = _super.call(this, locale) || this;
+        _this.locale = locale;
+        _this.integralPartParser = new IntegralPartParser_1.IntegralPartParser(locale.percentGroupSeparator, locale.percentDecimalSeparator);
+        _this.decimalSeparatorParser = new DecimalSeparatorParser_1.DecimalSeparatorParser(locale.percentDecimalSeparator);
+        _this.fractionalPartParser = new FractionalPartParser_1.FractionalPartParser();
+        return _this;
+    }
+    PercentParser.prototype.getDecimalSeparator = function () {
+        return this.locale.percentDecimalSeparator;
+    };
+    return PercentParser;
+}(BaseNumberParser_1.BaseNumberParser);
+exports.PercentParser = PercentParser;
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function restoreNumberPrecision(value1, value2) {
+    var _a = value1.toString(10).split('.'),
+        _b = _a[1],
+        fract = _b === void 0 ? '' : _b;
+    return +value2.toFixed(fract.length);
+}
+exports.restoreNumberPrecision = restoreNumberPrecision;
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var DiffOperation;
+(function (DiffOperation) {
+    DiffOperation[DiffOperation["Insert"] = 0] = "Insert";
+    DiffOperation[DiffOperation["Delete"] = 1] = "Delete";
+    DiffOperation[DiffOperation["Change"] = 2] = "Change";
+    DiffOperation[DiffOperation["None"] = 3] = "None";
+})(DiffOperation = exports.DiffOperation || (exports.DiffOperation = {}));
+function strDiff(text1, text2, position) {
+    var operation = DiffOperation.None,
+        result = { operation: operation };
+    if (text1 === text2) {
+        result = {
+            operation: DiffOperation.None
+        };
+    } else if (text2.length === 0) {
+        result = {
+            operation: DiffOperation.Delete,
+            src: text1,
+            position: 0
+        };
+    } else {
+        var atBegin = getCommonAtBegin(text1, text2);
+        var atEnd = getCommonAtEnd(text1.substr(atBegin), text2.substr(atBegin));
+        var src = void 0,
+            dst = void 0,
+            position_1 = atBegin;
+        if (atBegin === 0 && atEnd === 0) {
+            operation = DiffOperation.Change;
+            src = text1;
+            dst = text2;
+        } else if (atBegin + atEnd < text1.length) {
+            operation = DiffOperation.Change;
+            src = text1.substr(atBegin, text1.length - atBegin - atEnd);
+            dst = text2.substr(atBegin, text2.length - atBegin - atEnd);
+            if (dst.length === 0 && src.length > 0) {
+                dst = void 0;
+                operation = DiffOperation.Delete;
+            }
+        } else if (text1.length > text2.length) {
+            operation = DiffOperation.Delete;
+            src = text1.substr(atBegin, text1.length - atBegin - atEnd);
+        } else if (text1.length < text2.length) {
+            operation = DiffOperation.Insert;
+            dst = text2.substr(atBegin, text2.length - atBegin - atEnd);
+        } else {
+            operation = DiffOperation.Change;
+            src = text1.substr(atBegin, text1.length - atBegin - atEnd);
+            dst = text2.substr(atBegin, text2.length - atBegin - atEnd);
+        }
+        result = {
+            operation: operation,
+            src: src,
+            dst: dst,
+            position: position_1
+        };
+    }
+    return checkAmbiguousOperation(text1, text2, result, position);
+}
+exports.strDiff = strDiff;
+function checkAmbiguousOperation(text1, text2, diff, position) {
+    switch (diff.operation) {
+        case DiffOperation.Insert:
+            diff = checkAmbiguousInsert(text1, text2, diff, position);
+            break;
+        case DiffOperation.Delete:
+            diff = checkAmbiguousDelete(text1, text2, diff, position);
+            break;
+    }
+    return diff;
+}
+function checkAmbiguousInsert(text1, text2, diff, position) {
+    var updatedPosition = null;
+    for (var i = diff.position; i >= 0; i = i - diff.dst.length) {
+        var checkPosition = i - diff.dst.length;
+        if (text2.substring(checkPosition, i) === diff.dst) {
+            if (checkPosition === position - diff.dst.length) {
+                updatedPosition = checkPosition;
+                break;
+            }
+        }
+    }
+    if (updatedPosition !== null) {
+        diff.position = updatedPosition;
+    }
+    return diff;
+}
+function checkAmbiguousDelete(text1, text2, diff, position) {
+    var updatedPosition = null;
+    for (var i = diff.position; i >= 0; i = i - diff.src.length) {
+        var checkPosition = i - diff.src.length;
+        if (text1.substring(checkPosition, i) === diff.src) {
+            if (checkPosition >= position) {
+                updatedPosition = checkPosition;
+            } else {
+                break;
+            }
+        }
+    }
+    if (updatedPosition !== null) {
+        diff.position = updatedPosition;
+    }
+    return diff;
+}
+function getCommonAtBegin(text1, text2) {
+    var len = Math.min(text1.length, text2.length);
+    var common = 0;
+    for (var i = 0; i < len; i = i + 1) {
+        if (text1[i] !== text2[i]) {
+            break;
+        }
+        common++;
+    }
+    return common;
+}
+function getCommonAtEnd(text1, text2) {
+    var arr1 = text1.split('').reverse();
+    var arr2 = text2.split('').reverse();
+    var common = 0;
+    var len = Math.min(arr1.length, arr2.length);
+    for (var i = 0; i < len; i = i + 1) {
+        if (arr1[i] !== arr2[i]) {
+            break;
+        }
+        common++;
+    }
+    return common;
+}
+
+/***/ })
+/******/ ]);
+});
