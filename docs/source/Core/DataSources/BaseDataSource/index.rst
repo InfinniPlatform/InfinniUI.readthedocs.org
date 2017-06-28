@@ -182,6 +182,13 @@ Events
      - Устанавливает `обработчик события <../../Script/>`__ о том, что `поставщик данных </API/Core/DataProviders/>`_ вернул ошибку
 
 
+.. include:: BaseDataSource.metadata.rst
+
+See Also
+--------
+
+-  `ValidationResult <ValidationResult.html>`__
+
 
 .. toctree::
    :hidden:
@@ -237,6 +244,3 @@ Events
    BaseDataSource.updateItems.rst
    ValidationResult.rst
    ValidationResult.error.rst
-
-
-.. include:: BaseDataSource.metadata.rst
