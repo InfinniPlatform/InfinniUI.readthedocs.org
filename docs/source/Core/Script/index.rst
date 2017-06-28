@@ -1,20 +1,30 @@
 Script
 ======
 
-Scripts in InfinniUI are js-functions. Developers can code any logic to implement in front end applications. Scripts have fix input parameters: context and arguments.
+Скрипты в InfinniUI - это js-функции, с заданной прикладными
+разработчиками логикой. С помощью них прикладные разработчики могут
+реализовывать в приложениях произвольную логику. Скрипты имеют
+зафиксированные входные параметры (их два: контекст и аргументы).
 
-Scirpts can be attached to  `views <../Elements/View/>`__ as
+Скрипты могут быть прикреплены к `представлению <../Elements/View/>`__ в
+формате
 
 .. code:: js
 
     {
-        name: 'ScriptName',
+        name: 'ИмяСкрипта',
         func: someScriptInstance
     }
 
-This will make the script get into the view script list and then will become available by its name.
+В этом случае, скрипт попадет в список скриптов представления и станет
+доступен там по заданному имени.
 
-generally scripts are defined and used at the metadata level. They can be defined in two ways. First in section scrips in metadata views. In this case they will get attached to this view under the defined name. for example: Let us create script ``alertAction`` which upon invocation will display a message on the screen. Let us declare this script as an event processor upon button click.
+В основном, скрипты задаются и используются на уровне метаданных. Там их
+можно задавать двумя способами. Первый - в разделе Scripts в метаданных
+представления. В этом случае они прикрепляются к этому представлению под
+заданным именем. Пример: зададим скрипт ``alertAction``, который при
+вызове будет выводить сообщение на экране. Объявим этот скрипт
+обработчиком события нажатия на кнопку.
 
 .. code:: js
 
@@ -46,9 +56,9 @@ generally scripts are defined and used at the metadata level. They can be define
         }]
     }
 
-Second way is the more short way. If script is supposed to be used
-only in one place then its body can be defined in a boody of processor
-without view registration:
+Второй способ - более короткий. Если скрипт предполагается использовать
+только в одном месте, то его тело можно задать непосредственно в
+объявлении обработчика, без регистрации на представлении:
 
 .. code:: js
 
@@ -75,7 +85,8 @@ without view registration:
         }]
     }
 
-As you may notice for this type of script its contents are placed in braces.
+Как вы возможно уже заметили, для такого типа задания скрипта, его
+содержимое помещается в фигурные скобки.
 
 
 .. toctree::
