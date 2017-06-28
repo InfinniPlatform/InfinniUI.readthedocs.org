@@ -1,21 +1,28 @@
 Style
 =====
 
-InfinniUI is based on bootstrap 3 framework. Styling of an app
-made with  InfinniUI can be produced in 4 levels.
+За основу верстки в InfinniUI взят фреймворк bootstrap. Стилизация
+приложения, сделанного на InfinniUI возможна на 4 уровнях.
 
-1. Level of choosing from pre-defined values.
-2. Level of settings of pre-defined platform values.
-3. Level of bootstrap variable settings.
-4. Manual styling of css for certain app elements.
+1. Уровень выбора из предопределенных значений.
+2. Уровень настройки предопределенных значений платформы.
+3. Уровень настройки переменных bootstrap.
+4. Ручная настройка css-стилей для конкретных элементов приложения.
 
-As the number of level increases the more customization can be done to the app. However every next level implies the more low-level work needs to be done to stay aligned with the principles built-in InfinniUI. Going to lower levels will require more programmers skills and knowledge.
+Каждый следующий уровень из перечисленных является все более
+низкоуровневым - снимает все больше ограничений на возможную
+кастомизацию внешнего вида, однако с каждым следующим уровнем
+увиличивается риск появления противоречий с принципами, заложенными в
+InfinniUI. Поэтому нужно стараться переходить на более низкие уровни
+кастомизации внешнего вида как можно реже и только при появлении резких
+на то оснований.
 
-Pre-defined values level
+Уровень выбора из предопределенных значений
 -------------------------------------------
 
-Can be set up in metadata. This setting `colors of
-elements <ColorStyle>`__ as well as `typography inside elements <TextStyle>`__.
+Настраивается в метаданных. Это настройка `цвета
+элементов <ColorStyle>`__, а так же `типографики внутри
+элементов <TextStyle>`__.
 
 .. code:: js
 
@@ -35,32 +42,36 @@ elements <ColorStyle>`__ as well as `typography inside elements <TextStyle>`__.
     }
 
 
-Pre-defined platform values 
+Уровень настройки предопределенных значений платформы
 -----------------------------------------------------
 
-Pre-defined values for `element colors <ColorStyle>`__ as well as
-`typography inside elements <TextStyle>`__ are located in
-``bootstrap-framework/less/pl-variables.less`` (inside of InfinniUI framework). Overlapping is the best to be 
-implemented in the file ``<yourProject>/styles/platform-variables.less`` (if you are proceeding with 
-``example`` template project).
+Предопределенные значения для `цвета элементов <ColorStyle>`__, а так же
+`типографики внутри элементов <TextStyle>`__ находятся в
+файле ``bootstrap-framework/less/pl-variables.less`` (внутри фреймворка InfinniUI).
+Перекрывать их лучше в файле ``<yourProject>/styles/platform-variables.less``
+(если вы делаете свой проект на основе шаблонного проекта example).
 
-Bootstrap variable settings level
+Уровень настройки переменных bootstrap
 --------------------------------------
 
-Bootstrap framework settings (basic sizes, tabs, rounds etc) are in
-``bootstrap-framework/less/variables.less`` file (inside InfinniUI framework). 
-Overlapping is best to be done in
-``<yourProject>/styles/bootstrap-variables.less`` file (if you are proceeding with 
-``example`` template project).
-If you require to overlap bootstrap styles, it can be done 
-in ``<yourProject>/styles/bootstrap-theme.less`` file.
+Настройки величин уровня фреймворка bootstrap (базовые размеры, отступы,
+скругления и т. д.) находятся в файле
+``bootstrap-framework/less/variables.less`` (внутри фреймворка InfinniUI). 
+Перекрывать их лучше в файле
+``<yourProject>/styles/bootstrap-variables.less`` (если вы делаете свой проект
+на основе шаблонного проекта example).
+Если возникает необходимость перекрыть стиль фреймворка bootstrap, 
+перекрывайте его в файле ``<yourProject>/styles/bootstrap-theme.less``
 
-Manual styling of css for certain app elements
+Ручная настройка css-стилей для конкретных элементов приложения
 ---------------------------------------------------------------
 
-Css-styles can be applied for a certain element (change margin for a button). One can set to a certain element `metadata Style </Core/Elements/Element.metadata.html>`_. This value will appear as element's additional class which can be assigned a required css-style (or more).
-
-To define custom styles refer to ``<yourProject>/styles/extensions.less``.
+Если требуется применить css-стиль для определенного элемента (например
+отступ для определенной кнопки, а не всех кнопок), то можно установить
+конкретному элементу `метаданные Style </Core/Elements/Element.metadata.html>`_, это значение появится у элемента
+в качестве дополнительного класса, на который можно будет назначить
+необходимый css-стиль (или несколько стилей).
+Определить кастомные стили можно в файле ``<yourProject>/styles/extensions.less``.
 
 See also
 ---------
