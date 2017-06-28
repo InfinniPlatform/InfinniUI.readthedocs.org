@@ -35,7 +35,7 @@ Properties
    * - Parameters
      - ``Array``
      - –
-     - Коллекция `параметров представления <../../../../Parameters/>`__
+     - Коллекция `параметров представления </Core/Parameters/>`__
 
 
 Examples

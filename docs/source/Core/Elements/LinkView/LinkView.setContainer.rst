@@ -42,4 +42,4 @@ See Also
 
 -  `getOpenMode <LinkView.getOpenMode.html>`__
 -  `setOpenMode <LinkView.setOpenMode.html>`__
--  `OpenMode <OpenMode/>`__
+-  `OpenMode <OpenMode.html>`__

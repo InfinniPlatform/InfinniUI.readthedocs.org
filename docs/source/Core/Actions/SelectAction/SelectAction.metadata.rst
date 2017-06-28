@@ -13,7 +13,7 @@ Properties
      - Type
      - Description
    * - LinkView*
-     - `LinkView.metadata <../../Elements/View/LinkView/LinkView.metadata.html>`__
+     - `LinkView.metadata <../../Elements/LinkView/LinkView.metadata/>`__
      - Объект, который будет создавать и настраивать `представление <../../Elements/View/>`__
    * - SourceValue.Source*
      - ``String``

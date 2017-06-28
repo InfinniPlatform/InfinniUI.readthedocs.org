@@ -1,7 +1,7 @@
 LinkView.getOpenMode()
 ======================
 
-Возвращает `режим отображения представления <OpenMode/>`__.
+Возвращает `режим отображения представления <OpenMode.html>`__.
 
 Syntax
 ------
@@ -31,4 +31,4 @@ See Also
 --------
 
 -  `setOpenMode <LinkView.setOpenMode.html>`__
--  `OpenMode <OpenMode/>`__
+-  `OpenMode <OpenMode.html>`__

@@ -25,8 +25,8 @@ Parameters
      - Type
      - Description
    * - ``options.view``
-     - `View <../../Core/View/View>`__
-     - Parent `view <../../Core/View/View>`__.
+     - `View <../../Core/Elements/View>`__
+     - Parent view.
 
 
 Methods

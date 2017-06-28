@@ -43,7 +43,7 @@ Properties
      - Type
      - Description
    * - linkView
-     - `LinkView <../../Elements/View/LinkView/>`__
+     - `LinkView <../../Elements/LinkView/>`__
      - Объект, который будет создавать и настраивать `представление <../../Elements/View/>`__
 
 

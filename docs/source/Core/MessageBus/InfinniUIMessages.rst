@@ -15,10 +15,10 @@ MessageTypes
      - messageBody
    * - onViewBuildError
      - Ошибка при создании `view <../Elements/View/>`__
-     - {error: ``string``, metadata: {`путь до метаданных <../Elements/View/LinkView/LinkView.metadata/AutoView/>`__}}
+     - {error: ``string``, metadata: {`путь до метаданных <../Elements/LinkView/LinkView.metadata/AutoView.html>`__}}
    * - onViewCreated
      - Создана `view <../Elements/View/>`__
-     - {openMode: `openMode <../Elements/View/LinkView/OpenMode.html>`__, view: `view <../Elements/View/>`__}
+     - {openMode: `openMode <../Elements/LinkView/OpenMode.html>`__, view: `view <../Elements/View/>`__}
    * - onNotifyUser
      - Оповещение пользователя
      - {messageText: ``string``, messageType: ``string``}

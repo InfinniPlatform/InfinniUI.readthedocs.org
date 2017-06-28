@@ -1,7 +1,7 @@
 LinkView
 ========
 
-Объект, который создает и настраивает `представление <../>`__.
+Объект, который создает и настраивает `представление <../View/>`__.
 
 Syntax
 ------
@@ -20,7 +20,7 @@ Parameters
      - Type
      - Description
    * - parent
-     - `Element <../../Element/>`__
+     - `Element <../Element/>`__
      - Родительский элемент
 
 
@@ -37,7 +37,7 @@ Methods
    * - `setOpenMode <LinkView.setOpenMode.html>`__
      - Устанавливает название стратегии отображения представления
    * - `setViewTemplate <LinkView.setViewTemplate.html>`__
-     - Устанавливает `функцию <../../../Script/>`__ шаблонизации представления
+     - Устанавливает `функцию <../../Script/>`__ шаблонизации представления
    * - `createView <LinkView.createView.html>`__
      - Создает представление
    * - `setDialogWidth <LinkView.setDialogWidth.html>`__

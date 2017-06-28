@@ -63,7 +63,7 @@ Methods
    * - `close <View.close.html>`__
      - Закрывает представление
    * - `setOpenStrategy <View.setOpenStrategy.html>`__
-     - Устанавливает `стратегию отображения представления <LinkView/OpenMode.html>`__
+     - Устанавливает `стратегию отображения представления <../LinkView/OpenMode.html>`__
    * - `getHeaderTemplate <View.getHeaderTemplate.html>`__
      - Возвращает `функцию <../../Script/>`__ шаблонизации заголовка представления
    * - `setHeaderTemplate <View.setHeaderTemplate.html>`__
@@ -105,7 +105,6 @@ Events
    :hidden:
 
    DialogResult/index.rst
-   LinkView/index.rst
    DialogResult.rst
    View.close.rst
    View.getApplicationView.rst
@@ -136,4 +135,4 @@ Events
 See Also
 --------
 
--  `LinkView <LinkView/>`__
+-  `LinkView <../LinkView/>`__

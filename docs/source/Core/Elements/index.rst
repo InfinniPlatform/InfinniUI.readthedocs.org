@@ -9,3 +9,4 @@ Elements
    Container/index.rst
    Element/index.rst
    View/index.rst
+   LinkView/index.rst
