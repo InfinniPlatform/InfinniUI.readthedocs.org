@@ -1,9 +1,10 @@
 Actions
 =======
 
-Actions are used to perform typical actions in infinniUI. Actions implement `base API <BaseAction/>`__.
+Для реализации типичных действий в Infinni UI используются Actions. 
+Все действия реализуют `базовый API <BaseAction/>`__.
 
-At this moment Infinni UI has got the following actions:
+На данный момент в Infinni UI реализованы следующие действия:
 
 .. list-table::
    :header-rows: 1
@@ -11,29 +12,29 @@ At this moment Infinni UI has got the following actions:
    * - Name
      - Description
    * - `OpenAction <OpenAction/>`__
-     - Opens `view <../Elements/View/>`__
+     - Открывает `представление <../Elements/View/>`__
    * - `AcceptAction <AcceptAction/>`__
-     - Sets as a work result of  `View <../Elements/View/>`__ value `DialogResult.accepted <../Elements/View/DialogResult/>`__
+     - Устанавливает в качестве результата работы `представления <../Elements/View/>`__ значение `DialogResult.accepted <../Elements/View/DialogResult/>`__
    * - `CancelAction <CancelAction/>`__
-     - Sets as a work result of `View <../Elements/View/>`__ value `DialogResult.canceled <../Elements/View/DialogResult/>`__
+     - Устанавливает в качестве результата работы `представления <../Elements/View/>`__ значение `DialogResult.canceled <../Elements/View/DialogResult/>`__
    * - `AddAction <AddAction/>`__
-     - Add a new element in  `Data Source <../DataSources>`__
+     - Добавляет новый элемент в `источник данных <../DataSources>`__
    * - `CreateItemAction <CreateItemAction/>`__
-     - Create a new element in  `Data Source <../DataSources>`__
+     - Создает новый элемент в `источнике данных <../DataSources>`__
    * - `EditAction <EditAction/>`__
-     - Edits element from  `Data Source <../DataSources>`__
+     - Редактирует элемент из `источника данных <../DataSources>`__
    * - `DeleteAction <DeleteAction/>`__
-     - Deletes element from `Data Sources <../DataSources>`__
+     - Удаляет элемент из `источника данных <../DataSources>`__
    * - `UpdateAction <UpdateAction/>`__
-     - Updates list of elements `Data Sources <../DataSources>`__
+     - Обновляет список элементов `источника данных <../DataSources>`__
    * - `SaveAction <SaveAction/>`__
-     - Saves changes of selected element in `Data Source <../DataSources>`__
+     - Сохраняет изменения для текущего элемента в `источнике данных <../DataSources>`__
    * - `SelectAction <SelectAction/>`__
-     - Fills a field of element in `Data Source <../DataSources>`__ by data from other `Data Source <../DataSources>`__ element
+     - Заполняет поле элемента в `источнике данных <../DataSources>`__ данными из другого элемента `источника данных <../DataSources>`__
    * - `ServerAction <ServerAction/>`__
-     - Sends http request
+     - Отправляет http запрос
    * - `RouteToAction <RouteToAction/>`__
-     - Follows a pre-defined route
+     - Переходит по заданному маршруту
 
 
 
