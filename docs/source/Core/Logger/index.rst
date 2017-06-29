@@ -1,13 +1,17 @@
 Logger
 ======
 
-Message logging service.
+Сервис регистрации сообщений.
 
 Description
 -----------
 
-Message logging service is a program object which provides methods to register log messages of different `levels <LogLevel.html>`__:
-Debug, info, warning, errors and tracing messages. The serivce also can set the level of registered messages defining how elaborate logging indo will be.
+Сервис регистрации сообщений - программный объект, который предоставляет
+методы для регистрации сообщений разных `уровней <LogLevel.html>`__:
+отладка, информация, предупреждения, ошибки и трассировка. Также сервис
+предоставляет возможность установить минимальный уровень регистрируемых
+сообщений, что позволяет управлять тем, насколько подробной будет
+регистрируемая информация.
 
 Syntax
 ------
@@ -27,7 +31,7 @@ Parameters
      - Description
    * - ``level``
      - `LogLevel <LogLevel.html>`__
-     - Min `level of logging <LogLevel.html>`__.
+     - Минимальный `уровень регистрируемых сообщений <LogLevel.html>`__.
 
 
 Methods
@@ -39,19 +43,19 @@ Methods
    * - Name
      - Description
    * - `getLevel <Logger.getLevel.html>`__
-     - Returns min  `logging level <LogLevel.html>`__.
+     - Возвращает минимальный `уровень регистрируемых сообщений <LogLevel.html>`__.
    * - `setLevel <Logger.setLevel.html>`__
-     - Sets min `logging level <LogLevel.html>`__.
+     - Устанавливает минимальный `уровень регистрируемых сообщений <LogLevel.html>`__.
    * - `debug <Logger.debug.html>`__
-     - Registers debugging message.
+     - Регистрирует отладочное сообщение.
    * - `info <Logger.info.html>`__
-     - Registers info message.
+     - Регистрирует информационное сообщение.
    * - `warn <Logger.warn.html>`__
-     - Registers warning message.
+     - Регистрирует сообщение с предупреждением.
    * - `error <Logger.error.html>`__
-     - Registers error message.
+     - Регистрирует сообщение с ошибкой.
    * - `trace <Logger.trace.html>`__
-     - Register tracing message.
+     - Регистрирует сообщение трассировки.
 
 
 
