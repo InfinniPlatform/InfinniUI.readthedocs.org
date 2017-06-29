@@ -1,19 +1,26 @@
 NotificationSubscriptions
 =========================
 
-Service allows to subscribe to server notifications. 
-NotificationSubscriptions based on signalR components - a set of server and clients
-libraries providing two way real time interaction between server and client.
+Сервис, позволяющий подписаться на уведомления от сервера. Основу
+NotificationSubscriptions составляет signalR - набор серверных и
+клиентских библиотек, облегчающих двухстороннее взаимодействие реального
+времени между сервером и клиентом.
 
 Description
 -----------
 
-Regulary working with a web-page, both request and transmission is initiated by a client. However in some cases updating data on the web-page should be done timely. To inform clients about changes so called push-notifications are used. SignaR can organize those. NotificationSubscriptions service allows subscribe to notifications from external services made with SignalR.
+Обычно, при работе с вэб-страницей, запрос и передача данных
+инициируется клиентом. Однако в некоторых случаях требуется
+актуализировать данные на странице без задержек. Для возможности
+оповещать клиентов об изменении данных используются так называемые
+push-уведомления. Один из способов организовать такие уведомления
+является библиотека SignalR. Сервис NotificationSubscriptions позволяет
+подписываться на уведомления внешних сервисов, реализованных на SignalR.
 
 Parameters
 ~~~~~~~~~~
 
-No
+Нет.
 
 Methods
 -------
@@ -24,19 +31,19 @@ Methods
    * - Name
      - Description
    * - `subscribe <NotificationSubscriptions.subscribe.html>`__
-     - Adds subsciption to event
+     - Добавляет подписку на событие
    * - `unsubscribe <NotificationSubscriptions.unsubscribe.html>`__
-     - Removes subscribtion to event
+     - Удаляет подписку на событие
    * - `startConnection <NotificationSubscriptions.startConnection.html>`__
-     - Sets server connection and adds listeners in accordance to certain keys
+     - Устанавливает соединение с сервером и добавляет слушателей по заданым ключам
    * - `stopConnection <NotificationSubscriptions.stopConnection.html>`__
-     - Removes server connection
+     - Разрывает соединение с сервером
    * - `reconnection <NotificationSubscriptions.reconnection.html>`__
-     - Re-establishes conection to a server with certain parameters
+     - Повторно устанавливает соединение с сервером с ранее указанными параметрами
    * - `isDisconnected <NotificationSubscriptions.isDisconnected.html>`__
-     - Checks if the connection is removed
+     - Проверяет, разорвано ли соединение с сервером
    * - `on <NotificationSubscriptions.on.html>`__
-     - Checks subscription signalR status
+     - Выполняет подписку на события signalR
 
 
 
