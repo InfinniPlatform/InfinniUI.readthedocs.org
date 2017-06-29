@@ -1,12 +1,13 @@
 Parameters
 ==========
 
-View parameter
+Параметр представления.
 
 Description
 -----------
 
-Parameters declared as views and used to exchange data between views.
+Параметры объявляются в рамках представления и используются для обмена
+данными между представлениями.
 
 Syntax
 ------
@@ -26,7 +27,7 @@ Parameters
      - Description
    * - ``options.view``
      - `View <../../Core/Elements/View>`__
-     - Parent view.
+     - Родительское представление.
 
 
 Methods
@@ -38,19 +39,19 @@ Methods
    * - Name
      - Description
    * - `getName <Parameter.getName.html>`__
-     - Returns parameter name.
+     - Возвращает наименование параметра.
    * - `setName <Parameter.setName.html>`__
-     - Sets parameter name.
+     - Устанавливает наименование параметра.
    * - `getView <Parameter.getView.html>`__
-     - Returns parent view.
+     - Возвращает родительское представление.
    * - `getValue <Parameter.getValue.html>`__
-     - Returns parameter value.
+     - Возвращает значение параметра.
    * - `setValue <Parameter.setValue.html>`__
-     - Sets parameter value.
+     - Устанавливает значение параметра.
    * - `getProperty <Parameter.getProperty.html>`__
-     - Returns value of parameter attribute.
+     - Возвращает значение атрибута параметра.
    * - `setProperty <Parameter.setProperty.html>`__
-     - Sets value of parameter attribute.
+     - Устанавливает значение атрибута параметра.
 
 
 Events
@@ -62,7 +63,7 @@ Events
    * - Name
      - Description
    * - ``onPropertyChanged``
-     - Sets `event processor <../../Core/Script/>`__ that event remained unchanged.
+     - Устанавливает `обработчик события <../../Core/Script/>`__ о том, что значение было изменено.
 
 
 
