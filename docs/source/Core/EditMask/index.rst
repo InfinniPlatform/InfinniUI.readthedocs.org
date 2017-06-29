@@ -1,48 +1,74 @@
 EditMask
 ========
 
-Edit mask is implemented in case if a user should enter data in strictly-defind format. Mask shall only be appled in input mode, to display data use `DisplayFormat <../DisplayFormat/>`__ .  Editor using a mask gets into input mode provides text field which allows to enter data only pre-defined by mask. For example, input field can only accept 24-hours format time, integer numbers or phone number.
+Маска ввода данных.
 
+Маска ввода данных используется в том случае, если необходимо, чтобы
+конечный пользователь вводил данные в строго определенном формате. Маска
+должна применяться только в режиме ввода данных, для отображения данных
+используется `DisplayFormat <../DisplayFormat/>`__. Когда редактор,
+использующий маску, переходит в режим ввода данных, он предоставляет
+пользователю текстовое поле, которое позволяет вводить данные в том
+формате, которые определены маской. Например, может возникнуть задача,
+чтобы в поле ввода можно было вводить дату только в 24-часовом формате
+или только целые числа. Другой пример - ввод номера телефона. Для
+решения подобных задач как раз и предназначена маска ввода данных.
 
-Edit Mask types
+Типы масок ввода
 ----------------
 
-Base properies of Edit Mask data can be read in article BaseEditMask,
-below listed base Edit Mask types.
+Базовый набор свойств маски ввода данных описан в разделе BaseEditMask,
+ниже перечислены основные типы масок ввода.
 
 `DateTimeEditMask <DateTimeEditMask/>`__
 
-Editor allows enter date/time in a particular format.
+Редактор позволяет вводить дату/время только в определенном формате.
 
 |image0|
 |image1|
 |image2|
 
 
-Mask simplifies date/time input in certain format especially when it comes to keboard input. It can use a few pre-defined most freuently used date/time templates. In addition to that, it is possible to define a specific format string for date/time input including year, month, day, hour, minute, seconds etc.
+Маска значительно упрощает ввода даты/времени в нужном формате особенно,
+когда речь идет о клавиатурном вводе. Маска предоставляет возможность
+указать несколько предустановленных, часто используемых шаблонов ввода
+даты/времени. Наряду с этим имеется возможность указать специфическую
+строку форматирования для ввода даты/времени, оперируя такими составными
+элементами, как год, месяц, день, часы, минуты, секунды и т.д.
 
 `NumberEditMask <NumberEditMask/>`__
 
-Editor allows to input numeric values only in certain format.
+Редактор позволяет вводить числовые значения только в определенном
+формате.
 
 |image3|
 |image4|
 |image5|
 
 
-Mask significantly eases keyboard input of numeric values in certain format eg integer, fractional number, currency, percent etc. A few pre-defined most frequently used templates can be used in addition to specific format string.
+Маска значительно упрощает ввод числовых значений в нужном формате
+(целых и дробных чисел, значений денежных единиц, процентов и т.д.),
+особенно, когда речь идет о клавиатурном вводе. Маска предоставляет
+возможность указать несколько предустановленных, часто используемых
+шаблонов ввода числовых значений. Наряду с этим имеется возможность
+указать специфическую строку форматирования.
 
 `TemplateEditMask <TemplateEditMask/>`__
 
-Editor allows to input fix format string.
+Редактор позволяет вводить строку в фиксированном формате.
 
 |image6|
 |image7|
 
 
-Mask supports symbols which define simple rules of input.
-For example, one can define a rule that phone number must start with a 3-digit code.
-Special symbols and literals can be dispayed in input mode while can be bypassed in edit mode eg dashes in phone numbers can be added automatically. Unlike regular expressions mask is simple and helps to auto-fill data.
+Маска поддерживает символы, которые определяют простые правила ввода.
+Например, можно определить правило, что номер телефона должен начинаться
+с кода, который состоит из 3 цифр. Спецсимволы и литералы могут
+отображаться при вводе данных, но будут пропускаться при редактировании
+(например, дефисы в телефонных номерах будут проставляться
+автоматически). Из-за простоты формата маски (в отличие от регулярных
+выражений), есть возможность качественно реализовать автозаполнение,
+облегчив ввод данных.
 
 .. |image0| image:: assets/DateTimeEditMask_Ex_00.png
 .. |image1| image:: assets/DateTimeEditMask_Ex_01.png
