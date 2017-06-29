@@ -1,9 +1,10 @@
 GlobalContext
 =============
 
-Application global context. Context provides API to appication methods and properties that are used jointly.
+Глобальный контекст приложения. Контекст предоставляет доступ (API) к
+совместно используемым методам и свойствам приложения.
 
-Variable ``InfinniUI.global`` contains global context. 
+Глобальный контекст приложения доступен через ``InfinniUI.global``.
 
 Properties
 ----------
@@ -16,28 +17,28 @@ Properties
      - Description
    * - ``containers``
      - ``Object``
-     - List of containers to view in mode ``OpenMode="Container"``.
+     - Список доступных контейнеров для открытия представлений в режиме ``OpenMode="Container"``.
    * - ``localizations``
      - ``Object``
-     - Map, where key is localization name and value is `localization <../Localizations/>`__.
+     - Ассоциативный массив, связвающий `локали <../Localizations/>`_ с их названиями.
    * - ``localized``
      - `Localization <../Localizations/>`__
-     - Current language and regional settings. It stores value from InfinniUI.global.localizations associated with InfinniUI.config.lang.
+     - Текущие языковые и региональные настройки. В нем хранится значение InfinniUI.global.localizations соответсвующее InfinniUI.config.lang.
    * - ``factory``
      - `ApplicationBuilder <../Builders/>`__
-     - Common application `builder <../Builders/>`__.
+     - Общий `билдер <../Builders/>`__ приложения.
    * - ``logger``
      - `Logger <../Logger/>`__
-     - `Message logging service <../Logger/>`__.
+     - `Сервис регистрации сообщений <../Logger/>`__.
    * - ``messageBus``
      - `MessageBus <../MessageBus/>`__
-     - `Application message bus <../MessageBus/>`__ .
+     - `Шина сообщений <../MessageBus/>`__ приложения.
    * - ``session``
      - `Session <../Session/>`__
-     -  `User session <../Session/>`__ provider.
+     - Провайдер для работы `сессией пользователя <../Session/>`__.
    * - ``notificationSubsription``
      - `NotificationSubscriptions <../NotificationSubscriptions/>`__
-     - Server notification service.
+     - Сервис, позволяющий подписаться на уведомления от сервера.
 
 
 Methods
@@ -49,7 +50,7 @@ Methods
    * - Name
      - Description
    * - `executeAction <GlobalContext.executeAction.html>`__
-     - Fires up execution of an `action <../Actions/>`__.
+     - Запускает выполнение указанного `действия <../Actions/>`__.
 
 
 
