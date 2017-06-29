@@ -1,7 +1,13 @@
 ViewContext
 ===========
 
-View context is a program object which stores its view state and provides API to access to view elements. Any applied script  or event processor invocation accompanied by view context transmittance. Context is created for each view instance and its lifetime is defined by corresponding life time view instance.
+Контекст представления - программный объект, который хранит состояние
+представления и предоставляет строго определенный API для доступа к
+элементам представления. Вызов любого прикладного скрипта или
+обработчика события сопровождается передачей ему контекста
+представления. Контекст создается для каждого экземпляра представления и
+время его жизни определяется временем жизни соответствующего экземпляра
+представления.
 
 Properties
 ----------
@@ -12,19 +18,19 @@ Properties
    * - Name
      - Description
    * - `view <ViewContext.view.html>`__
-     - Returns `View <../Elements/View/>`__ context
+     - Возвращает `представление <../Elements/View/>`__ контекста
    * - `global <ViewContext.global.html>`__
-     - Returns `global application context <../GlobalContext/>`__
+     - Возвращает `глобальный контекст приложения <../GlobalContext/>`__
    * - `messageBus <ViewContext.messageBus.html>`__
-     - Returns `Message Bus View <../MessageBus/>`__
+     - Возвращает `шину сообщений представления <../MessageBus/>`__
    * - `scripts <ViewContext.scripts.html>`__
-     - Returns associative list of `Script View <../Script/>`__
+     - Возвращает ассоциативный список `скриптов представления <../Script/>`__
    * - `parameters <ViewContext.parameters.html>`__
-     - Returns associative list of `Parameters View <../Parameters/>`__
+     - Возвращает ассоциативный список `параметров представления <../Parameters/>`__
    * - `dataSources <ViewContext.dataSources.html>`__
-     - Returns associative list of `Data Sources View <../DataSources/BaseDataSource/>`__
+     - Возвращает ассоциативный список `источников данных представления <../DataSources/BaseDataSource/>`__
    * - `controls <ViewContext.controls.html>`__
-     - Returns associative list of `Visual View Elements <../Elements/Element/>`__
+     - Возвращает ассоциативный список `визуальных элементов представления <../Elements/Element/>`__
 
 
 
