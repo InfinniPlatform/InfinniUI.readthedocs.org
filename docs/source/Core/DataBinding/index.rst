@@ -1,23 +1,39 @@
 DataBinding
 ===========
 
-Data binding is a linking between elements and sources.
+Привязка данных между элементом и источником.
 
 Description
 -----------
 
-Data binding allows synchronize property values of two different objects. One is conditionally called element while another is source. Elements are often 
-`representations of <../Elements/>`__ `visual view <../Elements/View/>`__ while sources are - `data sources <../DataSources/>`__. Typically that doesn't matter which element will be the element and wich be the source because both represent the same interface. Objects that can bind data are all types of `visual elements <../Elements/>`__, all types of
-`Data Sources <../DataSources/>`__ and `View Parameters <../Parameters/>`__.
+Привязка данных позволяет синхронизировать значения свойств двух
+различных объектов. Один объект условно называется элементом, другой -
+источником. В роли элемента чаще всего выступают
+`элементы <../Elements/>`__ `визуального представления <../Elements/View/>`__,
+в роли источника - `источники данных <../DataSources/>`__.
+Принципиально не важно, какой элемент будет
+элементом, а какой источником, так как оба реализуют один и тот же
+интерфейс. Объектами, которые поддерживают привязку данных являются все
+типы визуальных `визуальных элементов <../Elements/>`__, все типы
+`источников данных <../DataSources/>`__ и `параметр представления <../Parameters/>`__.
 
-Any data binding can be representd as non-visual programm object which can define `the data conversion rules <BindingConverter/>`__ for both element and source, as well as desirable 
-`direction of data streams in binding mode <BindingMode/>`__:
+Любая привязка данных представлена невизуальным программным объектом,
+который позволяет указать `правила преобразования данных <BindingConverter/>`__ для элемента и источника,
+а также желаемое `направление потока данных в привязке <BindingMode/>`__:
 
--  Bi-directional exchange between element and source - if source has got updates then element gets updated otherwise if element has got updates then element gets updated accordingly.
--  To source updates - if source has got updates then no change to element is done, otherwise if element has got updates then source gets updated.
--  To element update -  if source has got updates element gets updated otherwise source gets no update.
+-  Двунаправленный обмен между элементом и источником (two way) - если в
+   источнике произошли изменения, элемент обновляется, и, наоборот, если
+   изменения произошли в элементе, источник обновляется.
+-  Только обновление источника (to source) - если в источнике произошли
+   изменения, элемент не обновляется, но, если изменения произошли в
+   элементе, источник обновляется.
+-  Только обновление элемента (to element) - если в источнике произошли
+   изменения, элемент обновляется, но, если изменения произошли в
+   элементе, источник не обновляется.
 
-Data binding thus conceals complexity of synchronizing between elements and sources and simplifies the code to great extent and makes behaviour of all elements controllable.
+Таким образом, привязка данных скрывает всю сложность синхронизации
+между элементом и источником, что в значительной степени упрощает код и
+обеспечивает предсказуемость поведения всех элементов.
 
 .. figure:: DataBindingAspects.png
    :alt: DataBindingAspects
@@ -31,7 +47,8 @@ Syntax
 
 Parameters
 ~~~~~~~~~~
-No
+
+Нет
 
 Returns
 ~~~~~~~
@@ -69,35 +86,35 @@ Methods
    * - Name
      - Description
    * - `getMode <DataBinding.getMode.html>`__
-     - Returns `direction of data stream in binding mode <BindingMode/>`__
+     - Возвращает `направление потока данных в привязке <BindingMode/>`__
    * - `setMode <DataBinding.setMode.html>`__
-     - Sets `direction of data stream in binding mode <BindingMode/>`__
+     - Устанавливает `направление потока данных в привязке <BindingMode/>`__
    * - `getConverter <DataBinding.getConverter.html>`__
-     - Returns `data converter between element and source <BindingConverter/>`__
+     - Возвращает `преобразователь данных между элементом и источником <BindingConverter/>`__
    * - `setConverter <DataBinding.setConverter.html>`__
-     - Sets `data converter between element and source <BindingConverter/>`__
+     - Устанавливает `преобразователь данных между элементом и источником <BindingConverter/>`__
    * - `bindSource <DataBinding.bindSource.html>`__
-     - Sets binding to source
+     - Устанавливает привязку к источнику
    * - `getSource <DataBinding.getSource.html>`__
-     - Returns data source binding
+     - Возвращает источник данных привязки
    * - `getSourceProperty <DataBinding.getSourceProperty.html>`__
-     - Returns path to data source property binding 
+     - Возвращает путь к свойству источника данных привязки
    * - `bindElement <DataBinding.bindElement.html>`__
-     - Sets binding to element
+     - Устанавливает привязку к элементу
    * - `getElement <DataBinding.getElement.html>`__
-     - Returns element binding
+     - Возвращает элемент привязки
    * - `getElementProperty <DataBinding.getElementProperty.html>`__
-     - returns path to element binding property
+     - Возвращает путь к свойству элемента привязки
    * - `getDefaultValue <DataBinding.getDefaultValue.html>`__
-     - Returns element defaul value
+     - Возвращает значение по умолчанию для элемента
    * - `setDefaultValue <DataBinding.setDefaultValue.html>`__
-     - Sets default value for element
+     - Устанавливает значение по умолчанию для элемента
 
 
 Events
 ------
 
-No
+Нет
 
 
 .. toctree::
