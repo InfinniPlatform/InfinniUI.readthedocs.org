@@ -1,29 +1,29 @@
 RouterService
 =============
 
-RouterService allows to set up routing for Single Page Application
+RouterService позволяет настроить маршрутизацию для Single Page Application
 
-It is stored in ``InfinniUI.RouterService``.
+Объект доступен через ``InfinniUI.RouterService``.
 
 Description
 -----------
 
-RouterService allows to set up routing at the
-client side and link this with events,  For browsers not supporting
-History API, RouterService does the same by implementing fragmentary URL.
+RouterService предоставляет возможность настройки маршрутизации на
+стороне клиента, а также связывания этих действий с событиями. Для
+браузеров, которые не поддерживают History API, RouterService проделает
+то же самое, используя фрагментарную структуру URL.
 
-
-While the page is loading and after your application opens
-HomePage view, all routes will be created as defined in
-`InfinniUI.config.routes <../../Config/>`__,
-router will be automatically fired up in accordance with History API settings from
-`InfinniUI.config.historyAPI <../../Config/>`__.
-RouterService is a harness for `Backbone.Router <http://backbonejs.org/#Router>`_.
+Во время загрузки страницы, после того, как ваше приложение откроет
+HomePage view и будут созданы все роуты описанные в
+`InfinniUI.config.routes <../../Config/>`_,
+автоматически будет запущен роутер используя настройки History API из
+`InfinniUI.config.historyAPI <../../Config/>`_.
+RouterService представляет собой обертку над `Backbone.Router <http://backbonejs.org/#Router>`_.
 
 Parameters
 ~~~~~~~~~~
 
-No
+Нет.
 
 Methods
 -------
@@ -34,15 +34,15 @@ Methods
    * - Name
      - Description
    * - `getLinkByName() <RouterService.getLinkByName.html>`__
-     - Returns link by name path
+     - Возвращает путь соответсвующий переданому имени
    * - `startRouter() <RouterService.startRouter.html>`__
-     - Starts routing
+     - Запускает роутинг
    * - `setContext() <RouterService.setContext.html>`__
-     - Set Context used in scripts
+     - Устанавливает контекст, передающийся в скрипты роутинга
    * - `setParams() <RouterService.setParams.html>`__
-     - Set Params used in scripts
+     - Устанавливает параметры, передающиеся в скрипты роутинга
    * - `addParams() <RouterService.addParams.html>`__
-     - Add Params used in scripts
+     - Добавляет параметры, передаваемые в скрипты роутинга
 
 
 .. toctree::
