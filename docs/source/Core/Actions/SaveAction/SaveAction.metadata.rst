@@ -48,8 +48,3 @@ Examples
             "OnError": "{ alert('onError'); }"
         }
     }
-
-See Also
-~~~~~~~~
-
--  `DataSource <../../DataSources/>`__

@@ -1,3 +1,7 @@
+.. |br| raw:: html
+
+   <br />
+
 DataProvider.createItem()
 =========================
 
@@ -6,14 +10,14 @@ DataProvider.createItem()
 Description
 -----------
 
-Для создания нового элемента в DataProvider используются 2 метода:
-  `createLocalItem <DataProvider.createLocalItem.html>`__ и
-  ``createItem``.
-Существенное отличие методов в том, что
-  `createLocalItem <DataProvider.createLocalItem.html>`__ создает новый
-  элемент локально, в то время как при вызове ``createItem`` создание
-  происходит на сервере. Для сохранения нового элемента используйте
-  метод `saveItem <DataProvider.saveItem.html>`__.
+Для создания нового элемента в DataProvider используются 2 метода:|br|
+`createLocalItem <DataProvider.createLocalItem.html>`__ и ``createItem``. |br|
+Существенное отличие методов в том, что 
+`createLocalItem <DataProvider.createLocalItem.html>`__ создает новый 
+элемент локально, в то время как при вызове ``createItem`` создание 
+происходит на сервере. |br|
+Для сохранения нового элемента используйте 
+метод `saveItem <DataProvider.saveItem.html>`__.
 
 Syntax
 ------

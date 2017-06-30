@@ -6,7 +6,7 @@ Collection.removeById
 Description
 -----------
 
-Метод `removeById() <Collection.removeById/>`__ удаляет элемент с
+Метод `removeById()` удаляет элемент с
 указанным идентификатором из коллекции. Успешное выполнение данного
 метода приводит к возникновению события
 `onRemove <Collection.onRemove/>`__. Вместе с этим событием также
