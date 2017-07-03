@@ -21,6 +21,10 @@ Properties
      - Boolean
      - ``true``
      - Определяет показывать ли колонку с CheckBox/Radio для выбора элементов.
+   * - Scroll
+     - Boolean
+     - ``true``
+     - Расстягивает DataGrid на все свободное пространство по вертикали.
    * - CheckAllVisible
      - Boolean
      - ``false``
