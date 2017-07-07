@@ -36,7 +36,7 @@ Properties
    * - VerticalAlignment
      - ``String`` (⇔)
      - –
-     - Вертикальное выравнивание таблицы.
+     - Вертикальное выравнивание таблицы. Возможны значения: Top, Center, Bottom, Stretch.
    * - RowBackground
      - `Color </Core/Style/ColorStyle/>`__ (⇔)
      - –
