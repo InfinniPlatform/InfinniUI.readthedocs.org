@@ -31,11 +31,11 @@ Properties
    * - Path
      - ``String``
      - –
-     - Путь до метаданных. Полный путь до метаданных будет выглядеть так: `InfinniUI.config </Core/Config/>`__.serverUrl + '/' + Path.
+     - Путь до метаданных. Полный путь до метаданных будет выглядеть так: `InfinniUI.config </Core/Config/index.html>`__.serverUrl + '/' + Path.
    * - Parameters
      - ``Array``
      - –
-     - Коллекция `параметров представления </Core/Parameters/>`__
+     - Коллекция `параметров представления </Core/Parameters/index.html>`__
 
 
 Examples
