@@ -3,7 +3,7 @@ RouterService
 
 RouterService allows to set up routing for Single Page Application
 
-It is stored in ``InfinniUI.RouterService``.
+It is stored in ``InfinniUI.routerService``.
 
 Description
 -----------
@@ -20,10 +20,11 @@ router will be automatically fired up in accordance with History API settings fr
 `InfinniUI.config.historyAPI <../../Config/>`__.
 RouterService is a harness for `Backbone.Router <http://backbonejs.org/#Router>`_.
 
+
 Parameters
 ~~~~~~~~~~
 
-No
+`Routes <../Routes/index.html>`__
 
 Methods
 -------
