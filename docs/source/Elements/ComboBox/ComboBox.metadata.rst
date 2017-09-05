@@ -58,8 +58,8 @@ Examples
         "LabelFloating": true,
         "Autocomplete": true,
         "AutocompleteProperty": "Description",
-        "ItemFormat": "{Description}",
-        "ValueFormat": "{Description}",
+        "ItemFormat": "${Description}",
+        "ValueFormat": "${Description}",
         "ShowClear": false,
         "Value": {
           "Source": "MainDataSource",

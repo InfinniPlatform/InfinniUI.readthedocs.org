@@ -37,7 +37,7 @@ Examples
 .. code:: json
 
     {
-        "DisplayFormat": "{FirstName} {LastName}",
+        "DisplayFormat": "${FirstName} ${LastName}",
         "Value": {
             "Source": "dataSource1",
             "Property": "$.Person"

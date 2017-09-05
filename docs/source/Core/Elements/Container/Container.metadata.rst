@@ -138,7 +138,7 @@ Examples
                     }
                 }
             },
-            "GroupItemFormat": "Connect: {Display}",
+            "GroupItemFormat": "Connect: ${Display}",
             "GroupValueProperty": "Display",
             "Items" : {
                 "Source": "MainDataSource",

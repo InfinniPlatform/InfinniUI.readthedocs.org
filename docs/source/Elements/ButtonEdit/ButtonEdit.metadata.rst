@@ -56,7 +56,7 @@ ButtonEdit удобно использовать для редактирован
                 "Source": "MainDataSource",
                 "Property": "$.Address"
             },
-            "DisplayFormat": "{City}, {Street} st., {House}",
+            "DisplayFormat": "${City}, ${Street} st., ${House}",
             "Action": {
                 "EditAction": {
                     ...

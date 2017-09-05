@@ -43,6 +43,6 @@ Examples
     {
         "MultiSelect": true,
         "ValueProperty": "id",
-        "ItemFormat": "{FirstName} {LastName}, {BirthDate:d}",
+        "ItemFormat": "${FirstName} ${LastName}, ${BirthDate:d}",
         "DisabledItemCondition": "{ return (args.value.Id == 3); }"
     }
