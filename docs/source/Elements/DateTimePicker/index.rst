@@ -55,6 +55,10 @@ Methods
      - Устанавливает смещение часового пояса.
    * - `getTimeZone <DateTimePicker.getTimeZone.html>`__
      - Возвращает смещение часового пояса.
+   * - `getExpandOnEnter <DateTimePicker.getExpandOnEnter.html>`__
+     - Возвращает значение, определяющее, будет ли открываться выпадающее меню по клавише Enter.
+   * - `setExpandOnEnter <DateTimePicker.setExpandOnEnter.html>`__
+     - Устанавивает значение, определяющее, будет ли открываться выпадающее меню по клавише Enter.
 
 
 
@@ -63,11 +67,13 @@ Methods
 .. toctree::
    :hidden:
 
+   DateTimePicker.getExpandOnEnter.rst
    DateTimePicker.getMaxValue.rst
    DateTimePicker.getMinValue.rst
    DateTimePicker.getMode.rst
    DateTimePicker.getTimeZone.rst
    DateTimePicker.metadata.rst
+   DateTimePicker.setExpandOnEnter.rst
    DateTimePicker.setMaxValue.rst
    DateTimePicker.setMinValue.rst
    DateTimePicker.setMode.rst

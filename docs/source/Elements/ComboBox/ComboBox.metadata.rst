@@ -29,6 +29,10 @@ Properties
      - ``Boolean``
      - false
      - Значение, определяющее, разрешено ли автозавершение ввода
+   * - ExpandOnEnter
+     - ``Boolean``
+     - true
+     - Значение, определяющее, раскрывать ли выпадающий список по нажатию на клавишу Enter
    * - AutocompleteProperty
      - ``String``
      - –

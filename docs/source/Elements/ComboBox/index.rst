@@ -63,6 +63,10 @@ Methods
      - Устанавливает значение, для поиска в выпадающем списке значений
    * - `setNoItemsMessage <ComboBox.setNoItemsMessage.html>`__
      - Устанавивает значение, которое будет использоваться для отображения, когда не найден не один элемент.
+   * - `getExpandOnEnter <ComboBox.getExpandOnEnter.html>`__
+     - Возвращает значение, определяющее, будет ли открываться выпадающий список по клавише Enter.
+   * - `setExpandOnEnter <ComboBox.setExpandOnEnter.html>`__
+     - Устанавивает значение, определяющее, будет ли открываться выпадающий список по клавише Enter.
 
 
 Events
@@ -78,6 +82,7 @@ Events
 
    ComboBox.getAutocomplete.rst
    ComboBox.getAutocompleteValue.rst
+   ComboBox.getExpandOnEnter.rst
    ComboBox.getLabelFloating.rst
    ComboBox.getLabelText.rst
    ComboBox.getShowClear.rst
@@ -85,6 +90,7 @@ Events
    ComboBox.metadata.rst
    ComboBox.setAutocomplete.rst
    ComboBox.setAutocompleteValue.rst
+   ComboBox.setExpandOnEnter.rst
    ComboBox.setLabelFloating.rst
    ComboBox.setLabelText.rst
    ComboBox.setNoItemsMessage.rst
