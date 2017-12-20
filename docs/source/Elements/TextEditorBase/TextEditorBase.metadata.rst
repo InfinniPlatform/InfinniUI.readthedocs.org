@@ -17,6 +17,10 @@ Properties
      - ``String`` (ƒ)
      - –
      - Текст метки
+   * - ``LabelTextTitle``
+     - ``Boolean``
+     - ``false``
+     - Копирование LabelText в атрибут title
    * - ``LabelFloating``
      - ``Boolean``
      - ``false``
@@ -39,6 +43,7 @@ Examples
 
     {
         "LabelText": "Birthday",
+        "LabelTextTitle": true,
         "LabelFloating": true,
         "DisplayFormat": ":d",
         "EditMask": {

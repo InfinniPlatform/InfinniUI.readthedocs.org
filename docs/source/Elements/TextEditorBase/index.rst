@@ -42,6 +42,10 @@ Methods
      - Возвращает текст метки.
    * - `setLabelText <TextEditorBase.setLabelText.html>`__
      - Устанавливает текст метки.
+   * - `getLabelTextTitle <TextEditorBase.getLabelTextTitle.html>`__
+     - Возвращает значение, которое показывает, копируется текст метки в атрибут title или нет.
+   * - `setLabelTextTitle <TextEditorBase.setLabelTextTitle.html>`__
+     - Устанавливает значение, которое показывает, копируется текст метки в атрибут title или нет.
    * - `getLabelFloating <TextEditorBase.getLabelFloating.html>`__
      - Возвращает значение, определяющее, является ли метка плавающей.
    * - `setLabelFloating <TextEditorBase.setLabelFloating.html>`__
@@ -66,8 +70,10 @@ Methods
    TextEditorBase.getEditMask.rst
    TextEditorBase.getLabelFloating.rst
    TextEditorBase.getLabelText.rst
+   TextEditorBase.getLabelTextTitle.rst
    TextEditorBase.metadata.rst
    TextEditorBase.setDisplayFormat.rst
    TextEditorBase.setEditMask.rst
    TextEditorBase.setLabelFloating.rst
    TextEditorBase.setLabelText.rst
+   TextEditorBase.setLabelTextTitle.rst
